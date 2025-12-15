@@ -107,7 +107,7 @@
 
 /turf/open/floor/engine/n2o
 	article = "an"
-	name = "\improper N2O floor"
+	name = "N2O floor"
 	initial_gas_mix = ATMOS_TANK_N2O
 
 /turf/open/floor/engine/n2o/get_ru_names()
@@ -121,7 +121,7 @@
 	)
 
 /turf/open/floor/engine/co2
-	name = "\improper CO2 floor"
+	name = "CO2 floor"
 	initial_gas_mix = ATMOS_TANK_CO2
 
 /turf/open/floor/engine/co2/get_ru_names()
@@ -149,7 +149,7 @@
 	)
 
 /turf/open/floor/engine/o2
-	name = "\improper O2 floor"
+	name = "O2 floor"
 	initial_gas_mix = ATMOS_TANK_O2
 
 /turf/open/floor/engine/o2/get_ru_names()
@@ -164,7 +164,7 @@
 
 /turf/open/floor/engine/n2
 	article = "an"
-	name = "\improper N2 floor"
+	name = "N2 floor"
 	initial_gas_mix = ATMOS_TANK_N2
 
 /turf/open/floor/engine/n2/get_ru_names()
@@ -178,7 +178,7 @@
 	)
 
 /turf/open/floor/engine/bz
-	name = "\improper BZ floor"
+	name = "BZ floor"
 	initial_gas_mix = ATMOS_TANK_BZ
 
 /turf/open/floor/engine/bz/get_ru_names()
@@ -192,7 +192,7 @@
 	)
 
 /turf/open/floor/engine/freon
-	name = "\improper Freon floor"
+	name = "Freon floor"
 	initial_gas_mix = ATMOS_TANK_FREON
 
 /turf/open/floor/engine/freon/get_ru_names()
@@ -206,7 +206,7 @@
 	)
 
 /turf/open/floor/engine/halon
-	name = "\improper Halon floor"
+	name = "Halon floor"
 	initial_gas_mix = ATMOS_TANK_HALON
 
 /turf/open/floor/engine/halon/get_ru_names()
@@ -220,7 +220,7 @@
 	)
 
 /turf/open/floor/engine/healium
-	name = "\improper Healium floor"
+	name = "Healium floor"
 	initial_gas_mix = ATMOS_TANK_HEALIUM
 
 /turf/open/floor/engine/healium/get_ru_names()
@@ -235,7 +235,7 @@
 
 /turf/open/floor/engine/h2
 	article = "an"
-	name = "\improper H2 floor"
+	name = "H2 floor"
 	initial_gas_mix = ATMOS_TANK_H2
 
 /turf/open/floor/engine/h2/get_ru_names()
@@ -249,7 +249,7 @@
 	)
 
 /turf/open/floor/engine/hypernoblium
-	name = "\improper Hypernoblium floor"
+	name = "Hypernoblium floor"
 	initial_gas_mix = ATMOS_TANK_HYPERNOBLIUM
 
 /turf/open/floor/engine/hypernoblium/get_ru_names()
@@ -263,7 +263,7 @@
 	)
 
 /turf/open/floor/engine/miasma
-	name = "\improper Miasma floor"
+	name = "Miasma floor"
 	initial_gas_mix = ATMOS_TANK_MIASMA
 
 /turf/open/floor/engine/miasma/get_ru_names()
@@ -277,7 +277,7 @@
 	)
 
 /turf/open/floor/engine/nitrium
-	name = "\improper nitrium floor"
+	name = "nitrium floor"
 	initial_gas_mix = ATMOS_TANK_NITRIUM
 
 /turf/open/floor/engine/nitrium/get_ru_names()
@@ -291,7 +291,7 @@
 	)
 
 /turf/open/floor/engine/pluoxium
-	name = "\improper Pluoxium floor"
+	name = "Pluoxium floor"
 	initial_gas_mix = ATMOS_TANK_PLUOXIUM
 
 /turf/open/floor/engine/pluoxium/get_ru_names()
@@ -305,7 +305,7 @@
 	)
 
 /turf/open/floor/engine/proto_nitrate
-	name = "\improper Proto-Nitrate floor"
+	name = "Proto-Nitrate floor"
 	initial_gas_mix = ATMOS_TANK_PROTO_NITRATE
 
 /turf/open/floor/engine/proto_nitrate/get_ru_names()
@@ -319,7 +319,7 @@
 	)
 
 /turf/open/floor/engine/tritium
-	name = "\improper Tritium floor"
+	name = "Tritium floor"
 	initial_gas_mix = ATMOS_TANK_TRITIUM
 
 /turf/open/floor/engine/tritium/get_ru_names()
@@ -334,7 +334,7 @@
 
 /turf/open/floor/engine/h2o
 	article = "an"
-	name = "\improper H2O floor"
+	name = "H2O floor"
 	initial_gas_mix = ATMOS_TANK_H2O
 
 /turf/open/floor/engine/h2o/get_ru_names()
@@ -348,7 +348,7 @@
 	)
 
 /turf/open/floor/engine/zauker
-	name = "\improper Zauker floor"
+	name = "Zauker floor"
 	initial_gas_mix = ATMOS_TANK_ZAUKER
 
 /turf/open/floor/engine/zauker/get_ru_names()
@@ -362,7 +362,7 @@
 	)
 
 /turf/open/floor/engine/helium
-	name = "\improper Helium floor"
+	name = "Helium floor"
 	initial_gas_mix = ATMOS_TANK_HELIUM
 
 /turf/open/floor/engine/helium/get_ru_names()
@@ -376,7 +376,7 @@
 	)
 
 /turf/open/floor/engine/antinoblium
-	name = "\improper Antinoblium floor"
+	name = "Antinoblium floor"
 	initial_gas_mix = ATMOS_TANK_ANTINOBLIUM
 
 /turf/open/floor/engine/antinoblium/get_ru_names()
