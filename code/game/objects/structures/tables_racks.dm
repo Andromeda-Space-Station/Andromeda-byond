@@ -1115,14 +1115,14 @@
 
 	if(being_unbuckled == unbuckler)
 		being_unbuckled.visible_message(
-			span_notice("[unbuckler] встаёт с [src.declent_ru(GENITIVE)]."),
-			span_notice("Вы встаёте с [src.declent_ru(GENITIVE)]."),
+			span_notice("[unbuckler] встаёт со [src.declent_ru(GENITIVE)]."),
+			span_notice("Вы встаёте со [src.declent_ru(GENITIVE)]."),
 			visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 		)
 	else
 		being_unbuckled.visible_message(
-			span_notice("[unbuckler] поднимает [being_unbuckled] с [src.declent_ru(GENITIVE)]."),
-			span_notice("[unbuckler] поднимает вас с [src.declent_ru(GENITIVE)]."),
+			span_notice("[unbuckler] поднимает [being_unbuckled] со [src.declent_ru(GENITIVE)]."),
+			span_notice("[unbuckler] поднимает вас со [src.declent_ru(GENITIVE)]."),
 			visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 		)
 

@@ -601,7 +601,7 @@
 	)
 
 /obj/item/stack/tile/carpet/donk
-	name = "\improper Donk Co. promotional carpet"
+	name = "Donk Co. promotional carpet"
 	icon_state = "tile_carpet_donk"
 	inhand_icon_state = "tile-carpet-orange"
 	turf_type = /turf/open/floor/carpet/donk
