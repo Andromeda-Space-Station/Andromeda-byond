@@ -54,13 +54,13 @@
 
 	if(SSticker.current_state < GAME_STATE_SETTING_UP)
 		var/tl = SSticker.GetTimeLeft()
-		to_chat(src, "Please set up your character and select \"Ready\". The game will start [tl > 0 ? "in about [DisplayTimeText(tl)]" : "soon"].")
+		to_chat(src, "Пожалуйста, настройте своего персонажа и нажмите \"Готов\". Игра начнётся [tl > 0 ? "примерно через [DisplayTimeText(tl)]" : "совсем скоро"].")
 
 	if(GLOB.unrecommended_builds[num2text(client.byond_build)])
 		INVOKE_ASYNC(src, PROC_REF(unrcommended_build_alert))
 
 /mob/dead/new_player/proc/unrcommended_build_alert()
-	var/warning = "Hey! The build of byond you are running ([client.byond_build]) has one or more potential issues that may cause major gameplay disruptions.\n\n\
-		You may continue to play, but be aware you may encounter the following issue while playing:\n\"[GLOB.unrecommended_builds[num2text(client.byond_build)]]\"\n\n\
-		If possible, we recommend updating your BYOND version.\nIf you are on the latest version, download an earlier release instead from www.byond.com/download/build."
-	alert(src, warning, "Bad BYOND Build", "OK")
+	var/warning = "Внимание! Билд BYOND, который вы используете ([client.byond_build]), имеет одну или несколько потенциальных проблем, способных вызвать серьёзные сбои в игровом процессе.\n\n\
+		Вы можете продолжить игру, но имейте в виду, что во время игры вы можете столкнуться со следующей ошибкой:\n\"[GLOB.unrecommended_builds[num2text(client.byond_build)]]\"\n\n\
+		По возможности мы рекомендуем обновить вашу версию BYOND.\nЕсли вы используете самую последнюю версию, попробуйте загрузить более ранний релиз с сайта www.byond.com/download/build."
+	alert(src, warning, "Проблемный билд BYOND", "ОК")
