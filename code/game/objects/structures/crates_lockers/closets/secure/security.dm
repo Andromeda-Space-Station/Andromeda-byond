@@ -1,7 +1,18 @@
 /obj/structure/closet/secure_closet/captains
 	name = "captain's locker"
+	gender = MALE
 	icon_state = "cap"
 	req_access = list(ACCESS_CAPTAIN)
+
+/obj/structure/closet/secure_closet/captains/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф капитана",
+		GENITIVE = "шкафа капитана",
+		DATIVE = "шкафу капитана",
+		ACCUSATIVE = "шкаф капитана",
+		INSTRUMENTAL = "шкафом капитана",
+		PREPOSITIONAL = "шкафе капитана",
+	)
 
 /obj/structure/closet/secure_closet/captains/PopulateContents()
 	..()
@@ -21,8 +32,19 @@
 
 /obj/structure/closet/secure_closet/hop
 	name = "head of personnel's locker"
+	gender = MALE
 	icon_state = "hop"
 	req_access = list(ACCESS_HOP)
+
+/obj/structure/closet/secure_closet/hop/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф главы персонала",
+		GENITIVE = "шкафа главы персонала",
+		DATIVE = "шкафу главы персонала",
+		ACCUSATIVE = "шкаф главы персонала",
+		INSTRUMENTAL = "шкафом главы персонала",
+		PREPOSITIONAL = "шкафе главы персонала",
+	)
 
 /obj/structure/closet/secure_closet/hop/PopulateContents()
 	..()
@@ -47,8 +69,19 @@
 
 /obj/structure/closet/secure_closet/hos
 	name = "head of security's locker"
+	gender = MALE
 	icon_state = "hos"
 	req_access = list(ACCESS_HOS)
+
+/obj/structure/closet/secure_closet/hos/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф главы службы безопасности",
+		GENITIVE = "шкафа главы службы безопасности",
+		DATIVE = "шкафу главы службы безопасности",
+		ACCUSATIVE = "шкаф главы службы безопасности",
+		INSTRUMENTAL = "шкафом главы службы безопасности",
+		PREPOSITIONAL = "шкафе главы службы безопасности",
+	)
 
 /obj/structure/closet/secure_closet/hos/PopulateContents()
 	..()
@@ -76,8 +109,19 @@
 
 /obj/structure/closet/secure_closet/warden
 	name = "warden's locker"
+	gender = MALE
 	icon_state = "warden"
 	req_access = list(ACCESS_ARMORY)
+
+/obj/structure/closet/secure_closet/warden/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф смотрителя",
+		GENITIVE = "шкафа смотрителя",
+		DATIVE = "шкафу смотрителя",
+		ACCUSATIVE = "шкаф смотрителя",
+		INSTRUMENTAL = "шкафом смотрителя",
+		PREPOSITIONAL = "шкафе смотрителя",
+	)
 
 /obj/structure/closet/secure_closet/warden/PopulateContents()
 	..()
@@ -101,8 +145,19 @@
 
 /obj/structure/closet/secure_closet/security
 	name = "security officer's locker"
+	gender = MALE
 	icon_state = "sec"
 	req_access = list(ACCESS_BRIG)
+
+/obj/structure/closet/secure_closet/security/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф офицера СБ",
+		GENITIVE = "шкафа офицера СБ",
+		DATIVE = "шкафу офицера СБ",
+		ACCUSATIVE = "шкаф офицера СБ",
+		INSTRUMENTAL = "шкафом офицера СБ",
+		PREPOSITIONAL = "шкафе офицера СБ",
+	)
 
 /obj/structure/closet/secure_closet/security/PopulateContents()
 	..()
@@ -150,6 +205,7 @@
 
 /obj/structure/closet/secure_closet/detective
 	name = "\improper detective's cabinet"
+	gender = MALE
 	icon_state = "cabinet"
 	resistance_flags = FLAMMABLE
 	max_integrity = 70
@@ -157,6 +213,16 @@
 	open_sound = 'sound/machines/closet/wooden_closet_open.ogg'
 	close_sound = 'sound/machines/closet/wooden_closet_close.ogg'
 	req_access = list(ACCESS_DETECTIVE)
+
+/obj/structure/closet/secure_closet/detective/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф детектива",
+		GENITIVE = "шкафа детектива",
+		DATIVE = "шкафу детектива",
+		ACCUSATIVE = "шкаф детектива",
+		INSTRUMENTAL = "шкафом детектива",
+		PREPOSITIONAL = "шкафе детектива",
+	)
 
 /obj/structure/closet/secure_closet/detective/PopulateContents()
 	..()
@@ -175,7 +241,18 @@
 
 /obj/structure/closet/secure_closet/injection
 	name = "lethal injections locker"
+	gender = MALE
 	req_access = list(ACCESS_ARMORY)
+
+/obj/structure/closet/secure_closet/injection/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф со смертельными инъекциями",
+		GENITIVE = "шкафа со смертельными инъекциями",
+		DATIVE = "шкафу со смертельными инъекциями",
+		ACCUSATIVE = "шкаф со смертельными инъекциями",
+		INSTRUMENTAL = "шкафом со смертельными инъекциями",
+		PREPOSITIONAL = "шкафе со смертельными инъекциями",
+	)
 
 /obj/structure/closet/secure_closet/injection/PopulateContents()
 	..()
@@ -184,31 +261,52 @@
 
 /obj/structure/closet/secure_closet/brig
 	name = "brig locker"
+	gender = MALE
 	anchored = TRUE
 	req_one_access = list(ACCESS_BRIG)
 	var/id = null
 
+/obj/structure/closet/secure_closet/brig/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф брига",
+		GENITIVE = "шкафа брига",
+		DATIVE = "шкафу брига",
+		ACCUSATIVE = "шкаф брига",
+		INSTRUMENTAL = "шкафом брига",
+		PREPOSITIONAL = "шкафе брига",
+	)
+
 /obj/structure/closet/secure_closet/brig/genpop
 	name = "genpop storage locker"
-	desc = "Used for storing the belongings of genpop's tourists visiting the locals."
+	desc = "Используется для хранения личных вещей туристов, посещающих местных жителей."
 	access_choices = FALSE
 	paint_jobs = null
 
+/obj/structure/closet/secure_closet/brig/genpop/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф общего режима",
+		GENITIVE = "шкафа общего режима",
+		DATIVE = "шкафу общего режима",
+		ACCUSATIVE = "шкаф общего режима",
+		INSTRUMENTAL = "шкафом общего режима",
+		PREPOSITIONAL = "шкафе общего режима",
+	)
+
 /obj/structure/closet/secure_closet/brig/genpop/examine(mob/user)
 	. = ..()
-	. += span_notice("<b>Right-click</b> with a Security-level ID to reset [src]'s registered ID.")
+	. += span_notice("<b>Нажмите ПКМ</b> с ID картой уровня СБ, чтобы сбросить зарегистрированный ID на [src.declent_ru(PREPOSITIONAL)].")
 
 /obj/structure/closet/secure_closet/brig/genpop/attackby(obj/item/card/id/advanced/prisoner/user_id, mob/user, list/modifiers, list/attack_modifiers)
 	if(!secure || !istype(user_id))
 		return ..()
 
 	if(isnull(id_card))
-		say("Prisoner ID linked to locker.")
+		say("ID заключённого привязан к шкафу.")
 		id_card = WEAKREF(user_id)
-		name = "genpop storage locker - [user_id.registered_name]"
+		name = "шкаф общего режима - [user_id.registered_name]"
 
 /obj/structure/closet/secure_closet/brig/genpop/proc/clear_access()
-	say("Authorized ID detected. Unlocking locker and resetting ID.")
+	say("Обнаружен авторизованный ID. Разблокировка шкафа и сброс ID.")
 	locked = FALSE
 	id_card = null
 	name = initial(name)
@@ -227,7 +325,18 @@
 /obj/structure/closet/secure_closet/evidence
 	anchored = TRUE
 	name = "secure evidence closet"
+	gender = MALE
 	req_one_access = list(ACCESS_ARMORY, ACCESS_DETECTIVE)
+
+/obj/structure/closet/secure_closet/evidence/get_ru_names()
+	return list(
+		NOMINATIVE = "защищённый шкаф для улик",
+		GENITIVE = "защищённого шкафа для улик",
+		DATIVE = "защищённому шкафу для улик",
+		ACCUSATIVE = "защищённый шкаф для улик",
+		INSTRUMENTAL = "защищённым шкафом для улик",
+		PREPOSITIONAL = "защищённом шкафе для улик",
+	)
 
 /obj/structure/closet/secure_closet/brig/PopulateContents()
 	..()
@@ -238,7 +347,18 @@
 
 /obj/structure/closet/secure_closet/courtroom
 	name = "courtroom locker"
+	gender = MALE
 	req_access = list(ACCESS_COURT)
+
+/obj/structure/closet/secure_closet/courtroom/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф зала суда",
+		GENITIVE = "шкафа зала суда",
+		DATIVE = "шкафу зала суда",
+		ACCUSATIVE = "шкаф зала суда",
+		INSTRUMENTAL = "шкафом зала суда",
+		PREPOSITIONAL = "шкафе зала суда",
+	)
 
 /obj/structure/closet/secure_closet/courtroom/PopulateContents()
 	..()
@@ -255,17 +375,49 @@
 /obj/structure/closet/secure_closet/contraband/armory
 	anchored = TRUE
 	name = "contraband locker"
+	gender = MALE
 	req_access = list(ACCESS_ARMORY)
+
+/obj/structure/closet/secure_closet/contraband/armory/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф для контрабанды",
+		GENITIVE = "шкафа для контрабанды",
+		DATIVE = "шкафу для контрабанды",
+		ACCUSATIVE = "шкаф для контрабанды",
+		INSTRUMENTAL = "шкафом для контрабанды",
+		PREPOSITIONAL = "шкафе для контрабанды",
+	)
 
 /obj/structure/closet/secure_closet/contraband/heads
 	name = "contraband locker"
 	req_access = list(ACCESS_COMMAND)
 	anchored = TRUE
 
+/obj/structure/closet/secure_closet/contraband/heads/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф для контрабанды",
+		GENITIVE = "шкафа для контрабанды",
+		DATIVE = "шкафу для контрабанды",
+		ACCUSATIVE = "шкаф для контрабанды",
+		INSTRUMENTAL = "шкафом для контрабанды",
+		PREPOSITIONAL = "шкафе для контрабанды",
+	)
+
 /obj/structure/closet/secure_closet/armory1
 	name = "armory armor locker"
+	gender = MALE
 	icon_state = "armory"
 	req_access = list(ACCESS_ARMORY)
+
+/obj/structure/closet/secure_closet/armory1/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с бронёй",
+		GENITIVE = "шкафа с бронёй",
+		DATIVE = "шкафу с бронёй",
+		ACCUSATIVE = "шкаф с бронёй",
+		INSTRUMENTAL = "шкафом с бронёй",
+		PREPOSITIONAL = "шкафе с бронёй",
+	)
 
 /obj/structure/closet/secure_closet/armory1/PopulateContents()
 	..()
@@ -284,9 +436,20 @@
 
 /obj/structure/closet/secure_closet/armory2
 	name = "armory ballistics locker"
+	gender = MALE
 	icon_state = "tac"
 	icon_door = "armory_shotgun"
 	req_access = list(ACCESS_ARMORY)
+
+/obj/structure/closet/secure_closet/armory2/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с баллистическим оружием",
+		GENITIVE = "шкафа с баллистическим оружием",
+		DATIVE = "шкафу с баллистическим оружием",
+		ACCUSATIVE = "шкаф с баллистическим оружием",
+		INSTRUMENTAL = "шкафом с баллистическим оружием",
+		PREPOSITIONAL = "шкафе с баллистическим оружием",
+	)
 
 /obj/structure/closet/secure_closet/armory2/PopulateContents()
 	..()
@@ -300,9 +463,20 @@
 
 /obj/structure/closet/secure_closet/armory3
 	name = "armory energy gun locker"
+	gender = MALE
 	icon_state = "tac"
 	icon_door = "armory_energy"
 	req_access = list(ACCESS_ARMORY)
+
+/obj/structure/closet/secure_closet/armory3/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с энергетическим оружием",
+		GENITIVE = "шкафа с энергетическим оружием",
+		DATIVE = "шкафу с энергетическим оружием",
+		ACCUSATIVE = "шкаф с энергетическим оружием",
+		INSTRUMENTAL = "шкафом с энергетическим оружием",
+		PREPOSITIONAL = "шкафе с энергетическим оружием",
+	)
 
 /obj/structure/closet/secure_closet/armory3/PopulateContents()
 	..()
@@ -319,8 +493,19 @@
 
 /obj/structure/closet/secure_closet/tac
 	name = "armory tac locker"
+	gender = MALE
 	icon_state = "tac"
 	req_access = list(ACCESS_ARMORY)
+
+/obj/structure/closet/secure_closet/tac/get_ru_names()
+	return list(
+		NOMINATIVE = "тактический шкаф оружейной",
+		GENITIVE = "тактического шкафа оружейной",
+		DATIVE = "тактическому шкафу оружейной",
+		ACCUSATIVE = "тактический шкаф оружейной",
+		INSTRUMENTAL = "тактическим шкафом оружейной",
+		PREPOSITIONAL = "тактическом шкафе оружейной",
+	)
 
 /obj/structure/closet/secure_closet/tac/PopulateContents()
 	..()
@@ -331,8 +516,19 @@
 
 /obj/structure/closet/secure_closet/labor_camp_security
 	name = "labor camp security locker"
+	gender = MALE
 	icon_state = "sec"
 	req_access = list(ACCESS_SECURITY)
+
+/obj/structure/closet/secure_closet/labor_camp_security/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф охраны трудового лагеря",
+		GENITIVE = "шкафа охраны трудового лагеря",
+		DATIVE = "шкафу охраны трудового лагеря",
+		ACCUSATIVE = "шкаф охраны трудового лагеря",
+		INSTRUMENTAL = "шкафом охраны трудового лагеря",
+		PREPOSITIONAL = "шкафе охраны трудового лагеря",
+	)
 
 /obj/structure/closet/secure_closet/labor_camp_security/PopulateContents()
 	..()

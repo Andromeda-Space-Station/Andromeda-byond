@@ -14,8 +14,19 @@
  */
 /obj/structure/closet/emcloset
 	name = "emergency closet"
-	desc = "It's a storage unit for emergency breath masks and O2 tanks."
+	desc = "Хранилище для аварийных дыхательных масок и баллонов с кислородом."
+	gender = MALE
 	icon_state = "emergency"
+
+/obj/structure/closet/emcloset/get_ru_names()
+	return list(
+		NOMINATIVE = "аварийный шкаф",
+		GENITIVE = "аварийного шкафа",
+		DATIVE = "аварийному шкафу",
+		ACCUSATIVE = "аварийный шкаф",
+		INSTRUMENTAL = "аварийным шкафом",
+		PREPOSITIONAL = "аварийном шкафе",
+	)
 
 /obj/structure/closet/emcloset/anchored
 	anchored = TRUE
@@ -65,8 +76,19 @@
  */
 /obj/structure/closet/firecloset
 	name = "fire-safety closet"
-	desc = "It's a storage unit for fire-fighting supplies."
+	desc = "Хранилище для противопожарного оборудования."
+	gender = MALE
 	icon_state = "fire"
+
+/obj/structure/closet/firecloset/get_ru_names()
+	return list(
+		NOMINATIVE = "пожарный шкаф",
+		GENITIVE = "пожарного шкафа",
+		DATIVE = "пожарному шкафу",
+		ACCUSATIVE = "пожарный шкаф",
+		INSTRUMENTAL = "пожарным шкафом",
+		PREPOSITIONAL = "пожарном шкафе",
+	)
 
 /obj/structure/closet/firecloset/PopulateContents()
 	..()
@@ -92,9 +114,20 @@
  */
 /obj/structure/closet/toolcloset
 	name = "tool closet"
-	desc = "It's a storage unit for tools."
+	desc = "Хранилище для инструментов."
+	gender = MALE
 	icon_state = "eng"
 	icon_door = "eng_tool"
+
+/obj/structure/closet/toolcloset/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с инструментами",
+		GENITIVE = "шкафа с инструментами",
+		DATIVE = "шкафу с инструментами",
+		ACCUSATIVE = "шкаф с инструментами",
+		INSTRUMENTAL = "шкафом с инструментами",
+		PREPOSITIONAL = "шкафе с инструментами",
+	)
 
 /obj/structure/closet/toolcloset/PopulateContents()
 	..()
@@ -141,9 +174,20 @@
  */
 /obj/structure/closet/radiation
 	name = "radiation suit closet"
-	desc = "It's a storage unit for rad-protective suits."
+	desc = "Хранилище для костюмов радиационной защиты."
+	gender = MALE
 	icon_state = "eng"
 	icon_door = "eng_rad"
+
+/obj/structure/closet/radiation/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с костюмом радиационной защиты",
+		GENITIVE = "шкафа с костюмом радиационной защиты",
+		DATIVE = "шкафу с костюмом радиационной защиты",
+		ACCUSATIVE = "шкаф с костюмом радиационной защиты",
+		INSTRUMENTAL = "шкафом с костюмом радиационной защиты",
+		PREPOSITIONAL = "шкафе с костюмом радиационной защиты",
+	)
 
 /obj/structure/closet/radiation/PopulateContents()
 	..()
@@ -156,8 +200,19 @@
  */
 /obj/structure/closet/bombcloset
 	name = "\improper EOD closet"
-	desc = "It's a storage unit for explosion-protective suits."
+	desc = "Хранилище для взрывозащитных костюмов."
+	gender = MALE
 	icon_state = "bomb"
+
+/obj/structure/closet/bombcloset/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф сапёра",
+		GENITIVE = "шкафа сапёра",
+		DATIVE = "шкафу сапёра",
+		ACCUSATIVE = "шкаф сапёра",
+		INSTRUMENTAL = "шкафом сапёра",
+		PREPOSITIONAL = "шкафе сапёра",
+	)
 
 /obj/structure/closet/bombcloset/PopulateContents()
 	..()

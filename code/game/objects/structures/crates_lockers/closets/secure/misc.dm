@@ -1,8 +1,19 @@
 /obj/structure/closet/secure_closet/ert_com
 	name = "emergency response team commander's locker"
-	desc = "A storage unit containing equipment for an Emergency Response Team Commander."
+	desc = "Хранилище, содержащее снаряжение для командира отряда быстрого реагирования."
+	gender = MALE
 	req_access = list(ACCESS_CENT_CAPTAIN)
 	icon_state = "cap"
+
+/obj/structure/closet/secure_closet/ert_com/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф командира ОБР",
+		GENITIVE = "шкафа командира ОБР",
+		DATIVE = "шкафу командира ОБР",
+		ACCUSATIVE = "шкаф командира ОБР",
+		INSTRUMENTAL = "шкафом командира ОБР",
+		PREPOSITIONAL = "шкафе командира ОБР",
+	)
 
 /obj/structure/closet/secure_closet/ert_com/PopulateContents()
 	..()
@@ -26,9 +37,20 @@
 
 /obj/structure/closet/secure_closet/ert_sec
 	name = "emergency response team security locker"
-	desc = "A storage unit containing equipment for an Emergency Response Team Security Officer."
+	desc = "Хранилище, содержащее снаряжение для офицера безопасности отряда быстрого реагирования."
+	gender = MALE
 	req_access = list(ACCESS_CENT_SPECOPS)
 	icon_state = "hos"
+
+/obj/structure/closet/secure_closet/ert_sec/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф офицера безопасности ОБР",
+		GENITIVE = "шкафа офицера безопасности ОБР",
+		DATIVE = "шкафу офицера безопасности ОБР",
+		ACCUSATIVE = "шкаф офицера безопасности ОБР",
+		INSTRUMENTAL = "шкафом офицера безопасности ОБР",
+		PREPOSITIONAL = "шкафе офицера безопасности ОБР",
+	)
 
 /obj/structure/closet/secure_closet/ert_sec/PopulateContents()
 	..()
@@ -40,9 +62,20 @@
 
 /obj/structure/closet/secure_closet/ert_med
 	name = "emergency response team medical locker"
-	desc = "A storage unit containing equipment for an Emergency Response Team Medical Officer."
+	desc = "Хранилище, содержащее снаряжение для медика отряда быстрого реагирования."
+	gender = MALE
 	req_access = list(ACCESS_CENT_MEDICAL)
 	icon_state = "cmo"
+
+/obj/structure/closet/secure_closet/ert_med/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф медика ОБР",
+		GENITIVE = "шкафа медика ОБР",
+		DATIVE = "шкафу медика ОБР",
+		ACCUSATIVE = "шкаф медика ОБР",
+		INSTRUMENTAL = "шкафом медика ОБР",
+		PREPOSITIONAL = "шкафе медика ОБР",
+	)
 
 /obj/structure/closet/secure_closet/ert_med/PopulateContents()
 	. = ..()
@@ -56,9 +89,20 @@
 
 /obj/structure/closet/secure_closet/ert_engi
 	name = "emergency response team engineer locker"
-	desc = "A storage unit containing equipment for an Emergency Response Team Engineer."
+	desc = "Хранилище, содержащее снаряжение для инженера отряда быстрого реагирования."
+	gender = MALE
 	req_access = list(ACCESS_CENT_STORAGE)
 	icon_state = "ce"
+
+/obj/structure/closet/secure_closet/ert_engi/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф инженера ОБР",
+		GENITIVE = "шкафа инженера ОБР",
+		DATIVE = "шкафу инженера ОБР",
+		ACCUSATIVE = "шкаф инженера ОБР",
+		INSTRUMENTAL = "шкафом инженера ОБР",
+		PREPOSITIONAL = "шкафе инженера ОБР",
+	)
 
 /obj/structure/closet/secure_closet/ert_engi/PopulateContents()
 	..()

@@ -1,6 +1,7 @@
 /obj/structure/closet/secure_closet
 	name = "secure locker"
-	desc = "It's a card-locked storage unit."
+	desc = "Это хранилище с карточным замком."
+	gender = MALE
 	locked = TRUE
 	icon_state = "secure"
 	max_integrity = 250
@@ -9,6 +10,17 @@
 	damage_deflection = 20
 	material_drop_amount = 5
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 0.5)
+
+/obj/structure/closet/secure_closet/get_ru_names()
+	return list(
+		NOMINATIVE = "защищённый шкафчик",
+		GENITIVE = "защищённого шкафчика",
+		DATIVE = "защищённому шкафчику",
+		ACCUSATIVE = "защищённый шкафчик",
+		INSTRUMENTAL = "защищённым шкафчиком",
+		PREPOSITIONAL = "защищённом шкафчике",
+	)
+
 
 /datum/armor/closet_secure_closet
 	melee = 30

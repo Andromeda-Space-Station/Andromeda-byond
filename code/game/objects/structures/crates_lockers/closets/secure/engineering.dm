@@ -1,7 +1,18 @@
 /obj/structure/closet/secure_closet/engineering_chief
 	name = "chief engineer's locker"
+	gender = MALE
 	req_access = list(ACCESS_CE)
 	icon_state = "ce"
+
+/obj/structure/closet/secure_closet/engineering_chief/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф главного инженера",
+		GENITIVE = "шкафа главного инженера",
+		DATIVE = "шкафу главного инженера",
+		ACCUSATIVE = "шкаф главного инженера",
+		INSTRUMENTAL = "шкафом главного инженера",
+		PREPOSITIONAL = "шкафе главного инженера",
+	)
 
 /obj/structure/closet/secure_closet/engineering_chief/PopulateContents()
 	..()
@@ -29,9 +40,20 @@
 
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies locker"
+	gender = MALE
 	req_access = list(ACCESS_ENGINE_EQUIP)
 	icon_state = "eng"
 	icon_door = "eng_elec"
+
+/obj/structure/closet/secure_closet/engineering_electrical/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф электрооборудования",
+		GENITIVE = "шкафа электрооборудования",
+		DATIVE = "шкафу электрооборудования",
+		ACCUSATIVE = "шкаф электрооборудования",
+		INSTRUMENTAL = "шкафом электрооборудования",
+		PREPOSITIONAL = "шкафе электрооборудования",
+	)
 
 /obj/structure/closet/secure_closet/engineering_electrical/PopulateContents()
 	..()
@@ -50,9 +72,20 @@
 
 /obj/structure/closet/secure_closet/engineering_welding
 	name = "welding supplies locker"
+	gender = MALE
 	req_access = list(ACCESS_ENGINE_EQUIP)
 	icon_state = "eng"
 	icon_door = "eng_weld"
+
+/obj/structure/closet/secure_closet/engineering_welding/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф сварочного оборудования",
+		GENITIVE = "шкафа сварочного оборудования",
+		DATIVE = "шкафу сварочного оборудования",
+		ACCUSATIVE = "шкаф сварочного оборудования",
+		INSTRUMENTAL = "шкафом сварочного оборудования",
+		PREPOSITIONAL = "шкафе сварочного оборудования",
+	)
 
 /obj/structure/closet/secure_closet/engineering_welding/PopulateContents()
 	..()
@@ -63,8 +96,19 @@
 
 /obj/structure/closet/secure_closet/engineering_personal
 	name = "engineer's locker"
+	gender = MALE
 	req_access = list(ACCESS_ENGINE_EQUIP)
 	icon_state = "eng_secure"
+
+/obj/structure/closet/secure_closet/engineering_personal/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф инженера",
+		GENITIVE = "шкафа инженера",
+		DATIVE = "шкафу инженера",
+		ACCUSATIVE = "шкаф инженера",
+		INSTRUMENTAL = "шкафом инженера",
+		PREPOSITIONAL = "шкафе инженера",
+	)
 
 /obj/structure/closet/secure_closet/engineering_personal/PopulateContents()
 	..()
@@ -80,8 +124,19 @@
 
 /obj/structure/closet/secure_closet/atmospherics
 	name = "atmospheric technician's locker"
+	gender = MALE
 	req_access = list(ACCESS_ATMOSPHERICS)
 	icon_state = "atmos"
+
+/obj/structure/closet/secure_closet/atmospherics/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф атмосферного техника",
+		GENITIVE = "шкафа атмосферного техника",
+		DATIVE = "шкафу атмосферного техника",
+		ACCUSATIVE = "шкаф атмосферного техника",
+		INSTRUMENTAL = "шкафом атмосферного техника",
+		PREPOSITIONAL = "шкафе атмосферного техника",
+	)
 
 /obj/structure/closet/secure_closet/atmospherics/PopulateContents()
 	..()

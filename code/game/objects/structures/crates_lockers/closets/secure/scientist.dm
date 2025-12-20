@@ -1,7 +1,18 @@
 /obj/structure/closet/secure_closet/research_director
 	name = "research director's locker"
+	gender = MALE
 	req_access = list(ACCESS_RD)
 	icon_state = "rd"
+
+/obj/structure/closet/secure_closet/research_director/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф научного руководителя",
+		GENITIVE = "шкафа научного руководителя",
+		DATIVE = "шкафу научного руководителя",
+		ACCUSATIVE = "шкаф научного руководителя",
+		INSTRUMENTAL = "шкафом научного руководителя",
+		PREPOSITIONAL = "шкафе научного руководителя",
+	)
 
 /obj/structure/closet/secure_closet/research_director/PopulateContents()
 	..()
@@ -28,8 +39,19 @@
 
 /obj/structure/closet/secure_closet/cytology
 	name = "cytology equipment locker"
+	gender = MALE
 	icon_state = "science"
 	req_access = list(ACCESS_RESEARCH)
+
+/obj/structure/closet/secure_closet/cytology/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф цитологического оборудования",
+		GENITIVE = "шкафа цитологического оборудования",
+		DATIVE = "шкафу цитологического оборудования",
+		ACCUSATIVE = "шкаф цитологического оборудования",
+		INSTRUMENTAL = "шкафом цитологического оборудования",
+		PREPOSITIONAL = "шкафе цитологического оборудования",
+	)
 
 /obj/structure/closet/secure_closet/cytology/PopulateContents()
 	. = ..()

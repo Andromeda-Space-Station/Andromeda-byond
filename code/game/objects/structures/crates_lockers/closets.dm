@@ -6,7 +6,8 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 
 /obj/structure/closet
 	name = "closet"
-	desc = "It's a basic storage unit."
+	desc = "Это обычное место для хранения."
+	gender = MALE
 	icon = 'icons/obj/storage/closet.dmi'
 	icon_state = "generic"
 	density = TRUE
@@ -109,6 +110,16 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	bomb = 10
 	fire = 70
 	acid = 60
+
+/obj/structure/closet/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф",
+		GENITIVE = "шкафа",
+		DATIVE = "шкафу",
+		ACCUSATIVE = "шкаф",
+		INSTRUMENTAL = "шкафом",
+		PREPOSITIONAL = "шкафе",
+	)
 
 /obj/structure/closet/get_save_vars()
 	. = ..()
@@ -363,31 +374,31 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 /obj/structure/closet/examine(mob/user)
 	. = ..()
 	if(id_card)
-		. += span_notice("It can be [EXAMINE_HINT("marked")] with a pen.")
+		. += span_notice("Он может быть [EXAMINE_HINT("помечен")] ручкой.")
 	if(can_weld_shut && !welded)
-		. += span_notice("It can be [EXAMINE_HINT("welded")] shut.")
+		. += span_notice("Он может быть [EXAMINE_HINT("заварен")].")
 	if(welded)
-		. += span_notice("It's [EXAMINE_HINT("welded")] shut.")
+		. += span_notice("Он [EXAMINE_HINT("заварен")].")
 	if(anchorable && !anchored)
-		. += span_notice("It can be [EXAMINE_HINT("bolted")] to the ground.")
+		. += span_notice("Он может быть [EXAMINE_HINT("прикручен")] к полу.")
 	if(anchored)
-		. += span_notice("It's [anchorable ? EXAMINE_HINT("bolted") : "attached firmly"] to the ground.")
+		. += span_notice("Он [anchorable ? EXAMINE_HINT("прикручен") : "намертво прикреплён"] к полу.")
 	if(length(paint_jobs))
-		. += span_notice("It can be [EXAMINE_HINT("painted")] with another texture.")
+		. += span_notice("Его можно [EXAMINE_HINT("покрасить")] в другую текстуру.")
 	if(HAS_TRAIT(user, TRAIT_SKITTISH) && divable)
-		. += span_notice("If you bump into [p_them()] while running, you will jump inside.")
+		. += span_notice("Если вы врежетесь в [src.declent_ru(ACCUSATIVE)] на бегу, вы запрыгнете внутрь.")
 
 	if(can_install_electronics)
 		if(!secure)
-			. += span_notice("You can install airlock electronics for access control.")
+			. += span_notice("Вы можете установить электронику шлюза для контроля доступа.")
 		else
-			. += span_notice("Its airlock electronics are [EXAMINE_HINT("screwed")] in place.")
+			. += span_notice("Электроника шлюза [EXAMINE_HINT("прикручена")] на месте.")
 		if(!card_reader_installed && length(access_choices))
-			. += span_notice("You can install a card reader for further access control.")
+			. += span_notice("Вы можете установить картридер для дальнейшего контроля доступа.")
 		else if(card_reader_installed)
-			. += span_notice("The card reader could be [EXAMINE_HINT("pried")] out.")
-			. += span_notice("Swipe your PDA with an ID card/Just ID to change access levels.")
-			. += span_notice("Use multitool to [access_locked ? "unlock" : "lock"] the access panel.")
+			. += span_notice("Картридер можно [EXAMINE_HINT("выломать")].")
+			. += span_notice("Проведите КПК с ID картой/просто ID для изменения уровня доступа.")
+			. += span_notice("Используйте мультитул, чтобы [access_locked ? "разблокировать" : "заблокировать"] панель доступа.")
 
 /obj/structure/closet/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
@@ -395,53 +406,53 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 
 	if(isnull(held_item))
 		if(secure && !broken)
-			context[SCREENTIP_CONTEXT_RMB] = opened ? "Lock" : "Unlock"
+			context[SCREENTIP_CONTEXT_RMB] = opened ? "Заблокировать" : "Разблокировать"
 		if(!welded)
-			context[SCREENTIP_CONTEXT_LMB] = opened ? "Close" : "Open"
+			context[SCREENTIP_CONTEXT_LMB] = opened ? "Закрыть" : "Открыть"
 		screentip_change = TRUE
 
 	if(istype(held_item, cutting_tool))
 		if(opened)
-			context[SCREENTIP_CONTEXT_LMB] = "Deconstruct"
+			context[SCREENTIP_CONTEXT_LMB] = "Разобрать"
 			screentip_change = TRUE
 		else
 			if(!welded && can_weld_shut)
-				context[SCREENTIP_CONTEXT_LMB] = "Weld"
+				context[SCREENTIP_CONTEXT_LMB] = "Заварить"
 				screentip_change = TRUE
 			else if(welded)
-				context[SCREENTIP_CONTEXT_LMB] = "Unweld"
+				context[SCREENTIP_CONTEXT_LMB] = "Разварить"
 				screentip_change = TRUE
 
 	if(istype(held_item) && held_item.tool_behaviour == TOOL_WRENCH && anchorable)
-		context[SCREENTIP_CONTEXT_RMB] = anchored ? "Unanchor" : "Anchor"
+		context[SCREENTIP_CONTEXT_RMB] = anchored ? "Открутить" : "Прикрутить"
 		screentip_change = TRUE
 
 	if(!locked && !opened && (welded || !can_weld_shut))
 		if(!secure)
 			if(!broken && can_install_electronics && istype(held_item, /obj/item/electronics/airlock))
-				context[SCREENTIP_CONTEXT_LMB] = "Install Electronics"
+				context[SCREENTIP_CONTEXT_LMB] = "Установить электронику"
 				screentip_change = TRUE
 		else
 			if(istype(held_item) && held_item.tool_behaviour == TOOL_SCREWDRIVER)
-				context[SCREENTIP_CONTEXT_LMB] = "Remove Electronics"
+				context[SCREENTIP_CONTEXT_LMB] = "Снять электронику"
 				screentip_change = TRUE
 			if(!card_reader_installed && length(access_choices) && !broken && can_install_electronics && istype(held_item, /obj/item/stock_parts/card_reader))
-				context[SCREENTIP_CONTEXT_LMB] = "Install Reader"
+				context[SCREENTIP_CONTEXT_LMB] = "Установить ридер"
 				screentip_change = TRUE
 		if(card_reader_installed && istype(held_item) && held_item.tool_behaviour == TOOL_CROWBAR)
-			context[SCREENTIP_CONTEXT_LMB] = "Remove Reader"
+			context[SCREENTIP_CONTEXT_LMB] = "Снять ридер"
 			screentip_change = TRUE
 
 	if(!locked && !opened)
 		if(id_card && IS_WRITING_UTENSIL(held_item))
-			context[SCREENTIP_CONTEXT_LMB] = "Rename"
+			context[SCREENTIP_CONTEXT_LMB] = "Переименовать"
 			screentip_change = TRUE
 		if(secure && card_reader_installed && !broken)
 			if(!access_locked && istype(held_item) && !isnull(held_item.GetID()))
-				context[SCREENTIP_CONTEXT_LMB] = "Change Access"
+				context[SCREENTIP_CONTEXT_LMB] = "Изменить доступ"
 				screentip_change = TRUE
 			if(istype(held_item) && istype(held_item) && held_item.tool_behaviour == TOOL_MULTITOOL)
-				context[SCREENTIP_CONTEXT_LMB] = "[access_locked ? "Unlock" : "Lock"] Access Panel"
+				context[SCREENTIP_CONTEXT_LMB] = "[access_locked ? "Разблокировать" : "Заблокировать"] панель доступа"
 				screentip_change = TRUE
 
 	return screentip_change ? CONTEXTUAL_SCREENTIP_SET : NONE
@@ -460,13 +471,13 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		if(!(user.mobility_flags & MOBILITY_USE))
 			return FALSE
 	if(pulledby && user && HAS_TRAIT(src, TRAIT_STRONGPULL) && user != pulledby)
-		to_chat(user, span_danger("[pulledby] has an incredibly strong grip on [src], preventing it from opening."))
+		to_chat(user, span_danger("[pulledby] невероятно крепко держит [declent_ru(ACCUSATIVE)], не давая ему открыться."))
 		return FALSE
 	var/turf/T = get_turf(src)
 	for(var/mob/living/L in T)
 		if(L.anchored || horizontal && L.mob_size > MOB_SIZE_TINY && L.density)
 			if(user)
-				to_chat(user, span_danger("There's something large on top of [src], preventing it from opening."))
+				to_chat(user, span_danger("Сверху на [declent_ru(PREPOSITIONAL)] что-то большое, не даёт открыть."))
 			return FALSE
 	return TRUE
 
@@ -475,12 +486,12 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	for(var/obj/structure/closet/closet in T)
 		if(closet != src && !closet.wall_mounted)
 			if(user)
-				balloon_alert(user, "[closet.name] is in the way!")
+				balloon_alert(user, "[closet.name] мешает!")
 			return FALSE
 	for(var/mob/living/L in T)
 		if(L.anchored || horizontal && L.mob_size > MOB_SIZE_TINY && L.density)
 			if(user)
-				to_chat(user, span_danger("There's something too large in [src], preventing it from closing."))
+				to_chat(user, span_danger("В [declent_ru(PREPOSITIONAL)] что-то слишком большое, не даёт закрыть."))
 			return FALSE
 	return TRUE
 
@@ -660,7 +671,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	if(!secure || !card_reader_installed || broken || locked || opened)
 		return
 	access_locked = !access_locked
-	balloon_alert(user, "access panel [access_locked ? "locked" : "unlocked"]")
+	balloon_alert(user, "панель доступа [access_locked ? "заблокирована" : "разблокирована"]")
 	return TRUE
 
 /// sets the access for the closets from the swiped ID card
@@ -686,11 +697,11 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		return FALSE
 
 	if(broken)
-		balloon_alert(user, "its broken!")
+		balloon_alert(user, "он сломан!")
 		return FALSE
 
 	if(locked)
-		balloon_alert(user, "unlock first!")
+		balloon_alert(user, "сначала разблокируйте!")
 		return FALSE
 
 	return TRUE
@@ -700,10 +711,10 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	if(!secure || opened)
 		return FALSE
 	if(card_reader_installed)
-		balloon_alert(user, "attached to reader!")
+		balloon_alert(user, "прикреплено к ридеру!")
 		return FALSE
 	if(locked)
-		balloon_alert(user, "unlock first!")
+		balloon_alert(user, "сначала разблокируйте!")
 		return FALSE
 
 	return TRUE
@@ -714,15 +725,15 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		return FALSE
 
 	if(broken)
-		balloon_alert(user, "its broken!")
+		balloon_alert(user, "он сломан!")
 		return FALSE
 
 	if(!secure)
-		balloon_alert(user, "no electronics inside!")
+		balloon_alert(user, "нет электроники внутри!")
 		return FALSE
 
 	if(locked)
-		balloon_alert(user, "unlock first!")
+		balloon_alert(user, "сначала разблокируйте!")
 		return FALSE
 
 	return TRUE
@@ -733,7 +744,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		return FALSE
 
 	if(locked)
-		balloon_alert(user, "unlock first!")
+		balloon_alert(user, "сначала разблокируйте!")
 		return FALSE
 
 	return TRUE
@@ -745,7 +756,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	if(!opened && istype(weapon, /obj/item/airlock_painter))
 		if(!length(paint_jobs))
 			return
-		var/choice = tgui_input_list(user, "Set Closet Paintjob", "Paintjob", paint_jobs)
+		var/choice = tgui_input_list(user, "Установите покраску для шкафа", "Покраска", paint_jobs)
 		if(isnull(choice))
 			return
 
@@ -760,8 +771,8 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		update_appearance()
 
 	else if(istype(weapon, /obj/item/electronics/airlock) && can_install_airlock_electronics(user))
-		user.visible_message(span_notice("[user] installs the electronics into the [src]."),\
-			span_notice("You start to install electronics into the [src]..."))
+		user.visible_message(span_notice("[user] устанавливает электронику в [declent_ru(NOMINATIVE)]."),\
+			span_notice("Вы начинаете устанавливать электронику в [declent_ru(NOMINATIVE)]..."))
 
 		if(!do_after(user, 4 SECONDS, target = src, extra_checks = CALLBACK(src, PROC_REF(can_install_airlock_electronics), user)))
 			return
@@ -771,13 +782,13 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		inherit_airlock_electronics_access(weapon)
 		qdel(weapon)
 		secure = TRUE
-		balloon_alert(user, "electronics installed")
+		balloon_alert(user, "электроника установлена")
 
 		update_appearance()
 
 	else if(weapon.tool_behaviour == TOOL_SCREWDRIVER && can_unscrew_airlock_electronics(user))
-		user.visible_message(span_notice("[user] begins to remove the electronics from the [src]."),\
-			span_notice("You begin to remove the electronics from the [src]..."))
+		user.visible_message(span_notice("[user] начинает извлекать электронику из [declent_ru(GENITIVE)]."),\
+			span_notice("Вы начинаете извлекать электронику из [declent_ru(GENITIVE)]..."))
 
 		if (!weapon.use_tool(src, user, 40, volume = 50, extra_checks = CALLBACK(src, PROC_REF(can_unscrew_airlock_electronics), user)))
 			return
@@ -793,13 +804,13 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		req_one_access = null
 		id_card = null
 		secure = FALSE
-		balloon_alert(user, "electronics removed")
+		balloon_alert(user, "электроника извлечена")
 
 		update_appearance()
 
 	else if(istype(weapon, /obj/item/stock_parts/card_reader) && can_install_card_reader(user))
-		user.visible_message(span_notice("[user] is installing a card reader."),
-					span_notice("You begin installing the card reader."))
+		user.visible_message(span_notice("[user] устанавливает картридер."),
+					span_notice("Вы начинаете устанавливать картридер."))
 
 		if(!do_after(user, 4 SECONDS, target = src, extra_checks = CALLBACK(src, PROC_REF(can_install_card_reader), user)))
 			return
@@ -807,11 +818,11 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		qdel(weapon)
 		card_reader_installed = TRUE
 
-		balloon_alert(user, "card reader installed")
+		balloon_alert(user, "картридер установлен")
 
 	else if(weapon.tool_behaviour == TOOL_CROWBAR && can_pryout_card_reader(user))
-		user.visible_message(span_notice("[user] begins to pry the card reader out from [src]."),\
-			span_notice("You begin to pry the card reader out from [src]..."))
+		user.visible_message(span_notice("[user] начинает выламывать картридер из [declent_ru(GENITIVE)]."),\
+			span_notice("Вы начинаете выламывать картридер из [declent_ru(GENITIVE)]..."))
 
 		if(!weapon.use_tool(src, user, 4 SECONDS, extra_checks = CALLBACK(src, PROC_REF(can_pryout_card_reader), user)))
 			return
@@ -819,7 +830,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		new /obj/item/stock_parts/card_reader(drop_location())
 		card_reader_installed = FALSE
 
-		balloon_alert(user, "card reader removed")
+		balloon_alert(user, "картридер удалён")
 
 	else if(secure && !broken && card_reader_installed && !locked && !opened && !access_locked && !isnull((id = weapon.GetID())))
 		var/num_choices = length(access_choices)
@@ -830,7 +841,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		if(num_choices == 1)
 			choice = access_choices[1]
 		else
-			choice = tgui_input_list(user, "Set Access Type", "Access Type", access_choices)
+			choice = tgui_input_list(user, "Установите тип доступа", "Тип доступа", access_choices)
 		if(isnull(choice))
 			return
 
@@ -838,11 +849,11 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		switch(choice)
 			if("Personal") //only the player who swiped their id has access.
 				id_card = WEAKREF(id)
-				name = "[id.registered_name]'s locker"
-				desc += " It has been ID locked to [id.registered_name]."
+				name = "шкаф [id.registered_name]"
+				desc += " Он был заблокирован ID картой [id.registered_name]."
 			if("Job") //anyone who has the same access permissions as this id has access. Does NOT apply to the whole department.
-				name = "[id.assignment]'s locker"
-				desc += " It has been access locked to [id.assignment]s."
+				name = "шкаф [id.assignment]"
+				desc += " Он был заблокирован доступом [id.assignment]."
 				set_access(id.GetAccess())
 			if("None") //free for all
 				name = initial(name)
@@ -852,9 +863,9 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 				set_access(list())
 
 		if(!isnull(id_card))
-			balloon_alert(user, "now owned by [id.registered_name]")
+			balloon_alert(user, "теперь принадлежит [id.registered_name]")
 		else
-			balloon_alert(user, "set to [choice]")
+			balloon_alert(user, "установлен на [choice]")
 
 	else if(opened)
 		if(istype(weapon, cutting_tool))
@@ -862,18 +873,18 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 				if(!weapon.tool_start_check(user, amount=1))
 					return
 
-				to_chat(user, span_notice("You begin cutting \the [src] apart..."))
+				to_chat(user, span_notice("Вы начинаете разрезать [declent_ru(ACCUSATIVE)] на части..."))
 				if(weapon.use_tool(src, user, 40, volume=50))
 					if(!opened)
 						return
-					user.visible_message(span_notice("[user] slices apart \the [src]."),
-									span_notice("You cut \the [src] apart with \the [weapon]."),
-									span_hear("You hear welding."))
+					user.visible_message(span_notice("[user] разрезает [declent_ru(ACCUSATIVE)]."),
+									span_notice("Вы разрезаете [declent_ru(ACCUSATIVE)] с помощью [weapon.declent_ru(GENITIVE)]."),
+									span_hear("Слышна сварка."))
 					deconstruct(TRUE)
 				return
 			else // for example cardboard box is cut with wirecutters
-				user.visible_message(span_notice("[user] cut apart \the [src]."), \
-									span_notice("You cut \the [src] apart with \the [weapon]."))
+				user.visible_message(span_notice("[user] разрезает [declent_ru(ACCUSATIVE)]."), \
+									span_notice("Вы разрезаете [declent_ru(ACCUSATIVE)] с помощью [weapon.declent_ru(GENITIVE)]."))
 				deconstruct(TRUE)
 				return
 		if (user.combat_mode)
@@ -890,9 +901,9 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 				return
 			welded = !welded
 			after_weld(welded)
-			user.visible_message(span_notice("[user] [welded ? "welds shut" : "unwelded"] \the [src]."),
-							span_notice("You [welded ? "weld" : "unwelded"] \the [src] with \the [weapon]."),
-							span_hear("You hear welding."))
+			user.visible_message(span_notice("[user] [welded ? "заваривает" : "разваривает"] [declent_ru(ACCUSATIVE)]."),
+							span_notice("Вы [welded ? "завариваете" : "развариваете"] [declent_ru(ACCUSATIVE)] с помощью [weapon.declent_ru(GENITIVE)]."),
+							span_hear("Слышна сварка."))
 			user.log_message("[welded ? "welded":"unwelded"] closet [src] with [weapon]", LOG_GAME)
 			update_appearance()
 
@@ -907,14 +918,14 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 
 /obj/structure/closet/wrench_act_secondary(mob/living/user, obj/item/tool)
 	if(!anchorable)
-		balloon_alert(user, "no anchor bolts!")
+		balloon_alert(user, "нет анкерных болтов!")
 		return TRUE
 	if(isinspace() && !anchored) // We want to prevent anchoring a locker in space, but we should still be able to unanchor it there
-		balloon_alert(user, "nothing to anchor to!")
+		balloon_alert(user, "не к чему прикрутить!")
 		return TRUE
 	set_anchored(!anchored)
 	tool.play_tool_sound(src, 75)
-	user.balloon_alert_to_viewers("[anchored ? "anchored" : "unanchored"]")
+	user.balloon_alert_to_viewers("[anchored ? "прикручен" : "откручен"]")
 	return TRUE
 
 /obj/structure/closet/proc/after_weld(weld_state)
@@ -937,14 +948,14 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		return
 	var/turf/T = get_turf(src)
 	add_fingerprint(user)
-	user.visible_message(span_warning("[user] [actuallyismob ? "tries to ":""]stuff [O] into [src]."), \
-		span_warning("You [actuallyismob ? "try to ":""]stuff [O] into [src]."), \
-		span_hear("You hear clanging."))
+	user.visible_message(span_warning("[user] [actuallyismob ? "пытается запихнуть ":""] [O] в [declent_ru(NOMINATIVE)]."), \
+		span_warning("Вы [actuallyismob ? "пытаетесь запихнуть ":""] [O] в [declent_ru(NOMINATIVE)]."), \
+		span_hear("Слышен звон."))
 	if(actuallyismob)
 		if(do_after(user, 4 SECONDS, O))
-			user.visible_message(span_notice("[user] stuffs [O] into [src]."), \
-				span_notice("You stuff [O] into [src]."), \
-				span_hear("You hear a loud metal bang."))
+			user.visible_message(span_notice("[user] запихивает [O] в [declent_ru(NOMINATIVE)]."), \
+				span_notice("Вы запихиваете [O] в [declent_ru(NOMINATIVE)]."), \
+				span_hear("Слышен громкий металлический удар."))
 			var/mob/living/L = O
 			if(!issilicon(L))
 				L.Paralyze(40)
@@ -963,7 +974,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	if(locked)
 		if(message_cooldown <= world.time)
 			message_cooldown = world.time + 50
-			to_chat(user, span_warning("[src]'s door won't budge!"))
+			to_chat(user, span_warning("Дверь [src.declent_ru(GENITIVE)] не поддаётся!"))
 		return
 	container_resist_act(user)
 
@@ -1000,8 +1011,8 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 
 /obj/structure/closet/verb/verb_toggleopen()
 	set src in view(1)
-	set category = "Object"
-	set name = "Toggle Open"
+	set category = "Объект"
+	set name = "Переключить Открытие"
 
 	if(!usr.can_perform_action(src) || !isturf(loc))
 		return
@@ -1009,7 +1020,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	if(iscarbon(usr) || issilicon(usr) || isdrone(usr))
 		return toggle(usr)
 	else
-		to_chat(usr, span_warning("This mob type can't use this verb."))
+		to_chat(usr, span_warning("Этот тип моба не может использовать этот глагол."))
 
 // Objects that try to exit a locker by stepping were doing so successfully,
 // and due to an oversight in turf/Enter() were going through walls.  That
@@ -1038,9 +1049,9 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	//okay, so the closet is either welded or locked... resist!!!
 	user.changeNext_move(CLICK_CD_BREAKOUT)
 	user.last_special = world.time + CLICK_CD_BREAKOUT
-	user.visible_message(span_warning("[src] begins to shake violently!"), \
-		span_notice("You lean on the back of [src] and start pushing the door open... (this will take about [DisplayTimeText(breakout_time)].)"), \
-		span_hear("You hear banging from [src]."))
+	user.visible_message(span_warning("[declent_ru(NOMINATIVE)] начинает сильно трястись!"), \
+		span_notice("Вы наваливаетесь на заднюю стенку [declent_ru(GENITIVE)] и начинаете толкать дверь... (это займёт около [DisplayTimeText(breakout_time)].)"), \
+		span_hear("Вы слышите удары из [declent_ru(GENITIVE)]."))
 
 	addtimer(CALLBACK(src, PROC_REF(check_if_shake)), 1 SECONDS)
 
@@ -1048,13 +1059,12 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		if(!user || user.stat != CONSCIOUS || (loc_required && (user.loc != src)) || opened || (!locked && !welded) )
 			return
 		//we check after a while whether there is a point of resisting anymore and whether the user is capable of resisting
-		user.visible_message(span_danger("[user] successfully broke out of [src]!"),
-							span_notice("You successfully break out of [src]!"))
+		user.visible_message(span_danger("[user] успешно вырывается из [declent_ru(NOMINATIVE)]!"),
+							span_notice("Вы успешно вырвались из [declent_ru(GENITIVE)]!"))
 		bust_open()
 	else
 		if(user.loc == src) //so we don't get the message if we resisted multiple times and succeeded.
-			to_chat(user, span_warning("You fail to break out of [src]!"))
-
+			to_chat(user, span_warning("Вам не удалось выбраться из [declent_ru(NOMINATIVE)]!"))
 /obj/structure/closet/relay_container_resist_act(mob/living/user, obj/container)
 	container_resist_act(user)
 
@@ -1121,9 +1131,9 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 				togglelock(user, silent)
 				return
 			if(!can_unlock(user, user.get_idcard(), registered_id))
-				error_msg = "not your locker!"
+				error_msg = "не ваш шкаф!"
 		else if(!can_unlock(user, user.get_idcard()))
-			error_msg = "access denied!"
+			error_msg = "доступ запрещён!"
 		if(error_msg)
 			if(!silent)
 				balloon_alert(user, error_msg)
@@ -1134,8 +1144,8 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	locked = !locked
 	play_closet_lock_sound()
 	user.visible_message(
-		span_notice("[user] [locked ? "locks" : "unlocks"] [src]."),
-		span_notice("You [locked ? "locked" : "unlocked"] [src]."),
+		span_notice("[user] [locked ? "блокирует" : "разблокирует"] [declent_ru(NOMINATIVE)]."),
+		span_notice("Вы [locked ? "заблокировали" : "разблокировали"] [declent_ru(NOMINATIVE)]."),
 	)
 	update_appearance()
 
@@ -1161,8 +1171,8 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 
 /obj/structure/closet/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if(secure && !broken)
-		visible_message(span_warning("Sparks fly from [src]!"), blind_message = span_hear("You hear a faint electrical spark."))
-		balloon_alert(user, "lock broken open")
+		visible_message(span_warning("Искры летят из [declent_ru(GENITIVE)]!"), blind_message = span_hear("Вы слышите слабую электрическую искру."))
+		balloon_alert(user, "замок взломан")
 		playsound(src, SFX_SPARKS, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 		broken = TRUE
 		locked = FALSE
@@ -1226,11 +1236,11 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	else
 		target.Knockdown(SHOVE_KNOCKDOWN_SOLID)
 	update_icon()
-	target.visible_message(span_danger("[shover.name] shoves [target.name] into [src]!"),
-		span_userdanger("You're shoved into [src] by [shover.name]!"),
-		span_hear("You hear aggressive shuffling followed by a loud thud!"), COMBAT_MESSAGE_RANGE, shover)
-	to_chat(src, span_danger("You shove [target.name] into [src]!"))
-	log_combat(shover, target, "shoved", "into [src] (locker/crate)[weapon ? " with [weapon]" : ""]")
+	target.visible_message(span_danger("[shover.name] запихивает [target.name] в [declent_ru(NOMINATIVE)]!"),
+		span_userdanger("[shover.name] запихивает вас в [declent_ru(NOMINATIVE)]!"),
+		span_hear("Вы слышите агрессивное шарканье, за которым следует громкий удар!"), COMBAT_MESSAGE_RANGE, shover)
+	to_chat(src, span_danger("Вы запихиваете [target.name] в [declent_ru(NOMINATIVE)]!"))
+	log_combat(shover, target, "shoved", "into [declent_ru(NOMINATIVE)] (locker/crate)[weapon ? " with [weapon]" : ""]")
 	return COMSIG_LIVING_SHOVE_HANDLED
 
 /// Signal proc for [COMSIG_ATOM_MAGICALLY_UNLOCKED]. Unlock and open up when we get knock casted.
@@ -1250,11 +1260,11 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 /obj/structure/closet/rename_checks(mob/living/user)
 	. = TRUE
 	if(locked)
-		src.balloon_alert(user, "unlock first!")
+		src.balloon_alert(user, "сначала разблокируйте!")
 		return FALSE
 
 	if(isnull(id_card) && secure)
-		src.balloon_alert(user, "not yours to rename!")
+		src.balloon_alert(user, "не ваше, чтобы переименовывать!")
 		return FALSE
 
 ///Spears deal bonus damages to lockers
@@ -1263,8 +1273,8 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		HIDE_ATTACK_MESSAGES(attack_modifiers)
 		MODIFY_ATTACK_FORCE_MULTIPLIER(attack_modifiers, 2)
 		user.visible_message(
-			span_danger("[user] stabs with precision [src]'s electronics with [attacking_item]!"),
-			span_danger("You stab with precision [src]'s electronics with [attacking_item]!"),
+			span_danger("[user] точно пронзает электронику [declent_ru(GENITIVE)] с помощью [attacking_item]!"),
+			span_danger("Вы точно пронзаете электронику [declent_ru(GENITIVE)] с помощью [attacking_item]!"),
 			null,
 			COMBAT_MESSAGE_RANGE,
 		)

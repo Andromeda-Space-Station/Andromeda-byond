@@ -1,9 +1,20 @@
 /obj/structure/closet/infinite
 	name = "infinite closet"
-	desc = "It's closets, all the way down."
+	desc = "Это шкафы, на всю длину"
+	gender = MALE
 	var/replicating_type
 	var/stop_replicating_at = 4
 	var/auto_close_time = 15 SECONDS // Set to 0 to disable auto-closing.
+
+/obj/structure/closet/infinite/get_ru_names()
+	return list(
+		NOMINATIVE = "бесконечный шкаф",
+		GENITIVE = "бесконечного шкафа",
+		DATIVE = "бесконечному шкафу",
+		ACCUSATIVE = "бесконечный шкаф",
+		INSTRUMENTAL = "бесконечным шкафом",
+		PREPOSITIONAL = "бесконечном шкафе",
+	)
 
 /obj/structure/closet/infinite/Initialize(mapload)
 	. = ..()
@@ -30,4 +41,4 @@
 
 /obj/structure/closet/infinite/proc/close_on_my_own()
 	if(close())
-		visible_message(span_notice("\The [src] closes on its own."))
+		visible_message(span_notice("[declent_ru(NOMINATIVE)] закрывается сам по себе."))

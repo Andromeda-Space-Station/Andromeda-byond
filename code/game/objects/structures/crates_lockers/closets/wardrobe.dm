@@ -1,7 +1,18 @@
 /obj/structure/closet/wardrobe
 	name = "wardrobe"
-	desc = "It's a storage unit for standard-issue Nanotrasen attire."
+	desc = "Это шкаф для хранения стандартной одежды Nanotrasen."
+	gender = MALE
 	icon_door = "blue"
+
+/obj/structure/closet/wardrobe/get_ru_names()
+	return list(
+		NOMINATIVE = "гардероб",
+		GENITIVE = "гардероба",
+		DATIVE = "гардеробу",
+		ACCUSATIVE = "гардероб",
+		INSTRUMENTAL = "гардеробом",
+		PREPOSITIONAL = "гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/PopulateContents()
 	..()
@@ -17,6 +28,16 @@
 	name = "pink wardrobe"
 	icon_door = "pink"
 
+/obj/structure/closet/wardrobe/pink/get_ru_names()
+	return list(
+		NOMINATIVE = "розовый гардероб",
+		GENITIVE = "розового гардероба",
+		DATIVE = "розовому гардеробу",
+		ACCUSATIVE = "розовый гардероб",
+		INSTRUMENTAL = "розовым гардеробом",
+		PREPOSITIONAL = "розовом гардеробе",
+	)
+
 /obj/structure/closet/wardrobe/pink/PopulateContents()
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/under/color/pink(src)
@@ -29,6 +50,16 @@
 /obj/structure/closet/wardrobe/black
 	name = "black wardrobe"
 	icon_door = "black"
+
+/obj/structure/closet/wardrobe/black/get_ru_names()
+	return list(
+		NOMINATIVE = "чёрный гардероб",
+		GENITIVE = "чёрного гардероба",
+		DATIVE = "чёрному гардеробу",
+		ACCUSATIVE = "чёрный гардероб",
+		INSTRUMENTAL = "чёрным гардеробом",
+		PREPOSITIONAL = "чёрном гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/black/PopulateContents()
 	for(var/i in 1 to 3)
@@ -56,6 +87,16 @@
 	name = "green wardrobe"
 	icon_door = "green"
 
+/obj/structure/closet/wardrobe/green/get_ru_names()
+	return list(
+		NOMINATIVE = "зелёный гардероб",
+		GENITIVE = "зелёного гардероба",
+		DATIVE = "зелёному гардеробу",
+		ACCUSATIVE = "зелёный гардероб",
+		INSTRUMENTAL = "зелёным гардеробом",
+		PREPOSITIONAL = "зелёном гардеробе",
+	)
+
 /obj/structure/closet/wardrobe/green/PopulateContents()
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/under/color/green(src)
@@ -70,8 +111,18 @@
 
 /obj/structure/closet/wardrobe/orange
 	name = "prison wardrobe"
-	desc = "It's a storage unit for Nanotrasen-regulation prisoner attire."
+	desc = "Это шкаф для хранения тюремной формы Nanotrasen."
 	icon_door = "orange"
+
+/obj/structure/closet/wardrobe/orange/get_ru_names()
+	return list(
+		NOMINATIVE = "тюремный гардероб",
+		GENITIVE = "тюремного гардероба",
+		DATIVE = "тюремному гардеробу",
+		ACCUSATIVE = "тюремный гардероб",
+		INSTRUMENTAL = "тюремным гардеробом",
+		PREPOSITIONAL = "тюремном гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/orange/PopulateContents()
 	for(var/i in 1 to 3)
@@ -86,6 +137,16 @@
 /obj/structure/closet/wardrobe/yellow
 	name = "yellow wardrobe"
 	icon_door = "yellow"
+
+/obj/structure/closet/wardrobe/yellow/get_ru_names()
+	return list(
+		NOMINATIVE = "жёлтый гардероб",
+		GENITIVE = "жёлтого гардероба",
+		DATIVE = "жёлтому гардеробу",
+		ACCUSATIVE = "жёлтый гардероб",
+		INSTRUMENTAL = "жёлтым гардеробом",
+		PREPOSITIONAL = "жёлтом гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/yellow/PopulateContents()
 	for(var/i in 1 to 3)
@@ -102,6 +163,16 @@
 /obj/structure/closet/wardrobe/white
 	name = "white wardrobe"
 	icon_door = "white"
+
+/obj/structure/closet/wardrobe/white/get_ru_names()
+	return list(
+		NOMINATIVE = "белый гардероб",
+		GENITIVE = "белого гардероба",
+		DATIVE = "белому гардеробу",
+		ACCUSATIVE = "белый гардероб",
+		INSTRUMENTAL = "белым гардеробом",
+		PREPOSITIONAL = "белом гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/white/PopulateContents()
 	for(var/i in 1 to 3)
@@ -120,6 +191,16 @@
 	name = "pajama wardrobe"
 	icon_door = "white"
 
+/obj/structure/closet/wardrobe/pjs/get_ru_names()
+	return list(
+		NOMINATIVE = "гардероб с пижамами",
+		GENITIVE = "гардероба с пижамами",
+		DATIVE = "гардеробу с пижамами",
+		ACCUSATIVE = "гардероб с пижамами",
+		INSTRUMENTAL = "гардеробом с пижамами",
+		PREPOSITIONAL = "гардеробе с пижамами",
+	)
+
 /obj/structure/closet/wardrobe/pjs/PopulateContents()
 	new /obj/item/clothing/under/misc/pj/red(src)
 	new /obj/item/clothing/under/misc/pj/red(src)
@@ -137,6 +218,16 @@
 /obj/structure/closet/wardrobe/grey
 	name = "grey wardrobe"
 	icon_door = "grey"
+
+/obj/structure/closet/wardrobe/grey/get_ru_names()
+	return list(
+		NOMINATIVE = "серый гардероб",
+		GENITIVE = "серого гардероба",
+		DATIVE = "серому гардеробу",
+		ACCUSATIVE = "серый гардероб",
+		INSTRUMENTAL = "серым гардеробом",
+		PREPOSITIONAL = "сером гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/grey/PopulateContents()
 	for(var/i in 1 to 3)
@@ -167,6 +258,16 @@
 /obj/structure/closet/wardrobe/mixed
 	name = "mixed wardrobe"
 	icon_door = "mixed"
+
+/obj/structure/closet/wardrobe/mixed/get_ru_names()
+	return list(
+		NOMINATIVE = "смешанный гардероб",
+		GENITIVE = "смешанного гардероба",
+		DATIVE = "смешанному гардеробу",
+		ACCUSATIVE = "смешанный гардероб",
+		INSTRUMENTAL = "смешанным гардеробом",
+		PREPOSITIONAL = "смешанном гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/mixed/PopulateContents()
 	if(prob(40))

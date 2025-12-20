@@ -1,11 +1,22 @@
 /obj/effect/decal/cleanable/blood/gibs/robot_debris
 	name = "robot debris"
-	desc = "It's a useless heap of junk... <i>or is it?</i>"
+	desc = "Это бесполезная куча хлама... <i>или нет?</i>"
+	gender = PLURAL
 	icon = 'icons/mob/silicon/robots.dmi'
 	random_icon_states = list("gib1", "gib2", "gib3", "gib4", "gib5", "gib6", "gib7")
 	has_overlay = FALSE
 	squishy = FALSE
 	color = null
+
+/obj/effect/decal/cleanable/blood/gibs/robot_debris/get_ru_names()
+	return list(
+		NOMINATIVE = "обломки робота",
+		GENITIVE = "обломков робота",
+		DATIVE = "обломкам робота",
+		ACCUSATIVE = "обломки робота",
+		INSTRUMENTAL = "обломками робота",
+		PREPOSITIONAL = "обломках робота",
+	)
 
 /obj/effect/decal/cleanable/blood/gibs/robot_debris/get_default_blood_type()
 	return get_blood_type(BLOOD_TYPE_OIL)
@@ -43,8 +54,19 @@
 /obj/effect/decal/cleanable/blood/oil
 	name = "motor oil"
 	// This is fetched in /datum/blood_type/oil/set_up_blood() for all blood decals with default desc
-	desc = "It's black and greasy. Looks like Beepsky made another mess."
+	desc = "Оно чёрное и жирное. Похоже, Бипски снова наделал грязи."
+	gender = NEUTER
 	color = /datum/blood_type/oil::color // For mapper sanity
+
+/obj/effect/decal/cleanable/blood/oil/get_ru_names()
+	return list(
+		NOMINATIVE = "машинное масло",
+		GENITIVE = "машинного масла",
+		DATIVE = "машинному маслу",
+		ACCUSATIVE = "машинное масло",
+		INSTRUMENTAL = "машинным маслом",
+		PREPOSITIONAL = "машинном масле",
+	)
 
 /obj/effect/decal/cleanable/blood/oil/get_default_blood_type()
 	return get_blood_type(BLOOD_TYPE_OIL)
@@ -55,7 +77,18 @@
 
 /obj/effect/decal/cleanable/blood/splatter/oil
 	name = "motor oil"
+	gender = NEUTER
 	color = /datum/blood_type/oil::color
+
+/obj/effect/decal/cleanable/blood/splatter/oil/get_ru_names()
+	return list(
+		NOMINATIVE = "машинное масло",
+		GENITIVE = "машинного масла",
+		DATIVE = "машинному маслу",
+		ACCUSATIVE = "машинное масло",
+		INSTRUMENTAL = "машинным маслом",
+		PREPOSITIONAL = "машинном масле",
+	)
 
 /obj/effect/decal/cleanable/blood/splatter/oil/get_default_blood_type()
 	return get_blood_type(BLOOD_TYPE_OIL)

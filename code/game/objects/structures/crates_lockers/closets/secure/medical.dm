@@ -1,8 +1,19 @@
 /obj/structure/closet/secure_closet/medical1
 	name = "medicine closet"
-	desc = "Filled to the brim with medical junk."
+	desc = "Забит до отказа медицинским хламом."
+	gender = MALE
 	icon_state = "med"
 	req_access = list(ACCESS_MEDICAL)
+
+/obj/structure/closet/secure_closet/medical1/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с медикаментами",
+		GENITIVE = "шкафа с медикаментами",
+		DATIVE = "шкафу с медикаментами",
+		ACCUSATIVE = "шкаф с медикаментами",
+		INSTRUMENTAL = "шкафом с медикаментами",
+		PREPOSITIONAL = "шкафе с медикаментами",
+	)
 
 /obj/structure/closet/secure_closet/medical1/PopulateContents()
 	..()
@@ -20,9 +31,20 @@
 
 /obj/structure/closet/secure_closet/medical2
 	name = "anesthetic closet"
-	desc = "Used to knock people out."
+	desc = "Используется для отрубания людей."
+	gender = MALE
 	icon_state = "med_secure"
 	req_access = list(ACCESS_SURGERY)
+
+/obj/structure/closet/secure_closet/medical2/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с анестетиками",
+		GENITIVE = "шкафа с анестетиками",
+		DATIVE = "шкафу с анестетиками",
+		ACCUSATIVE = "шкаф с анестетиками",
+		INSTRUMENTAL = "шкафом с анестетиками",
+		PREPOSITIONAL = "шкафе с анестетиками",
+	)
 
 /obj/structure/closet/secure_closet/medical2/PopulateContents()
 	..()
@@ -33,8 +55,19 @@
 
 /obj/structure/closet/secure_closet/medical3
 	name = "medical doctor's locker"
+	gender = MALE
 	req_access = list(ACCESS_SURGERY)
 	icon_state = "med_secure"
+
+/obj/structure/closet/secure_closet/medical3/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф врача",
+		GENITIVE = "шкафа врача",
+		DATIVE = "шкафу врача",
+		ACCUSATIVE = "шкаф врача",
+		INSTRUMENTAL = "шкафом врача",
+		PREPOSITIONAL = "шкафе врача",
+	)
 
 /obj/structure/closet/secure_closet/medical3/PopulateContents()
 	..()
@@ -47,6 +80,7 @@
 
 /obj/structure/closet/secure_closet/psychology
 	name = "psychology locker"
+	gender = MALE
 	req_access = list(ACCESS_PSYCHOLOGY)
 	icon_state = "cabinet"
 	door_anim_time = 0 // no animation
@@ -54,6 +88,16 @@
 	close_sound = 'sound/machines/closet/wooden_closet_close.ogg'
 	open_sound_volume = 25
 	close_sound_volume = 50
+
+/obj/structure/closet/secure_closet/psychology/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф психолога",
+		GENITIVE = "шкафа психолога",
+		DATIVE = "шкафу психолога",
+		ACCUSATIVE = "шкаф психолога",
+		INSTRUMENTAL = "шкафом психолога",
+		PREPOSITIONAL = "шкафе психолога",
+	)
 
 /obj/structure/closet/secure_closet/psychology/PopulateContents()
 	..()
@@ -71,8 +115,19 @@
 
 /obj/structure/closet/secure_closet/chief_medical
 	name = "chief medical officer's locker"
+	gender = MALE
 	req_access = list(ACCESS_CMO)
 	icon_state = "cmo"
+
+/obj/structure/closet/secure_closet/chief_medical/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф главного врача",
+		GENITIVE = "шкафа главного врача",
+		DATIVE = "шкафу главного врача",
+		ACCUSATIVE = "шкаф главного врача",
+		INSTRUMENTAL = "шкафом главного врача",
+		PREPOSITIONAL = "шкафе главного врача",
+	)
 
 /obj/structure/closet/secure_closet/chief_medical/PopulateContents()
 	..()
@@ -101,8 +156,19 @@
 
 /obj/structure/closet/secure_closet/animal
 	name = "animal control locker"
+	gender = MALE
 	icon_door = "chemical"
 	req_access = list(ACCESS_SURGERY)
+
+/obj/structure/closet/secure_closet/animal/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф контроля животных",
+		GENITIVE = "шкафа контроля животных",
+		DATIVE = "шкафу контроля животных",
+		ACCUSATIVE = "шкаф контроля животных",
+		INSTRUMENTAL = "шкафом контроля животных",
+		PREPOSITIONAL = "шкафе контроля животных",
+	)
 
 /obj/structure/closet/secure_closet/animal/PopulateContents()
 	..()
@@ -112,9 +178,20 @@
 
 /obj/structure/closet/secure_closet/chemical
 	name = "chemical closet"
-	desc = "Store dangerous chemicals in here."
+	desc = "Храните опасные химикаты здесь."
+	gender = MALE
 	req_access = list(ACCESS_PHARMACY)
 	icon_state = "chem_secure"
+
+/obj/structure/closet/secure_closet/chemical/get_ru_names()
+	return list(
+		NOMINATIVE = "химический шкаф",
+		GENITIVE = "химического шкафа",
+		DATIVE = "химическому шкафу",
+		ACCUSATIVE = "химический шкаф",
+		INSTRUMENTAL = "химическим шкафом",
+		PREPOSITIONAL = "химическом шкафе",
+	)
 
 /obj/structure/closet/secure_closet/chemical/PopulateContents()
 	..()
@@ -128,7 +205,18 @@
 
 /obj/structure/closet/secure_closet/chemical/heisenberg //contains one of each beaker, syringe etc.
 	name = "advanced chemical closet"
+	gender = MALE
 	req_access = list(ACCESS_PLUMBING)
+
+/obj/structure/closet/secure_closet/chemical/heisenberg/get_ru_names()
+	return list(
+		NOMINATIVE = "продвинутый химический шкаф",
+		GENITIVE = "продвинутого химического шкафа",
+		DATIVE = "продвинутому химическому шкафу",
+		ACCUSATIVE = "продвинутый химический шкаф",
+		INSTRUMENTAL = "продвинутым химическим шкафом",
+		PREPOSITIONAL = "продвинутом химическом шкафе",
+	)
 
 /obj/structure/closet/secure_closet/chemical/heisenberg/PopulateContents()
 	..()
@@ -140,8 +228,19 @@
 
 /obj/structure/closet/secure_closet/paramedic
 	name = "emergency medical team locker"
+	gender = MALE
 	req_access = list(ACCESS_PARAMEDIC)
 	icon_state = "paramed_secure"
+
+/obj/structure/closet/secure_closet/paramedic/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф парамедика",
+		GENITIVE = "шкафа парамедика",
+		DATIVE = "шкафу парамедика",
+		ACCUSATIVE = "шкаф парамедика",
+		INSTRUMENTAL = "шкафом парамедика",
+		PREPOSITIONAL = "шкафе парамедика",
+	)
 
 /obj/structure/closet/secure_closet/paramedic/PopulateContents()
 	..()

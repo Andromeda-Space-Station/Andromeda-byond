@@ -1,6 +1,7 @@
 /obj/structure/closet/secure_closet/freezer
 	icon_state = "freezer"
 	base_icon_state = "freezer"
+	gender = MALE
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1
 	door_anim_squish = 0.22
 	door_anim_angle = 123
@@ -15,6 +16,16 @@
 	var/cooling_rate_per_second = 4
 	/// Minimum temperature of the internal air mixture
 	var/minimum_temperature = T0C - 60
+
+/obj/structure/closet/secure_closet/freezer/get_ru_names()
+	return list(
+		NOMINATIVE = "холодильник",
+		GENITIVE = "холодильника",
+		DATIVE = "холодильнику",
+		ACCUSATIVE = "холодильник",
+		INSTRUMENTAL = "холодильником",
+		PREPOSITIONAL = "холодильнике",
+	)
 
 /obj/structure/closet/secure_closet/freezer/process_internal_air(seconds_per_tick)
 	if(opened)
@@ -43,6 +54,16 @@
 /obj/structure/closet/secure_closet/freezer/empty
 	name = "freezer"
 
+/obj/structure/closet/secure_closet/freezer/empty/get_ru_names()
+	return list(
+		NOMINATIVE = "морозильник",
+		GENITIVE = "морозильника",
+		DATIVE = "морозильнику",
+		ACCUSATIVE = "морозильник",
+		INSTRUMENTAL = "морозильником",
+		PREPOSITIONAL = "морозильнике",
+	)
+
 /obj/structure/closet/secure_closet/freezer/empty/open
 	req_access = null
 	locked = FALSE
@@ -50,6 +71,16 @@
 /obj/structure/closet/secure_closet/freezer/kitchen
 	name = "kitchen cabinet"
 	req_access = list(ACCESS_KITCHEN)
+
+/obj/structure/closet/secure_closet/freezer/kitchen/get_ru_names()
+	return list(
+		NOMINATIVE = "кухонный шкаф",
+		GENITIVE = "кухонного шкафа",
+		DATIVE = "кухонному шкафу",
+		ACCUSATIVE = "кухонный шкаф",
+		INSTRUMENTAL = "кухонным шкафом",
+		PREPOSITIONAL = "кухонном шкафе",
+	)
 
 /obj/structure/closet/secure_closet/freezer/kitchen/PopulateContents()
 	..()
@@ -63,8 +94,18 @@
 
 /obj/structure/closet/secure_closet/freezer/kitchen/maintenance
 	name = "maintenance refrigerator"
-	desc = "This refrigerator looks quite dusty, is there anything edible still inside?"
+	desc = "Этот холодильник выглядит довольно пыльным. Внутри ещё осталось что-нибудь съедобное?"
 	req_access = null
+
+/obj/structure/closet/secure_closet/freezer/kitchen/maintenance/get_ru_names()
+	return list(
+		NOMINATIVE = "технический холодильник",
+		GENITIVE = "технического холодильника",
+		DATIVE = "техническому холодильнику",
+		ACCUSATIVE = "технический холодильник",
+		INSTRUMENTAL = "техническим холодильником",
+		PREPOSITIONAL = "техническом холодильнике",
+	)
 
 /obj/structure/closet/secure_closet/freezer/kitchen/maintenance/PopulateContents()
 	..()
@@ -81,6 +122,16 @@
 	name = "meat fridge"
 	req_access = list(ACCESS_KITCHEN)
 
+/obj/structure/closet/secure_closet/freezer/meat/get_ru_names()
+	return list(
+		NOMINATIVE = "мясной холодильник",
+		GENITIVE = "мясного холодильника",
+		DATIVE = "мясному холодильнику",
+		ACCUSATIVE = "мясной холодильник",
+		INSTRUMENTAL = "мясным холодильником",
+		PREPOSITIONAL = "мясном холодильнике",
+	)
+
 /obj/structure/closet/secure_closet/freezer/meat/PopulateContents()
 	..()
 	for(var/i in 1 to 4)
@@ -96,6 +147,16 @@
 /obj/structure/closet/secure_closet/freezer/gulag_fridge
 	name = "refrigerator"
 
+/obj/structure/closet/secure_closet/freezer/gulag_fridge/get_ru_names()
+	return list(
+		NOMINATIVE = "холодильник",
+		GENITIVE = "холодильника",
+		DATIVE = "холодильнику",
+		ACCUSATIVE = "холодильник",
+		INSTRUMENTAL = "холодильником",
+		PREPOSITIONAL = "холодильнике",
+	)
+
 /obj/structure/closet/secure_closet/freezer/gulag_fridge/PopulateContents()
 	..()
 	for(var/i in 1 to 3)
@@ -104,6 +165,16 @@
 /obj/structure/closet/secure_closet/freezer/fridge
 	name = "refrigerator"
 	req_access = list(ACCESS_KITCHEN)
+
+/obj/structure/closet/secure_closet/freezer/fridge/get_ru_names()
+	return list(
+		NOMINATIVE = "холодильник",
+		GENITIVE = "холодильника",
+		DATIVE = "холодильнику",
+		ACCUSATIVE = "холодильник",
+		INSTRUMENTAL = "холодильником",
+		PREPOSITIONAL = "холодильнике",
+	)
 
 /obj/structure/closet/secure_closet/freezer/fridge/PopulateContents()
 	..()
@@ -127,8 +198,18 @@
 
 /obj/structure/closet/secure_closet/freezer/money
 	name = "freezer"
-	desc = "This contains cold hard cash."
+	desc = "Здесь хранятся ледянные наличные."
 	req_access = list(ACCESS_VAULT)
+
+/obj/structure/closet/secure_closet/freezer/money/get_ru_names()
+	return list(
+		NOMINATIVE = "морозильник",
+		GENITIVE = "морозильника",
+		DATIVE = "морозильнику",
+		ACCUSATIVE = "морозильник",
+		INSTRUMENTAL = "морозильником",
+		PREPOSITIONAL = "морозильнике",
+	)
 
 /obj/structure/closet/secure_closet/freezer/money/PopulateContents()
 	..()
@@ -141,8 +222,18 @@
 
 /obj/structure/closet/secure_closet/freezer/cream_pie
 	name = "cream pie closet"
-	desc = "Contains pies filled with cream and/or custard, you sickos."
+	desc = "Содержит пироги с кремом и/или заварным кремом, извращенцы."
 	req_access = list(ACCESS_THEATRE)
+
+/obj/structure/closet/secure_closet/freezer/cream_pie/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с кремовыми пирогами",
+		GENITIVE = "шкафа с кремовыми пирогами",
+		DATIVE = "шкафу с кремовыми пирогами",
+		ACCUSATIVE = "шкаф с кремовыми пирогами",
+		INSTRUMENTAL = "шкафом с кремовыми пирогами",
+		PREPOSITIONAL = "шкафе с кремовыми пирогами",
+	)
 
 /obj/structure/closet/secure_closet/freezer/cream_pie/PopulateContents()
 	..()

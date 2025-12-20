@@ -2,8 +2,19 @@
 
 /obj/structure/closet/gmcloset
 	name = "formal closet"
-	desc = "It's a storage unit for formal clothing."
+	desc = "Это шкаф для хранения официальной одежды."
+	gender = MALE
 	icon_door = "bar_wardrobe"
+
+/obj/structure/closet/gmcloset/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с официальной одеждой",
+		GENITIVE = "шкафа с официальной одеждой",
+		DATIVE = "шкафу с официальной одеждой",
+		ACCUSATIVE = "шкаф с официальной одеждой",
+		INSTRUMENTAL = "шкафом с официальной одеждой",
+		PREPOSITIONAL = "шкафе с официальной одеждой",
+	)
 
 /obj/structure/closet/gmcloset/PopulateContents()
 	..()
@@ -25,8 +36,19 @@
 
 /obj/structure/closet/chefcloset
 	name = "chef's closet"
-	desc = "It's a storage unit for food service garments and mousetraps."
+	desc = "Это шкаф для хранения одежды работников кухни и мышеловок."
+	gender = MALE
 	icon_door = "chef_wardrobe"
+
+/obj/structure/closet/chefcloset/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф шеф-повара",
+		GENITIVE = "шкафа шеф-повара",
+		DATIVE = "шкафу шеф-повара",
+		ACCUSATIVE = "шкаф шеф-повара",
+		INSTRUMENTAL = "шкафом шеф-повара",
+		PREPOSITIONAL = "шкафе шеф-повара",
+	)
 
 /obj/structure/closet/chefcloset/PopulateContents()
 	..()
@@ -46,8 +68,19 @@
 
 /obj/structure/closet/jcloset
 	name = "custodial closet"
-	desc = "It's a storage unit for janitorial clothes and gear."
+	desc = "Это шкаф для хранения одежды и инвентаря уборщика."
+	gender = MALE
 	icon_door = "jani_wardrobe"
+
+/obj/structure/closet/jcloset/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф уборщика",
+		GENITIVE = "шкафа уборщика",
+		DATIVE = "шкафу уборщика",
+		ACCUSATIVE = "шкаф уборщика",
+		INSTRUMENTAL = "шкафом уборщика",
+		PREPOSITIONAL = "шкафе уборщика",
+	)
 
 /obj/structure/closet/jcloset/PopulateContents()
 	..()
@@ -70,8 +103,19 @@
 
 /obj/structure/closet/lawcloset
 	name = "legal closet"
-	desc = "It's a storage unit for courtroom apparel and items."
+	desc = "Это шкаф для хранения одежды и предметов зала суда."
+	gender = MALE
 	icon_door = "law_wardrobe"
+
+/obj/structure/closet/lawcloset/get_ru_names()
+	return list(
+		NOMINATIVE = "юридический шкаф",
+		GENITIVE = "юридического шкафа",
+		DATIVE = "юридическому шкафу",
+		ACCUSATIVE = "юридический шкаф",
+		INSTRUMENTAL = "юридическим шкафом",
+		PREPOSITIONAL = "юридическом шкафе",
+	)
 
 /obj/structure/closet/lawcloset/PopulateContents()
 	..()
@@ -97,8 +141,19 @@
 
 /obj/structure/closet/wardrobe/chaplain_black
 	name = "chapel wardrobe"
-	desc = "It's a storage unit for Nanotrasen-approved religious attire."
+	desc = "Это шкаф для хранения одобренной Nanotrasen религиозной одежды."
+	gender = MALE
 	icon_door = "chap_wardrobe"
+
+/obj/structure/closet/wardrobe/chaplain_black/get_ru_names()
+	return list(
+		NOMINATIVE = "церковный гардероб",
+		GENITIVE = "церковного гардероба",
+		DATIVE = "церковному гардеробу",
+		ACCUSATIVE = "церковный гардероб",
+		INSTRUMENTAL = "церковным гардеробом",
+		PREPOSITIONAL = "церковном гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/chaplain_black/PopulateContents()
 	new /obj/item/choice_beacon/holy(src)
@@ -116,7 +171,18 @@
 
 /obj/structure/closet/wardrobe/red
 	name = "security wardrobe"
+	gender = MALE
 	icon_door = "sec_wardrobe"
+
+/obj/structure/closet/wardrobe/red/get_ru_names()
+	return list(
+		NOMINATIVE = "гардероб охраны",
+		GENITIVE = "гардероба охраны",
+		DATIVE = "гардеробу охраны",
+		ACCUSATIVE = "гардероб охраны",
+		INSTRUMENTAL = "гардеробом охраны",
+		PREPOSITIONAL = "гардеробе охраны",
+	)
 
 /obj/structure/closet/wardrobe/red/PopulateContents()
 	var/static/items_inside = list(
@@ -136,7 +202,18 @@
 
 /obj/structure/closet/wardrobe/cargotech
 	name = "cargo wardrobe"
+	gender = MALE
 	icon_door = "cargo_wardrobe"
+
+/obj/structure/closet/wardrobe/cargotech/get_ru_names()
+	return list(
+		NOMINATIVE = "грузовой гардероб",
+		GENITIVE = "грузового гардероба",
+		DATIVE = "грузовому гардеробу",
+		ACCUSATIVE = "грузовой гардероб",
+		INSTRUMENTAL = "грузовым гардеробом",
+		PREPOSITIONAL = "грузовом гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/cargotech/PopulateContents()
 	var/static/items_inside = list(
@@ -150,7 +227,18 @@
 
 /obj/structure/closet/wardrobe/atmospherics_yellow
 	name = "atmospherics wardrobe"
+	gender = MALE
 	icon_door = "atmos_wardrobe"
+
+/obj/structure/closet/wardrobe/atmospherics_yellow/get_ru_names()
+	return list(
+		NOMINATIVE = "атмосферный гардероб",
+		GENITIVE = "атмосферного гардероба",
+		DATIVE = "атмосферному гардеробу",
+		ACCUSATIVE = "атмосферный гардероб",
+		INSTRUMENTAL = "атмосферным гардеробом",
+		PREPOSITIONAL = "атмосферном гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/atmospherics_yellow/PopulateContents()
 	var/static/items_inside = list(
@@ -168,7 +256,18 @@
 
 /obj/structure/closet/wardrobe/engineering_yellow
 	name = "engineering wardrobe"
+	gender = MALE
 	icon_door = "engi_wardrobe"
+
+/obj/structure/closet/wardrobe/engineering_yellow/get_ru_names()
+	return list(
+		NOMINATIVE = "инженерный гардероб",
+		GENITIVE = "инженерного гардероба",
+		DATIVE = "инженерному гардеробу",
+		ACCUSATIVE = "инженерный гардероб",
+		INSTRUMENTAL = "инженерным гардеробом",
+		PREPOSITIONAL = "инженерном гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/engineering_yellow/PopulateContents()
 	var/static/items_inside = list(
@@ -187,7 +286,18 @@
 
 /obj/structure/closet/wardrobe/white/medical
 	name = "medical doctor's wardrobe"
+	gender = MALE
 	icon_door = "med_wardrobe"
+
+/obj/structure/closet/wardrobe/white/medical/get_ru_names()
+	return list(
+		NOMINATIVE = "гардероб врача",
+		GENITIVE = "гардероба врача",
+		DATIVE = "гардеробу врача",
+		ACCUSATIVE = "гардероб врача",
+		INSTRUMENTAL = "гардеробом врача",
+		PREPOSITIONAL = "гардеробе врача",
+	)
 
 /obj/structure/closet/wardrobe/white/medical/PopulateContents()
 	var/static/items_inside = list(
@@ -210,7 +320,18 @@
 
 /obj/structure/closet/wardrobe/robotics_black
 	name = "robotics wardrobe"
+	gender = MALE
 	icon_door = "robo_wardrobe"
+
+/obj/structure/closet/wardrobe/robotics_black/get_ru_names()
+	return list(
+		NOMINATIVE = "гардероб робототехника",
+		GENITIVE = "гардероба робототехника",
+		DATIVE = "гардеробу робототехника",
+		ACCUSATIVE = "гардероб робототехника",
+		INSTRUMENTAL = "гардеробом робототехника",
+		PREPOSITIONAL = "гардеробе робототехника",
+	)
 
 /obj/structure/closet/wardrobe/robotics_black/PopulateContents()
 	var/static/items_inside = list(
@@ -230,7 +351,18 @@
 
 /obj/structure/closet/wardrobe/chemistry_white
 	name = "chemistry wardrobe"
+	gender = MALE
 	icon_door = "chem_wardrobe"
+
+/obj/structure/closet/wardrobe/chemistry_white/get_ru_names()
+	return list(
+		NOMINATIVE = "химический гардероб",
+		GENITIVE = "химического гардероба",
+		DATIVE = "химическому гардеробу",
+		ACCUSATIVE = "химический гардероб",
+		INSTRUMENTAL = "химическим гардеробом",
+		PREPOSITIONAL = "химическом гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/chemistry_white/PopulateContents()
 	var/static/items_inside = list(
@@ -248,7 +380,18 @@
 
 /obj/structure/closet/wardrobe/genetics_white
 	name = "genetics wardrobe"
+	gender = MALE
 	icon_door = "gen_wardrobe"
+
+/obj/structure/closet/wardrobe/genetics_white/get_ru_names()
+	return list(
+		NOMINATIVE = "гардероб генетика",
+		GENITIVE = "гардероба генетика",
+		DATIVE = "гардеробу генетика",
+		ACCUSATIVE = "гардероб генетика",
+		INSTRUMENTAL = "гардеробом генетика",
+		PREPOSITIONAL = "гардеробе генетика",
+	)
 
 /obj/structure/closet/wardrobe/genetics_white/PopulateContents()
 	var/static/items_inside = list(
@@ -265,7 +408,18 @@
 
 /obj/structure/closet/wardrobe/virology_white
 	name = "virology wardrobe"
+	gender = MALE
 	icon_door = "viro_wardrobe"
+
+/obj/structure/closet/wardrobe/virology_white/get_ru_names()
+	return list(
+		NOMINATIVE = "вирусологический гардероб",
+		GENITIVE = "вирусологического гардероба",
+		DATIVE = "вирусологическому гардеробу",
+		ACCUSATIVE = "вирусологический гардероб",
+		INSTRUMENTAL = "вирусологическим гардеробом",
+		PREPOSITIONAL = "вирусологическом гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/virology_white/PopulateContents()
 	var/static/items_inside = list(
@@ -282,7 +436,18 @@
 
 /obj/structure/closet/wardrobe/science_white
 	name = "science wardrobe"
+	gender = MALE
 	icon_door = "sci_wardrobe"
+
+/obj/structure/closet/wardrobe/science_white/get_ru_names()
+	return list(
+		NOMINATIVE = "научный гардероб",
+		GENITIVE = "научного гардероба",
+		DATIVE = "научному гардеробу",
+		ACCUSATIVE = "научный гардероб",
+		INSTRUMENTAL = "научным гардеробом",
+		PREPOSITIONAL = "научном гардеробе",
+	)
 
 /obj/structure/closet/wardrobe/science_white/PopulateContents()
 	var/static/items_inside = list(
@@ -301,7 +466,18 @@
 
 /obj/structure/closet/wardrobe/botanist
 	name = "botanist wardrobe"
+	gender = MALE
 	icon_door = "botany_wardrobe"
+
+/obj/structure/closet/wardrobe/botanist/get_ru_names()
+	return list(
+		NOMINATIVE = "гардероб ботаника",
+		GENITIVE = "гардероба ботаника",
+		DATIVE = "гардеробу ботаника",
+		ACCUSATIVE = "гардероб ботаника",
+		INSTRUMENTAL = "гардеробом ботаника",
+		PREPOSITIONAL = "гардеробе ботаника",
+	)
 
 /obj/structure/closet/wardrobe/botanist/PopulateContents()
 	var/static/items_inside = list(
@@ -318,7 +494,18 @@
 
 /obj/structure/closet/wardrobe/curator
 	name = "treasure hunting wardrobe"
+	gender = MALE
 	icon_door = "curator_wardrobe"
+
+/obj/structure/closet/wardrobe/curator/get_ru_names()
+	return list(
+		NOMINATIVE = "гардероб охотника за сокровищами",
+		GENITIVE = "гардероба охотника за сокровищами",
+		DATIVE = "гардеробу охотника за сокровищами",
+		ACCUSATIVE = "гардероб охотника за сокровищами",
+		INSTRUMENTAL = "гардеробом охотника за сокровищами",
+		PREPOSITIONAL = "гардеробе охотника за сокровищами",
+	)
 
 /obj/structure/closet/wardrobe/curator/PopulateContents()
 	new /obj/item/clothing/head/fedora/curator(src)
