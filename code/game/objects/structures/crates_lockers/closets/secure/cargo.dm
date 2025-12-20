@@ -1,7 +1,18 @@
 /obj/structure/closet/secure_closet/quartermaster
 	name = "quartermaster's locker"
+	gender = MALE
 	req_access = list(ACCESS_QM)
 	icon_state = "qm"
+
+/obj/structure/closet/secure_closet/quartermaster/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф квартирмейстера",
+		GENITIVE = "шкафа квартирмейстера",
+		DATIVE = "шкафу квартирмейстера",
+		ACCUSATIVE = "шкаф квартирмейстера",
+		INSTRUMENTAL = "шкафом квартирмейстера",
+		PREPOSITIONAL = "шкафе квартирмейстера",
+	)
 
 /obj/structure/closet/secure_closet/quartermaster/PopulateContents()
 	..()

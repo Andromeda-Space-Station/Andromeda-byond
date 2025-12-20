@@ -1,5 +1,6 @@
 /obj/structure/closet/secure_closet/bar
 	name = "booze storage"
+	gender = MALE
 	req_access = list(ACCESS_BAR)
 	icon_state = "cabinet"
 	resistance_flags = FLAMMABLE
@@ -10,6 +11,16 @@
 	close_sound_volume = 50
 	door_anim_time = 0 // no animation
 	paint_jobs = null
+
+/obj/structure/closet/secure_closet/bar/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф для выпивки",
+		GENITIVE = "шкафа для выпивки",
+		DATIVE = "шкафу для выпивки",
+		ACCUSATIVE = "шкаф для выпивки",
+		INSTRUMENTAL = "шкафом для выпивки",
+		PREPOSITIONAL = "шкафе для выпивки",
+	)
 
 /obj/structure/closet/secure_closet/bar/PopulateContents()
 	..()
@@ -33,6 +44,16 @@
 
 /obj/structure/closet/secure_closet/bar/lavaland_bartender_clothes
 	name = "bartender's closet"
+
+/obj/structure/closet/secure_closet/bar/lavaland_bartender_clothes/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф бармена",
+		GENITIVE = "шкафа бармена",
+		DATIVE = "шкафу бармена",
+		ACCUSATIVE = "шкаф бармена",
+		INSTRUMENTAL = "шкафом бармена",
+		PREPOSITIONAL = "шкафе бармена",
+	)
 
 /obj/structure/closet/secure_closet/bar/lavaland_bartender_clothes/PopulateContents()
 	new /obj/item/clothing/neck/beads(src)

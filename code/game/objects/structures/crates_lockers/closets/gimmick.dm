@@ -1,6 +1,7 @@
 /obj/structure/closet/cabinet
 	name = "cabinet"
-	desc = "Old will forever be in fashion."
+	desc = "Классика всегда в моде."
+	gender = MALE
 	icon_state = "cabinet"
 	resistance_flags = FLAMMABLE
 	open_sound = 'sound/machines/closet/wooden_closet_open.ogg'
@@ -10,20 +11,62 @@
 	max_integrity = 70
 	door_anim_time = 0 // no animation
 
+/obj/structure/closet/cabinet/get_ru_names()
+	return list(
+		NOMINATIVE = "деревянный шкаф",
+		GENITIVE = "деревянного шкафа",
+		DATIVE = "деревянному шкафу",
+		ACCUSATIVE = "деревянный шкаф",
+		INSTRUMENTAL = "деревянным шкафом",
+		PREPOSITIONAL = "деревянном шкафе",
+	)
+
 /obj/structure/closet/acloset
 	name = "strange closet"
-	desc = "It looks alien!"
+	desc = "Выглядит инопланетно!"
+	gender = MALE
 	icon_state = "alien"
 	material_drop = /obj/item/stack/sheet/mineral/abductor
 
+/obj/structure/closet/acloset/get_ru_names()
+	return list(
+		NOMINATIVE = "странный шкаф",
+		GENITIVE = "странного шкафа",
+		DATIVE = "странному шкафу",
+		ACCUSATIVE = "странный шкаф",
+		INSTRUMENTAL = "странным шкафом",
+		PREPOSITIONAL = "странном шкафе",
+	)
+
 /obj/structure/closet/gimmick
 	name = "administrative supply closet"
-	desc = "It's a storage unit for things that have no right being here."
+	desc = "Это хранилище для вещей, которым здесь не место."
+	gender = MALE
 	icon_state = "syndicate"
+
+/obj/structure/closet/gimmick/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф административного снабжения",
+		GENITIVE = "шкафа административного снабжения",
+		DATIVE = "шкафу административного снабжения",
+		ACCUSATIVE = "шкаф административного снабжения",
+		INSTRUMENTAL = "шкафом административного снабжения",
+		PREPOSITIONAL = "шкафе административного снабжения",
+	)
 
 /obj/structure/closet/gimmick/russian
 	name = "\improper Russian surplus closet"
-	desc = "It's a storage unit for Russian standard-issue surplus."
+	desc = "Это склад для российского стандартного излишка."
+
+/obj/structure/closet/gimmick/russian/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с российской униформой",
+		GENITIVE = "шкафа с российской униформой",
+		DATIVE = "шкафу с российской униформой",
+		ACCUSATIVE = "шкаф с российской униформой",
+		INSTRUMENTAL = "шкафом с российской униформой",
+		PREPOSITIONAL = "шкафе с российской униформой",
+	)
 
 /obj/structure/closet/gimmick/russian/PopulateContents()
 	..()
@@ -34,7 +77,17 @@
 
 /obj/structure/closet/gimmick/tacticool
 	name = "tacticool gear closet"
-	desc = "It's a storage unit for Tacticool gear."
+	desc = "Это хранилище для Тактикульного снаряжения."
+
+/obj/structure/closet/gimmick/tacticool/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с тактикульным снаряжением",
+		GENITIVE = "шкафа с тактикульным снаряжением",
+		DATIVE = "шкафу с тактикульным снаряжением",
+		ACCUSATIVE = "шкаф с тактикульным снаряжением",
+		INSTRUMENTAL = "шкафом с тактикульным снаряжением",
+		PREPOSITIONAL = "шкафе с тактикульным снаряжением",
+	)
 
 /obj/structure/closet/gimmick/tacticool/PopulateContents()
 	..()
@@ -57,12 +110,32 @@
 
 /obj/structure/closet/thunderdome
 	name = "\improper Thunderdome closet"
-	desc = "Everything you need!"
+	desc = "Всё, что вам нужно!"
 	anchored = TRUE
+
+/obj/structure/closet/thunderdome/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф Громового Купола",
+		GENITIVE = "шкафа Громового Купола",
+		DATIVE = "шкафу Громового Купола",
+		ACCUSATIVE = "шкаф Громового Купола",
+		INSTRUMENTAL = "шкафом Громового Купола",
+		PREPOSITIONAL = "шкафе Громового Купола",
+	)
 
 /obj/structure/closet/thunderdome/tdred
 	name = "red-team Thunderdome closet"
 	icon_door = "red"
+
+/obj/structure/closet/thunderdome/tdred/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф красной команды Громового Купола",
+		GENITIVE = "шкафа красной команды Громового Купола",
+		DATIVE = "шкафу красной команды Громового Купола",
+		ACCUSATIVE = "шкаф красной команды Громового Купола",
+		INSTRUMENTAL = "шкафом красной команды Громового Купола",
+		PREPOSITIONAL = "шкафе красной команды Громового Купола",
+	)
 
 /obj/structure/closet/thunderdome/tdred/PopulateContents()
 	..()
@@ -85,6 +158,16 @@
 	name = "green-team Thunderdome closet"
 	icon_door = "green"
 
+/obj/structure/closet/thunderdome/tdgreen/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф зелёной команды Громового Купола",
+		GENITIVE = "шкафа зелёной команды Громового Купола",
+		DATIVE = "шкафу зелёной команды Громового Купола",
+		ACCUSATIVE = "шкаф зелёной команды Громового Купола",
+		INSTRUMENTAL = "шкафом зелёной команды Громового Купола",
+		PREPOSITIONAL = "шкафе зелёной команды Громового Купола",
+	)
+
 /obj/structure/closet/thunderdome/tdgreen/PopulateContents()
 	..()
 	for(var/i in 1 to 3)
@@ -103,7 +186,7 @@
 		new /obj/item/gun/energy/laser(src)
 
 /obj/structure/closet/malf/suits
-	desc = "It's a storage unit for operational gear."
+	desc = "Это хранилище для оперативного снаряжения."
 	icon_state = "syndicate"
 
 /obj/structure/closet/malf/suits/PopulateContents()
@@ -118,7 +201,8 @@
 
 /obj/structure/closet/mini_fridge
 	name = "grimy mini-fridge"
-	desc = "A small contraption designed to imbue a few drinks with a pleasant chill."
+	desc = "Маленькое приспособление, созданное для приятного охлаждения нескольких напитков."
+	gender = MALE
 	icon_state = "mini_fridge"
 	icon_welded = "welded_small"
 	max_mob_size = MOB_SIZE_SMALL
@@ -126,6 +210,16 @@
 	anchored_tabletop_offset = 3
 	anchored = 1
 	storage_capacity = 10
+
+/obj/structure/closet/mini_fridge/get_ru_names()
+	return list(
+		NOMINATIVE = "мини-холодильник",
+		GENITIVE = "мини-холодильника",
+		DATIVE = "мини-холодильнику",
+		ACCUSATIVE = "мини-холодильник",
+		INSTRUMENTAL = "мини-холодильником",
+		PREPOSITIONAL = "мини-холодильнике",
+	)
 
 /obj/structure/closet/mini_fridge/PopulateContents()
 	. = ..()
@@ -138,7 +232,17 @@
 
 /obj/structure/closet/mini_fridge/grimy
 	name = "grimy mini-fridge"
-	desc = "A small contraption designed to imbue a few drinks with a pleasant chill. This antiquated unit however seems to serve no purpose other than keeping the roaches company."
+	desc = "Маленькое приспособление, созданное для приятного охлаждения нескольких напитков. Однако этот устаревший агрегат, похоже, служит лишь компанией для тараканов."
+
+/obj/structure/closet/mini_fridge/grimy/get_ru_names()
+	return list(
+		NOMINATIVE = "грязный мини-холодильник",
+		GENITIVE = "грязного мини-холодильника",
+		DATIVE = "грязному мини-холодильнику",
+		ACCUSATIVE = "грязный мини-холодильник",
+		INSTRUMENTAL = "грязным мини-холодильником",
+		PREPOSITIONAL = "грязном мини-холодильнике",
+	)
 
 /obj/structure/closet/mini_fridge/grimy/PopulateContents()
 	. = ..()

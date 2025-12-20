@@ -1,8 +1,19 @@
 /obj/structure/closet/secure_closet/personal
-	desc = "It's a secure locker for personnel. The first person to swipe their ID gains control."
+	desc = "Это защищённый шкаф для персонала. Первый, кто проведёт своей ID-картой, получит контроль над ним."
 	name = "personal closet"
+	gender = MALE
 	req_access = list(ACCESS_ALL_PERSONAL_LOCKERS)
 	card_reader_installed = TRUE
+
+/obj/structure/closet/secure_closet/personal/get_ru_names()
+	return list(
+		NOMINATIVE = "личный шкаф",
+		GENITIVE = "личного шкафа",
+		DATIVE = "личному шкафу",
+		ACCUSATIVE = "личный шкаф",
+		INSTRUMENTAL = "личным шкафом",
+		PREPOSITIONAL = "личном шкафе",
+	)
 
 /obj/structure/closet/secure_closet/personal/Initialize(mapload)
 	. = ..()
@@ -31,6 +42,16 @@
 
 /obj/structure/closet/secure_closet/personal/patient
 	name = "patient's closet"
+
+/obj/structure/closet/secure_closet/personal/patient/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф пациента",
+		GENITIVE = "шкафа пациента",
+		DATIVE = "шкафу пациента",
+		ACCUSATIVE = "шкаф пациента",
+		INSTRUMENTAL = "шкафом пациента",
+		PREPOSITIONAL = "шкафе пациента",
+	)
 
 /obj/structure/closet/secure_closet/personal/patient/PopulateContents()
 	new /obj/item/clothing/under/color/white( src )

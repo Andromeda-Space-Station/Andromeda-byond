@@ -1,6 +1,7 @@
 /obj/structure/closet/cardboard
 	name = "large cardboard box"
-	desc = "Just a box..."
+	desc = "Просто коробка..."
+	gender = FEMALE
 	icon_state = "cardboard"
 	mob_storage_capacity = 1
 	resistance_flags = FLAMMABLE
@@ -31,6 +32,16 @@
 	var/move_speed_multiplier = 1
 	/// If the speed multiplier should be applied to mobs inside this box
 	var/move_delay = FALSE
+
+/obj/structure/closet/cardboard/get_ru_names()
+	return list(
+		NOMINATIVE = "большая картонная коробка",
+		GENITIVE = "большой картонной коробки",
+		DATIVE = "большой картонной коробке",
+		ACCUSATIVE = "большую картонную коробку",
+		INSTRUMENTAL = "большой картонной коробкой",
+		PREPOSITIONAL = "большой картонной коробке",
+	)
 
 /obj/structure/closet/cardboard/Initialize(mapload)
 	. = ..()
@@ -108,7 +119,7 @@
 
 /obj/structure/closet/cardboard/metal
 	name = "large metal box"
-	desc = "THE COWARDS! THE FOOLS!"
+	desc = "ТРУСЫ! ГЛУПЦЫ!"
 	icon_state = "metalbox"
 	max_integrity = 500
 	mob_storage_capacity = 5
@@ -120,3 +131,13 @@
 	open_sound_volume = 35
 	close_sound_volume = 50
 	material_drop = /obj/item/stack/sheet/plasteel
+
+/obj/structure/closet/cardboard/metal/get_ru_names()
+	return list(
+		NOMINATIVE = "большая металлическая коробка",
+		GENITIVE = "большой металлической коробки",
+		DATIVE = "большой металлической коробке",
+		ACCUSATIVE = "большую металлическую коробку",
+		INSTRUMENTAL = "большой металлической коробкой",
+		PREPOSITIONAL = "большой металлической коробке",
+	)

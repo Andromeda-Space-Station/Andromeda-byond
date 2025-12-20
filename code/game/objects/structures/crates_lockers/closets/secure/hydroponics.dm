@@ -1,7 +1,18 @@
 /obj/structure/closet/secure_closet/hydroponics
 	name = "botanist's locker"
+	gender = MALE
 	req_access = list(ACCESS_HYDROPONICS)
 	icon_state = "hydro"
+
+/obj/structure/closet/secure_closet/hydroponics/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф ботаника",
+		GENITIVE = "шкафа ботаника",
+		DATIVE = "шкафу ботаника",
+		ACCUSATIVE = "шкаф ботаника",
+		INSTRUMENTAL = "шкафом ботаника",
+		PREPOSITIONAL = "шкафе ботаника",
+	)
 
 /obj/structure/closet/secure_closet/hydroponics/PopulateContents()
 	..()

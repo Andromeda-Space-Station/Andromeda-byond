@@ -1,7 +1,18 @@
 /obj/structure/closet/l3closet
 	name = "level 3 biohazard gear closet"
-	desc = "It's a storage unit for level 3 biohazard gear."
+	desc = "Это хранилище для снаряжения биологической защиты 3-го уровня."
+	gender = MALE
 	icon_state = "bio"
+
+/obj/structure/closet/l3closet/get_ru_names()
+	return list(
+		NOMINATIVE = "шкаф с биозащитой 3-го уровня",
+		GENITIVE = "шкафа с биозащитой 3-го уровня",
+		DATIVE = "шкафу с биозащитой 3-го уровня",
+		ACCUSATIVE = "шкаф с биозащитой 3-го уровня",
+		INSTRUMENTAL = "шкафом с биозащитой 3-го уровня",
+		PREPOSITIONAL = "шкафе с биозащитой 3-го уровня",
+	)
 
 /obj/structure/closet/l3closet/PopulateContents()
 	new /obj/item/storage/bag/bio(src)

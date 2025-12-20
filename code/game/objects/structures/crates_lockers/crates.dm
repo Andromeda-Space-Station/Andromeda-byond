@@ -1,6 +1,7 @@
 /obj/structure/closet/crate
 	name = "crate"
-	desc = "A rectangular steel crate."
+	desc = "Прямоугольный стальной ящик."
+	gender = MALE
 	icon = 'icons/obj/storage/crates.dmi'
 	icon_state = "crate"
 	base_icon_state = "crate"
@@ -37,6 +38,16 @@
 	var/lid_z = 0
 	var/weld_w = 0
 	var/weld_z = 0
+
+/obj/structure/closet/crate/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик",
+		GENITIVE = "ящика",
+		DATIVE = "ящику",
+		ACCUSATIVE = "ящик",
+		INSTRUMENTAL = "ящиком",
+		PREPOSITIONAL = "ящике",
+	)
 
 /obj/structure/closet/crate/Initialize(mapload)
 	AddElement(/datum/element/climbable, climb_time = crate_climb_time, climb_stun = 0) //add element in closed state before parent init opens it(if it does)
@@ -154,7 +165,7 @@
 		manifest = null
 		return
 	if(user)
-		to_chat(user, span_notice("You tear the manifest off of [src]."))
+		to_chat(user, span_notice("Вы срываете манифест с [declent_ru(GENITIVE)]."))
 	playsound(src, 'sound/items/poster/poster_ripped.ogg', 75, TRUE)
 
 	our_manifest.forceMove(drop_location(src))
@@ -169,7 +180,8 @@
 
 /obj/structure/closet/crate/coffin
 	name = "coffin"
-	desc = "It's a burial receptacle for the dearly departed."
+	desc = "Погребальный сосуд для усопших."
+	gender = MALE
 	icon_state = "coffin"
 	base_icon_state = "coffin"
 	resistance_flags = FLAMMABLE
@@ -186,23 +198,55 @@
 	can_weld_shut = FALSE
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 5)
 
+/obj/structure/closet/crate/coffin/get_ru_names()
+	return list(
+		NOMINATIVE = "гроб",
+		GENITIVE = "гроба",
+		DATIVE = "гробу",
+		ACCUSATIVE = "гроб",
+		INSTRUMENTAL = "гробом",
+		PREPOSITIONAL = "гробе",
+	)
+
 /obj/structure/closet/crate/trashcart //please make this a generic cart path later after things calm down a little
-	desc = "A heavy, metal trashcart with wheels."
+	desc = "Тяжёлая металлическая мусорная тележка на колёсах."
 	name = "trash cart"
+	gender = FEMALE
 	icon_state = "trashcart"
 	base_icon_state = "trashcart"
 	can_install_electronics = FALSE
 	paint_jobs = null
 	weld_z = 5
 
+/obj/structure/closet/crate/trashcart/get_ru_names()
+	return list(
+		NOMINATIVE = "мусорная тележка",
+		GENITIVE = "мусорной тележки",
+		DATIVE = "мусорной тележке",
+		ACCUSATIVE = "мусорную тележку",
+		INSTRUMENTAL = "мусорной тележкой",
+		PREPOSITIONAL = "мусорной тележке",
+	)
+
 /obj/structure/closet/crate/trashcart/laundry
 	name = "laundry cart"
-	desc = "A large cart for hauling around large amounts of laundry."
+	desc = "Большая тележка для перевозки большого количества белья."
+	gender = FEMALE
 	icon_state = "laundry"
 	base_icon_state = "laundry"
 	elevation = 14
 	elevation_open = 14
 	can_weld_shut = FALSE
+
+/obj/structure/closet/crate/trashcart/laundry/get_ru_names()
+	return list(
+		NOMINATIVE = "тележка для белья",
+		GENITIVE = "тележки для белья",
+		DATIVE = "тележке для белья",
+		ACCUSATIVE = "тележку для белья",
+		INSTRUMENTAL = "тележкой для белья",
+		PREPOSITIONAL = "тележке для белья",
+	)
 
 /obj/structure/closet/crate/trashcart/Initialize(mapload)
 	. = ..()
@@ -224,30 +268,64 @@
 			new /obj/item/storage/bag/trash/filled(src)
 
 /obj/structure/closet/crate/internals
-	desc = "An internals crate."
+	desc = "Ящик с дыхательным снаряжением."
 	name = "internals crate"
+	gender = MALE
 	icon_state = "o2crate"
 	base_icon_state = "o2crate"
 
+/obj/structure/closet/crate/internals/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик с дыхательным снаряжением",
+		GENITIVE = "ящика с дыхательным снаряжением",
+		DATIVE = "ящику с дыхательным снаряжением",
+		ACCUSATIVE = "ящик с дыхательным снаряжением",
+		INSTRUMENTAL = "ящиком с дыхательным снаряжением",
+		PREPOSITIONAL = "ящике с дыхательным снаряжением",
+	)
+
 /obj/structure/closet/crate/medical
-	desc = "A medical crate."
+	desc = "Медицинский ящик."
 	name = "medical crate"
+	gender = MALE
 	icon_state = "medicalcrate"
 	base_icon_state = "medicalcrate"
 
+/obj/structure/closet/crate/medical/get_ru_names()
+	return list(
+		NOMINATIVE = "медицинский ящик",
+		GENITIVE = "медицинского ящика",
+		DATIVE = "медицинскому ящику",
+		ACCUSATIVE = "медицинский ящик",
+		INSTRUMENTAL = "медицинским ящиком",
+		PREPOSITIONAL = "медицинском ящике",
+	)
+
 /obj/structure/closet/crate/deforest
 	name = "deforest medical crate"
-	desc = "A DeForest brand crate of medical supplies."
+	desc = "Ящик медицинских принадлежностей марки DeForest."
+	gender = MALE
 	icon_state = "deforest"
 	base_icon_state = "deforest"
+
+/obj/structure/closet/crate/deforest/get_ru_names()
+	return list(
+		NOMINATIVE = "медицинский ящик DeForest",
+		GENITIVE = "медицинского ящика DeForest",
+		DATIVE = "медицинскому ящику DeForest",
+		ACCUSATIVE = "медицинский ящик DeForest",
+		INSTRUMENTAL = "медицинским ящиком DeForest",
+		PREPOSITIONAL = "медицинском ящике DeForest",
+	)
 
 /obj/structure/closet/crate/medical/department
 	icon_state = "medical"
 	base_icon_state = "medical"
 
 /obj/structure/closet/crate/freezer
-	desc = "A freezer."
+	desc = "Морозильник."
 	name = "freezer"
+	gender = MALE
 	icon_state = "freezer"
 	base_icon_state = "freezer"
 	paint_jobs = null
@@ -256,6 +334,16 @@
 	var/cooling_rate_per_second = 4
 	/// Minimum temperature of the internal air mixture
 	var/minimum_temperature = T0C - 60
+
+/obj/structure/closet/crate/freezer/get_ru_names()
+	return list(
+		NOMINATIVE = "морозильник",
+		GENITIVE = "морозильника",
+		DATIVE = "морозильнику",
+		ACCUSATIVE = "морозильник",
+		INSTRUMENTAL = "морозильником",
+		PREPOSITIONAL = "морозильнике",
+	)
 
 /obj/structure/closet/crate/freezer/process_internal_air(seconds_per_tick)
 	if(opened)
@@ -273,7 +361,18 @@
 
 /obj/structure/closet/crate/freezer/blood
 	name = "blood freezer"
-	desc = "A freezer containing packs of blood."
+	desc = "Морозильник с пакетами крови."
+	gender = MALE
+
+/obj/structure/closet/crate/freezer/blood/get_ru_names()
+	return list(
+		NOMINATIVE = "морозильник для крови",
+		GENITIVE = "морозильника для крови",
+		DATIVE = "морозильнику для крови",
+		ACCUSATIVE = "морозильник для крови",
+		INSTRUMENTAL = "морозильником для крови",
+		PREPOSITIONAL = "морозильнике для крови",
+	)
 
 /obj/structure/closet/crate/freezer/blood/PopulateContents()
 	. = ..()
@@ -292,7 +391,18 @@
 
 /obj/structure/closet/crate/freezer/surplus_limbs
 	name = "surplus prosthetic limbs"
-	desc = "A crate containing an assortment of cheap prosthetic limbs."
+	desc = "Ящик с ассортиментом дешёвых протезов конечностей."
+	gender = MALE
+
+/obj/structure/closet/crate/freezer/surplus_limbs/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик с протезами",
+		GENITIVE = "ящика с протезами",
+		DATIVE = "ящику с протезами",
+		ACCUSATIVE = "ящик с протезами",
+		INSTRUMENTAL = "ящиком с протезами",
+		PREPOSITIONAL = "ящике с протезами",
+	)
 
 /obj/structure/closet/crate/freezer/surplus_limbs/PopulateContents()
 	. = ..()
@@ -307,7 +417,18 @@
 
 /obj/structure/closet/crate/freezer/organ
 	name = "organ freezer"
-	desc = "A freezer containing a set of organic organs."
+	desc = "Морозильник с набором органических органов."
+	gender = MALE
+
+/obj/structure/closet/crate/freezer/organ/get_ru_names()
+	return list(
+		NOMINATIVE = "морозильник для органов",
+		GENITIVE = "морозильника для органов",
+		DATIVE = "морозильнику для органов",
+		ACCUSATIVE = "морозильник для органов",
+		INSTRUMENTAL = "морозильником для органов",
+		PREPOSITIONAL = "морозильнике для органов",
+	)
 
 /obj/structure/closet/crate/freezer/organ/PopulateContents()
 	. = ..()
@@ -322,64 +443,185 @@
 
 /obj/structure/closet/crate/freezer/food
 	name = "food icebox"
+	gender = MALE
 	icon_state = "food"
 	base_icon_state = "food"
 
+/obj/structure/closet/crate/freezer/food/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик для еды",
+		GENITIVE = "ящика для еды",
+		DATIVE = "ящику для еды",
+		ACCUSATIVE = "ящик для еды",
+		INSTRUMENTAL = "ящиком для еды",
+		PREPOSITIONAL = "ящике для еды",
+	)
+
 /obj/structure/closet/crate/freezer/donk
 	name = "\improper Donk Co. fridge"
-	desc = "A Donk Co. brand fridge, keeps your donkpockets and foam ammunition fresh!"
+	desc = "Холодильник марки Donk Co. — сохраняет ваши донк-покеты и пенные боеприпасы свежими!"
+	gender = MALE
 	icon_state = "donkcocrate"
 	base_icon_state = "donkcocrate"
 
+/obj/structure/closet/crate/freezer/donk/get_ru_names()
+	return list(
+		NOMINATIVE = "холодильник Donk Co.",
+		GENITIVE = "холодильника Donk Co.",
+		DATIVE = "холодильнику Donk Co.",
+		ACCUSATIVE = "холодильник Donk Co.",
+		INSTRUMENTAL = "холодильником Donk Co.",
+		PREPOSITIONAL = "холодильнике Donk Co.",
+	)
+
 /obj/structure/closet/crate/self
 	name = "\improper S.E.L.F. crate"
-	desc = "A robust-looking crate with a seemingly decorative holographic display. The front of the crate proudly declares its allegiance to the notorious terrorist group 'S.E.L.F'."
+	desc = "Прочно выглядящий ящик с, казалось бы, декоративным голографическим дисплеем. Лицевая часть ящика гордо заявляет о своей принадлежности к печально известной террористической группировке 'S.E.L.F'."
+	gender = MALE
 	icon_state = "selfcrate"
 	base_icon_state = "selfcrate"
 
+/obj/structure/closet/crate/self/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик S.E.L.F.",
+		GENITIVE = "ящика S.E.L.F.",
+		DATIVE = "ящику S.E.L.F.",
+		ACCUSATIVE = "ящик S.E.L.F.",
+		INSTRUMENTAL = "ящиком S.E.L.F.",
+		PREPOSITIONAL = "ящике S.E.L.F.",
+	)
+
 /obj/structure/closet/crate/radiation
-	desc = "A crate with a radiation sign on it."
+	desc = "Ящик с символом радиации на нём."
 	name = "radiation crate"
+	gender = MALE
 	icon_state = "radiation"
 	base_icon_state = "radiation"
 
+/obj/structure/closet/crate/radiation/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик радиационной защиты",
+		GENITIVE = "ящика радиационной защиты",
+		DATIVE = "ящику радиационной защиты",
+		ACCUSATIVE = "ящик радиационной защиты",
+		INSTRUMENTAL = "ящиком радиационной защиты",
+		PREPOSITIONAL = "ящике радиационной защиты",
+	)
+
 /obj/structure/closet/crate/hydroponics
 	name = "hydroponics crate"
-	desc = "All you need to destroy those pesky weeds and pests."
+	desc = "Всё необходимое для уничтожения этих надоедливых сорняков и вредителей."
+	gender = MALE
 	icon_state = "hydrocrate"
 	base_icon_state = "hydrocrate"
 
+/obj/structure/closet/crate/hydroponics/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик гидропоники",
+		GENITIVE = "ящика гидропоники",
+		DATIVE = "ящику гидропоники",
+		ACCUSATIVE = "ящик гидропоники",
+		INSTRUMENTAL = "ящиком гидропоники",
+		PREPOSITIONAL = "ящике гидропоники",
+	)
+
 /obj/structure/closet/crate/centcom
 	name = "centcom crate"
+	gender = MALE
 	icon_state = "centcom"
 	base_icon_state = "centcom"
 
+/obj/structure/closet/crate/centcom/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик Центкома",
+		GENITIVE = "ящика Центкома",
+		DATIVE = "ящику Центкома",
+		ACCUSATIVE = "ящик Центкома",
+		INSTRUMENTAL = "ящиком Центкома",
+		PREPOSITIONAL = "ящике Центкома",
+	)
+
 /obj/structure/closet/crate/cargo
 	name = "cargo crate"
+	gender = MALE
 	icon_state = "cargo"
 	base_icon_state = "cargo"
 
+/obj/structure/closet/crate/cargo/get_ru_names()
+	return list(
+		NOMINATIVE = "грузовой ящик",
+		GENITIVE = "грузового ящика",
+		DATIVE = "грузовому ящику",
+		ACCUSATIVE = "грузовой ящик",
+		INSTRUMENTAL = "грузовым ящиком",
+		PREPOSITIONAL = "грузовом ящике",
+	)
+
 /obj/structure/closet/crate/robust
 	name = "robust industries crate"
-	desc = "Robust Industries LLC. crate. Feels oddly nostalgic."
+	desc = "Ящик Robust Industries LLC. Вызывает странную ностальгию."
+	gender = MALE
 	icon_state = "robust"
 	base_icon_state = "robust"
 
+/obj/structure/closet/crate/robust/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик Robust Industries",
+		GENITIVE = "ящика Robust Industries",
+		DATIVE = "ящику Robust Industries",
+		ACCUSATIVE = "ящик Robust Industries",
+		INSTRUMENTAL = "ящиком Robust Industries",
+		PREPOSITIONAL = "ящике Robust Industries",
+	)
+
 /obj/structure/closet/crate/cargo/mining
 	name = "mining crate"
+	gender = MALE
 	icon_state = "mining"
 	base_icon_state = "mining"
 
+/obj/structure/closet/crate/cargo/mining/get_ru_names()
+	return list(
+		NOMINATIVE = "шахтёрский ящик",
+		GENITIVE = "шахтёрского ящика",
+		DATIVE = "шахтёрскому ящику",
+		ACCUSATIVE = "шахтёрский ящик",
+		INSTRUMENTAL = "шахтёрским ящиком",
+		PREPOSITIONAL = "шахтёрском ящике",
+	)
+
 /obj/structure/closet/crate/engineering
 	name = "engineering crate"
+	gender = MALE
 	icon_state = "engi_crate"
 	base_icon_state = "engi_crate"
 
+/obj/structure/closet/crate/engineering/get_ru_names()
+	return list(
+		NOMINATIVE = "инженерный ящик",
+		GENITIVE = "инженерного ящика",
+		DATIVE = "инженерному ящику",
+		ACCUSATIVE = "инженерный ящик",
+		INSTRUMENTAL = "инженерным ящиком",
+		PREPOSITIONAL = "инженерном ящике",
+	)
+
 /obj/structure/closet/crate/nakamura
 	name = "nakamura engineering crate"
-	desc = "Crate from Nakamura Engineering, most likely containing engineering supplies or MODcores."
+	desc = "Ящик от Nakamura Engineering, скорее всего, содержит инженерные припасы или MOD-ядра."
+	gender = MALE
 	icon_state = "nakamura"
 	base_icon_state = "nakamura"
+
+/obj/structure/closet/crate/nakamura/get_ru_names()
+	return list(
+		NOMINATIVE = "инженерный ящик Nakamura",
+		GENITIVE = "инженерного ящика Nakamura",
+		DATIVE = "инженерному ящику Nakamura",
+		ACCUSATIVE = "инженерный ящик Nakamura",
+		INSTRUMENTAL = "инженерным ящиком Nakamura",
+		PREPOSITIONAL = "инженерном ящике Nakamura",
+	)
 
 /obj/structure/closet/crate/engineering/electrical
 	icon_state = "engi_e_crate"
@@ -387,14 +629,36 @@
 
 /obj/structure/closet/crate/engineering/atmos
 	name = "atmospherics crate"
+	gender = MALE
 	icon_state = "atmos"
 	base_icon_state = "atmos"
 
+/obj/structure/closet/crate/engineering/atmos/get_ru_names()
+	return list(
+		NOMINATIVE = "атмосферный ящик",
+		GENITIVE = "атмосферного ящика",
+		DATIVE = "атмосферному ящику",
+		ACCUSATIVE = "атмосферный ящик",
+		INSTRUMENTAL = "атмосферным ящиком",
+		PREPOSITIONAL = "атмосферном ящике",
+	)
+
 /obj/structure/closet/crate/rcd
-	desc = "A crate for the storage of an RCD."
+	desc = "Ящик для хранения РСУ."
 	name = "\improper RCD crate"
+	gender = MALE
 	icon_state = "engi_crate"
 	base_icon_state = "engi_crate"
+
+/obj/structure/closet/crate/rcd/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик для РСУ",
+		GENITIVE = "ящика для РСУ",
+		DATIVE = "ящику для РСУ",
+		ACCUSATIVE = "ящик для РСУ",
+		INSTRUMENTAL = "ящиком для РСУ",
+		PREPOSITIONAL = "ящике для РСУ",
+	)
 
 /obj/structure/closet/crate/rcd/PopulateContents()
 	..()
@@ -404,19 +668,52 @@
 
 /obj/structure/closet/crate/science
 	name = "science crate"
-	desc = "A science crate."
+	desc = "Научный ящик."
+	gender = MALE
 	icon_state = "scicrate"
 	base_icon_state = "scicrate"
 
+/obj/structure/closet/crate/science/get_ru_names()
+	return list(
+		NOMINATIVE = "научный ящик",
+		GENITIVE = "научного ящика",
+		DATIVE = "научному ящику",
+		ACCUSATIVE = "научный ящик",
+		INSTRUMENTAL = "научным ящиком",
+		PREPOSITIONAL = "научном ящике",
+	)
+
 /obj/structure/closet/crate/science/robo
 	name = "robotics crate"
+	gender = MALE
 	icon_state = "robo"
 	base_icon_state = "robo"
 
+/obj/structure/closet/crate/science/robo/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик робототехники",
+		GENITIVE = "ящика робототехники",
+		DATIVE = "ящику робототехники",
+		ACCUSATIVE = "ящик робототехники",
+		INSTRUMENTAL = "ящиком робототехники",
+		PREPOSITIONAL = "ящике робототехники",
+	)
+
 /obj/structure/closet/crate/mod
 	name = "MOD crate"
+	gender = MALE
 	icon_state = "robo"
 	base_icon_state = "robo"
+
+/obj/structure/closet/crate/mod/get_ru_names()
+	return list(
+		NOMINATIVE = "ящик MOD",
+		GENITIVE = "ящика MOD",
+		DATIVE = "ящику MOD",
+		ACCUSATIVE = "ящик MOD",
+		INSTRUMENTAL = "ящиком MOD",
+		PREPOSITIONAL = "ящике MOD",
+	)
 
 /obj/structure/closet/crate/mod/PopulateContents()
 	..()
@@ -427,8 +724,19 @@
 
 /obj/structure/closet/crate/solarpanel_small
 	name = "budget solar panel crate"
+	gender = MALE
 	icon_state = "engi_e_crate"
 	base_icon_state = "engi_e_crate"
+
+/obj/structure/closet/crate/solarpanel_small/get_ru_names()
+	return list(
+		NOMINATIVE = "бюджетный ящик солнечных панелей",
+		GENITIVE = "бюджетного ящика солнечных панелей",
+		DATIVE = "бюджетному ящику солнечных панелей",
+		ACCUSATIVE = "бюджетный ящик солнечных панелей",
+		INSTRUMENTAL = "бюджетным ящиком солнечных панелей",
+		PREPOSITIONAL = "бюджетном ящике солнечных панелей",
+	)
 
 /obj/structure/closet/crate/solarpanel_small/PopulateContents()
 	..()
@@ -440,9 +748,20 @@
 
 /obj/structure/closet/crate/goldcrate
 	name = "gold crate"
-	desc = "A rectangular steel crate. It seems to be painted to look like gold."
+	desc = "Прямоугольный стальной ящик. Похоже, он покрашен под золото."
+	gender = MALE
 	icon_state = "gold"
 	base_icon_state = "gold"
+
+/obj/structure/closet/crate/goldcrate/get_ru_names()
+	return list(
+		NOMINATIVE = "золотой ящик",
+		GENITIVE = "золотого ящика",
+		DATIVE = "золотому ящику",
+		ACCUSATIVE = "золотой ящик",
+		INSTRUMENTAL = "золотым ящиком",
+		PREPOSITIONAL = "золотом ящике",
+	)
 
 /obj/structure/closet/crate/goldcrate/PopulateContents()
 	..()
@@ -456,9 +775,20 @@
 
 /obj/structure/closet/crate/silvercrate
 	name = "silver crate"
-	desc = "A rectangular steel crate. It seems to be painted to look like silver."
+	desc = "Прямоугольный стальной ящик. Похоже, он покрашен под серебро."
+	gender = MALE
 	icon_state = "silver"
 	base_icon_state = "silver"
+
+/obj/structure/closet/crate/silvercrate/get_ru_names()
+	return list(
+		NOMINATIVE = "серебряный ящик",
+		GENITIVE = "серебряного ящика",
+		DATIVE = "серебряному ящику",
+		ACCUSATIVE = "серебряный ящик",
+		INSTRUMENTAL = "серебряным ящиком",
+		PREPOSITIONAL = "серебряном ящике",
+	)
 
 /obj/structure/closet/crate/silvercrate/PopulateContents()
 	..()
@@ -479,11 +809,22 @@
 
 /obj/structure/closet/crate/glitter
 	name = "pink crate"
-	desc = "A glittery pink crate."
+	desc = "Блестящий розовый ящик."
+	gender = MALE
 	icon_state = "pink"
 	base_icon_state = "pink"
 	var/glitter_prob = 25
 	var/glitter_color = "#ff8080"
+
+/obj/structure/closet/crate/glitter/get_ru_names()
+	return list(
+		NOMINATIVE = "розовый ящик",
+		GENITIVE = "розового ящика",
+		DATIVE = "розовому ящику",
+		ACCUSATIVE = "розовый ящик",
+		INSTRUMENTAL = "розовым ящиком",
+		PREPOSITIONAL = "розовом ящике",
+	)
 
 /obj/structure/closet/crate/glitter/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change)
 	. = ..()
@@ -496,7 +837,18 @@
 
 /obj/structure/closet/crate/glitter/lavender
 	name = "lavender crate"
-	desc = "A glittery purple... no, lavender crate."
+	desc = "Блестящий фиолетовый... нет, лавандовый ящик."
+	gender = MALE
 	icon_state = "lavender"
 	base_icon_state = "lavender"
 	glitter_color = "#db80ff"
+
+/obj/structure/closet/crate/glitter/lavender/get_ru_names()
+	return list(
+		NOMINATIVE = "лавандовый ящик",
+		GENITIVE = "лавандового ящика",
+		DATIVE = "лавандовому ящику",
+		ACCUSATIVE = "лавандовый ящик",
+		INSTRUMENTAL = "лавандовым ящиком",
+		PREPOSITIONAL = "лавандовом ящике",
+	)
