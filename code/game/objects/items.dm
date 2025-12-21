@@ -422,17 +422,17 @@
 
 /obj/item/examine_tags(mob/user)
 	var/list/parent_tags = ..()
-	parent_tags.Insert(1, weight_class_to_text(w_class)) // To make size display first, otherwise it looks goofy
+	parent_tags.Insert(1, weight_class_to_text(w_class)) // Чтобы размер отображался первым, иначе выглядит нелепо
 	. = parent_tags
 	.[weight_class_to_text(w_class)] = weight_class_to_tooltip(w_class)
 
 	if(item_flags & CRUEL_IMPLEMENT)
-		.[span_red("morbid")] = "It seems quite practical for particularly morbid procedures and experiments."
+		.[span_red("мрачны")] = "Похоже, это довольно практично для особенно мрачных процедур и экспериментов."
 
 	if (siemens_coefficient == 0)
-		.["insulated"] = "It is made from a robust electrical insulator and will block any electricity passing through it!"
+		.["изолированный"] = "Оно сделано из прочного электроизолятора и будет блокировать любое электричество, проходящее через него!"
 	else if (siemens_coefficient <= 0.5)
-		.["partially insulated"] = "It is made from a poor insulator that will dampen (but not fully block) electric shocks passing through it."
+		.["частично изолированный"] = "Оно сделано из плохого изолятора, который ослабит (но не полностью заблокирует) удары током, проходящие через него."
 
 /obj/item/examine_descriptor(mob/user)
 	return "предмет"

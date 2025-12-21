@@ -563,7 +563,7 @@
 						continue
 					. += span_warning("It looks like you can hit the pilot directly if you target the center or above.")
 					break //in case user is holding two guns
-	. += span_notice("It has a <a href='byond://?src=[REF(src)];list_armor=1'>tag</a> listing its protection classes.")
+	. += span_notice("На нём есть <a href='byond://?src=[REF(src)];list_armor=1'>шильдик</a>, указывающая классы защиты.")
 
 /obj/vehicle/sealed/mecha/Topic(href, href_list)
 	. = ..()

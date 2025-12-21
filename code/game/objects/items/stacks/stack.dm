@@ -236,14 +236,14 @@
 		return
 	if(singular_name)
 		if(get_amount()>1)
-			. += "There are [get_amount()] [singular_name]\s in the stack."
+			. += "В стопке находится [get_amount()] [declent_ru(GENITIVE)]."
 		else
-			. += "There is [get_amount()] [singular_name] in the stack."
+			. += "В стопке находится [get_amount()] [declent_ru(GENITIVE)]."
 	else if(get_amount()>1)
-		. += "There are [get_amount()] in the stack."
+		. += "В стопке находится [get_amount()] предметов."
 	else
-		. += "There is [get_amount()] in the stack."
-	. += span_notice("<b>Right-click</b> with an empty hand to take a custom amount.")
+		. += "В стопке находится [get_amount()] предмет."
+	. += span_notice("<b>ПКМ</b> пустой рукой, чтобы взять определённое количество.")
 
 /obj/item/stack/proc/get_amount()
 	if(is_cyborg)
@@ -752,11 +752,11 @@
 	if(is_zero_amount(delete_if_zero = TRUE))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	var/max = get_amount()
-	var/stackmaterial = tgui_input_number(user, "How many sheets do you wish to take out of this stack?", "Stack Split", max_value = max)
+	var/stackmaterial = tgui_input_number(user, "Сколько листов вы хотите взять из этой стопки?", "Разделение стопки", max_value = max)
 	if(!stackmaterial || QDELETED(user) || QDELETED(src) || !usr.can_perform_action(src, FORBID_TELEKINESIS_REACH))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	split_n_take(user, stackmaterial)
-	to_chat(user, span_notice("You take [stackmaterial] sheets out of the stack."))
+	to_chat(user, span_notice("Вы берёте [stackmaterial] листов из стопки."))
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /** Splits the stack into two stacks, returns the new stack.

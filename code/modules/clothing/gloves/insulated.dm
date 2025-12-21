@@ -112,10 +112,10 @@
 
 /obj/item/clothing/gloves/color/fyellow/examine_tags(mob/user)
 	. = ..()
-	// Pretend we're always insulated
-	if (.["partially insulated"])
-		. -= "partially insulated"
-	.["insulated"] = "It is made from a robust electrical insulator and will block any electricity passing through it!"
+	// Притворимся, что мы всегда изолированы
+	if (.["частично изолированный"])
+		. -= "частично изолированное"
+	.["изолированный"] = "Они сделаны из прочного электроизолятора и будут блокировать любое электричество, проходящее через них!"
 
 /obj/item/clothing/gloves/color/fyellow/old
 	desc = "Old and worn out insulated gloves, hopefully they still work."
