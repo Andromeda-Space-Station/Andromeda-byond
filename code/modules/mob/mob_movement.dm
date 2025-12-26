@@ -553,7 +553,7 @@
 
 ///Moves a mob upwards in z level
 /mob/verb/up()
-	set name = "Move Upwards"
+	set name = "Двигаться вверх"
 	set category = "IC"
 
 	if(remote_control)
@@ -572,15 +572,15 @@
 
 	if(!can_z_move(UP, current_turf, null, ZMOVE_CAN_FLY_CHECKS|ZMOVE_FEEDBACK))
 		return
-	balloon_alert(src, "moving up...")
+	balloon_alert(src, "двигаюсь вверх...")
 	if(!do_after(src, 1 SECONDS, hidden = TRUE))
 		return
 	if(zMove(UP, z_move_flags = ZMOVE_FLIGHT_FLAGS|ZMOVE_FEEDBACK))
-		to_chat(src, span_notice("You move upwards."))
+		to_chat(src, span_notice("Вы поднимаетесь наверх."))
 
 ///Moves a mob down a z level
 /mob/verb/down()
-	set name = "Move Down"
+	set name = "Двигаться вниз"
 	set category = "IC"
 
 	if(remote_control)
@@ -599,11 +599,11 @@
 
 	if(!can_z_move(DOWN, current_turf, null, ZMOVE_CAN_FLY_CHECKS|ZMOVE_FEEDBACK))
 		return
-	balloon_alert(src, "moving down...")
+	balloon_alert(src, "двигаюсь вниз...")
 	if(!do_after(src, 1 SECONDS, hidden = TRUE))
 		return
 	if(zMove(DOWN, z_move_flags = ZMOVE_FLIGHT_FLAGS|ZMOVE_FEEDBACK))
-		to_chat(src, span_notice("You move down."))
+		to_chat(src, span_notice("Вы спускаетесь вниз."))
 	return FALSE
 
 /mob/abstract_move(atom/destination)
