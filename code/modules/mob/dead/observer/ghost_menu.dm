@@ -105,34 +105,34 @@ GLOBAL_DATUM_INIT(ghost_menu, /datum/ghost_menu, new)
 
 	data["hud_info"] = list(
 		list(
-			"name" = "Data HUDs",
+			"name" = "Дата-HUD",
 			"enabled" = (user.ghost_hud_flags & GHOST_DATA_HUDS),
 			"flag" = GHOST_DATA_HUDS,
-			"tooltip" = "Grants you Med/Sec/Diag HUDs.",
+			"tooltip" = "Даёт доступ к Мед/СБ/Диагн HUD.",
 		),
 		list(
-			"name" = "Ghost Vision",
+			"name" = "Зрение призрака",
 			"enabled" = (user.ghost_hud_flags & GHOST_VISION),
 			"flag" = GHOST_VISION,
-			"tooltip" = "Allows you to see ghost-only things (ex: smuggler satchels, countdowns, camera eyes).",
+			"tooltip" = "Позволяет видеть вещи, видимые только призракам (например, сумки контрабандистов, обратный отсчет, камеры).",
 		),
 		list(
-			"name" = "Health Scanner",
+			"name" = "Сканер здоровья",
 			"enabled" = (user.ghost_hud_flags & GHOST_HEALTH),
 			"flag" = GHOST_HEALTH,
-			"tooltip" = "Allows you to perform a health scan by clicking on someone.",
+			"tooltip" = "Позволяет проводить сканирование здоровья при клике на кого-либо.",
 		),
 		list(
-			"name" = "Chemical Scanner",
+			"name" = "Сканер химикатов",
 			"enabled" = (user.ghost_hud_flags & GHOST_CHEM),
 			"flag" = GHOST_CHEM,
-			"tooltip" = "Allows you to perform a chemical scan by clicking on someone.",
+			"tooltip" = "Позволяет проводить химическое сканирование при клике на кого-либо.",
 		),
 		list(
-			"name" = "Gas Scanner",
+			"name" = "Сканер газов",
 			"enabled" = (user.ghost_hud_flags & GHOST_GAS),
 			"flag" = GHOST_GAS,
-			"tooltip" = "Allows you to perform a gas scan by clicking on a tile/atmos machine.",
+			"tooltip" = "Позволяет проводить газовое сканирование при клике на тайл или атмосферное оборудование.",
 		),
 	)
 
@@ -149,7 +149,7 @@ GLOBAL_DATUM_INIT(ghost_menu, /datum/ghost_menu, new)
 
 /datum/ghost_menu/proc/tray_view(mob/dead/observer/user)
 	if(SSlag_switch.measures[DISABLE_GHOST_ZOOM_TRAY] && !user.client?.holder)
-		to_chat(user, span_notice("That verb is currently globally disabled."))
+		to_chat(user, span_notice("Это действие в данный момент глобально отключено."))
 		return
 	t_ray_scan(user)
 
@@ -182,7 +182,7 @@ GLOBAL_DATUM_INIT(ghost_menu, /datum/ghost_menu, new)
 
 /datum/ghost_menu/proc/set_view(mob/dead/observer/user, new_view)
 	if(SSlag_switch.measures[DISABLE_GHOST_ZOOM_TRAY] && !user.client?.holder)
-		to_chat(user, span_notice("That verb is currently globally disabled."))
+		to_chat(user, span_notice("Это действие в данный момент глобально отключено."))
 		return TRUE
 	var/max_view = user.client.prefs.unlock_content ? GHOST_MAX_VIEW_RANGE_MEMBER : GHOST_MAX_VIEW_RANGE_DEFAULT
 	if(max_view >= new_view && new_view < GHOST_MIN_VIEW_RANGE)

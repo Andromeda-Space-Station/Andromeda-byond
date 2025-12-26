@@ -46,6 +46,16 @@
 	start_active = TRUE
 	name = "motion-sensitive security camera"
 
+/obj/machinery/camera/motion/get_ru_names()
+	return list(
+		NOMINATIVE = "камера наблюдения с датчиком движения",
+		GENITIVE = "камеры наблюдения с датчиком движения",
+		DATIVE = "камере наблюдения с датчиком движения",
+		ACCUSATIVE = "камеру наблюдения с датчиком движения",
+		INSTRUMENTAL = "камерой наблюдения с датчиком движения",
+		PREPOSITIONAL = "камере наблюдения с датчиком движения",
+	)
+
 /obj/machinery/camera/motion/Initialize(mapload)
 	. = ..()
 	upgradeMotion()
@@ -88,6 +98,16 @@
 	start_active = TRUE
 	name = "motion-sensitive security camera"
 
+/obj/machinery/camera/autoname/motion/get_ru_names()
+	return list(
+		NOMINATIVE = "камера наблюдения с датчиком движения",
+		GENITIVE = "камеры наблюдения с датчиком движения",
+		DATIVE = "камере наблюдения с датчиком движения",
+		ACCUSATIVE = "камеру наблюдения с датчиком движения",
+		INSTRUMENTAL = "камерой наблюдения с датчиком движения",
+		PREPOSITIONAL = "камере наблюдения с датчиком движения",
+	)
+
 /obj/machinery/camera/autoname/motion/Initialize(mapload)
 	. = ..()
 	upgradeMotion()
@@ -99,18 +119,29 @@
  */
 /obj/machinery/camera/preset/ordnance
 	name = "Hardened Bomb-Test Camera"
-	desc = "A specially-reinforced camera with a long lasting battery, used to monitor the bomb testing site. An external light is attached to the top."
-	c_tag = "Bomb Testing Site"
+	desc = "Специально усиленная камера с аккумулятором длительного действия, используемая для наблюдения за полигоном испытания бомб. Сверху прикреплён внешний фонарь."
+	gender = FEMALE
+	c_tag = "Испытательный полигон бомб"
 	network = list(CAMERANET_NETWORK_RD, CAMERANET_NETWORK_ORDNANCE)
 	use_power = NO_POWER_USE //Test site is an unpowered area
 	resistance_flags = parent_type::resistance_flags | INDESTRUCTIBLE
 	light_range = 10
 	start_active = TRUE
 
+/obj/machinery/camera/preset/ordnance/get_ru_names()
+	return list(
+		NOMINATIVE = "укреплённая камера испытательного полигона",
+		GENITIVE = "укреплённой камеры испытательного полигона",
+		DATIVE = "укреплённой камере испытательного полигона",
+		ACCUSATIVE = "укреплённую камеру испытательного полигона",
+		INSTRUMENTAL = "укреплённой камерой испытательного полигона",
+		PREPOSITIONAL = "укреплённой камере испытательного полигона",
+	)
+
 ///The internal camera object for exosuits, applied by the camera upgrade
 /obj/machinery/camera/exosuit
-	c_tag = "Exosuit: unspecified"
-	desc = "This camera belongs in a mecha. If you see this, tell a coder!"
+	c_tag = "Экзокостюм: не указан"
+	desc = "Эта камера принадлежит меху. Если вы это видите, сообщите кодеру!"
 	network = list(CAMERANET_NETWORK_SS13, CAMERANET_NETWORK_RD)
 	short_range = 1 //used when the camera gets EMPd
 	///Number of the camera and thus the name of the mech
@@ -138,7 +169,7 @@
 	number = existing_mech_names[mech_name] + 1
 	existing_mech_names[mech_name] = number
 
-	c_tag = "Exosuit: [mech_name] #[number]"
+	c_tag = "Экзокостюм: [mech_name] #[number]"
 	current_name = mech_name
 
 // UPGRADE PROCS

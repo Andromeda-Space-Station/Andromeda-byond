@@ -2063,12 +2063,12 @@
 
 /obj/machinery/door/airlock/mining/get_ru_names()
 	return list(
-		NOMINATIVE = "шахтёрский шлюз",
-		GENITIVE = "шахтёрского шлюза",
-		DATIVE = "шахтёрскому шлюзу",
-		ACCUSATIVE = "шахтёрский шлюз",
-		INSTRUMENTAL = "шахтёрским шлюзом",
-		PREPOSITIONAL = "шахтёрском шлюзе",
+		NOMINATIVE = "шлюз снабжения",
+		GENITIVE = "шлюза снабжения",
+		DATIVE = "шлюзу снабжения",
+		ACCUSATIVE = "шлюз снабжения",
+		INSTRUMENTAL = "шлюзом снабжения",
+		PREPOSITIONAL = "шлюзе снабжения",
 	)
 
 /obj/machinery/door/airlock/atmos
@@ -2331,12 +2331,12 @@
 
 /obj/machinery/door/airlock/mining/glass/get_ru_names()
 	return list(
-		NOMINATIVE = "стеклянный шахтёрский шлюз",
-		GENITIVE = "стеклянного шахтёрского шлюза",
-		DATIVE = "стеклянному шахтёрскому шлюзу",
-		ACCUSATIVE = "стеклянный шахтёрский шлюз",
-		INSTRUMENTAL = "стеклянным шахтёрским шлюзом",
-		PREPOSITIONAL = "стеклянном шахтёрском шлюзе",
+		NOMINATIVE = "стеклянный шлюз снабжения",
+		GENITIVE = "стеклянного шлюза снабжения",
+		DATIVE = "стеклянному шлюзу снабжения",
+		ACCUSATIVE = "стеклянный шлюз снабжения",
+		INSTRUMENTAL = "стеклянным шлюзом снабжения",
+		PREPOSITIONAL = "стеклянном шлюзе снабжения",
 	)
 
 /obj/machinery/door/airlock/atmos/glass

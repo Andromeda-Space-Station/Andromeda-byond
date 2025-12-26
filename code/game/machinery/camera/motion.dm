@@ -51,7 +51,7 @@
 		return FALSE
 	if(camera_enabled)
 		if(alarm_manager.send_alarm(ALARM_MOTION, src, src))
-			visible_message(span_warning("A red light flashes on [src]!"))
+			visible_message(span_warning("На [declent_ru(PREPOSITIONAL)] мигает красная лампочка!"))
 	detectTime = -1
 	return TRUE
 
@@ -64,8 +64,18 @@
 /obj/machinery/camera/motion/thunderdome
 	name = "entertainment camera"
 	network = list(CAMERANET_NETWORK_THUNDERDOME)
-	c_tag = "Arena"
+	c_tag = "Арена"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF | FREEZE_PROOF
+
+/obj/machinery/camera/motion/thunderdome/get_ru_names()
+	return list(
+		NOMINATIVE = "развлекательная камера",
+		GENITIVE = "развлекательной камеры",
+		DATIVE = "развлекательной камере",
+		ACCUSATIVE = "развлекательную камеру",
+		INSTRUMENTAL = "развлекательной камерой",
+		PREPOSITIONAL = "развлекательной камере",
+	)
 
 /obj/machinery/camera/motion/thunderdome/Initialize(mapload)
 	. = ..()
