@@ -3,7 +3,7 @@
 
 /obj/machinery/computer/operating
 	name = "operating computer"
-	desc = "Monitors patient vitals and displays surgery steps. Can be loaded with surgery disks to perform experimental procedures. Automatically syncs to operating tables within its line of sight for surgical tech advancement."
+	desc = "Отслеживает жизненно важные показатели пациента и отображает этапы операции. Может быть загружен с хирургическими дисками для выполнения экспериментальных процедур. Автоматически синхронизируется с операционными столами в пределах прямой видимости для улучшения хирургических технологий."
 	icon_screen = "crew"
 	icon_keyboard = "med_key"
 	circuit = /obj/item/circuitboard/computer/operating
@@ -13,12 +13,33 @@
 	var/list/advanced_surgeries = list()
 	var/datum/techweb/linked_techweb
 	light_color = LIGHT_COLOR_BLUE
+	// Таймер say оповещения (раз в 10 секунд)
+	var/report_cooldown = 0
+	// Таймер звука пульса (интервал между "бипами")
+	var/sound_cooldown = 0
+	// Флаг: звук смерти уже проигран (чтобы не повторять)
+	var/played_dead_sound = FALSE
+	// Последний рассчитанный интервал (альтернативная переменная для отслеживания изменения)
+	var/last_interval
+	// Включены ли все оповещения (звук + сообщение)
+	var/alerts_enabled = TRUE
 
 	var/datum/component/experiment_handler/experiment_handler
+
+/obj/machinery/computer/operating/get_ru_names()
+	return list(
+		NOMINATIVE = "операционный компьютер",
+		GENITIVE = "операционного компьютера",
+		DATIVE = "операционному компьютеру",
+		ACCUSATIVE = "операционный компьютер",
+		INSTRUMENTAL = "операционным компьютером",
+		PREPOSITIONAL = "операционном компьютере",
+	)
 
 /obj/machinery/computer/operating/Initialize(mapload)
 	. = ..()
 	find_table()
+	START_PROCESSING(SSprocessing, src)
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/computer/operating/post_machine_initialize()
@@ -43,6 +64,7 @@
 		if(table && table.computer == src)
 			table.computer = null
 	QDEL_NULL(experiment_handler)
+	STOP_PROCESSING(SSprocessing, src)
 	return ..()
 
 /obj/machinery/computer/operating/multitool_act(mob/living/user, obj/item/multitool/tool)
@@ -52,9 +74,9 @@
 
 /obj/machinery/computer/operating/attackby(obj/item/O, mob/user, list/modifiers, list/attack_modifiers)
 	if(istype(O, /obj/item/disk/surgery))
-		user.visible_message(span_notice("[user] begins to load \the [O] in \the [src]..."), \
-			span_notice("You begin to load a surgery protocol from \the [O]..."), \
-			span_hear("You hear the chatter of a floppy drive."))
+		user.visible_message(span_notice("[user] начинает загружать диск [O.declent_ru(NOMINATIVE)] в [declent_ru(NOMINATIVE)]..."), \
+			span_notice("Вы начинаете загружать хирургический протокол с [O.declent_ru(GENITIVE)]..."), \
+			span_hear("Слышно шум дисковода."))
 		var/obj/item/disk/surgery/D = O
 		if(do_after(user, 1 SECONDS, target = src))
 			advanced_surgeries |= D.surgeries
@@ -76,6 +98,118 @@
 		if(table)
 			table.computer = src
 			break
+
+// Описание взаимодействия
+/obj/machinery/computer/operating/examine(mob/user)
+	. = ..()
+	. += span_notice("ПКМ для [alerts_enabled ? "выключения" : "включения"] оповещений о состоянии пациента.")
+
+// Интерактивное взаимодействие с компом, вкл/выкл оповещение через ПКМ
+/obj/machinery/computer/operating/attack_hand_secondary(mob/user, list/modifiers)
+	alerts_enabled = !alerts_enabled
+	to_chat(user, span_notice("[alerts_enabled ? "Включение" : "Выключение"] оповещений о состоянии пациента."))
+	playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+// Оповещение от компьютера от компа
+// TODO: Rewokin: Сделать механ пульса уже у сердца и поменять эту шляпу, что сейчас тут работает (имитирует пульс). Т.к. это криво и не хорошо!
+/obj/machinery/computer/operating/process(seconds_per_tick)
+	// Вкл/выкл оповещение
+	if(!alerts_enabled)
+		return
+	// Проверка состояния самого компа, если он сломан или без питания, то хуй вам, а не оповещение
+	if(machine_stat)
+		return
+	/// --Звуп пульса пациента
+	// Если новый пациент, то сбрасывается старые значения, чтоб у нормального пациента не было не того пульса
+	if(!table?.patient)
+		sound_cooldown = 0
+		return
+	// Пациент на операционном столе
+	var/mob/living/patient = table.patient
+	if(patient.stat != DEAD)
+		// Текущее здоровье пациента (от -100 до 100)
+		var/raw_health = patient.health
+		// Путь к звуковому файлу пульса (быстрый/нормальный/медленный)
+		var/sound_file
+		// Интервал между звуками пульса в секундах
+		var/interval
+		// Хп игрока = ритм пульса
+		if(raw_health >= 50)
+			sound_file = 'sound/machines/operating_computer/pulse_normal.ogg'
+			interval = 0.5 SECONDS
+		else if(raw_health >= 0)
+			sound_file = 'sound/machines/operating_computer/pulse_fast.ogg'
+			interval = 0.5 SECONDS
+		else if(raw_health >= -80)
+			sound_file = 'sound/machines/operating_computer/pulse_very_fast.ogg'
+			interval = 0.1 SECONDS
+		else if(raw_health >= -100)
+			sound_file = 'sound/machines/operating_computer/pulse_normal.ogg'
+			interval = 2 SECONDS
+		// Если интервал изменился, сбрасываем таймер звука,
+		// Чтобы новый интервал применился сразу, а не ждал старого таймера.
+		if(interval != last_interval)
+			sound_cooldown = 0
+			last_interval = interval
+		// Проверяем, пора ли играть звук
+		if(world.time >= sound_cooldown)
+			playsound(src, sound_file, 10, FALSE)
+			sound_cooldown = world.time + interval
+	// Звук смерти (однократно)
+	if(table?.patient?.stat == DEAD)
+		if(!played_dead_sound)
+			playsound(src, 'sound/machines/operating_computer/dead.ogg', 10, FALSE)
+			played_dead_sound = TRUE
+	else
+		played_dead_sound = FALSE // Сброс, если пациент ожил
+
+	///-- Сообщение о статусе пациента
+	// Сообщение каждые 10 секунд
+	if(world.time < report_cooldown)
+		return
+	report_cooldown = world.time + 10 SECONDS
+	// Пациент на столе?
+	if(!table?.patient)
+		return
+
+	// Текстовый статус сознания (в сознании/без сознания/труп)
+	var/conscious_status
+	// Текстовый статус здоровья (отличном/критическом и т.д.)
+	var/health_status
+	// Процент здоровья, приведённый к шкале 0–100% (исходно здоровье от -100 до 100)
+	var/health_percent = ((patient.health + 100) / 200) * 100
+
+	// Состояние пациента, если труп, то не нужно отписывать, ведь это решается уже в var/message
+	switch(patient.stat)
+		if(CONSCIOUS)
+			conscious_status = "в сознании"
+		if(SOFT_CRIT)
+			conscious_status = "в полусознании"
+		if(UNCONSCIOUS, HARD_CRIT)
+			conscious_status = "без сознания"
+	// Здоровье пациента
+	if(patient.stat != DEAD)
+		if(health_percent >= 90)
+			health_status = "отличном"
+		else if(health_percent >= 70)
+			health_status = "хорошом"
+		else if(health_percent >= 50)
+			health_status = "удовлетворительном"
+		else if(health_percent >= 30)
+			health_status = "плохом"
+		else if(health_percent >= 10)
+			health_status = "ужасном"
+		else
+			health_status = "критическом"
+	// Сообщение о состоянии пациента
+	var/message
+	// Чтоб не срать состоянимем пациента. Мы блять и так понимаем, что труп хуёво себя ощущает. Думай
+	if(patient.stat == DEAD)
+		message = "Пациент труп."
+	else
+		message = "Пациент [conscious_status]. Здоровье в [health_status] состоянии."
+	say(message)
 
 /obj/machinery/computer/operating/ui_state(mob/user)
 	return GLOB.standing_state
