@@ -22,7 +22,7 @@
 	grind_results = list(/datum/reagent/lithium = 15, /datum/reagent/iron = 5, /datum/reagent/silicon = 5)
 
 /obj/item/stock_parts/power_store/cell/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "батарея",
 		GENITIVE = "батареи",
 		DATIVE = "батарее",
@@ -53,7 +53,7 @@
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*0.4)
 
 /obj/item/stock_parts/power_store/cell/crap/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пальчиковая батарейка",
 		GENITIVE = "пальчиковой батарейки",
 		DATIVE = "пальчиковой батарейке",
@@ -78,7 +78,7 @@
 	chargerate = STANDARD_CELL_RATE * 0.5
 
 /obj/item/stock_parts/power_store/cell/upgraded/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "батарейка крона",
 		GENITIVE = "батарейки крона",
 		DATIVE = "батарейке крона",
@@ -97,7 +97,7 @@
 	maxcharge = STANDARD_CELL_CHARGE * 5
 
 /obj/item/stock_parts/power_store/cell/upgraded/plus/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "улучшенная батарейка крона",
 		GENITIVE = "улучшенной батарейки крона",
 		DATIVE = "улучшенной батарейке крона",
@@ -112,7 +112,7 @@
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*0.4)
 
 /obj/item/stock_parts/power_store/cell/secborg/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "батарея борга охраны",
 		GENITIVE = "батареи борга охраны",
 		DATIVE = "батарее борга охраны",
@@ -129,7 +129,7 @@
 	maxcharge = STANDARD_CELL_CHARGE * 0.6
 
 /obj/item/stock_parts/power_store/cell/mini_egun/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "миниатюрная батарея пистолета",
 		GENITIVE = "миниатюрной батареи пистолета",
 		DATIVE = "миниатюрной батарее пистолета",
@@ -143,7 +143,7 @@
 	maxcharge = STANDARD_CELL_CHARGE * 1.2
 
 /obj/item/stock_parts/power_store/cell/hos_gun/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "многофазная батарея X-01",
 		GENITIVE = "многофазной батареи X-01",
 		DATIVE = "многофазной батарее X-01",
@@ -159,7 +159,7 @@
 	chargerate = STANDARD_CELL_RATE * 0.75
 
 /obj/item/stock_parts/power_store/cell/pulse/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "батарея импульсной винтовки",
 		GENITIVE = "батареи импульсной винтовки",
 		DATIVE = "батарее импульсной винтовки",
@@ -173,7 +173,7 @@
 	maxcharge = STANDARD_CELL_CHARGE * 5
 
 /obj/item/stock_parts/power_store/cell/pulse/carbine/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "батарея импульсного карабина",
 		GENITIVE = "батареи импульсного карабина",
 		DATIVE = "батарее импульсного карабина",
@@ -187,7 +187,7 @@
 	maxcharge = STANDARD_CELL_CHARGE * 2
 
 /obj/item/stock_parts/power_store/cell/pulse/pistol/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "батарея импульсного пистолета",
 		GENITIVE = "батареи импульсного пистолета",
 		DATIVE = "батарее импульсного пистолета",
@@ -201,7 +201,7 @@
 	chargerate = STANDARD_CELL_RATE * 3
 
 /obj/item/stock_parts/power_store/cell/laser_pistol/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "батарея лазерного пистолета",
 		GENITIVE = "батареи лазерного пистолета",
 		DATIVE = "батарее лазерного пистолета",
@@ -219,7 +219,7 @@
 	chargerate = STANDARD_CELL_RATE
 
 /obj/item/stock_parts/power_store/cell/ninja/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "чёрная батарея",
 		GENITIVE = "чёрной батареи",
 		DATIVE = "чёрной батарее",
@@ -240,7 +240,7 @@
 	empty = TRUE
 
 /obj/item/stock_parts/power_store/cell/high/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "батарея повышенной ёмкости",
 		GENITIVE = "батареи повышенной ёмкости",
 		DATIVE = "батарее повышенной ёмкости",
@@ -261,7 +261,7 @@
 	empty = TRUE
 
 /obj/item/stock_parts/power_store/cell/high/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "суперёмкая батарея",
 		GENITIVE = "суперёмкой батареи",
 		DATIVE = "суперёмкой батарее",
@@ -282,7 +282,7 @@
 	empty = TRUE
 
 /obj/item/stock_parts/power_store/cell/hyper/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гиперёмкая батарея",
 		GENITIVE = "гиперёмкой батареи",
 		DATIVE = "гиперёмкой батарее",
@@ -304,7 +304,7 @@
 	empty = TRUE
 
 /obj/item/stock_parts/power_store/cell/bluespace/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "блюспейс батарея",
 		GENITIVE = "блюспейс батареи",
 		DATIVE = "блюспейс батарее",
@@ -326,7 +326,7 @@
 	return used
 
 /obj/item/stock_parts/power_store/cell/infinite/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "батарея бесконечной ёмкости",
 		GENITIVE = "батареи бесконечной ёмкости",
 		DATIVE = "батарее бесконечной ёмкости",
@@ -344,7 +344,7 @@
 	ratingdesc = FALSE
 
 /obj/item/stock_parts/power_store/cell/infinite/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ядро пустоты",
 		GENITIVE = "ядра пустоты",
 		DATIVE = "ядру пустоты",
@@ -375,7 +375,7 @@
 	. = ..()
 
 /obj/item/stock_parts/power_store/cell/potato/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "картофельная батарейка",
 		GENITIVE = "картофельной батарейки",
 		DATIVE = "картофельной батарейке",
@@ -391,7 +391,7 @@
 	maxcharge = STANDARD_CELL_CHARGE * 0.5
 
 /obj/item/stock_parts/power_store/cell/emproof/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "анти-ЭМИ батарея",
 		GENITIVE = "анти-ЭМИ батареи",
 		DATIVE = "анти-ЭМИ батарее",
@@ -421,7 +421,7 @@
 	connector_type = "slimecore"
 
 /obj/item/stock_parts/power_store/cell/emproof/slime/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "слаймовая анти-ЭМИ батарея",
 		GENITIVE = "слаймовой анти-ЭМИ батареи",
 		DATIVE = "слаймовой анти-ЭМИ батарее",
@@ -438,7 +438,7 @@
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/stock_parts/power_store/cell/emergency_light/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "миниатюрная батарея",
 		GENITIVE = "миниатюрной батареи",
 		DATIVE = "миниатюрной батарее",
@@ -466,7 +466,7 @@
 	grind_results = null
 
 /obj/item/stock_parts/power_store/cell/crystal_cell/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кристаллическая батарея",
 		GENITIVE = "кристаллической батареи",
 		DATIVE = "кристаллической батарее",

@@ -13,7 +13,7 @@
 	var/max_heat_transfer_rate = 100
 
 /obj/machinery/atmospherics/components/binary/temperature_pump/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тепловой насос",
 		GENITIVE = "теплового насоса",
 		DATIVE = "тепловому насосу",

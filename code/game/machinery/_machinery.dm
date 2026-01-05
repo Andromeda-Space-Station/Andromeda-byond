@@ -161,7 +161,7 @@
 	acid = 70
 
 /obj/machinery/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "оборудование",
 		GENITIVE = "оборудования",
 		DATIVE = "оборудованию",

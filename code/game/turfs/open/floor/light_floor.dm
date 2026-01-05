@@ -27,7 +27,7 @@
 	var/cycle = FALSE
 
 /turf/open/floor/light/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "светящийся пол",
 		GENITIVE = "светящегося пола",
 		DATIVE = "светящемуся полу",
@@ -179,7 +179,7 @@
 	cycle = TRUE
 
 /turf/open/floor/light/colour_cycle/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "танцпол",
 		GENITIVE = "танцпола",
 		DATIVE = "танцполу",

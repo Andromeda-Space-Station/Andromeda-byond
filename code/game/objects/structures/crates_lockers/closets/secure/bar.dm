@@ -13,7 +13,7 @@
 	paint_jobs = null
 
 /obj/structure/closet/secure_closet/bar/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф для выпивки",
 		GENITIVE = "шкафа для выпивки",
 		DATIVE = "шкафу для выпивки",
@@ -46,7 +46,7 @@
 	name = "bartender's closet"
 
 /obj/structure/closet/secure_closet/bar/lavaland_bartender_clothes/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф бармена",
 		GENITIVE = "шкафа бармена",
 		DATIVE = "шкафу бармена",

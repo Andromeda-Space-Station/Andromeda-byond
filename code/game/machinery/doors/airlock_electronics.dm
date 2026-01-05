@@ -19,7 +19,7 @@
 	var/shell = FALSE
 
 /obj/item/electronics/airlock/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плата шлюза",
 		GENITIVE = "плата шлюза",
 		DATIVE = "плате шлюза",

@@ -54,7 +54,7 @@
 	acid = 30
 
 /obj/item/weldingtool/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сварочный аппарат",
 		GENITIVE = "сварочного аппарата",
 		DATIVE = "сварочному аппарату",
@@ -348,7 +348,7 @@
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*0.6)
 
 /obj/item/weldingtool/largetank/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "промышленный сварочный аппарат",
 		GENITIVE = "промышленного сварочного аппарата",
 		DATIVE = "промышленному сварочному аппарату",
@@ -371,7 +371,7 @@
 	toolspeed = 0.5
 
 /obj/item/weldingtool/largetank/cyborg/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "интегрированный сварочный аппарат",
 		GENITIVE = "интегрированного сварочного аппарата",
 		DATIVE = "интегрированному сварочному аппарату",
@@ -391,7 +391,7 @@
 	change_icons = FALSE
 
 /obj/item/weldingtool/mini/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "аварийный сварочный аппарат",
 		GENITIVE = "аварийного сварочного аппарата",
 		DATIVE = "аварийному сварочному аппарату",
@@ -419,7 +419,7 @@
 	change_icons = FALSE
 
 /obj/item/weldingtool/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетный сварочный аппарат",
 		GENITIVE = "инопланетного сварочного аппарата",
 		DATIVE = "инопланетному сварочному аппарату",
@@ -442,7 +442,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.7, /datum/material/glass=SMALL_MATERIAL_AMOUNT*1.2)
 
 /obj/item/weldingtool/hugetank/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "улучшенный промышленный сварочный аппарат",
 		GENITIVE = "улучшенного промышленного сварочного аппарата",
 		DATIVE = "улучшенному промышленному сварочному аппарату",
@@ -467,7 +467,7 @@
 	var/nextrefueltick = 0
 
 /obj/item/weldingtool/experimental/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "экспериментальный сварочный аппарат",
 		GENITIVE = "экспериментального сварочного аппарата",
 		DATIVE = "экспериментальному сварочному аппарату",

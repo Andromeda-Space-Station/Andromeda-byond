@@ -5,7 +5,7 @@
 	surgeries = list(/datum/surgery/plastic_surgery/advanced)
 
 /obj/item/disk/surgery/advanced_plastic_surgery/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диск продвинутой пластической хирургии",
 		GENITIVE = "диска продвинутой пластической хирургии",
 		DATIVE = "диску продвинутой пластической хирургии",

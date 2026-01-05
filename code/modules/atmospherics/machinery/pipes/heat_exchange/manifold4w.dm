@@ -19,7 +19,7 @@
 	has_gas_visuals = FALSE
 
 /obj/machinery/atmospherics/pipe/heat_exchanging/manifold4w/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "4-сторонний манифольд",
 		GENITIVE = "4-стороннего манифольда",
 		DATIVE = "4-стороннему манифольду",

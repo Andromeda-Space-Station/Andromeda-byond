@@ -5,7 +5,7 @@
 	icon_door = "blue"
 
 /obj/structure/closet/wardrobe/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гардероб",
 		GENITIVE = "гардероба",
 		DATIVE = "гардеробу",
@@ -29,7 +29,7 @@
 	icon_door = "pink"
 
 /obj/structure/closet/wardrobe/pink/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "розовый гардероб",
 		GENITIVE = "розового гардероба",
 		DATIVE = "розовому гардеробу",
@@ -52,7 +52,7 @@
 	icon_door = "black"
 
 /obj/structure/closet/wardrobe/black/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "чёрный гардероб",
 		GENITIVE = "чёрного гардероба",
 		DATIVE = "чёрному гардеробу",
@@ -88,7 +88,7 @@
 	icon_door = "green"
 
 /obj/structure/closet/wardrobe/green/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "зелёный гардероб",
 		GENITIVE = "зелёного гардероба",
 		DATIVE = "зелёному гардеробу",
@@ -115,7 +115,7 @@
 	icon_door = "orange"
 
 /obj/structure/closet/wardrobe/orange/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тюремный гардероб",
 		GENITIVE = "тюремного гардероба",
 		DATIVE = "тюремному гардеробу",
@@ -139,7 +139,7 @@
 	icon_door = "yellow"
 
 /obj/structure/closet/wardrobe/yellow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "жёлтый гардероб",
 		GENITIVE = "жёлтого гардероба",
 		DATIVE = "жёлтому гардеробу",
@@ -165,7 +165,7 @@
 	icon_door = "white"
 
 /obj/structure/closet/wardrobe/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "белый гардероб",
 		GENITIVE = "белого гардероба",
 		DATIVE = "белому гардеробу",
@@ -192,7 +192,7 @@
 	icon_door = "white"
 
 /obj/structure/closet/wardrobe/pjs/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гардероб с пижамами",
 		GENITIVE = "гардероба с пижамами",
 		DATIVE = "гардеробу с пижамами",
@@ -220,7 +220,7 @@
 	icon_door = "grey"
 
 /obj/structure/closet/wardrobe/grey/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "серый гардероб",
 		GENITIVE = "серого гардероба",
 		DATIVE = "серому гардеробу",
@@ -260,7 +260,7 @@
 	icon_door = "mixed"
 
 /obj/structure/closet/wardrobe/mixed/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "смешанный гардероб",
 		GENITIVE = "смешанного гардероба",
 		DATIVE = "смешанному гардеробу",

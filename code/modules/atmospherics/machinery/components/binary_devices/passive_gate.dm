@@ -21,7 +21,7 @@ Passive gate is similar to the regular pump except:
 	var/target_pressure = ONE_ATMOSPHERE
 
 /obj/machinery/atmospherics/components/binary/passive_gate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пассивный шлюз",
 		GENITIVE = "пассивного шлюза",
 		DATIVE = "пассивному шлюзу",

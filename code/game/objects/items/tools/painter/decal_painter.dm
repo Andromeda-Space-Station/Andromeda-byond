@@ -20,7 +20,7 @@
 	VAR_PRIVATE/datum/paintable_decal_category/current_category
 
 /obj/item/airlock_painter/decal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "покрасчик декалей",
 		GENITIVE = "покрасчика декалей",
 		DATIVE = "покрасчику декалей",
@@ -153,7 +153,7 @@
 	initial_ink_type = /obj/item/toner/extreme
 
 /obj/item/airlock_painter/decal/debug/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "экстремальный покрасчик декалей",
 		GENITIVE = "экстремального покрасчика декалей",
 		DATIVE = "экстремальному покрасчику декалей",

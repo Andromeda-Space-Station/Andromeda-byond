@@ -12,7 +12,7 @@
 	door_anim_time = 0 // no animation
 
 /obj/structure/closet/cabinet/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "деревянный шкаф",
 		GENITIVE = "деревянного шкафа",
 		DATIVE = "деревянному шкафу",
@@ -29,7 +29,7 @@
 	material_drop = /obj/item/stack/sheet/mineral/abductor
 
 /obj/structure/closet/acloset/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "странный шкаф",
 		GENITIVE = "странного шкафа",
 		DATIVE = "странному шкафу",
@@ -45,7 +45,7 @@
 	icon_state = "syndicate"
 
 /obj/structure/closet/gimmick/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф административного снабжения",
 		GENITIVE = "шкафа административного снабжения",
 		DATIVE = "шкафу административного снабжения",
@@ -59,7 +59,7 @@
 	desc = "Это склад для российского стандартного излишка."
 
 /obj/structure/closet/gimmick/russian/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с российской униформой",
 		GENITIVE = "шкафа с российской униформой",
 		DATIVE = "шкафу с российской униформой",
@@ -80,7 +80,7 @@
 	desc = "Это хранилище для Тактикульного снаряжения."
 
 /obj/structure/closet/gimmick/tacticool/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с тактикульным снаряжением",
 		GENITIVE = "шкафа с тактикульным снаряжением",
 		DATIVE = "шкафу с тактикульным снаряжением",
@@ -114,7 +114,7 @@
 	anchored = TRUE
 
 /obj/structure/closet/thunderdome/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф Громового Купола",
 		GENITIVE = "шкафа Громового Купола",
 		DATIVE = "шкафу Громового Купола",
@@ -128,7 +128,7 @@
 	icon_door = "red"
 
 /obj/structure/closet/thunderdome/tdred/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф красной команды Громового Купола",
 		GENITIVE = "шкафа красной команды Громового Купола",
 		DATIVE = "шкафу красной команды Громового Купола",
@@ -159,7 +159,7 @@
 	icon_door = "green"
 
 /obj/structure/closet/thunderdome/tdgreen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф зелёной команды Громового Купола",
 		GENITIVE = "шкафа зелёной команды Громового Купола",
 		DATIVE = "шкафу зелёной команды Громового Купола",
@@ -212,7 +212,7 @@
 	storage_capacity = 10
 
 /obj/structure/closet/mini_fridge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мини-холодильник",
 		GENITIVE = "мини-холодильника",
 		DATIVE = "мини-холодильнику",
@@ -235,7 +235,7 @@
 	desc = "Маленькое приспособление, созданное для приятного охлаждения нескольких напитков. Однако этот устаревший агрегат, похоже, служит лишь компанией для тараканов."
 
 /obj/structure/closet/mini_fridge/grimy/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "грязный мини-холодильник",
 		GENITIVE = "грязного мини-холодильника",
 		DATIVE = "грязному мини-холодильнику",

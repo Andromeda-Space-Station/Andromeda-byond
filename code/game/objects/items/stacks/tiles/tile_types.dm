@@ -31,7 +31,7 @@
 	var/list/tile_rotate_dirs_number
 
 /obj/item/stack/tile/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сломанная плитка",
 		GENITIVE = "сломанной плитки",
 		DATIVE = "сломанной плитке",
@@ -113,7 +113,7 @@
 	merge_type = /obj/item/stack/tile/grass
 
 /obj/item/stack/tile/grass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "дерновая плитка",
 		GENITIVE = "дерновой плитки",
 		DATIVE = "дерновой плитке",
@@ -134,7 +134,7 @@
 	merge_type = /obj/item/stack/tile/hay
 
 /obj/item/stack/tile/hay/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сноп сена",
 		GENITIVE = "снопа сена",
 		DATIVE = "снопу сена",
@@ -154,7 +154,7 @@
 	merge_type = /obj/item/stack/tile/fairygrass
 
 /obj/item/stack/tile/fairygrass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "волшебная дерновая плитка",
 		GENITIVE = "волшебной дерновой плитки",
 		DATIVE = "волшебной дерновой плитке",
@@ -182,7 +182,7 @@
 	mats_per_unit = list(/datum/material/wood = HALF_SHEET_MATERIAL_AMOUNT / 2)
 
 /obj/item/stack/tile/wood/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "деревянная плитка",
 		GENITIVE = "деревянной плитки",
 		DATIVE = "деревянной плитке",
@@ -199,7 +199,7 @@
 	merge_type = /obj/item/stack/tile/wood/parquet
 
 /obj/item/stack/tile/wood/parquet/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "паркетная плитка",
 		GENITIVE = "паркетной плитки",
 		DATIVE = "паркетной плитке",
@@ -216,7 +216,7 @@
 	merge_type = /obj/item/stack/tile/wood/large
 
 /obj/item/stack/tile/wood/large/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая деревянная плитка",
 		GENITIVE = "большой деревянной плитки",
 		DATIVE = "большой деревянной плитке",
@@ -233,7 +233,7 @@
 	merge_type = /obj/item/stack/tile/wood/tile
 
 /obj/item/stack/tile/wood/tile/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "узорчатая деревянная плитка",
 		GENITIVE = "узорчатой деревянной плитки",
 		DATIVE = "узорчатой деревянной плитке",
@@ -261,7 +261,7 @@
 	mats_per_unit = list(/datum/material/bamboo = HALF_SHEET_MATERIAL_AMOUNT / 2)
 
 /obj/item/stack/tile/bamboo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "часть бамбукового мата",
 		GENITIVE = "части бамбукового мата",
 		DATIVE = "части бамбукового мата",
@@ -279,7 +279,7 @@
 	tile_rotate_dirs = list(NORTH, EAST, SOUTH, WEST)
 
 /obj/item/stack/tile/bamboo/tatami/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка татами (зелёная)",
 		GENITIVE = "плитки татами (зелёной)",
 		DATIVE = "плитке татами (зелёной)",
@@ -296,7 +296,7 @@
 	merge_type = /obj/item/stack/tile/bamboo/tatami/purple
 
 /obj/item/stack/tile/bamboo/tatami/purple/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка татами (фиолетовая)",
 		GENITIVE = "плитки татами (фиолетовой)",
 		DATIVE = "плитке татами (фиолетовой)",
@@ -313,7 +313,7 @@
 	merge_type = /obj/item/stack/tile/bamboo/tatami/black
 
 /obj/item/stack/tile/bamboo/tatami/black/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка татами (чёрная)",
 		GENITIVE = "плитки татами (чёрной)",
 		DATIVE = "плитке татами (чёрной)",
@@ -334,7 +334,7 @@
 	mats_per_unit = list(/datum/material/sand = SHEET_MATERIAL_AMOUNT * 2)
 
 /obj/item/stack/tile/basalt/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "базальтовая плитка",
 		GENITIVE = "базальтовой плитки",
 		DATIVE = "базальтовой плитке",
@@ -361,7 +361,7 @@
 	)
 
 /obj/item/stack/tile/carpet/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ковровая плитка",
 		GENITIVE = "ковровой плитки",
 		DATIVE = "ковровой плитке",
@@ -380,7 +380,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST, SOUTHEAST)
 
 /obj/item/stack/tile/carpet/symbol/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ковровая плитка с символом",
 		GENITIVE = "ковровой плитки с символом",
 		DATIVE = "ковровой плитке с символом",
@@ -398,7 +398,7 @@
 	merge_type = /obj/item/stack/tile/carpet/star
 
 /obj/item/stack/tile/carpet/star/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ковровая плитка со звездой",
 		GENITIVE = "ковровой плитки со звездой",
 		DATIVE = "ковровой плитке со звездой",
@@ -417,7 +417,7 @@
 	tile_reskin_types = null
 
 /obj/item/stack/tile/carpet/black/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "черная ковровая плитка",
 		GENITIVE = "черной ковровой плитки",
 		DATIVE = "черной ковровой плитке",
@@ -447,7 +447,7 @@
 
 
 /obj/item/stack/tile/carpet/cyan/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "голубая ковровая плитка",
 		GENITIVE = "голубой ковровой плитки",
 		DATIVE = "голубой ковровой плитке",
@@ -467,7 +467,7 @@
 	tile_reskin_types = null
 
 /obj/item/stack/tile/carpet/green/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "зеленая ковровая плитка",
 		GENITIVE = "зеленой ковровой плитки",
 		DATIVE = "зеленой ковровой плитке",
@@ -496,7 +496,7 @@
 	tile_reskin_types = null
 
 /obj/item/stack/tile/carpet/purple/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фиолетовая ковровая плитка",
 		GENITIVE = "фиолетовой ковровой плитки",
 		DATIVE = "фиолетовой ковровой плитке",
@@ -516,7 +516,7 @@
 	tile_reskin_types = null
 
 /obj/item/stack/tile/carpet/red/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "красная ковровая плитка",
 		GENITIVE = "красной ковровой плитки",
 		DATIVE = "красной ковровой плитке",
@@ -536,7 +536,7 @@
 	tile_reskin_types = null
 
 /obj/item/stack/tile/carpet/royalblack/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "королевски черная ковровая плитка",
 		GENITIVE = "королевски черной ковровой плитки",
 		DATIVE = "королевски черной ковровой плитке",
@@ -555,7 +555,7 @@
 	tile_reskin_types = null
 
 /obj/item/stack/tile/carpet/blue/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "королевски синяя ковровая плитка",
 		GENITIVE = "королевски синей ковровой плитки",
 		DATIVE = "королевски синей ковровой плитке",
@@ -573,7 +573,7 @@
 	tile_reskin_types = null
 
 /obj/item/stack/tile/carpet/executive/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "исполнительная ковровая плитка",
 		GENITIVE = "исполнительной ковровой плитки",
 		DATIVE = "исполнительной ковровой плитке",
@@ -591,7 +591,7 @@
 	tile_reskin_types = null
 
 /turf/open/floor/carpet/stellar/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "звёздная ковровая плитка",
 		GENITIVE = "звёздной ковровой плитке",
 		DATIVE = "звёздной ковровой плитке",
@@ -609,7 +609,7 @@
 	tile_reskin_types = null
 
 /obj/item/stack/tile/carpet/donk/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "рекламная ковровая плитка Donk Co.",
 		GENITIVE = "рекламной ковровой плитки Donk Co.",
 		DATIVE = "рекламной ковровой плитке Donk Co.",
@@ -683,7 +683,7 @@
 	var/emissive_alpha = 150
 
 /obj/item/stack/tile/carpet/neon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "неоновая ковровая плитка",
 		GENITIVE = "неоновой ковровой плитки",
 		DATIVE = "неоновой ковровой плитке",
@@ -724,7 +724,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простая неоновая ковровая плитка",
 		GENITIVE = "простой неоновой ковровой плитки",
 		DATIVE = "простой неоновой ковровой плитке",
@@ -756,7 +756,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "белая неоновая ковровая плитка",
 		GENITIVE = "белой неоновой ковровой плитки",
 		DATIVE = "белой неоновой ковровой плитке",
@@ -788,7 +788,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/black/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "чёрная неоновая ковровая плитка",
 		GENITIVE = "чёрной неоновой ковровой плитки",
 		DATIVE = "чёрной неоновой ковровой плитке",
@@ -819,7 +819,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/red/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "красная неоновая ковровая плитка",
 		GENITIVE = "красной неоновой ковровой плитки",
 		DATIVE = "красной неоновой ковровой плитке",
@@ -850,7 +850,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/orange/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "оранжевая неоновая ковровая плитка",
 		GENITIVE = "оранжевой неоновой ковровой плитки",
 		DATIVE = "оранжевой неоновой ковровой плитке",
@@ -882,7 +882,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/yellow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "жёлтая неоновая ковровая плитка",
 		GENITIVE = "жёлтой неоновой ковровой плитки",
 		DATIVE = "жёлтой неоновой ковровой плитке",
@@ -912,7 +912,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/lime/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "лаймовая неоновая ковровая плитка",
 		GENITIVE = "лаймовой неоновой ковровой плитки",
 		DATIVE = "лаймовой неоновой ковровой плитке",
@@ -943,7 +943,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/green/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "зелёная неоновая ковровая плитка",
 		GENITIVE = "зелёной неоновой ковровой плитки",
 		DATIVE = "зелёной неоновой ковровой плитке",
@@ -975,7 +975,7 @@
 
 
 /obj/item/stack/tile/carpet/neon/simple/teal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бирюзовая неоновая ковровая плитка",
 		GENITIVE = "бирюзовой неоновой ковровой плитки",
 		DATIVE = "бирюзовой неоновой ковровой плитке",
@@ -1006,7 +1006,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/cyan/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "голубая неоновая ковровая плитка",
 		GENITIVE = "голубой неоновой ковровой плитки",
 		DATIVE = "голубой неоновой ковровой плитке",
@@ -1038,7 +1038,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/blue/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "синяя неоновая ковровая плитка",
 		GENITIVE = "синей неоновой ковровой плитки",
 		DATIVE = "синей неоновой ковровой плитке",
@@ -1069,7 +1069,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/purple/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пурпурная неоновая ковровая плитка",
 		GENITIVE = "пурпурной неоновой ковровой плитки",
 		DATIVE = "пурпурной неоновой ковровой плитке",
@@ -1100,7 +1100,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/violet/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фиолетовая неоновая ковровая плитка",
 		GENITIVE = "фиолетовой неоновой ковровой плитки",
 		DATIVE = "фиолетовой неоновой ковровой плитке",
@@ -1131,7 +1131,7 @@
 	)
 
 /obj/item/stack/tile/carpet/neon/simple/pink/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "розовая неоновая ковровая плитка",
 		GENITIVE = "розовой неоновой ковровой плитки",
 		DATIVE = "розовой неоновой ковровой плитке",
@@ -1423,7 +1423,7 @@
 	merge_type = /obj/item/stack/tile/fakespace
 
 /obj/item/stack/tile/fakespace/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "звёздная ковровая плитка",
 		GENITIVE = "звёздной ковровой плитки",
 		DATIVE = "звёздной ковровой плитке",
@@ -1447,7 +1447,7 @@
 	merge_type = /obj/item/stack/tile/fakepit
 
 /obj/item/stack/tile/fakepit/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ковровая плитка с иллюзией ямы",
 		GENITIVE = "ковровой плитки с иллюзией ямы",
 		DATIVE = "ковровой плитке с иллюзией ямы",
@@ -1470,7 +1470,7 @@
 	merge_type = /obj/item/stack/tile/fakeice
 
 /obj/item/stack/tile/fakeice/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка с имитацией льда",
 		GENITIVE = "плитки с имитацией льда",
 		DATIVE = "плитке с имитацией льда",
@@ -1493,7 +1493,7 @@
 	merge_type = /obj/item/stack/tile/noslip
 
 /obj/item/stack/tile/noslip/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "нескользящая плитка",
 		GENITIVE = "нескользящей плитки",
 		DATIVE = "нескользящей плитке",
@@ -1524,7 +1524,7 @@
 	merge_type = /obj/item/stack/tile/tram
 
 /obj/item/stack/tile/tram/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка трамвайной платформы",
 		GENITIVE = "плитки трамвайной платформы",
 		DATIVE = "плитке трамвайной платформы",
@@ -1559,7 +1559,7 @@
 	mats_per_unit = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1.05, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 1.05)
 
 /obj/item/stack/tile/circuit/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка-микросхема",
 		GENITIVE = "плитки-микросхемы",
 		DATIVE = "плитке-микросхеме",
@@ -1578,7 +1578,7 @@
 	merge_type = /obj/item/stack/tile/circuit/green
 
 /obj/item/stack/tile/circuit/green/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "зеленая плитка-микросхема",
 		GENITIVE = "зеленой плитки-микросхемы",
 		DATIVE = "зеленой плитке-микросхеме",
@@ -1601,7 +1601,7 @@
 	merge_type = /obj/item/stack/tile/circuit/red
 
 /obj/item/stack/tile/circuit/red/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "красная плитка-микросхема",
 		GENITIVE = "красной плитки-микросхемы",
 		DATIVE = "красной плитке-микросхеме",
@@ -1630,7 +1630,7 @@
 		)
 
 /obj/item/stack/tile/pod/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "рифлёная плитка",
 		GENITIVE = "рифлёной плитки",
 		DATIVE = "рифлёной плитке",
@@ -1648,7 +1648,7 @@
 	merge_type = /obj/item/stack/tile/pod/light
 
 /obj/item/stack/tile/pod/light/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "светлая рифлёная плитка",
 		GENITIVE = "светлой рифлёной плитки",
 		DATIVE = "светлой рифлёной плитке",
@@ -1666,7 +1666,7 @@
 	merge_type = /obj/item/stack/tile/pod/dark
 
 /obj/item/stack/tile/pod/dark/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "темная рифлёная плитка",
 		GENITIVE = "темной рифлёной плитки",
 		DATIVE = "темной рифлёной плитке",
@@ -1686,7 +1686,7 @@
 	merge_type = /obj/item/stack/tile/plastic
 
 /obj/item/stack/tile/plastic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластиковая плитка",
 		GENITIVE = "пластиковой плитки",
 		DATIVE = "пластиковой плитке",
@@ -1707,7 +1707,7 @@
 	merge_type = /obj/item/stack/tile/material
 
 /obj/item/stack/tile/material/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "напольная плитка",
 		GENITIVE = "напольной плитки",
 		DATIVE = "напольной плитке",
@@ -1734,7 +1734,7 @@
 	)
 
 /obj/item/stack/tile/eighties/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ретро-плитка",
 		GENITIVE = "ретро-плитки",
 		DATIVE = "ретро-плитке",
@@ -1769,7 +1769,7 @@
 	)
 
 /obj/item/stack/tile/bronze/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бронзовая плитка",
 		GENITIVE = "бронзовой плитки",
 		DATIVE = "бронзовой плитке",
@@ -1802,7 +1802,7 @@
 	merge_type = /obj/item/stack/tile/cult
 
 /obj/item/stack/tile/cult/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гравированная плитка",
 		GENITIVE = "гравированной плитки",
 		DATIVE = "гравированной плитке",
@@ -1859,7 +1859,7 @@
 	)
 
 /obj/item/stack/tile/catwalk_tile/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка для мостика",
 		GENITIVE = "плитки для мостика",
 		DATIVE = "плитке для мостика",
@@ -1912,7 +1912,7 @@
 	mats_per_unit = list(/datum/material/glass=SHEET_MATERIAL_AMOUNT * 0.25) // 4 tiles per sheet
 
 /obj/item/stack/tile/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянная плитка",
 		GENITIVE = "стеклянной плитки",
 		DATIVE = "стеклянной плитке",
@@ -1934,7 +1934,7 @@
 	mats_per_unit = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.125, /datum/material/glass=SHEET_MATERIAL_AMOUNT * 0.25) // 4 tiles per sheet
 
 /obj/item/stack/tile/rglass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённая стеклянная плитка",
 		GENITIVE = "укреплённой стеклянной плитки",
 		DATIVE = "укреплённой стеклянной плитке",
@@ -1956,7 +1956,7 @@
 	mats_per_unit = list(/datum/material/alloy/plasmaglass = SHEET_MATERIAL_AMOUNT * 0.25)
 
 /obj/item/stack/tile/glass/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменная стеклянная плитка",
 		GENITIVE = "плазменной стеклянной плитки",
 		DATIVE = "плазменной стеклянной плитке",
@@ -1975,7 +1975,7 @@
 	mats_per_unit = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.125, /datum/material/alloy/plasmaglass = SHEET_MATERIAL_AMOUNT * 0.25)
 
 /obj/item/stack/tile/rglass/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённая плазменная плитка",
 		GENITIVE = "укреплённой плазменной плитки",
 		DATIVE = "укреплённой плазменной плитке",

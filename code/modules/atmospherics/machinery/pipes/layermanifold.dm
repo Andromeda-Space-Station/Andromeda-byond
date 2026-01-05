@@ -21,7 +21,7 @@
 	var/list/back_nodes
 
 /obj/machinery/atmospherics/pipe/layer_manifold/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "адаптер слоёв",
 		GENITIVE = "адаптера слоёв",
 		DATIVE = "адаптеру слоёв",

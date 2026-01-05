@@ -18,7 +18,7 @@
 	var/minimum_temperature = T0C - 60
 
 /obj/structure/closet/secure_closet/freezer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "холодильник",
 		GENITIVE = "холодильника",
 		DATIVE = "холодильнику",
@@ -55,7 +55,7 @@
 	name = "freezer"
 
 /obj/structure/closet/secure_closet/freezer/empty/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "морозильник",
 		GENITIVE = "морозильника",
 		DATIVE = "морозильнику",
@@ -73,7 +73,7 @@
 	req_access = list(ACCESS_KITCHEN)
 
 /obj/structure/closet/secure_closet/freezer/kitchen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кухонный шкаф",
 		GENITIVE = "кухонного шкафа",
 		DATIVE = "кухонному шкафу",
@@ -98,7 +98,7 @@
 	req_access = null
 
 /obj/structure/closet/secure_closet/freezer/kitchen/maintenance/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "технический холодильник",
 		GENITIVE = "технического холодильника",
 		DATIVE = "техническому холодильнику",
@@ -123,7 +123,7 @@
 	req_access = list(ACCESS_KITCHEN)
 
 /obj/structure/closet/secure_closet/freezer/meat/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мясной холодильник",
 		GENITIVE = "мясного холодильника",
 		DATIVE = "мясному холодильнику",
@@ -148,7 +148,7 @@
 	name = "refrigerator"
 
 /obj/structure/closet/secure_closet/freezer/gulag_fridge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "холодильник",
 		GENITIVE = "холодильника",
 		DATIVE = "холодильнику",
@@ -167,7 +167,7 @@
 	req_access = list(ACCESS_KITCHEN)
 
 /obj/structure/closet/secure_closet/freezer/fridge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "холодильник",
 		GENITIVE = "холодильника",
 		DATIVE = "холодильнику",
@@ -202,7 +202,7 @@
 	req_access = list(ACCESS_VAULT)
 
 /obj/structure/closet/secure_closet/freezer/money/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "морозильник",
 		GENITIVE = "морозильника",
 		DATIVE = "морозильнику",
@@ -226,7 +226,7 @@
 	req_access = list(ACCESS_THEATRE)
 
 /obj/structure/closet/secure_closet/freezer/cream_pie/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с кремовыми пирогами",
 		GENITIVE = "шкафа с кремовыми пирогами",
 		DATIVE = "шкафу с кремовыми пирогами",

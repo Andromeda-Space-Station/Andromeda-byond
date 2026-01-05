@@ -12,7 +12,7 @@
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 0.5)
 
 /obj/structure/closet/secure_closet/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "защищённый шкафчик",
 		GENITIVE = "защищённого шкафчика",
 		DATIVE = "защищённому шкафчику",

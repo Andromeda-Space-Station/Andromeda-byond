@@ -13,7 +13,7 @@
 	wall_external = TRUE
 
 /obj/item/wallframe/camera/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сборка камеры",
 		GENITIVE = "сборки камеры",
 		DATIVE = "сборке камеры",
@@ -101,7 +101,7 @@
 	var/alarm_delay = 30 // Don't forget, there's another 3 seconds in queueAlarm()
 
 /obj/machinery/camera/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "камера наблюдения",
 		GENITIVE = "камеры наблюдения",
 		DATIVE = "камере наблюдения",

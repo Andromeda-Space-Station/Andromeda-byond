@@ -285,7 +285,7 @@ user.balloon_alert_to_viewers("чинит [declent_ru(NOMINATIVE)]...", "поч�
 	icon_state = "survival"
 
 /obj/structure/sign/mining/survival/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "знак убежища",
 		GENITIVE = "знака убежища",
 		DATIVE = "знаку убежища",

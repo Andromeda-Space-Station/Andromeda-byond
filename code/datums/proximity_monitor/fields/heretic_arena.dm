@@ -135,7 +135,7 @@ GLOBAL_LIST_EMPTY(heretic_arenas)
 	pass_flags_self = NONE // No PASSCLOSEDTURF because only arena victors are allowed to go in or out
 
 /turf/closed/indestructible/heretic_wall/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "потусторонняя стена",
 		GENITIVE = "потусторонней стены",
 		DATIVE = "потусторонней стене",

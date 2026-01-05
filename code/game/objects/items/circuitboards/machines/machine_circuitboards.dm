@@ -10,7 +10,7 @@
 		/obj/item/stack/cable_coil = 2)
 
 /obj/item/circuitboard/machine/bsa/back/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата генератора БСА",
 		GENITIVE = "машинной платы генератора БСА",
 		DATIVE = "машинной плате генератора БСА",
@@ -29,7 +29,7 @@
 		/obj/item/stack/cable_coil = 2)
 
 /obj/item/circuitboard/machine/bsa/front/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата дула БСА",
 		GENITIVE = "машинной платы дула БСА",
 		DATIVE = "машинной плате дула БСА",
@@ -47,7 +47,7 @@
 		/obj/item/stack/cable_coil = 2)
 
 /obj/item/circuitboard/machine/bsa/middle/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата фузора БСА",
 		GENITIVE = "машинной платы фузора БСА",
 		DATIVE = "машинной плате фузора БСА",
@@ -67,7 +67,7 @@
 		/obj/item/stack/cable_coil = 2)
 
 /obj/item/circuitboard/machine/dna_vault/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата хранилища ДНК",
 		GENITIVE = "машинной платы хранилища ДНК",
 		DATIVE = "машинной плате хранилища ДНК",
@@ -87,7 +87,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/announcement_system/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата системы оповещения",
 		GENITIVE = "машинной платы системы оповещения",
 		DATIVE = "машинной плате системы оповещения",
@@ -107,7 +107,7 @@
 		/obj/item/electronics/airlock = 1)
 
 /obj/item/circuitboard/machine/suit_storage_unit/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата хранилища скафандров",
 		GENITIVE = "машинной платы хранилища скафандров",
 		DATIVE = "машинной плате хранилища скафандров",
@@ -124,7 +124,7 @@
 		/datum/stock_part/servo = 1,)
 
 /obj/item/circuitboard/machine/mass_driver/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата масс-драйвера",
 		GENITIVE = "машинной платы масс-драйвера",
 		DATIVE = "машинной плате масс-драйвера",
@@ -143,7 +143,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/autolathe/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата автолата",
 		GENITIVE = "машинной платы автолата",
 		DATIVE = "машинной плате автолата",
@@ -160,7 +160,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/grounding_rod/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата заземляющего стержня",
 		GENITIVE = "машинной платы заземляющего стержня",
 		DATIVE = "машинной плате заземляющего стержня",
@@ -182,7 +182,7 @@
 	)
 
 /obj/item/circuitboard/machine/telecomms/broadcaster/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата подпространственного вещателя",
 		GENITIVE = "машинной платы подпространственного вещателя",
 		DATIVE = "машинной плате подпространственного вещателя",
@@ -202,7 +202,7 @@
 	)
 
 /obj/item/circuitboard/machine/telecomms/bus/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата шины мейнфрейма",
 		GENITIVE = "машинной платы шины мейнфрейма",
 		DATIVE = "машинной плате шины мейнфрейма",
@@ -222,7 +222,7 @@
 	)
 
 /obj/item/circuitboard/machine/telecomms/hub/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата хаба мейнфрейма",
 		GENITIVE = "машинной платы хаба мейнфрейма",
 		DATIVE = "машинной плате хаба мейнфрейма",
@@ -242,7 +242,7 @@
 	)
 
 /obj/item/circuitboard/machine/telecomms/message_server/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата сервера сообщений",
 		GENITIVE = "машинной платы сервера сообщений",
 		DATIVE = "машинной плате сервера сообщений",
@@ -265,7 +265,7 @@
 	)
 
 /obj/item/circuitboard/machine/telecomms/processor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата процессорного модуля",
 		GENITIVE = "машинной платы процессорного модуля",
 		DATIVE = "машинной плате процессорного модуля",
@@ -286,7 +286,7 @@
 	)
 
 /obj/item/circuitboard/machine/telecomms/receiver/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата подпространственного приёмника",
 		GENITIVE = "машинной платы подпространственного приёмника",
 		DATIVE = "машинной плате подпространственного приёмника",
@@ -306,7 +306,7 @@
 	)
 
 /obj/item/circuitboard/machine/telecomms/relay/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата реле мейнфрейма",
 		GENITIVE = "машинной платы реле мейнфрейма",
 		DATIVE = "машинной плате реле мейнфрейма",
@@ -326,7 +326,7 @@
 	)
 
 /obj/item/circuitboard/machine/telecomms/server/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата телекоммуникационного сервера",
 		GENITIVE = "машинной платы телекоммуникационного сервера",
 		DATIVE = "машинной плате телекоммуникационного сервера",
@@ -344,7 +344,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/tesla_coil/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата контроллера Теслы",
 		GENITIVE = "машинной платы контроллера Теслы",
 		DATIVE = "машинной плате контроллера Теслы",
@@ -365,7 +365,7 @@
 	)
 
 /obj/item/circuitboard/machine/modular_shield_generator/gate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата врат модульного щита",
 		GENITIVE = "машинной платы врат модульного щита",
 		DATIVE = "машинной плате врат модульного щита",
@@ -386,7 +386,7 @@
 	)
 
 /obj/item/circuitboard/machine/modular_shield_generator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата модульного генератора щита",
 		GENITIVE = "машинной платы модульного генератора щита",
 		DATIVE = "машинной плате модульного генератора щита",
@@ -405,7 +405,7 @@
 	)
 
 /obj/item/circuitboard/machine/modular_shield_node/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата узла модульного щита",
 		GENITIVE = "машинной платы узла модульного щита",
 		DATIVE = "машинной плате узла модульного щита",
@@ -423,7 +423,7 @@
 	)
 
 /obj/item/circuitboard/machine/modular_shield_cable/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата кабеля модульного щита",
 		GENITIVE = "машинной платы кабеля модульного щита",
 		DATIVE = "машинной плате кабеля модульного щита",
@@ -442,7 +442,7 @@
 	)
 
 /obj/item/circuitboard/machine/modular_shield_well/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата колодца модульного щита",
 		GENITIVE = "машинной платы колодца модульного щита",
 		DATIVE = "машинной плате колодца модульного щита",
@@ -461,7 +461,7 @@
 	)
 
 /obj/item/circuitboard/machine/modular_shield_relay/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата реле модульного щита",
 		GENITIVE = "машинной платы реле модульного щита",
 		DATIVE = "машинной плате реле модульного щита",
@@ -480,7 +480,7 @@
 	)
 
 /obj/item/circuitboard/machine/modular_shield_charger/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата зарядника модульного щита",
 		GENITIVE = "машинной платы зарядника модульного щита",
 		DATIVE = "машинной плате зарядника модульного щита",
@@ -497,7 +497,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/cell_charger/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата зарядника батареек",
 		GENITIVE = "машинной платы зарядника батареек",
 		DATIVE = "машинной плате зарядника батареек",
@@ -513,7 +513,7 @@
 	req_components = list()
 
 /obj/item/circuitboard/machine/circulator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата циркулятора",
 		GENITIVE = "машинной платы циркулятора",
 		DATIVE = "машинной плате циркулятора",
@@ -532,7 +532,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/emitter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата излучателя",
 		GENITIVE = "машинной платы излучателя",
 		DATIVE = "машинной плате излучателя",
@@ -548,7 +548,7 @@
 	req_components = list()
 
 /obj/item/circuitboard/machine/thermoelectric_generator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата ТЭГ",
 		GENITIVE = "машинной платы ТЭГ",
 		DATIVE = "машинной плате ТЭГ",
@@ -567,7 +567,7 @@
 	)
 
 /obj/item/circuitboard/machine/ntnet_relay/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата реле NTNet",
 		GENITIVE = "машинной платы реле NTNet",
 		DATIVE = "машинной плате реле NTNet",
@@ -588,7 +588,7 @@
 	var/high_production_profile = FALSE
 
 /obj/item/circuitboard/machine/pacman/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата генератора ПАКМАН",
 		GENITIVE = "машинной платы генератора ПАКМАН",
 		DATIVE = "машинной плате генератора ПАКМАН",
@@ -617,7 +617,7 @@
 		/obj/item/stack/sheet/iron = 5)
 
 /obj/item/circuitboard/machine/turbine_compressor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата входного компрессора турбины",
 		GENITIVE = "машинной платы входного компрессора турбины",
 		DATIVE = "машинной плате входного компрессора турбины",
@@ -635,7 +635,7 @@
 		/obj/item/stack/sheet/iron = 5)
 
 /obj/item/circuitboard/machine/turbine_rotor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата ротора ядра турбины",
 		GENITIVE = "машинной платы ротора ядра турбины",
 		DATIVE = "машинной плате ротора ядра турбины",
@@ -653,7 +653,7 @@
 		/obj/item/stack/sheet/iron = 5)
 
 /obj/item/circuitboard/machine/turbine_stator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата выходного патрубка турбины",
 		GENITIVE = "машинной платы выходного патрубка турбины",
 		DATIVE = "машинной плате выходного патрубка турбины",
@@ -668,7 +668,7 @@
 	build_path = /obj/machinery/rnd/production/protolathe/department/engineering
 
 /obj/item/circuitboard/machine/protolathe/department/engineering/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата инженерного протолата",
 		GENITIVE = "машинной платы инженерного протолата",
 		DATIVE = "машинной плате инженерного протолата",
@@ -687,7 +687,7 @@
 		/obj/item/stack/sheet/mineral/uranium = 10) // We have no Pu-238, and this is the closest thing to it.
 
 /obj/item/circuitboard/machine/rtg/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата РИТЭГ",
 		GENITIVE = "машинной платы РИТЭГ",
 		DATIVE = "машинной плате РИТЭГ",
@@ -707,7 +707,7 @@
 		/obj/item/stack/sheet/mineral/plasma = 5)
 
 /obj/item/circuitboard/machine/rtg/advanced/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата продвинутого РИТЭГ",
 		GENITIVE = "машинной платы продвинутого РИТЭГ",
 		DATIVE = "машинной плате продвинутого РИТЭГ",
@@ -724,7 +724,7 @@
 		/datum/stock_part/scanning_module = 3)
 
 /obj/item/circuitboard/machine/scanner_gate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата сканирующих ворот",
 		GENITIVE = "машинной платы сканирующих ворот",
 		DATIVE = "машинной плате сканирующих ворот",
@@ -744,7 +744,7 @@
 	def_components = list(/obj/item/stock_parts/power_store/battery = /obj/item/stock_parts/power_store/battery/high/empty)
 
 /obj/item/circuitboard/machine/smes/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата СМЕС",
 		GENITIVE = "машинной платы СМЕС",
 		DATIVE = "машинной плате СМЕС",
@@ -761,7 +761,7 @@
 		/datum/stock_part/capacitor = 1,)
 
 /obj/item/circuitboard/machine/smes/connector/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата коннектора питания",
 		GENITIVE = "машинной платы коннектора питания",
 		DATIVE = "машинной плате коннектора питания",
@@ -781,7 +781,7 @@
 	def_components = list(/obj/item/stock_parts/power_store/battery = /obj/item/stock_parts/power_store/battery/high/empty)
 
 /obj/item/circuitboard/machine/smesbank/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата портативного СМЕС",
 		GENITIVE = "машинной платы портативного СМЕС",
 		DATIVE = "машинной плате портативного СМЕС",
@@ -796,7 +796,7 @@
 	build_path = /obj/machinery/rnd/production/techfab/department/engineering
 
 /obj/item/circuitboard/machine/techfab/department/engineering/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата инженерного техфаба",
 		GENITIVE = "машинной платы инженерного техфаба",
 		DATIVE = "машинной плате инженерного техфаба",
@@ -823,7 +823,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/thermomachine/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата термомашины",
 		GENITIVE = "машинной платы термомашины",
 		DATIVE = "машинной плате термомашины",
@@ -849,7 +849,7 @@
 		/obj/item/stack/sheet/plasteel = 5)
 
 /obj/item/circuitboard/machine/HFR_fuel_input/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата ввода топлива HFR",
 		GENITIVE = "машинной платы ввода топлива HFR",
 		DATIVE = "машинной плате ввода топлива HFR",
@@ -866,7 +866,7 @@
 		/obj/item/stack/sheet/plasteel = 5)
 
 /obj/item/circuitboard/machine/HFR_waste_output/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата вывода отходов HFR",
 		GENITIVE = "машинной платы вывода отходов HFR",
 		DATIVE = "машинной плате вывода отходов HFR",
@@ -883,7 +883,7 @@
 		/obj/item/stack/sheet/plasteel = 5)
 
 /obj/item/circuitboard/machine/HFR_moderator_input/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата ввода замедлителя HFR",
 		GENITIVE = "машинной платы ввода замедлителя HFR",
 		DATIVE = "машинной плате ввода замедлителя HFR",
@@ -902,7 +902,7 @@
 		/obj/item/stack/sheet/plasteel = 10)
 
 /obj/item/circuitboard/machine/HFR_core/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата ядра HFR",
 		GENITIVE = "машинной платы ядра HFR",
 		DATIVE = "машинной плате ядра HFR",
@@ -919,7 +919,7 @@
 		/obj/item/stack/sheet/plasteel = 5)
 
 /obj/item/circuitboard/machine/HFR_corner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата угла HFR",
 		GENITIVE = "машинной платы угла HFR",
 		DATIVE = "машинной плате угла HFR",
@@ -938,7 +938,7 @@
 		/obj/item/stack/sheet/plasteel = 5)
 
 /obj/item/circuitboard/machine/HFR_interface/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата интерфейса HFR",
 		GENITIVE = "машинной платы интерфейса HFR",
 		DATIVE = "машинной плате интерфейса HFR",
@@ -957,7 +957,7 @@
 		/obj/item/stack/sheet/plasteel = 5)
 
 /obj/item/circuitboard/machine/crystallizer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата кристаллизатора",
 		GENITIVE = "машинной платы кристаллизатора",
 		DATIVE = "машинной плате кристаллизатора",
@@ -977,7 +977,7 @@
 	)
 
 /obj/item/circuitboard/machine/component_printer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата принтера компонентов",
 		GENITIVE = "машинной платы принтера компонентов",
 		DATIVE = "машинной плате принтера компонентов",
@@ -996,7 +996,7 @@
 	)
 
 /obj/item/circuitboard/machine/module_duplicator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата дубликатора модулей",
 		GENITIVE = "машинной платы дубликатора модулей",
 		DATIVE = "машинной плате дубликатора модулей",
@@ -1015,7 +1015,7 @@
 		)
 
 /obj/item/circuitboard/machine/circuit_imprinter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата принтера схем",
 		GENITIVE = "машинной платы принтера схем",
 		DATIVE = "машинной плате принтера схем",
@@ -1029,7 +1029,7 @@
 	build_path = /obj/machinery/rnd/production/circuit_imprinter/offstation
 
 /obj/item/circuitboard/machine/circuit_imprinter/offstation/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата древнего принтера схем",
 		GENITIVE = "машинной платы древнего принтера схем",
 		DATIVE = "машинной плате древнего принтера схем",
@@ -1044,7 +1044,7 @@
 	build_path = /obj/machinery/rnd/production/circuit_imprinter/department
 
 /obj/item/circuitboard/machine/circuit_imprinter/department/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата отдельного принтера схем",
 		GENITIVE = "машинной платы отдельного принтера схем",
 		DATIVE = "машинной плате отдельного принтера схем",
@@ -1062,7 +1062,7 @@
 	var/secure = FALSE
 
 /obj/item/circuitboard/machine/holopad/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата ИИ голопада",
 		GENITIVE = "машинной платы ИИ голопада",
 		DATIVE = "машинной плате ИИ голопада",
@@ -1097,7 +1097,7 @@
 	def_components = list(/obj/item/stack/ore/bluespace_crystal = /obj/item/stack/ore/bluespace_crystal/artificial)
 
 /obj/item/circuitboard/machine/launchpad/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата блюспейс лаунчпада",
 		GENITIVE = "машинной платы блюспейс лаунчпада",
 		DATIVE = "машинной плате блюспейс лаунчпада",
@@ -1116,7 +1116,7 @@
 		)
 
 /obj/item/circuitboard/machine/protolathe/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата протолата",
 		GENITIVE = "машинной платы протолата",
 		DATIVE = "машинной плате протолата",
@@ -1130,7 +1130,7 @@
 	build_path = /obj/machinery/rnd/production/protolathe/offstation
 
 /obj/item/circuitboard/machine/protolathe/offstation/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата древнего протолата",
 		GENITIVE = "машинной платы древнего протолата",
 		DATIVE = "машинной плате древнего протолата",
@@ -1145,7 +1145,7 @@
 	build_path = /obj/machinery/rnd/production/protolathe/department
 
 /obj/item/circuitboard/machine/protolathe/department/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата отдельного протолата",
 		GENITIVE = "машинной платы отдельного протолата",
 		DATIVE = "машинной плате отдельного протолата",
@@ -1165,7 +1165,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/reagentgrinder/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата измельчителя \"Всё-в-одном\"",
 		GENITIVE = "машинной платы измельчителя \"Всё-в-одном\"",
 		DATIVE = "машинной плате измельчителя \"Всё-в-одном\"",
@@ -1191,7 +1191,7 @@
 	var/is_special_type = FALSE
 
 /obj/item/circuitboard/machine/smartfridge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата умного холодильника",
 		GENITIVE = "машинной платы умного холодильника",
 		DATIVE = "машинной плате умного холодильника",
@@ -1229,7 +1229,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/dehydrator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата дегидратора",
 		GENITIVE = "машинной платы дегидратора",
 		DATIVE = "машинной плате дегидратора",
@@ -1249,7 +1249,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/space_heater/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата обогревателя",
 		GENITIVE = "машинной платы обогревателя",
 		DATIVE = "машинной плате обогревателя",
@@ -1271,7 +1271,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/electrolyzer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата электролизера",
 		GENITIVE = "машинной платы электролизера",
 		DATIVE = "машинной плате электролизера",
@@ -1290,7 +1290,7 @@
 		)
 
 /obj/item/circuitboard/machine/techfab/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата техфаба",
 		GENITIVE = "машинной платы техфаба",
 		DATIVE = "машинной плате техфаба",
@@ -1304,7 +1304,7 @@
 	build_path = /obj/machinery/rnd/production/techfab/department
 
 /obj/item/circuitboard/machine/techfab/department/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата отдельного техфаба",
 		GENITIVE = "машинной платы отдельного техфаба",
 		DATIVE = "машинной плате отдельного техфаба",
@@ -1324,7 +1324,7 @@
 	var/static/list/valid_vendor_names_paths
 
 /obj/item/circuitboard/machine/vendor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата настраиваемого вендомата",
 		GENITIVE = "машинной платы настраиваемого вендомата",
 		DATIVE = "машинной плате настраиваемого вендомата",
@@ -1378,7 +1378,7 @@
 	)
 
 /obj/item/circuitboard/machine/bountypad/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата гражданского баунтипада",
 		GENITIVE = "машинной платы гражданского баунтипада",
 		DATIVE = "машинной плате гражданского баунтипада",
@@ -1398,7 +1398,7 @@
 		/datum/stock_part/servo = 1,)
 
 /obj/item/circuitboard/machine/fax/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата факса",
 		GENITIVE = "машинной платы факса",
 		DATIVE = "машинной плате факса",
@@ -1416,7 +1416,7 @@
 	)
 
 /obj/item/circuitboard/machine/bookbinder/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата переплётчика книг",
 		GENITIVE = "машинной платы переплётчика книг",
 		DATIVE = "машинной плате переплётчика книг",
@@ -1434,7 +1434,7 @@
 	)
 
 /obj/item/circuitboard/machine/libraryscanner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата сканера книг",
 		GENITIVE = "машинной платы сканера книг",
 		DATIVE = "машинной плате сканера книг",
@@ -1454,7 +1454,7 @@
 	)
 
 /obj/item/circuitboard/machine/photocopier/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата фотокопира",
 		GENITIVE = "машинной платы фотокопира",
 		DATIVE = "машинной плате фотокопира",
@@ -1479,7 +1479,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/chem_dispenser/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата раздатчика химикатов",
 		GENITIVE = "машинной платы раздатчика химикатов",
 		DATIVE = "машинной плате раздатчика химикатов",
@@ -1526,7 +1526,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/chem_dispenser/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата синтезатора реагентов",
 		GENITIVE = "машинной платы синтезатора реагентов",
 		DATIVE = "машинной плате синтезатора реагентов",
@@ -1544,7 +1544,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/chem_heater/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата хим. нагревателя",
 		GENITIVE = "машинной платы хим. нагревателя",
 		DATIVE = "машинной плате хим. нагревателя",
@@ -1562,7 +1562,7 @@
 	/obj/item/stack/cable_coil = 5)
 
 /obj/item/circuitboard/machine/chem_mass_spec/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата хроматографа",
 		GENITIVE = "машинной платы хроматографа",
 		DATIVE = "машинной плате хроматографа",
@@ -1583,7 +1583,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/chem_master/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата ХимМастера 3000",
 		GENITIVE = "машинной платы ХимМастера 3000",
 		DATIVE = "машинной плате ХимМастера 3000",
@@ -1615,7 +1615,7 @@
 		/obj/item/stack/sheet/glass = 4)
 
 /obj/item/circuitboard/machine/cryo_tube/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата криосауны",
 		GENITIVE = "машинной платы криосауны",
 		DATIVE = "машинной плате криосауны",
@@ -1632,7 +1632,7 @@
 		/obj/item/kitchen/fork = 1)
 
 /obj/item/circuitboard/machine/fat_sucker/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата экстрактора липидов",
 		GENITIVE = "машинной платы экстрактора липидов",
 		DATIVE = "машинной плате экстрактора липидов",
@@ -1648,7 +1648,7 @@
 	req_components = list(/datum/stock_part/micro_laser = 4)
 
 /obj/item/circuitboard/machine/harvester/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата комбайна",
 		GENITIVE = "машинной платы комбайна",
 		DATIVE = "машинной плате комбайна",
@@ -1667,7 +1667,7 @@
 		/datum/stock_part/scanning_module = 1)
 
 /obj/item/circuitboard/machine/medical_kiosk/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата медицинского киоска",
 		GENITIVE = "машинной платы медицинского киоска",
 		DATIVE = "машинной плате медицинского киоска",
@@ -1701,7 +1701,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/limbgrower/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата выращивателя конечностей",
 		GENITIVE = "машинной платы выращивателя конечностей",
 		DATIVE = "машинной плате выращивателя конечностей",
@@ -1725,7 +1725,7 @@
 	build_path = /obj/machinery/rnd/production/protolathe/department/medical
 
 /obj/item/circuitboard/machine/protolathe/department/medical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата медицинского протолата",
 		GENITIVE = "машинной платы медицинского протолата",
 		DATIVE = "машинной плате медицинского протолата",
@@ -1745,7 +1745,7 @@
 		/obj/item/stack/sheet/glass = 2)
 
 /obj/item/circuitboard/machine/sleeper/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата слипера",
 		GENITIVE = "машинной платы слипера",
 		DATIVE = "машинной плате слипера",
@@ -1770,7 +1770,7 @@
 	build_path = /obj/machinery/sleeper/party
 
 /obj/item/circuitboard/machine/sleeper/party/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата патипода",
 		GENITIVE = "машинной платы патипода",
 		DATIVE = "машинной плате патипода",
@@ -1791,7 +1791,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/smoke_machine/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата дым-машины",
 		GENITIVE = "машинной платы дым-машины",
 		DATIVE = "машинной плате дым-машины",
@@ -1810,7 +1810,7 @@
 		/datum/stock_part/capacitor = 1)
 
 /obj/item/circuitboard/machine/stasis/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата стазис-кровати",
 		GENITIVE = "машинной платы стазис-кровати",
 		DATIVE = "машинной плате стазис-кровати",
@@ -1827,7 +1827,7 @@
 		/datum/stock_part/matter_bin = 1)
 
 /obj/item/circuitboard/machine/medipen_refiller/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата заправщика медипенов",
 		GENITIVE = "машинной платы заправщика медипенов",
 		DATIVE = "машинной плате заправщика медипенов",
@@ -1842,7 +1842,7 @@
 	build_path = /obj/machinery/rnd/production/techfab/department/medical
 
 /obj/item/circuitboard/machine/techfab/department/medical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата медицинского техфаба",
 		GENITIVE = "машинной платы медицинского техфаба",
 		DATIVE = "машинной плате медицинского техфаба",
@@ -1859,7 +1859,7 @@
 	build_path = /obj/machinery/rnd/production/circuit_imprinter/department/science
 
 /obj/item/circuitboard/machine/circuit_imprinter/department/science/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата научного принтера схем",
 		GENITIVE = "машинной платы научного принтера схем",
 		DATIVE = "машинной плате научного принтера схем",
@@ -1879,7 +1879,7 @@
 	def_components = list(/obj/item/stock_parts/power_store/cell = /obj/item/stock_parts/power_store/cell/high)
 
 /obj/item/circuitboard/machine/cyborgrecharger/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата зарядника киборгов",
 		GENITIVE = "машинной платы зарядника киборгов",
 		DATIVE = "машинной плате зарядника киборгов",
@@ -1899,7 +1899,7 @@
 	)
 
 /obj/item/circuitboard/machine/destructive_analyzer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата деструктивного анализатора",
 		GENITIVE = "машинной платы деструктивного анализатора",
 		DATIVE = "машинной плате деструктивного анализатора",
@@ -1918,7 +1918,7 @@
 		/datum/stock_part/micro_laser = 2)
 
 /obj/item/circuitboard/machine/experimentor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата Э.К.С.П.Е.Р.И-МЕНТОРа",
 		GENITIVE = "машинной платы Э.К.С.П.Е.Р.И-МЕНТОРа",
 		DATIVE = "машинной плате Э.К.С.П.Е.Р.И-МЕНТОРа",
@@ -1936,7 +1936,7 @@
 		/datum/stock_part/capacitor = 5)
 
 /obj/item/circuitboard/machine/mech_recharger/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата зарядника мехов",
 		GENITIVE = "машинной платы зарядника мехов",
 		DATIVE = "машинной плате зарядника мехов",
@@ -1956,7 +1956,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/mechfab/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата фабрикатора экзокостюмов",
 		GENITIVE = "машинной платы фабрикатора экзокостюмов",
 		DATIVE = "машинной плате фабрикатора экзокостюмов",
@@ -1971,7 +1971,7 @@
 	build_path = /obj/machinery/vatgrower
 
 /obj/item/circuitboard/machine/vatgrower/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата бака для выращивания",
 		GENITIVE = "машинной платы бака для выращивания",
 		DATIVE = "машинной плате бака для выращивания",
@@ -1990,7 +1990,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/monkey_recycler/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата переработчика обезьян",
 		GENITIVE = "машинной платы переработчика обезьян",
 		DATIVE = "машинной плате переработчика обезьян",
@@ -2005,7 +2005,7 @@
 	build_path = /obj/machinery/processor/slime
 
 /obj/item/circuitboard/machine/processor/slime/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата переработчика слаймов",
 		GENITIVE = "машинной платы переработчика слаймов",
 		DATIVE = "машинной плате переработчика слаймов",
@@ -2028,7 +2028,7 @@
 	build_path = /obj/machinery/rnd/production/protolathe/department/science
 
 /obj/item/circuitboard/machine/protolathe/department/science/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата научного протолата",
 		GENITIVE = "машинной платы научного протолата",
 		DATIVE = "машинной плате научного протолата",
@@ -2049,7 +2049,7 @@
 	def_components = list(/obj/item/stack/ore/bluespace_crystal = /obj/item/stack/ore/bluespace_crystal/artificial)
 
 /obj/item/circuitboard/machine/quantumpad/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата квантовой площадки",
 		GENITIVE = "машинной платы квантовой площадки",
 		DATIVE = "машинной плате квантовой площадки",
@@ -2068,7 +2068,7 @@
 	)
 
 /obj/item/circuitboard/machine/rdserver/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата РнД сервера",
 		GENITIVE = "машинной платы РнД сервера",
 		DATIVE = "машинной плате РнД сервера",
@@ -2082,7 +2082,7 @@
 	build_path = /obj/machinery/rnd/server/oldstation
 
 /obj/item/circuitboard/machine/rdserver/oldstation/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата древнего РнД сервера",
 		GENITIVE = "машинной платы древнего РнД сервера",
 		DATIVE = "машинной плате древнего РнД сервера",
@@ -2097,7 +2097,7 @@
 	build_path = /obj/machinery/rnd/production/techfab/department/science
 
 /obj/item/circuitboard/machine/techfab/department/science/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата научного техфаба",
 		GENITIVE = "машинной платы научного техфаба",
 		DATIVE = "машинной плате научного техфаба",
@@ -2116,7 +2116,7 @@
 	def_components = list(/obj/item/stack/ore/bluespace_crystal = /obj/item/stack/ore/bluespace_crystal/artificial)
 
 /obj/item/circuitboard/machine/teleporter_hub/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата узла телепорта",
 		GENITIVE = "машинной платы узла телепорта",
 		DATIVE = "машинной плате узла телепорта",
@@ -2136,7 +2136,7 @@
 	def_components = list(/obj/item/stack/ore/bluespace_crystal = /obj/item/stack/ore/bluespace_crystal/artificial)
 
 /obj/item/circuitboard/machine/teleporter_station/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата станции телепорта",
 		GENITIVE = "машинной платы станции телепорта",
 		DATIVE = "машинной плате станции телепорта",
@@ -2157,7 +2157,7 @@
 		/obj/item/stack/cable_coil = 2)
 
 /obj/item/circuitboard/machine/dnascanner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата сканера ДНК",
 		GENITIVE = "машинной платы сканера ДНК",
 		DATIVE = "машинной плате сканера ДНК",
@@ -2179,7 +2179,7 @@
 	)
 
 /obj/item/circuitboard/machine/dna_infuser/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата инфузора ДНК",
 		GENITIVE = "машинной платы инфузора ДНК",
 		DATIVE = "машинной плате инфузора ДНК",
@@ -2201,7 +2201,7 @@
 	)
 
 /obj/item/circuitboard/machine/experimental_cloner_scanner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата экспериментального сканера клонирования",
 		GENITIVE = "машинной платы экспериментального сканера клонирования",
 		DATIVE = "машинной плате экспериментального сканера клонирования",
@@ -2221,7 +2221,7 @@
 	)
 
 /obj/item/circuitboard/machine/experimental_cloner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата экспериментального клонера",
 		GENITIVE = "машинной платы экспериментального клонера",
 		DATIVE = "машинной плате экспериментального клонера",
@@ -2237,7 +2237,7 @@
 	req_components = list()
 
 /obj/item/circuitboard/machine/mechpad/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата орбитальной площадки мехов",
 		GENITIVE = "машинной платы орбитальной площадки мехов",
 		DATIVE = "машинной плате орбитальной площадки мехов",
@@ -2253,7 +2253,7 @@
 	req_components = list()
 
 /obj/item/circuitboard/machine/botpad/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата бот-лаунчпада",
 		GENITIVE = "машинной платы бот-лаунчпада",
 		DATIVE = "машинной плате бот-лаунчпада",
@@ -2270,7 +2270,7 @@
 	build_path = /obj/machinery/rnd/production/protolathe/department/security
 
 /obj/item/circuitboard/machine/protolathe/department/security/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата охранного протолата",
 		GENITIVE = "машинной платы охранного протолата",
 		DATIVE = "машинной плате охранного протолата",
@@ -2287,7 +2287,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/recharger/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата зарядника оружия",
 		GENITIVE = "машинной платы зарядника оружия",
 		DATIVE = "машинной плате зарядника оружия",
@@ -2302,7 +2302,7 @@
 	build_path = /obj/machinery/rnd/production/techfab/department/security
 
 /obj/item/circuitboard/machine/techfab/department/security/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата охранного техфаба",
 		GENITIVE = "машинной платы охранного техфаба",
 		DATIVE = "машинной плате охранного техфаба",
@@ -2322,7 +2322,7 @@
 	)
 
 /obj/item/circuitboard/machine/photobooth/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата фотобудки",
 		GENITIVE = "машинной платы фотобудки",
 		DATIVE = "машинной плате фотобудки",
@@ -2337,7 +2337,7 @@
 	build_path = /obj/machinery/photobooth/security
 
 /obj/item/circuitboard/machine/photobooth/security/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата охранной фотобудки",
 		GENITIVE = "машинной платы охранной фотобудки",
 		DATIVE = "машинной плате охранной фотобудки",
@@ -2357,7 +2357,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/biogenerator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата биогенератора",
 		GENITIVE = "машинной платы биогенератора",
 		DATIVE = "машинной плате биогенератора",
@@ -2372,7 +2372,7 @@
 	build_path = /obj/machinery/chem_dispenser/drinks
 
 /obj/item/circuitboard/machine/chem_dispenser/drinks/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата автомата с газировкой",
 		GENITIVE = "машинной платы автомата с газировкой",
 		DATIVE = "машинной плате автомата с газировкой",
@@ -2397,7 +2397,7 @@
 	build_path = /obj/machinery/chem_dispenser/drinks/beer
 
 /obj/item/circuitboard/machine/chem_dispenser/drinks/beer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата раздатчика алкоголя",
 		GENITIVE = "машинной платы раздатчика алкоголя",
 		DATIVE = "машинной плате раздатчика алкоголя",
@@ -2422,7 +2422,7 @@
 	build_path = /obj/machinery/chem_master/condimaster
 
 /obj/item/circuitboard/machine/chem_master/condi/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата КондиМастера 3000",
 		GENITIVE = "машинной платы КондиМастера 3000",
 		DATIVE = "машинной плате КондиМастера 3000",
@@ -2439,7 +2439,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/deep_fryer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата фритюрницы",
 		GENITIVE = "машинной платы фритюрницы",
 		DATIVE = "машинной плате фритюрницы",
@@ -2456,7 +2456,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/griddle/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата сковороды",
 		GENITIVE = "машинной платы сковороды",
 		DATIVE = "машинной плате сковороды",
@@ -2473,7 +2473,7 @@
 	needs_anchored = TRUE
 
 /obj/item/circuitboard/machine/oven/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата духовки",
 		GENITIVE = "машинной платы духовки",
 		DATIVE = "машинной плате духовки",
@@ -2490,7 +2490,7 @@
 	needs_anchored = TRUE
 
 /obj/item/circuitboard/machine/stove/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата плиты",
 		GENITIVE = "машинной платы плиты",
 		DATIVE = "машинной плате плиты",
@@ -2507,7 +2507,7 @@
 	needs_anchored = TRUE
 
 /obj/item/circuitboard/machine/range/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата кухонной плиты",
 		GENITIVE = "машинной платы кухонной плиты",
 		DATIVE = "машинной плате кухонной плиты",
@@ -2529,7 +2529,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/dish_drive/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата диш-драйва",
 		GENITIVE = "машинной платы диш-драйва",
 		DATIVE = "машинной плате диш-драйва",
@@ -2562,7 +2562,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/gibber/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата гибки",
 		GENITIVE = "машинной платы гибки",
 		DATIVE = "машинной плате гибки",
@@ -2582,7 +2582,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/hydroponics/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата гидропонной ванны",
 		GENITIVE = "машинной платы гидропонной ванны",
 		DATIVE = "машинной плате гидропонной ванны",
@@ -2613,7 +2613,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/microwave/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата микроволновки",
 		GENITIVE = "машинной платы микроволновки",
 		DATIVE = "машинной плате микроволновки",
@@ -2634,7 +2634,7 @@
 		/obj/item/stack/sheet/glass = 2)
 
 /obj/item/circuitboard/machine/microwave/engineering/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата беспроводной микроволновки",
 		GENITIVE = "машинной платы беспроводной микроволновки",
 		DATIVE = "машинной плате беспроводной микроволновки",
@@ -2653,7 +2653,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/processor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата кухонного комбайна",
 		GENITIVE = "машинной платы кухонного комбайна",
 		DATIVE = "машинной плате кухонного комбайна",
@@ -2679,7 +2679,7 @@
 	build_path = /obj/machinery/rnd/production/protolathe/department/service
 
 /obj/item/circuitboard/machine/protolathe/department/service/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата сервисного протолата",
 		GENITIVE = "машинной платы сервисного протолата",
 		DATIVE = "машинной плате сервисного протолата",
@@ -2697,7 +2697,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/recycler/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата переработчика мусора",
 		GENITIVE = "машинной платы переработчика мусора",
 		DATIVE = "машинной плате переработчика мусора",
@@ -2716,7 +2716,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/seed_extractor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата экстрактора семян",
 		GENITIVE = "машинной платы экстрактора семян",
 		DATIVE = "машинной плате экстрактора семян",
@@ -2731,7 +2731,7 @@
 	build_path = /obj/machinery/rnd/production/techfab/department/service
 
 /obj/item/circuitboard/machine/techfab/department/service/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата сервисного техфаба",
 		GENITIVE = "машинной платы сервисного техфаба",
 		DATIVE = "машинной плате сервисного техфаба",
@@ -2750,7 +2750,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/fishing_portal_generator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата генератора рыболовного портала",
 		GENITIVE = "машинной платы генератора рыболовного портала",
 		DATIVE = "машинной плате генератора рыболовного портала",
@@ -2764,7 +2764,7 @@
 	build_path = /obj/machinery/fishing_portal_generator/emagged
 
 /obj/item/circuitboard/machine/fishing_portal_generator/emagged/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата взломанного генератора рыболовного портала",
 		GENITIVE = "машинной платы взломанного генератора рыболовного портала",
 		DATIVE = "машинной плате взломанного генератора рыболовного портала",
@@ -2787,7 +2787,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/ore_redemption/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата переплавщика руды",
 		GENITIVE = "машинной платы переплавщика руды",
 		DATIVE = "машинной плате переплавщика руды",
@@ -2806,7 +2806,7 @@
 	req_components = list()
 
 /obj/item/circuitboard/machine/ore_silo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата рудного хранилища",
 		GENITIVE = "машинной платы рудного хранилища",
 		DATIVE = "машинной плате рудного хранилища",
@@ -2821,7 +2821,7 @@
 	build_path = /obj/machinery/rnd/production/protolathe/department/cargo
 
 /obj/item/circuitboard/machine/protolathe/department/cargo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата грузового протолата",
 		GENITIVE = "машинной платы грузового протолата",
 		DATIVE = "машинной плате грузового протолата",
@@ -2839,7 +2839,7 @@
 		/datum/stock_part/matter_bin = 2)
 
 /obj/item/circuitboard/machine/stacking_machine/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата стакера",
 		GENITIVE = "машинной платы стакера",
 		DATIVE = "машинной плате стакера",
@@ -2857,7 +2857,7 @@
 		/obj/item/stack/cable_coil = 5)
 
 /obj/item/circuitboard/machine/stacking_unit_console/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата консоли стакера",
 		GENITIVE = "машинной платы консоли стакера",
 		DATIVE = "машинной плате консоли стакера",
@@ -2872,7 +2872,7 @@
 	build_path = /obj/machinery/rnd/production/techfab/department/cargo
 
 /obj/item/circuitboard/machine/techfab/department/cargo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата грузового техфаба",
 		GENITIVE = "машинной платы грузового техфаба",
 		DATIVE = "машинной плате грузового техфаба",
@@ -2891,7 +2891,7 @@
 		/datum/stock_part/card_reader = 1)
 
 /obj/item/circuitboard/machine/materials_market/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата рынка материалов",
 		GENITIVE = "машинной платы рынка материалов",
 		DATIVE = "машинной плате рынка материалов",
@@ -2911,7 +2911,7 @@
 	needs_anchored = TRUE
 
 /obj/item/circuitboard/machine/mailsorter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата сортировщика почты",
 		GENITIVE = "машинной платы сортировщика почты",
 		DATIVE = "машинной плате сортировщика почты",
@@ -2929,7 +2929,7 @@
 	)
 
 /obj/item/circuitboard/machine/crossing_signal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата сигнала перехода",
 		GENITIVE = "машинной платы сигнала перехода",
 		DATIVE = "машинной плате сигнала перехода",
@@ -2946,7 +2946,7 @@
 	)
 
 /obj/item/circuitboard/machine/guideway_sensor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата путевого датчика",
 		GENITIVE = "машинной платы путевого датчика",
 		DATIVE = "машинной плате путевого датчика",
@@ -2966,7 +2966,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/sheetifier/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата Листо-мейстера 2000",
 		GENITIVE = "машинной платы Листо-мейстера 2000",
 		DATIVE = "машинной плате Листо-мейстера 2000",
@@ -2987,7 +2987,7 @@
 	var/venue_type = /datum/venue/restaurant
 
 /obj/item/circuitboard/machine/restaurant_portal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата ресторанного портала",
 		GENITIVE = "машинной платы ресторанного портала",
 		DATIVE = "машинной плате ресторанного портала",
@@ -3031,7 +3031,7 @@
 	icon_state = "abductor_mod"
 
 /obj/item/circuitboard/machine/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетная плата",
 		GENITIVE = "инопланетной платы",
 		DATIVE = "инопланетной плате",
@@ -3062,7 +3062,7 @@
 	)
 
 /obj/item/circuitboard/machine/hypnochair/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата камеры допроса",
 		GENITIVE = "машинной платы камеры допроса",
 		DATIVE = "машинной плате камеры допроса",
@@ -3083,7 +3083,7 @@
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/plumbing_receiver/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата химического получателя",
 		GENITIVE = "машинной платы химического получателя",
 		DATIVE = "машинной плате химического получателя",
@@ -3102,7 +3102,7 @@
 	)
 
 /obj/item/circuitboard/machine/skill_station/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата станции навыков",
 		GENITIVE = "машинной платы станции навыков",
 		DATIVE = "машинной плате станции навыков",
@@ -3121,7 +3121,7 @@
 		/datum/stock_part/servo = 2)
 
 /obj/item/circuitboard/machine/destructive_scanner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата деструктивного сканера",
 		GENITIVE = "машинной платы деструктивного сканера",
 		DATIVE = "машинной плате деструктивного сканера",
@@ -3139,7 +3139,7 @@
 		/datum/stock_part/scanning_module = 4)
 
 /obj/item/circuitboard/machine/doppler_array/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата тахионно-доплеровского массива",
 		GENITIVE = "машинной платы тахионно-доплеровского массива",
 		DATIVE = "машинной плате тахионно-доплеровского массива",
@@ -3157,7 +3157,7 @@
 		/datum/stock_part/scanning_module = 4)
 
 /obj/item/circuitboard/machine/exoscanner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата экзосканера",
 		GENITIVE = "машинной платы экзосканера",
 		DATIVE = "машинной плате экзосканера",
@@ -3175,7 +3175,7 @@
 		/datum/stock_part/scanning_module = 4)
 
 /obj/item/circuitboard/machine/exodrone_launcher/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата пускателя дронов",
 		GENITIVE = "машинной платы пускателя дронов",
 		DATIVE = "машинной плате пускателя дронов",
@@ -3192,7 +3192,7 @@
 		/datum/stock_part/scanning_module = 1)
 
 /obj/item/circuitboard/machine/ecto_sniffer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата экто-сниффера",
 		GENITIVE = "машинной платы экто-сниффера",
 		DATIVE = "машинной плате экто-сниффера",
@@ -3212,7 +3212,7 @@
 		)
 
 /obj/item/circuitboard/machine/anomaly_refinery/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата переработчика аномалий",
 		GENITIVE = "машинной платы переработчика аномалий",
 		DATIVE = "машинной плате переработчика аномалий",
@@ -3231,7 +3231,7 @@
 		)
 
 /obj/item/circuitboard/machine/tank_compressor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата компрессора баков",
 		GENITIVE = "машинной платы компрессора баков",
 		DATIVE = "машинной плате компрессора баков",
@@ -3253,7 +3253,7 @@
 	)
 
 /obj/item/circuitboard/machine/coffeemaker/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата кофеварки",
 		GENITIVE = "машинной платы кофеварки",
 		DATIVE = "машинной плате кофеварки",
@@ -3275,7 +3275,7 @@
 	)
 
 /obj/item/circuitboard/machine/coffeemaker/impressa/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата кофеварки Импресса",
 		GENITIVE = "машинной платы кофеварки Импресса",
 		DATIVE = "машинной плате кофеварки Импресса",
@@ -3291,7 +3291,7 @@
 	req_components = list()
 
 /obj/item/circuitboard/machine/navbeacon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата навигационного маяка",
 		GENITIVE = "машинной платы навигационного маяка",
 		DATIVE = "машинной плате навигационного маяка",
@@ -3311,7 +3311,7 @@
 	)
 
 /obj/item/circuitboard/machine/radioactive_nebula_shielding/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата радиационного щита",
 		GENITIVE = "машинной платы радиационного щита",
 		DATIVE = "машинной плате радиационного щита",
@@ -3331,7 +3331,7 @@
 	)
 
 /obj/item/circuitboard/machine/brm/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата МИВа",
 		GENITIVE = "машинной платы МИВа",
 		DATIVE = "машинной плате МИВа",
@@ -3351,7 +3351,7 @@
 	)
 
 /obj/item/circuitboard/machine/refinery/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата переработчика валунов",
 		GENITIVE = "машинной платы переработчика валунов",
 		DATIVE = "машинной плате переработчика валунов",
@@ -3371,7 +3371,7 @@
 	)
 
 /obj/item/circuitboard/machine/smelter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата плавильни валунов",
 		GENITIVE = "машинной платы плавильни валунов",
 		DATIVE = "машинной плате плавильни валунов",
@@ -3391,7 +3391,7 @@
 	)
 
 /obj/item/circuitboard/machine/shieldwallgen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата генератора защитного поля",
 		GENITIVE = "машинной платы генератора защитного поля",
 		DATIVE = "машинной плате генератора защитного поля",
@@ -3412,7 +3412,7 @@
 	)
 
 /obj/item/circuitboard/machine/flatpacker/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата флэтпакера",
 		GENITIVE = "машинной платы флэтпакера",
 		DATIVE = "машинной плате флэтпакера",
@@ -3431,7 +3431,7 @@
 	)
 
 /obj/item/circuitboard/machine/scrubber/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата переносного скруббера",
 		GENITIVE = "машинной платы переносного скруббера",
 		DATIVE = "машинной плате переносного скруббера",
@@ -3450,7 +3450,7 @@
 	)
 
 /obj/item/circuitboard/machine/pump/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата переносного насоса",
 		GENITIVE = "машинной платы переносного насоса",
 		DATIVE = "машинной плате переносного насоса",
@@ -3469,7 +3469,7 @@
 	)
 
 /obj/item/circuitboard/machine/pipe_scrubber/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата переносного скруббера труб",
 		GENITIVE = "машинной платы переносного скруббера труб",
 		DATIVE = "машинной плате переносного скруббера труб",
@@ -3488,7 +3488,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/portagrav/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата портативного генератора гравитации",
 		GENITIVE = "машинной платы портативного генератора гравитации",
 		DATIVE = "машинной плате портативного генератора гравитации",
@@ -3506,7 +3506,7 @@
 		)
 
 /obj/item/circuitboard/machine/big_manipulator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата большого манипулятора",
 		GENITIVE = "машинной платы большого манипулятора",
 		DATIVE = "машинной плате большого манипулятора",
@@ -3525,7 +3525,7 @@
 	)
 
 /obj/item/circuitboard/machine/manucrafter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата производственного крафтера",
 		GENITIVE = "машинной платы производственного крафтера",
 		DATIVE = "машинной плате производственного крафтера",
@@ -3544,7 +3544,7 @@
 	)
 
 /obj/item/circuitboard/machine/manulathe/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата производственного станка",
 		GENITIVE = "машинной платы производственного станка",
 		DATIVE = "машинной плате производственного станка",
@@ -3563,7 +3563,7 @@
 	)
 
 /obj/item/circuitboard/machine/manucrusher/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата производственного дробителя",
 		GENITIVE = "машинной платы производственного дробителя",
 		DATIVE = "машинной плате производственного дробителя",
@@ -3582,7 +3582,7 @@
 	)
 
 /obj/item/circuitboard/machine/manuunloader/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата производственного выгрузчика",
 		GENITIVE = "машинной платы производственного выгрузчика",
 		DATIVE = "машинной плате производственного выгрузчика",
@@ -3601,7 +3601,7 @@
 	)
 
 /obj/item/circuitboard/machine/manusorter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата производственного сортировщика",
 		GENITIVE = "машинной платы производственного сортировщика",
 		DATIVE = "машинной плате производственного сортировщика",
@@ -3620,7 +3620,7 @@
 	)
 
 /obj/item/circuitboard/machine/manusmelter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата производственной плавильни",
 		GENITIVE = "машинной платы производственной плавильни",
 		DATIVE = "машинной плате производственной плавильни",
@@ -3638,7 +3638,7 @@
 	)
 
 /obj/item/circuitboard/machine/manurouter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата производственного маршрутизатора",
 		GENITIVE = "машинной платы производственного маршрутизатора",
 		DATIVE = "машинной плате производственного маршрутизатора",
@@ -3657,7 +3657,7 @@
 	)
 
 /obj/item/circuitboard/machine/atmos_shield_gen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата атмосферного генератора щита",
 		GENITIVE = "машинной платы атмосферного генератора щита",
 		DATIVE = "машинной плате атмосферного генератора щита",
@@ -3677,7 +3677,7 @@
 	)
 
 /obj/item/circuitboard/machine/engine/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата двигателя шаттла",
 		GENITIVE = "машинной платы двигателя шаттла",
 		DATIVE = "машинной плате двигателя шаттла",
@@ -3691,7 +3691,7 @@
 	build_path = /obj/machinery/power/shuttle_engine/heater
 
 /obj/item/circuitboard/machine/engine/heater/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата обогревателя двигателя шаттла",
 		GENITIVE = "машинной платы обогревателя двигателя шаттла",
 		DATIVE = "машинной плате обогревателя двигателя шаттла",
@@ -3705,7 +3705,7 @@
 	build_path = /obj/machinery/power/shuttle_engine/propulsion
 
 /obj/item/circuitboard/machine/engine/propulsion/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата сопла двигателя шаттла",
 		GENITIVE = "машинной платы сопла двигателя шаттла",
 		DATIVE = "машинной плате сопла двигателя шаттла",
@@ -3725,7 +3725,7 @@
 	)
 
 /obj/item/circuitboard/machine/quantum_server/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата квантового сервера",
 		GENITIVE = "машинной платы квантового сервера",
 		DATIVE = "машинной плате квантового сервера",
@@ -3744,7 +3744,7 @@
 	)
 
 /obj/item/circuitboard/machine/netpod/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата нетпода",
 		GENITIVE = "машинной платы нетпода",
 		DATIVE = "машинной плате нетпода",
@@ -3759,7 +3759,7 @@
 	build_path = /obj/machinery/computer/quantum_console
 
 /obj/item/circuitboard/computer/quantum_console/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плата квантовой консоли",
 		GENITIVE = "платы квантовой консоли",
 		DATIVE = "плате квантовой консоли",
@@ -3777,7 +3777,7 @@
 	)
 
 /obj/item/circuitboard/machine/byteforge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинная плата байт-кузницы",
 		GENITIVE = "машинной платы байт-кузницы",
 		DATIVE = "машинной плате байт-кузницы",

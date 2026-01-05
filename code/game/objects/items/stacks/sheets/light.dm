@@ -16,7 +16,7 @@
 	merge_type = /obj/item/stack/light_w
 
 /obj/item/stack/light_w/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "проволочная стеклянная плитка",
 		GENITIVE = "проволочной стеклянной плитки",
 		DATIVE = "проволочной стеклянной плитке",

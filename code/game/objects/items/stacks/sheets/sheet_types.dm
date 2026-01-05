@@ -178,7 +178,7 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	sniffable = TRUE
 
 /obj/item/stack/sheet/iron/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "железо",
 		GENITIVE = "железа",
 		DATIVE = "железу",
@@ -331,7 +331,7 @@ GLOBAL_LIST_INIT(plasteel_recipes, list ( \
 	matter_amount = 12
 
 /obj/item/stack/sheet/plasteel/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пласталь",
 		GENITIVE = "пластали",
 		DATIVE = "пластали",
@@ -438,7 +438,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	drop_sound = 'sound/items/handling/materials/wood_drop.ogg'
 
 /obj/item/stack/sheet/mineral/wood/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "деревянная доска",
 		GENITIVE = "деревянной доски",
 		DATIVE = "деревянной доске",
@@ -518,7 +518,7 @@ GLOBAL_LIST_INIT(bamboo_recipes, list ( \
 	pickup_sound = null
 
 /obj/item/stack/sheet/mineral/bamboo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "нарезка бамбука",
 		GENITIVE = "нарезки бамбука",
 		DATIVE = "нарезке бамбука",
@@ -596,7 +596,7 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	drop_sound = SFX_CLOTH_DROP
 
 /obj/item/stack/sheet/cloth/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ткань",
 		GENITIVE = "ткани",
 		DATIVE = "ткани",
@@ -639,7 +639,7 @@ GLOBAL_LIST_INIT(durathread_recipes, list ( \
 	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
 
 /obj/item/stack/sheet/durathread/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "дюраткань",
 		GENITIVE = "дюраткани",
 		DATIVE = "дюраткани",
@@ -684,7 +684,7 @@ GLOBAL_LIST_INIT(durathread_recipes, list ( \
 	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
 
 /obj/item/stack/sheet/cotton/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сырой хлопок",
 		GENITIVE = "сырого хлопка",
 		DATIVE = "сырому хлопку",
@@ -706,7 +706,7 @@ GLOBAL_LIST_INIT(durathread_recipes, list ( \
 	loom_result = /obj/item/stack/sheet/durathread
 
 /obj/item/stack/sheet/cotton/durathread/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сырая прочная ткань",
 		GENITIVE = "сырой прочной ткани",
 		DATIVE = "сырой прочной ткани",
@@ -724,7 +724,7 @@ GLOBAL_LIST_INIT(durathread_recipes, list ( \
 	loom_result = /obj/item/stack/sheet/cloth
 
 /obj/item/stack/sheet/cotton/wool/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сырая шерсть",
 		GENITIVE = "сырой шерсти",
 		DATIVE = "сырой шерсти",
@@ -820,7 +820,7 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 	drop_sound = 'sound/items/handling/materials/cardboard_drop.ogg'
 
 /obj/item/stack/sheet/cardboard/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "картон",
 		GENITIVE = "картона",
 		DATIVE = "картону",
@@ -907,7 +907,7 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 	has_unique_girder = TRUE
 
 /obj/item/stack/sheet/bronze/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бронза",
 		GENITIVE = "бронзы",
 		DATIVE = "бронзе",
@@ -936,7 +936,7 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/lessergem
 
 /obj/item/stack/sheet/lessergem/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "малые самоцветы",
 		GENITIVE = "малых самоцветов",
 		DATIVE = "малым самоцветам",
@@ -955,7 +955,7 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/greatergem
 
 /obj/item/stack/sheet/greatergem/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "великие самоцветы",
 		GENITIVE = "великих самоцветов",
 		DATIVE = "великим самоцветам",
@@ -989,7 +989,7 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
 
 /obj/item/stack/sheet/bone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кости",
 		GENITIVE = "костей",
 		DATIVE = "костям",
@@ -1051,7 +1051,7 @@ GLOBAL_LIST_INIT(plastic_recipes, list(
 	drop_sound = 'sound/items/handling/materials/plastic_drop.ogg'
 
 /obj/item/stack/sheet/plastic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластик",
 		GENITIVE = "пластика",
 		DATIVE = "пластику",
@@ -1094,7 +1094,7 @@ GLOBAL_LIST_INIT(paperframe_recipes, list(
 	pickup_sound = null
 
 /obj/item/stack/sheet/paperframes/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бумажная рамка",
 		GENITIVE = "бумажной рамки",
 		DATIVE = "бумажной рамке",
@@ -1130,7 +1130,7 @@ GLOBAL_LIST_INIT(paperframe_recipes, list(
 	pickup_sound = null
 
 /obj/item/stack/sheet/meat/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мясной лист",
 		GENITIVE = "мясного листа",
 		DATIVE = "мясному листу",
@@ -1163,7 +1163,7 @@ GLOBAL_LIST_INIT(pizza_sheet_recipes, list(
 	pickup_sound = null
 
 /obj/item/stack/sheet/pizza/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "лист пиццы",
 		GENITIVE = "листа пиццы",
 		DATIVE = "листу пиццы",
@@ -1199,7 +1199,7 @@ GLOBAL_LIST_INIT(pizza_sheet_recipes, list(
 	grind_results = list(/datum/reagent/hauntium = 20)
 
 /obj/item/stack/sheet/hauntium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "проклятые листы",
 		GENITIVE = "проклятых листов",
 		DATIVE = "проклятым листам",

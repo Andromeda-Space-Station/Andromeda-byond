@@ -263,7 +263,7 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 	explosive_resistance = INFINITY
 
 /turf/closed/indestructible/hotelwall/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стена отеля",
 		GENITIVE = "стены отеля",
 		DATIVE = "стене отеля",

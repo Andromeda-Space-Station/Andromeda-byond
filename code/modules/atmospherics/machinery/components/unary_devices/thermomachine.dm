@@ -41,7 +41,7 @@
 	acid = 30
 
 /obj/machinery/atmospherics/components/unary/thermomachine/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "терморегулятор",
 		GENITIVE = "терморегулятора",
 		DATIVE = "терморегулятору",
@@ -370,7 +370,7 @@
 	greyscale_colors = COLOR_CYAN
 
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer/on/coldroom/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "терморегулятор холодильной камеры",
 		GENITIVE = "терморегулятора холодильной камеры",
 		DATIVE = "терморегулятору холодильной камеры",

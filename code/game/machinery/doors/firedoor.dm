@@ -74,7 +74,7 @@
 	acid = 70
 
 /obj/machinery/door/firedoor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пожарный шлюз",
 		GENITIVE = "пожарного шлюза",
 		DATIVE = "пожарному шлюзу",
@@ -814,7 +814,7 @@
 	max_integrity = 550
 
 /obj/machinery/door/firedoor/heavy/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тяжёлый пожарный шлюз",
 		GENITIVE = "тяжёлого пожарного шлюза",
 		DATIVE = "тяжёлому пожарному шлюзу",
@@ -830,7 +830,7 @@
 	icon_state = "mainboard"
 
 /obj/item/electronics/firelock/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "микросхема пожарного шлюза",
 		GENITIVE = "микросхемы пожарного шлюза",
 		DATIVE = "микросхеме пожарного шлюза",
@@ -855,7 +855,7 @@
 	var/directional = FALSE
 
 /obj/structure/firelock_frame/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "рама пожарного шлюза",
 		GENITIVE = "рамы пожарного шлюза",
 		DATIVE = "раме пожарного шлюза",
@@ -1012,7 +1012,7 @@
 	reinforced = TRUE
 
 /obj/structure/firelock_frame/heavy/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённая рама пожарного шлюза",
 		GENITIVE = "укреплённой рамы пожарного шлюза",
 		DATIVE = "укреплённой раме пожарного шлюза",

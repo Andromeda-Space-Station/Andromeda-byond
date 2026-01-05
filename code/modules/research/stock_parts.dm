@@ -40,7 +40,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.5)
 
 /obj/item/stock_parts/capacitor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "конденсатор",
 		GENITIVE = "конденсатора",
 		DATIVE = "конденсатору",
@@ -56,7 +56,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.2)
 
 /obj/item/stock_parts/scanning_module/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сканирующий модуль",
 		GENITIVE = "сканирующего модуля",
 		DATIVE = "сканирующему модулю",
@@ -73,7 +73,7 @@
 	base_name = "servo"
 
 /obj/item/stock_parts/servo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "микросервопривод",
 		GENITIVE = "микросервопривода",
 		DATIVE = "микросервоприводу",
@@ -89,7 +89,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.1, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.2)
 
 /obj/item/stock_parts/micro_laser/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "микролазер",
 		GENITIVE = "микролазера",
 		DATIVE = "микролазеру",
@@ -105,7 +105,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.8)
 
 /obj/item/stock_parts/matter_bin/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ёмкость материи",
 		GENITIVE = "ёмкости материи",
 		DATIVE = "ёмкости материи",
@@ -127,7 +127,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.5)
 
 /obj/item/stock_parts/capacitor/adv/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "улучшенный конденсатор",
 		GENITIVE = "улучшенного конденсатора",
 		DATIVE = "улучшенному конденсатору",
@@ -145,7 +145,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.2)
 
 /obj/item/stock_parts/scanning_module/adv/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "улучшенный сканирующий модуль",
 		GENITIVE = "улучшенного сканирующего модуля",
 		DATIVE = "улучшенному сканирующему модулю",
@@ -163,7 +163,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.3)
 
 /obj/item/stock_parts/servo/nano/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "конденнаносервоприводсатор",
 		GENITIVE = "наносервопривода",
 		DATIVE = "наносервоприводу",
@@ -181,7 +181,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.1, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.2)
 
 /obj/item/stock_parts/micro_laser/high/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мощный микролазер",
 		GENITIVE = "мощного микролазера",
 		DATIVE = "мощному микролазеру",
@@ -199,7 +199,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.8)
 
 /obj/item/stock_parts/matter_bin/adv/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "улучшенная ёмкость материи",
 		GENITIVE = "улучшенной ёмкости материи",
 		DATIVE = "улучшенной ёмкости материи",
@@ -221,7 +221,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.5)
 
 /obj/item/stock_parts/capacitor/super/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "суперконденсатор",
 		GENITIVE = "суперконденсатора",
 		DATIVE = "суперконденсатору",
@@ -239,7 +239,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.2)
 
 /obj/item/stock_parts/scanning_module/phasic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фазовый сканирующий модуль",
 		GENITIVE = "фазового сканирующего модуля",
 		DATIVE = "фазовому сканирующему модулю",
@@ -257,7 +257,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.3)
 
 /obj/item/stock_parts/servo/pico/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пикосервопривод",
 		GENITIVE = "пикосервопривода",
 		DATIVE = "пикосервоприводу",
@@ -275,7 +275,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.1, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.2)
 
 /obj/item/stock_parts/micro_laser/ultra/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сверхмощный микролазер",
 		GENITIVE = "сверхмощного микролазера",
 		DATIVE = "сверхмощному микролазеру",
@@ -293,7 +293,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.8)
 
 /obj/item/stock_parts/matter_bin/super/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "суперёмкость материи",
 		GENITIVE = "суперёмкости материи",
 		DATIVE = "суперёмкости материи",
@@ -315,7 +315,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.5)
 
 /obj/item/stock_parts/capacitor/quadratic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "квадратичный конденсатор",
 		GENITIVE = "квадратичного конденсатора",
 		DATIVE = "квадратичному конденсатору",
@@ -333,7 +333,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.2)
 
 /obj/item/stock_parts/scanning_module/triphasic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "трёхфазный сканирующий модуль",
 		GENITIVE = "трёхфазного сканирующего модуля",
 		DATIVE = "трёхфазному сканирующему модулю",
@@ -351,7 +351,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.3)
 
 /obj/item/stock_parts/servo/femto/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фемтосервопривод",
 		GENITIVE = "фемтосервопривода",
 		DATIVE = "фемтосервоприводу",
@@ -369,7 +369,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.1, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.2)
 
 /obj/item/stock_parts/micro_laser/quadultra/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "квадроультра микролазер",
 		GENITIVE = "квадроультра микролазера",
 		DATIVE = "квадроультра микролазеру",
@@ -387,7 +387,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.8)
 
 /obj/item/stock_parts/matter_bin/bluespace/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "блюспейс ёмкость материи",
 		GENITIVE = "блюспейс ёмкости материи",
 		DATIVE = "блюспейс ёмкости материи",
@@ -411,7 +411,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.3, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.1)
 
 /obj/item/stock_parts/subspace/ansible/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ансибл подпространства",
 		GENITIVE = "ансибла подпространства",
 		DATIVE = "ансиблу подпространства",
@@ -427,7 +427,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.3, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.1)
 
 /obj/item/stock_parts/subspace/filter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр гиперволны",
 		GENITIVE = "фильтра гиперволны",
 		DATIVE = "фильтру гиперволны",
@@ -443,7 +443,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.3, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.1)
 
 /obj/item/stock_parts/subspace/amplifier/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "усилитель подпространства",
 		GENITIVE = "усилителя подпространства",
 		DATIVE = "усилителю подпространства",
@@ -459,7 +459,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.3, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.1)
 
 /obj/item/stock_parts/subspace/treatment/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диск лечения подпространства",
 		GENITIVE = "диска лечения подпространства",
 		DATIVE = "диску лечения подпространства",
@@ -475,7 +475,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.3, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.1)
 
 /obj/item/stock_parts/subspace/analyzer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "анализатор длины волны подпространства",
 		GENITIVE = "анализатора длины волны подпространства",
 		DATIVE = "анализатору длины волны подпространства",
@@ -491,7 +491,7 @@
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*0.5)
 
 /obj/item/stock_parts/subspace/crystal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кристалл ансибл",
 		GENITIVE = "кристалла ансибл",
 		DATIVE = "кристаллу ансибл",
@@ -507,7 +507,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5)
 
 /obj/item/stock_parts/subspace/transmitter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "передатчик подпространства",
 		GENITIVE = "передатчика подпространства",
 		DATIVE = "передатчику подпространства",
@@ -527,7 +527,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.1)
 
 /obj/item/stock_parts/card_reader/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "картридер",
 		GENITIVE = "картридера",
 		DATIVE = "картридеру",
@@ -543,7 +543,7 @@
 	custom_materials = list(/datum/material/plastic=SMALL_MATERIAL_AMOUNT * 2, /datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5)
 
 /obj/item/stock_parts/water_recycler/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "рециркулятор воды",
 		GENITIVE = "рециркулятора воды",
 		DATIVE = "рециркулятору воды",
@@ -559,7 +559,7 @@
 	desc = "Элемент отладки для исследования."
 
 /obj/item/research/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "исследование",
 		GENITIVE = "исследования",
 		DATIVE = "исследованию",

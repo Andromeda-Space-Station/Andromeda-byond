@@ -27,7 +27,7 @@
 	var/mutable_appearance/overclock_overlay
 
 /obj/machinery/atmospherics/components/binary/volume_pump/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "объёмный газовый насос",
 		GENITIVE = "объёмного газового насоса",
 		DATIVE = "объёмному газовому насосу",

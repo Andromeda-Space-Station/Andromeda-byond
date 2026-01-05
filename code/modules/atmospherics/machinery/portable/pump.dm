@@ -13,7 +13,7 @@
 	volume = 1000
 
 /obj/machinery/portable_atmospherics/pump/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "переносной насос",
 		GENITIVE = "переносного насоса",
 		DATIVE = "переносному насосу",
@@ -185,7 +185,7 @@
 	name = "Lil' Pump"
 
 /obj/machinery/portable_atmospherics/pump/lil_pump/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "Маленький Насос",
 		GENITIVE = "Маленького Насоса",
 		DATIVE = "Маленькому Насосу",

@@ -33,7 +33,7 @@
 	)
 
 /obj/machinery/portable_atmospherics/scrubber/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "переносной скруббер",
 		GENITIVE = "переносного скруббера",
 		DATIVE = "переносному скрубберу",
@@ -217,7 +217,7 @@
 	use_overlays = FALSE
 
 /obj/machinery/portable_atmospherics/scrubber/huge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "огромный скруббер",
 		GENITIVE = "огромного скруббера",
 		DATIVE = "огромному скрубберу",

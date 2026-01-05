@@ -20,7 +20,7 @@
 	var/list/give_turf_traits = list(TRAIT_CHASM_STOPPED, TRAIT_HYPERSPACE_STOPPED, TRAIT_TURF_IGNORE_SLOWDOWN, TRAIT_IMMERSE_STOPPED)
 
 /obj/structure/lattice/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "решётка",
 		GENITIVE = "решётки",
 		DATIVE = "решётке",
@@ -138,7 +138,7 @@
 	give_turf_traits = list(TRAIT_TURF_IGNORE_SLOWDOWN, TRAIT_LAVA_STOPPED, TRAIT_CHASM_STOPPED, TRAIT_IMMERSE_STOPPED, TRAIT_HYPERSPACE_STOPPED)
 
 /obj/structure/lattice/catwalk/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мостик",
 		GENITIVE = "мостика",
 		DATIVE = "мостику",
@@ -181,7 +181,7 @@
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/structure/lattice/catwalk/mining/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённый мостик",
 		GENITIVE = "укреплённого мостика",
 		DATIVE = "укреплённому мостику",
@@ -211,7 +211,7 @@
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
 
 /obj/structure/lattice/catwalk/lava/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "термостойкий мостик",
 		GENITIVE = "термостойкого мостика",
 		DATIVE = "термостойкому мостику",
@@ -253,7 +253,7 @@
 	var/warning_particle = /particles/smoke/ash
 
 /obj/structure/lattice/catwalk/boulder/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "платформа-валун",
 		GENITIVE = "платформы-валуна",
 		DATIVE = "платформе-валуну",

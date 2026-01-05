@@ -8,7 +8,7 @@
 	temperature = TCMB
 
 /turf/open/floor/engine/hull/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внешняя обшивка корпуса",
 		GENITIVE = "внешней обшивки корпуса",
 		DATIVE = "внешней обшивке корпуса",
@@ -24,7 +24,7 @@
 	temperature = T20C
 
 /turf/open/floor/engine/hull/air/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внутренняя обшивка корпуса",
 		GENITIVE = "внутренней обшивки корпуса",
 		DATIVE = "внутренней обшивке корпуса",
@@ -37,7 +37,7 @@
 	name = "shuttle ceiling plating"
 
 /turf/open/floor/engine/hull/ceiling/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "обшивка потолка шаттла",
 		GENITIVE = "обшивки потолка шаттла",
 		DATIVE = "обшивке потолка шаттла",
@@ -53,7 +53,7 @@
 	heat_capacity = INFINITY
 
 /turf/open/floor/engine/hull/reinforced/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённая внешняя обшивка корпуса",
 		GENITIVE = "укреплённой внешней обшивки корпуса",
 		DATIVE = "укреплённой внешней обшивке корпуса",
@@ -69,7 +69,7 @@
 	temperature = T20C
 
 /turf/open/floor/engine/hull/reinforced/air/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённая внутренняя обшивка корпуса",
 		GENITIVE = "укреплённой внутренней обшивки корпуса",
 		DATIVE = "укреплённой внутренней обшивке корпуса",

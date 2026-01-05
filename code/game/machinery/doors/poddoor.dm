@@ -29,7 +29,7 @@
 	var/datum/weakref/owner
 
 /obj/machinery/door/poddoor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гермозатвор",
 		GENITIVE = "гермозатвора",
 		DATIVE = "гермозатвору",
@@ -300,7 +300,7 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
 /obj/machinery/door/poddoor/ert/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённый гермозатвор",
 		GENITIVE = "укреплённого гермозатвора",
 		DATIVE = "укреплённому гермозатвору",
@@ -327,7 +327,7 @@
 	id = INCINERATOR_ORDMIX_VENT
 
 /obj/machinery/door/poddoor/incinerator_ordmix/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "заслонка камеры сгорания",
 		GENITIVE = "заслонки камеры сгорания",
 		DATIVE = "заслонке камеры сгорания",
@@ -342,7 +342,7 @@
 	id = INCINERATOR_ATMOS_MAINVENT
 
 /obj/machinery/door/poddoor/incinerator_atmos_main/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "заслонка турбины",
 		GENITIVE = "заслонки турбины",
 		DATIVE = "заслонке турбины",
@@ -357,7 +357,7 @@
 	id = INCINERATOR_ATMOS_AUXVENT
 
 /obj/machinery/door/poddoor/incinerator_atmos_aux/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "заслонка камеры сгорания",
 		GENITIVE = "заслонки камеры сгорания",
 		DATIVE = "заслонке камеры сгорания",
@@ -372,7 +372,7 @@
 	id = TEST_ROOM_ATMOS_MAINVENT_1
 
 /obj/machinery/door/poddoor/atmos_test_room_mainvent_1/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "заслонка тестовой камеры 1",
 		GENITIVE = "заслонки тестовой камеры 1",
 		DATIVE = "заслонке тестовой камеры 1",
@@ -387,7 +387,7 @@
 	id = TEST_ROOM_ATMOS_MAINVENT_2
 
 /obj/machinery/door/poddoor/atmos_test_room_mainvent_2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "заслонка тестовой камеры 2",
 		GENITIVE = "заслонки тестовой камеры 2",
 		DATIVE = "заслонке тестовой камеры 2",
@@ -402,7 +402,7 @@
 	id = INCINERATOR_SYNDICATELAVA_MAINVENT
 
 /obj/machinery/door/poddoor/incinerator_syndicatelava_main/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "заслонка турбины",
 		GENITIVE = "заслонки турбины",
 		DATIVE = "заслонке турбины",
@@ -417,7 +417,7 @@
 	id = INCINERATOR_SYNDICATELAVA_AUXVENT
 
 /obj/machinery/door/poddoor/incinerator_syndicatelava_aux/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "заслонка камеры сгорания",
 		GENITIVE = "заслонки камеры сгорания",
 		DATIVE = "заслонке камеры сгорания",
@@ -432,7 +432,7 @@
 	id = MASSDRIVER_ORDNANCE
 
 /obj/machinery/door/poddoor/massdriver_ordnance/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "дверь пусковой шахты РНД",
 		GENITIVE = "двери пусковой шахты РНД",
 		DATIVE = "двери пусковой шахты РНД",
@@ -447,7 +447,7 @@
 	id = MASSDRIVER_CHAPEL
 
 /obj/machinery/door/poddoor/massdriver_chapel/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "дверь пусковой шахты Церкви",
 		GENITIVE = "двери пусковой шахты Церкви",
 		DATIVE = "двери пусковой шахты Церкви",
@@ -462,7 +462,7 @@
 	id = MASSDRIVER_DISPOSALS
 
 /obj/machinery/door/poddoor/massdriver_trash/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "дверь пусковой шахты мусоросброса",
 		GENITIVE = "двери пусковой шахты мусоросброса",
 		DATIVE = "двери пусковой шахты мусоросброса",

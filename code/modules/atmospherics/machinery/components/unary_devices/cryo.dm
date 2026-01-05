@@ -107,7 +107,7 @@
 	var/broadcast_channel = RADIO_CHANNEL_MEDICAL
 
 /obj/machinery/cryo_cell/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "криокапсула",
 		GENITIVE = "криокапсулы",
 		DATIVE = "криокапсуле",

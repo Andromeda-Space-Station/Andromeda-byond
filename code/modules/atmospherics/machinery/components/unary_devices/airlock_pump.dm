@@ -83,7 +83,7 @@
 
 
 /obj/machinery/atmospherics/components/unary/airlock_pump/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "насос внешнего шлюза",
 		GENITIVE = "насоса внешнего шлюза",
 		DATIVE = "насосу внешнего шлюза",

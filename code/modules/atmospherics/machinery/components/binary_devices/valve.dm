@@ -22,7 +22,7 @@
 	var/switching = FALSE
 
 /obj/machinery/atmospherics/components/binary/valve/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ручной вентиль",
 		GENITIVE = "ручного вентиля",
 		DATIVE = "ручному вентилю",
@@ -95,7 +95,7 @@
 	interaction_flags_machine = INTERACT_MACHINE_ALLOW_SILICON | INTERACT_MACHINE_OFFLINE | INTERACT_MACHINE_OPEN | INTERACT_MACHINE_OPEN_SILICON
 
 /obj/machinery/atmospherics/components/binary/valve/digital/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "цифровой вентиль",
 		GENITIVE = "цифрового вентиля",
 		DATIVE = "цифровому вентилю",

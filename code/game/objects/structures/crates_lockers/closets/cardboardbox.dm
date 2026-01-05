@@ -34,7 +34,7 @@
 	var/move_delay = FALSE
 
 /obj/structure/closet/cardboard/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая картонная коробка",
 		GENITIVE = "большой картонной коробки",
 		DATIVE = "большой картонной коробке",
@@ -133,7 +133,7 @@
 	material_drop = /obj/item/stack/sheet/plasteel
 
 /obj/structure/closet/cardboard/metal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая металлическая коробка",
 		GENITIVE = "большой металлической коробки",
 		DATIVE = "большой металлической коробке",

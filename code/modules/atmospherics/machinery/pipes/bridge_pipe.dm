@@ -18,7 +18,7 @@
 	has_gas_visuals = FALSE
 
 /obj/machinery/atmospherics/pipe/bridge_pipe/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мостовая труба",
 		GENITIVE = "мостовой трубы",
 		DATIVE = "мостовой трубе",

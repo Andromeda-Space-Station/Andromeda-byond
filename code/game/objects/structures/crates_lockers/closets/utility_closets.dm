@@ -19,7 +19,7 @@
 	icon_state = "emergency"
 
 /obj/structure/closet/emcloset/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "аварийный шкаф",
 		GENITIVE = "аварийного шкафа",
 		DATIVE = "аварийному шкафу",
@@ -81,7 +81,7 @@
 	icon_state = "fire"
 
 /obj/structure/closet/firecloset/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пожарный шкаф",
 		GENITIVE = "пожарного шкафа",
 		DATIVE = "пожарному шкафу",
@@ -120,7 +120,7 @@
 	icon_door = "eng_tool"
 
 /obj/structure/closet/toolcloset/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с инструментами",
 		GENITIVE = "шкафа с инструментами",
 		DATIVE = "шкафу с инструментами",
@@ -180,7 +180,7 @@
 	icon_door = "eng_rad"
 
 /obj/structure/closet/radiation/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с костюмом радиационной защиты",
 		GENITIVE = "шкафа с костюмом радиационной защиты",
 		DATIVE = "шкафу с костюмом радиационной защиты",
@@ -205,7 +205,7 @@
 	icon_state = "bomb"
 
 /obj/structure/closet/bombcloset/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф сапёра",
 		GENITIVE = "шкафа сапёра",
 		DATIVE = "шкафу сапёра",

@@ -16,7 +16,7 @@
 	pipe_state = "he"
 
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "труба",
 		GENITIVE = "трубы",
 		DATIVE = "трубе",

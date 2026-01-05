@@ -53,7 +53,7 @@
 	acid = 30
 
 /obj/item/screwdriver/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "отвёртка",
 		GENITIVE = "отвёртки",
 		DATIVE = "отвёртке",
@@ -90,7 +90,7 @@
 	greyscale_colors = null
 
 /obj/item/screwdriver/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетная отвёртка",
 		GENITIVE = "инопланетной отвёртки",
 		DATIVE = "инопланетной отвёртке",
@@ -132,7 +132,7 @@
 	greyscale_colors = null
 
 /obj/item/screwdriver/power/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ручная дрель",
 		GENITIVE = "ручной дрели",
 		DATIVE = "ручной дрели",
@@ -197,7 +197,7 @@
 	greyscale_colors = null
 
 /obj/item/screwdriver/cyborg/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "автоматическая отвёртка",
 		GENITIVE = "автоматической отвёртки",
 		DATIVE = "автоматической отвёртке",

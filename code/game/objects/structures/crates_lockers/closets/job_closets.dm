@@ -7,7 +7,7 @@
 	icon_door = "bar_wardrobe"
 
 /obj/structure/closet/gmcloset/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с официальной одеждой",
 		GENITIVE = "шкафа с официальной одеждой",
 		DATIVE = "шкафу с официальной одеждой",
@@ -41,7 +41,7 @@
 	icon_door = "chef_wardrobe"
 
 /obj/structure/closet/chefcloset/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф шеф-повара",
 		GENITIVE = "шкафа шеф-повара",
 		DATIVE = "шкафу шеф-повара",
@@ -73,7 +73,7 @@
 	icon_door = "jani_wardrobe"
 
 /obj/structure/closet/jcloset/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф уборщика",
 		GENITIVE = "шкафа уборщика",
 		DATIVE = "шкафу уборщика",
@@ -108,7 +108,7 @@
 	icon_door = "law_wardrobe"
 
 /obj/structure/closet/lawcloset/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "юридический шкаф",
 		GENITIVE = "юридического шкафа",
 		DATIVE = "юридическому шкафу",
@@ -146,7 +146,7 @@
 	icon_door = "chap_wardrobe"
 
 /obj/structure/closet/wardrobe/chaplain_black/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "церковный гардероб",
 		GENITIVE = "церковного гардероба",
 		DATIVE = "церковному гардеробу",
@@ -175,7 +175,7 @@
 	icon_door = "sec_wardrobe"
 
 /obj/structure/closet/wardrobe/red/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гардероб охраны",
 		GENITIVE = "гардероба охраны",
 		DATIVE = "гардеробу охраны",
@@ -206,7 +206,7 @@
 	icon_door = "cargo_wardrobe"
 
 /obj/structure/closet/wardrobe/cargotech/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "грузовой гардероб",
 		GENITIVE = "грузового гардероба",
 		DATIVE = "грузовому гардеробу",
@@ -231,7 +231,7 @@
 	icon_door = "atmos_wardrobe"
 
 /obj/structure/closet/wardrobe/atmospherics_yellow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "атмосферный гардероб",
 		GENITIVE = "атмосферного гардероба",
 		DATIVE = "атмосферному гардеробу",
@@ -260,7 +260,7 @@
 	icon_door = "engi_wardrobe"
 
 /obj/structure/closet/wardrobe/engineering_yellow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инженерный гардероб",
 		GENITIVE = "инженерного гардероба",
 		DATIVE = "инженерному гардеробу",
@@ -290,7 +290,7 @@
 	icon_door = "med_wardrobe"
 
 /obj/structure/closet/wardrobe/white/medical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гардероб врача",
 		GENITIVE = "гардероба врача",
 		DATIVE = "гардеробу врача",
@@ -324,7 +324,7 @@
 	icon_door = "robo_wardrobe"
 
 /obj/structure/closet/wardrobe/robotics_black/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гардероб робототехника",
 		GENITIVE = "гардероба робототехника",
 		DATIVE = "гардеробу робототехника",
@@ -355,7 +355,7 @@
 	icon_door = "chem_wardrobe"
 
 /obj/structure/closet/wardrobe/chemistry_white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "химический гардероб",
 		GENITIVE = "химического гардероба",
 		DATIVE = "химическому гардеробу",
@@ -384,7 +384,7 @@
 	icon_door = "gen_wardrobe"
 
 /obj/structure/closet/wardrobe/genetics_white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гардероб генетика",
 		GENITIVE = "гардероба генетика",
 		DATIVE = "гардеробу генетика",
@@ -412,7 +412,7 @@
 	icon_door = "viro_wardrobe"
 
 /obj/structure/closet/wardrobe/virology_white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "вирусологический гардероб",
 		GENITIVE = "вирусологического гардероба",
 		DATIVE = "вирусологическому гардеробу",
@@ -440,7 +440,7 @@
 	icon_door = "sci_wardrobe"
 
 /obj/structure/closet/wardrobe/science_white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "научный гардероб",
 		GENITIVE = "научного гардероба",
 		DATIVE = "научному гардеробу",
@@ -470,7 +470,7 @@
 	icon_door = "botany_wardrobe"
 
 /obj/structure/closet/wardrobe/botanist/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гардероб ботаника",
 		GENITIVE = "гардероба ботаника",
 		DATIVE = "гардеробу ботаника",
@@ -498,7 +498,7 @@
 	icon_door = "curator_wardrobe"
 
 /obj/structure/closet/wardrobe/curator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гардероб охотника за сокровищами",
 		GENITIVE = "гардероба охотника за сокровищами",
 		DATIVE = "гардеробу охотника за сокровищами",

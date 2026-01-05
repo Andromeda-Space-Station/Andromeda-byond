@@ -18,7 +18,7 @@
 	var/is_gas_flowing = FALSE
 
 /obj/machinery/atmospherics/components/binary/temperature_gate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "термошлюз",
 		GENITIVE = "термошлюза",
 		DATIVE = "термошлюзу",

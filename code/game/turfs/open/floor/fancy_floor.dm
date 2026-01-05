@@ -21,7 +21,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/open/floor/wood/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "деревянный пол",
 		GENITIVE = "деревянного пола",
 		DATIVE = "деревянному полу",
@@ -97,7 +97,7 @@
 	floor_tile = /obj/item/stack/tile/wood/parquet
 
 /turf/open/floor/wood/parquet/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "паркет",
 		GENITIVE = "паркета",
 		DATIVE = "паркету",
@@ -114,7 +114,7 @@
 	floor_tile = /obj/item/stack/tile/wood/large
 
 /turf/open/floor/wood/large/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "крупный дощатый пол",
 		GENITIVE = "крупного дощатого пола",
 		DATIVE = "крупному дощатому полу",
@@ -146,7 +146,7 @@
 	return list("bamboodamaged")
 
 /turf/open/floor/bamboo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бамбуковый пол",
 		GENITIVE = "бамбукового пола",
 		DATIVE = "бамбуковому полу",
@@ -164,7 +164,7 @@
 	smoothing_flags = NONE
 
 /turf/open/floor/bamboo/tatami/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "татами",
 		GENITIVE = "татами",
 		DATIVE = "татами",
@@ -206,7 +206,7 @@
 	return list("[initial(icon_state)]_damaged")
 
 /turf/open/floor/grass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "трава",
 		GENITIVE = "травы",
 		DATIVE = "траве",
@@ -239,7 +239,7 @@
 	return
 
 /turf/open/floor/grass/lavaland/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мёртвая трава",
 		GENITIVE = "мёртвой травы",
 		DATIVE = "мёртвой траве",
@@ -261,7 +261,7 @@
 	icon_state = "fairygrass[rand(0,3)]"
 
 /turf/open/floor/grass/fairy/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "волшебная трава",
 		GENITIVE = "волшебной травы",
 		DATIVE = "волшебной траве",
@@ -288,7 +288,7 @@
 	rust_resistance = RUST_RESISTANCE_ORGANIC
 
 /turf/open/floor/hay/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сено",
 		GENITIVE = "сена",
 		DATIVE = "сену",
@@ -333,7 +333,7 @@
 	return
 
 /turf/open/floor/fake_snow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "снег",
 		GENITIVE = "снега",
 		DATIVE = "снегу",
@@ -358,7 +358,7 @@
 	tiled_turf = FALSE
 
 /turf/open/floor/fakebasalt/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "декоративный базальтовый пол",
 		GENITIVE = "декоративного базальтового пола",
 		DATIVE = "декоративному базальтовому полу",
@@ -399,7 +399,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/open/floor/carpet/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ковёр",
 		GENITIVE = "ковра",
 		DATIVE = "ковру",
@@ -524,7 +524,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_EXECUTIVE
 
 /turf/open/floor/carpet/executive/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "исполнительный ковёр",
 		GENITIVE = "исполнительного ковра",
 		DATIVE = "исполнительному ковру",
@@ -543,7 +543,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_STELLAR
 
 /turf/open/floor/carpet/stellar/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "звёздный ковёр",
 		GENITIVE = "звёздного ковра",
 		DATIVE = "звёздному ковру",
@@ -562,7 +562,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_DONK
 
 /turf/open/floor/carpet/donk/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ковёр Donk Co.",
 		GENITIVE = "ковра Donk Co.",
 		DATIVE = "ковру Donk Co.",
@@ -661,7 +661,7 @@
 	var/emissive_alpha = 150
 
 /turf/open/floor/carpet/neon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "неоновый ковёр",
 		GENITIVE = "неонового ковра",
 		DATIVE = "неоновому ковру",
@@ -687,7 +687,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON
 
 /turf/open/floor/carpet/neon/simple/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой неоновый ковёр",
 		GENITIVE = "простого неонового ковра",
 		DATIVE = "простому неоновому ковру",
@@ -716,7 +716,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_WHITE
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой белый неоновый ковёр",
 		GENITIVE = "простого белого неонового ковра",
 		DATIVE = "простому белому неоновому ковру",
@@ -746,7 +746,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_BLACK
 
 /turf/open/floor/carpet/neon/simple/black/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой черный неоновый ковёр",
 		GENITIVE = "простого черного неонового ковра",
 		DATIVE = "простому черному неоновому ковру",
@@ -776,7 +776,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_RED
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой красный неоновый ковёр",
 		GENITIVE = "простого красного неонового ковра",
 		DATIVE = "простому красному неоновому ковру",
@@ -805,7 +805,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_ORANGE
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой оранжевый неоновый ковёр",
 		GENITIVE = "простого оранжевого неонового ковра",
 		DATIVE = "простому оранжевому неоновому ковру",
@@ -834,7 +834,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_YELLOW
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой желтый неоновый ковёр",
 		GENITIVE = "простого желтого неонового ковра",
 		DATIVE = "простому желтому неоновому ковру",
@@ -863,7 +863,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_LIME
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой лаймовый неоновый ковёр",
 		GENITIVE = "простого лаймового неонового ковра",
 		DATIVE = "простому лаймовому неоновому ковру",
@@ -892,7 +892,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_GREEN
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой зеленый неоновый ковёр",
 		GENITIVE = "простого зеленого неонового ковра",
 		DATIVE = "простому зеленому неоновому ковру",
@@ -921,7 +921,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_TEAL
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой бирюзовый неоновый ковёр",
 		GENITIVE = "простого бирюзового неонового ковра",
 		DATIVE = "простому бирюзовому неоновому ковру",
@@ -950,7 +950,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_CYAN
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой голубой неоновый ковёр",
 		GENITIVE = "простого голубого неонового ковра",
 		DATIVE = "простому голубому неоновому ковру",
@@ -979,7 +979,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_BLUE
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой синий неоновый ковёр",
 		GENITIVE = "простого синего неонового ковра",
 		DATIVE = "простому синому неоновому ковру",
@@ -1008,7 +1008,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_PURPLE
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой пурпурный неоновый ковёр",
 		GENITIVE = "простого пурпурного неонового ковра",
 		DATIVE = "простому пурпурному неоновому ковру",
@@ -1036,7 +1036,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_VIOLET
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой фиолетовый неоновый ковёр",
 		GENITIVE = "простого фиолетового неонового ковра",
 		DATIVE = "простому фиолетовому неоновому ковру",
@@ -1064,7 +1064,7 @@
 	canSmoothWith = SMOOTH_GROUP_CARPET_SIMPLE_NEON_PINK
 
 /turf/open/floor/carpet/neon/simple/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "простой розовый неоновый ковёр",
 		GENITIVE = "простого розового неонового ковра",
 		DATIVE = "простому розовому неоновому ковру",
@@ -1186,7 +1186,7 @@
 	tiled_turf = FALSE
 
 /turf/open/floor/fakepit/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фальшивая яма",
 		GENITIVE = "фальшивой ямы",
 		DATIVE = "фальшивой яме",
@@ -1208,7 +1208,7 @@
 	base_icon_state = "ice_turf-0"
 
 /turf/open/floor/fakeice/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фальшивый лёд",
 		GENITIVE = "фальшивого льда",
 		DATIVE = "фальшивому льду",
@@ -1234,7 +1234,7 @@
 	damaged_dmi = 'icons/turf/space.dmi'
 
 /turf/open/floor/fakespace/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фальшивый космос",
 		GENITIVE = "фальшивого космоса",
 		DATIVE = "фальшивому космосу",

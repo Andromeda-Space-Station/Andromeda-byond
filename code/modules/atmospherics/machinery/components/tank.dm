@@ -67,7 +67,7 @@
 	var/static/list/merger_typecache
 
 /obj/machinery/atmospherics/components/tank/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак",
 		GENITIVE = "газового бака",
 		DATIVE = "газовому баку",
@@ -435,7 +435,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/air/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Воздух)",
 		GENITIVE = "газового бака (Воздух)",
 		DATIVE = "газовому баку (Воздух)",
@@ -466,7 +466,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/carbon_dioxide/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Диоксид углерода)",
 		GENITIVE = "газового бака (Диоксид углерода)",
 		DATIVE = "газовому баку (Диоксид углерода)",
@@ -480,7 +480,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Плазма)",
 		GENITIVE = "газового бака (Плазма)",
 		DATIVE = "газовому баку (Плазма)",
@@ -494,7 +494,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/nitrogen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Азот)",
 		GENITIVE = "газового бака (Азот)",
 		DATIVE = "газовому баку (Азот)",
@@ -508,7 +508,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/oxygen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Кислород)",
 		GENITIVE = "газового бака (Кислород)",
 		DATIVE = "газовому баку (Кислород)",
@@ -522,7 +522,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/nitrous/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Оксид азота)",
 		GENITIVE = "газового бака (Оксид азота)",
 		DATIVE = "газовому баку (Оксид азота)",
@@ -536,7 +536,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/bz/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (BZ)",
 		GENITIVE = "газового бака (BZ)",
 		DATIVE = "газовому баку (BZ)",
@@ -550,7 +550,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/freon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Фреон)",
 		GENITIVE = "газового бака (Фреон)",
 		DATIVE = "газовому баку (Фреон)",
@@ -564,7 +564,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/halon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Галон)",
 		GENITIVE = "газового бака (Галон)",
 		DATIVE = "газовому баку (Галон)",
@@ -578,7 +578,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/healium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Хилиум)",
 		GENITIVE = "газового бака (Хилиум)",
 		DATIVE = "газовому баку (Хилиум)",
@@ -592,7 +592,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/hydrogen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Водород)",
 		GENITIVE = "газового бака (Водород)",
 		DATIVE = "газовому баку (Водород)",
@@ -606,7 +606,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/hypernoblium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Гиперноблий)",
 		GENITIVE = "газового бака (Гиперноблий)",
 		DATIVE = "газовому баку (Гиперноблий)",
@@ -620,7 +620,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/miasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Миазмы)",
 		GENITIVE = "газового бака (Миазмы)",
 		DATIVE = "газовому баку (Миазмы)",
@@ -634,7 +634,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/nitrium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Нитриум)",
 		GENITIVE = "газового бака (Нитриум)",
 		DATIVE = "газовому баку (Нитриум)",
@@ -648,7 +648,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/pluoxium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Плюоксиум)",
 		GENITIVE = "газового бака (Плюоксиум)",
 		DATIVE = "газовому баку (Плюоксиум)",
@@ -662,7 +662,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/proto_nitrate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Протонитрат)",
 		GENITIVE = "газового бака (Протонитрат)",
 		DATIVE = "газовому баку (Протонитрат)",
@@ -676,7 +676,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/tritium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Тритий)",
 		GENITIVE = "газового бака (Тритий)",
 		DATIVE = "газовому баку (Тритий)",
@@ -690,7 +690,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/water_vapor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Водяной пар)",
 		GENITIVE = "газового бака (Водяной пар)",
 		DATIVE = "газовому баку (Водяной пар)",
@@ -704,7 +704,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/zauker/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Заукер)",
 		GENITIVE = "газового бака (Заукер)",
 		DATIVE = "газовому баку (Заукер)",
@@ -718,7 +718,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/helium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Гелий)",
 		GENITIVE = "газового бака (Гелий)",
 		DATIVE = "газовому баку (Гелий)",
@@ -732,7 +732,7 @@
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
 /obj/machinery/atmospherics/components/tank/antinoblium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый бак (Антиноблий)",
 		GENITIVE = "газового бака (Антиноблий)",
 		DATIVE = "газовому баку (Антиноблий)",
@@ -754,7 +754,7 @@
 	var/datum/material/material_end_product
 
 /obj/structure/tank_frame/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "каркас бака",
 		GENITIVE = "каркаса бака",
 		DATIVE = "каркасу бака",

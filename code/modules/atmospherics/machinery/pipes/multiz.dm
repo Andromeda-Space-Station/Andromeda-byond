@@ -26,7 +26,7 @@
 	var/obj/machinery/atmospherics/front_node = null
 
 /obj/machinery/atmospherics/pipe/multiz/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "межпалубный адаптер труб",
 		GENITIVE = "межпалубного адаптера труб",
 		DATIVE = "межпалубному адаптеру труб",

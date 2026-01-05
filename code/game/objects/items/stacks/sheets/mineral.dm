@@ -46,7 +46,7 @@ GLOBAL_LIST_INIT(sandstone_recipes, list ( \
 	pickup_sound = SFX_STONE_PICKUP
 
 /obj/item/stack/sheet/mineral/sandstone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кирпич из песчаника",
 		GENITIVE = "кирпича из песчаника",
 		DATIVE = "кирпичу из песчаника",
@@ -90,7 +90,7 @@ GLOBAL_LIST_INIT(sandbag_recipes, list ( \
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/stack/sheet/mineral/sandbags/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мешки с песком",
 		GENITIVE = "мешков с песком",
 		DATIVE = "мешкам с песком",
@@ -128,7 +128,7 @@ GLOBAL_LIST_INIT(sandbag_recipes, list ( \
 	walltype = /turf/closed/wall/mineral/diamond
 
 /obj/item/stack/sheet/mineral/diamond/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "алмаз",
 		GENITIVE = "алмаза",
 		DATIVE = "алмазу",
@@ -169,7 +169,7 @@ GLOBAL_LIST_INIT(diamond_recipes, list ( \
 	walltype = /turf/closed/wall/mineral/uranium
 
 /obj/item/stack/sheet/mineral/uranium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "уран",
 		GENITIVE = "урана",
 		DATIVE = "урану",
@@ -216,7 +216,7 @@ GLOBAL_LIST_INIT(uranium_recipes, list ( \
 	walltype = /turf/closed/wall/mineral/plasma
 
 /obj/item/stack/sheet/mineral/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "твёрдая плазма",
 		GENITIVE = "твёрдой плазмы",
 		DATIVE = "твёрдой плазме",
@@ -264,7 +264,7 @@ GLOBAL_LIST_INIT(plasma_recipes, list ( \
 	walltype = /turf/closed/wall/mineral/gold
 
 /obj/item/stack/sheet/mineral/gold/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "золото",
 		GENITIVE = "золота",
 		DATIVE = "золоту",
@@ -306,7 +306,7 @@ GLOBAL_LIST_INIT(gold_recipes, list ( \
 	walltype = /turf/closed/wall/mineral/silver
 
 /obj/item/stack/sheet/mineral/silver/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "серебро",
 		GENITIVE = "серебра",
 		DATIVE = "серебру",
@@ -345,7 +345,7 @@ GLOBAL_LIST_INIT(silver_recipes, list ( \
 	walltype = /turf/closed/wall/mineral/bananium
 
 /obj/item/stack/sheet/mineral/bananium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бананиум",
 		GENITIVE = "бананиума",
 		DATIVE = "бананиуму",
@@ -386,7 +386,7 @@ GLOBAL_LIST_INIT(bananium_recipes, list ( \
 	walltype = /turf/closed/wall/mineral/titanium
 
 /obj/item/stack/sheet/mineral/titanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "титан",
 		GENITIVE = "титана",
 		DATIVE = "титану",
@@ -451,7 +451,7 @@ GLOBAL_LIST_INIT(titanium_recipes, list ( \
 	walltype = /turf/closed/wall/mineral/plastitanium
 
 /obj/item/stack/sheet/mineral/plastitanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластитан",
 		GENITIVE = "пластитана",
 		DATIVE = "пластитану",
@@ -490,7 +490,7 @@ GLOBAL_LIST_INIT(plastitanium_recipes, list ( \
 	drop_sound = 'sound/items/handling/materials/snow_drop.ogg'
 
 /obj/item/stack/sheet/mineral/snow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "снег",
 		GENITIVE = "снега",
 		DATIVE = "снегу",
@@ -532,7 +532,7 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
 	merge_type = /obj/item/stack/sheet/mineral/adamantine
 
 /obj/item/stack/sheet/mineral/adamantine/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "адамантин",
 		GENITIVE = "адамантина",
 		DATIVE = "адамантину",
@@ -559,7 +559,7 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
 	material_type = /datum/material/runite
 
 /obj/item/stack/sheet/mineral/runite/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "рунит",
 		GENITIVE = "рунита",
 		DATIVE = "руниту",
@@ -581,7 +581,7 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
 	merge_type = /obj/item/stack/sheet/mineral/mythril
 
 /obj/item/stack/sheet/mineral/mythril/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мифрил",
 		GENITIVE = "мифрила",
 		DATIVE = "мифрилу",
@@ -606,7 +606,7 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
 	walltype = /turf/closed/wall/mineral/abductor
 
 /obj/item/stack/sheet/mineral/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетный сплав",
 		GENITIVE = "инопланетного сплава",
 		DATIVE = "инопланетному сплаву",
@@ -642,7 +642,7 @@ GLOBAL_LIST_INIT(abductor_recipes, list ( \
 	novariants = TRUE
 
 /obj/item/stack/sheet/mineral/coal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "уголь",
 		GENITIVE = "угля",
 		DATIVE = "углю",
@@ -694,7 +694,7 @@ GLOBAL_LIST_INIT(metalhydrogen_recipes, list(
 	armor_type = /datum/armor/metal_hydrogen_sheet
 
 /obj/item/stack/sheet/mineral/metal_hydrogen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "металлический водород",
 		GENITIVE = "металлического водорода",
 		DATIVE = "металлическому водороду",
@@ -733,7 +733,7 @@ GLOBAL_LIST_INIT(zaukerite_recipes, list(
 	material_type = /datum/material/zaukerite
 
 /obj/item/stack/sheet/mineral/zaukerite/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "заукерит",
 		GENITIVE = "заукерита",
 		DATIVE = "заукериту",

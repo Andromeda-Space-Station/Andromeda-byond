@@ -21,7 +21,7 @@
 	var/base_decon_state = "r_wall"
 
 /turf/closed/wall/r_wall/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "усиленная стена",
 		GENITIVE = "усиленной стены",
 		DATIVE = "усиленной стене",
@@ -270,7 +270,7 @@
 	explosive_resistance = 20
 
 /turf/closed/wall/r_wall/plastitanium/syndicate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "корпус",
 		GENITIVE = "корпуса",
 		DATIVE = "корпусу",

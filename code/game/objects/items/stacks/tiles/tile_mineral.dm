@@ -37,7 +37,7 @@
 	merge_type = /obj/item/stack/tile/mineral/plasma
 
 /obj/item/stack/tile/mineral/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменная плитка",
 		GENITIVE = "плазменной плитки",
 		DATIVE = "плазменной плитке",
@@ -58,7 +58,7 @@
 	merge_type = /obj/item/stack/tile/mineral/uranium
 
 /obj/item/stack/tile/mineral/uranium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "урановая плитка",
 		GENITIVE = "урановой плитки",
 		DATIVE = "урановой плитке",
@@ -79,7 +79,7 @@
 	merge_type = /obj/item/stack/tile/mineral/gold
 
 /obj/item/stack/tile/mineral/gold/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "золотая плитка",
 		GENITIVE = "золотой плитки",
 		DATIVE = "золотой плитке",
@@ -100,7 +100,7 @@
 	merge_type = /obj/item/stack/tile/mineral/silver
 
 /obj/item/stack/tile/mineral/silver/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "серебряная плитка",
 		GENITIVE = "серебряной плитки",
 		DATIVE = "серебряной плитке",
@@ -121,7 +121,7 @@
 	merge_type = /obj/item/stack/tile/mineral/diamond
 
 /obj/item/stack/tile/mineral/diamond/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "алмазная плитка",
 		GENITIVE = "алмазной плитки",
 		DATIVE = "алмазной плитке",
@@ -143,7 +143,7 @@
 	merge_type = /obj/item/stack/tile/mineral/bananium
 
 /obj/item/stack/tile/mineral/bananium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бананиумовая плитка",
 		GENITIVE = "бананиумовой плитки",
 		DATIVE = "бананиумовой плитке",
@@ -165,7 +165,7 @@
 	merge_type = /obj/item/stack/tile/mineral/abductor
 
 /obj/item/stack/tile/mineral/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетная плитка",
 		GENITIVE = "инопланетной плитки",
 		DATIVE = "инопланетной плитке",
@@ -198,7 +198,7 @@
 		)
 
 /obj/item/stack/tile/mineral/titanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "титановая плитка",
 		GENITIVE = "титановой плитки",
 		DATIVE = "титановой плитке",
@@ -216,7 +216,7 @@
 	merge_type = /obj/item/stack/tile/mineral/titanium/yellow
 
 /obj/item/stack/tile/mineral/titanium/yellow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "жёлтая титановая плитка",
 		GENITIVE = "жёлтой титановой плитки",
 		DATIVE = "жёлтой титановой плитке",
@@ -234,7 +234,7 @@
 	merge_type = /obj/item/stack/tile/mineral/titanium/blue
 
 /obj/item/stack/tile/mineral/titanium/blue/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "синяя титановая плитка",
 		GENITIVE = "синей титановой плитки",
 		DATIVE = "синей титановой плитке",
@@ -252,7 +252,7 @@
 	merge_type = /obj/item/stack/tile/mineral/titanium/white
 
 /obj/item/stack/tile/mineral/titanium/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "белая титановая плитка",
 		GENITIVE = "белой титановой плитки",
 		DATIVE = "белой титановой плитке",
@@ -270,7 +270,7 @@
 	merge_type = /obj/item/stack/tile/mineral/titanium/purple
 
 /obj/item/stack/tile/mineral/titanium/purple/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фиолетовая титановая плитка",
 		GENITIVE = "фиолетовой титановой плитки",
 		DATIVE = "фиолетовой титановой плитке",
@@ -288,7 +288,7 @@
 	merge_type = /obj/item/stack/tile/mineral/titanium/tiled
 
 /obj/item/stack/tile/mineral/titanium/tiled/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мощёная титановая плитка",
 		GENITIVE = "мощёной титановой плитки",
 		DATIVE = "мощёной титановой плитке",
@@ -306,7 +306,7 @@
 	merge_type = /obj/item/stack/tile/mineral/titanium/tiled/yellow
 
 /obj/item/stack/tile/mineral/titanium/tiled/yellow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "жёлтая мощёная титановая плитка",
 		GENITIVE = "жёлтой мощёной титановой плитки",
 		DATIVE = "жёлтой мощёной титановой плитке",
@@ -324,7 +324,7 @@
 	merge_type = /obj/item/stack/tile/mineral/titanium/tiled/blue
 
 /obj/item/stack/tile/mineral/titanium/tiled/blue/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "синяя мощёная титановая плитка",
 		GENITIVE = "синей мощёной титановой плитки",
 		DATIVE = "синей мощёной титановой плитке",
@@ -342,7 +342,7 @@
 	merge_type = /obj/item/stack/tile/mineral/titanium/tiled/white
 
 /obj/item/stack/tile/mineral/titanium/tiled/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "белая мощёная титановая плитка",
 		GENITIVE = "белой мощёной титановой плитки",
 		DATIVE = "белой мощёной титановой плитке",
@@ -360,7 +360,7 @@
 	merge_type = /obj/item/stack/tile/mineral/titanium/tiled/purple
 
 /obj/item/stack/tile/mineral/titanium/tiled/purple/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фиолетовая мощёная титановая плитка",
 		GENITIVE = "фиолетовой мощёной титановой плитки",
 		DATIVE = "фиолетовой мощёной титановой плитке",
@@ -385,7 +385,7 @@
 		)
 
 /obj/item/stack/tile/mineral/plastitanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластитановая плитка",
 		GENITIVE = "пластитановой плитки",
 		DATIVE = "пластитановой плитке",
@@ -403,7 +403,7 @@
 	merge_type = /obj/item/stack/tile/mineral/plastitanium/red
 
 /obj/item/stack/tile/mineral/plastitanium/red/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "красная пластитановая плитка",
 		GENITIVE = "красной пластитановой плитки",
 		DATIVE = "красной пластитановой плитке",
@@ -424,7 +424,7 @@
 	mats_per_unit = list(/datum/material/snow = HALF_SHEET_MATERIAL_AMOUNT / 2)
 
 /obj/item/stack/tile/mineral/snow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "снежная плитка",
 		GENITIVE = "снежной плитки",
 		DATIVE = "снежной плитке",

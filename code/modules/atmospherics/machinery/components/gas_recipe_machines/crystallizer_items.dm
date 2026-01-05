@@ -6,7 +6,7 @@
 	var/uses = 1
 
 /obj/item/hypernoblium_crystal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кристалл гиперноблия",
 		GENITIVE = "кристалла гиперноблия",
 		DATIVE = "кристаллу гиперноблия",
@@ -57,7 +57,7 @@
 	var/cloud_size = 1
 
 /obj/item/nitrium_crystal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кристалл нитриума",
 		GENITIVE = "кристалла нитриума",
 		DATIVE = "кристаллу нитриума",

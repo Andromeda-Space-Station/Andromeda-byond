@@ -209,7 +209,7 @@
 // Добавляем русские названия для объектов.
 
 /obj/machinery/pipedispenser/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "трубный диспенсер",
 		GENITIVE = "трубного диспенсера",
 		DATIVE = "трубному диспенсеру",
@@ -219,7 +219,7 @@
 	)
 
 /obj/machinery/pipedispenser/disposal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диспенсер труб утилизации",
 		GENITIVE = "диспенсера труб утилизации",
 		DATIVE = "диспенсеру труб утилизации",
@@ -229,7 +229,7 @@
 	)
 
 /obj/machinery/pipedispenser/disposal/transit_tube/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диспенсер транзитных труб",
 		GENITIVE = "диспенсера транзитных труб",
 		DATIVE = "диспенсеру транзитных труб",

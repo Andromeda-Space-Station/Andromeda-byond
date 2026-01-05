@@ -7,7 +7,7 @@
 		)
 
 /obj/item/disk/surgery/sleeper_protocol/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "подозрительный хирургический диск",
 		GENITIVE = "подозрительного хирургического диска",
 		DATIVE = "подозрительному хирургическому диску",

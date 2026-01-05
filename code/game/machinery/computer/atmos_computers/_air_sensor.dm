@@ -263,7 +263,7 @@
 // Добавляем русские названия для объектов, которые могут отображаться в тексте.
 
 /obj/machinery/air_sensor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый датчик",
 		GENITIVE = "газового датчика",
 		DATIVE = "газовому датчику",
@@ -273,7 +273,7 @@
 	)
 
 /obj/item/air_sensor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "датчик воздуха",
 		GENITIVE = "датчика воздуха",
 		DATIVE = "датчику воздуха",

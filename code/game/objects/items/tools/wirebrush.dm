@@ -11,7 +11,7 @@
 	toolspeed = 1
 
 /obj/item/wirebrush/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "металлическая щётка",
 		GENITIVE = "металлической щётки",
 		DATIVE = "металлической щётке",

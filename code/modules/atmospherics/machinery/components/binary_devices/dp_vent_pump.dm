@@ -26,7 +26,7 @@
 	var/pressure_checks = ATMOS_EXTERNAL_BOUND
 
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "двухпортовая вентиляция",
 		GENITIVE = "двухпортовой вентиляции",
 		DATIVE = "двухпортовой вентиляции",
@@ -113,7 +113,7 @@
 	name = "large dual-port air vent"
 
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая двухпортовая вентиляция",
 		GENITIVE = "большой двухпортовой вентиляции",
 		DATIVE = "большой двухпортовой вентиляции",

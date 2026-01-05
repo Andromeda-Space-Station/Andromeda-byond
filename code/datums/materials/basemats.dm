@@ -23,7 +23,7 @@
 	fishing_gravity_mult = 1.1
 
 /datum/material/iron/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "железо",
 		GENITIVE = "железа",
 		DATIVE = "железу",
@@ -73,7 +73,7 @@
 	fishing_gravity_mult = 0.9
 
 /datum/material/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стекло",
 		GENITIVE = "стекла",
 		DATIVE = "стеклу",
@@ -132,7 +132,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 1.1
 
 /datum/material/silver/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "серебро",
 		GENITIVE = "серебра",
 		DATIVE = "серебру",
@@ -180,7 +180,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 1.2
 
 /datum/material/gold/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "золото",
 		GENITIVE = "золота",
 		DATIVE = "золоту",
@@ -229,7 +229,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 1.1
 
 /datum/material/diamond/get_ru_names() // https://www.youtube.com/watch?v=8l9ialJWAHs
-	return list(
+	return alist(
 		NOMINATIVE = "алмаз",
 		GENITIVE = "алмаза",
 		DATIVE = "алмазу",
@@ -272,7 +272,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 1.4
 
 /datum/material/diamond/get_ru_names() // https://www.youtube.com/watch?v=htHmpxjoJgQ
-	return list(
+	return alist(
 		NOMINATIVE = "уран",
 		GENITIVE = "урана",
 		DATIVE = "урану",
@@ -328,7 +328,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_bounciness_mult = 0.6
 
 /datum/material/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазма",
 		GENITIVE = "плазмы",
 		DATIVE = "плазме",
@@ -391,7 +391,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_bounciness_mult = 1.1
 
 /datum/material/bluespace/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "блюспейс поликристал",
 		GENITIVE = "блюспейс поликристала",
 		DATIVE = "блюспейс поликристалу",
@@ -455,7 +455,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_bounciness_mult = 2
 
 /datum/material/bananium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бананиум",
 		GENITIVE = "бананиума",
 		DATIVE = "бананиуму",
@@ -538,7 +538,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 1.1
 
 /datum/material/titanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "титан",
 		GENITIVE = "титана",
 		DATIVE = "титану",
@@ -579,7 +579,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 1.2
 
 /datum/material/runite/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "рунит",
 		GENITIVE = "рунита",
 		DATIVE = "руниту",
@@ -633,7 +633,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 0.85
 
 /datum/material/plastic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластик",
 		GENITIVE = "пластика",
 		DATIVE = "пластику",
@@ -656,7 +656,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	value_per_unit = 50 / SHEET_MATERIAL_AMOUNT
 
 /datum/material/biomass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "биомасса",
 		GENITIVE = "биомассы",
 		DATIVE = "биомассу",
@@ -692,7 +692,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 0.8
 
 /datum/material/wood/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "дерево",
 		GENITIVE = "дерева",
 		DATIVE = "дереву",
@@ -750,7 +750,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 1.3
 
 /datum/material/adamantine/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "адамантин",
 		GENITIVE = "адамантина",
 		DATIVE = "адамантину",
@@ -803,7 +803,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 1.3
 
 /datum/material/mythril/get_ru_names() // Почему не МилфРил?
-	return list(
+	return alist(
 		NOMINATIVE = "мифрил",
 		GENITIVE = "мифрила",
 		DATIVE = "мифрилу",
@@ -856,7 +856,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 0.8
 
 /datum/material/hot_ice/get_ru_names() // Горячий здесь только я
-	return list(
+	return alist(
 		NOMINATIVE = "горячий лёд",
 		GENITIVE = "горячего льда",
 		DATIVE = "горячему льду",
@@ -907,7 +907,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 0.7
 
 /datum/material/hot_ice/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "металлический водород",
 		GENITIVE = "металлического водорода",
 		DATIVE = "металлическому водороду",
@@ -951,7 +951,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 0.9
 
 /datum/material/sand/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "песок",
 		GENITIVE = "песка",
 		DATIVE = "песку",
@@ -993,7 +993,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 0.9
 
 /datum/material/sandstone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "песчаник",
 		GENITIVE = "песчаника",
 		DATIVE = "песчанику",
@@ -1059,7 +1059,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 1.666
 
 /datum/material/runedmetal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "рунный металл",
 		GENITIVE = "рунного металла",
 		DATIVE = "рунному металлу",
@@ -1095,7 +1095,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 1.05
 
 /datum/material/bronze/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бронза",
 		GENITIVE = "бронзы",
 		DATIVE = "бронзе",
@@ -1131,7 +1131,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 0.6
 
 /datum/material/paper/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бумага",
 		GENITIVE = "бумаги",
 		DATIVE = "бумаге",
@@ -1193,7 +1193,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 0.6
 
 /datum/material/cardboard/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "картон",
 		GENITIVE = "картона",
 		DATIVE = "картону",
@@ -1240,7 +1240,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 0.85
 
 /datum/material/bone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кость",
 		GENITIVE = "кости",
 		DATIVE = "кости",
@@ -1310,7 +1310,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 0.7
 
 /datum/material/bamboo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бамбук",
 		GENITIVE = "бамбука",
 		DATIVE = "бамбуку",
@@ -1343,7 +1343,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	fishing_gravity_mult = 1.3
 
 /datum/material/zaukerite/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "заукерит",
 		GENITIVE = "заукерита",
 		DATIVE = "заукериту",

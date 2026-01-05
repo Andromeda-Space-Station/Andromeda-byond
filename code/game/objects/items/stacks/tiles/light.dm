@@ -13,7 +13,7 @@
 	var/state = 0
 
 /obj/item/stack/tile/light/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "светящаяся плитка",
 		GENITIVE = "светящейся плитки",
 		DATIVE = "светящейся плитке",

@@ -24,7 +24,7 @@
 	var/starlight_color
 
 /turf/open/floor/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный пол",
 		GENITIVE = "стеклянного пола",
 		DATIVE = "стеклянному полу",
@@ -86,7 +86,7 @@
 	alpha_to_leave = 206
 
 /turf/open/floor/glass/reinforced/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённый стеклянный пол",
 		GENITIVE = "укреплённого стеклянного пола",
 		DATIVE = "укреплённому стеклянному полу",
@@ -116,7 +116,7 @@
 	alpha_to_leave = 255
 
 /turf/open/floor/glass/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменный стеклянный пол",
 		GENITIVE = "плазменного стеклянного пола",
 		DATIVE = "плазменному стеклянному полу",
@@ -142,7 +142,7 @@
 	alpha_to_leave = 206
 
 /turf/open/floor/glass/reinforced/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённый плазменный стеклянный пол",
 		GENITIVE = "укреплённого плазменного стеклянного пола",
 		DATIVE = "укреплённому плазменному стеклянному полу",

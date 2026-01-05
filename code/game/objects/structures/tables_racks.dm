@@ -61,7 +61,7 @@
 	var/flipped_table_sound = 'sound/items/trayhit/trayhit1.ogg'
 
 /obj/structure/table/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стол",
 		GENITIVE = "стола",
 		DATIVE = "столу",
@@ -475,7 +475,7 @@
 	can_flip = FALSE
 
 /obj/structure/table/rolling/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стол на колёсиках",
 		GENITIVE = "стола на колёсиках",
 		DATIVE = "столу на колёсиках",
@@ -564,7 +564,7 @@
 	armor_type = /datum/armor/table_glass
 
 /obj/structure/table/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный стол",
 		GENITIVE = "стеклянного стола",
 		DATIVE = "стеклянному столу",
@@ -646,7 +646,7 @@
 	max_integrity = 100
 
 /obj/structure/table/glass/plasmaglass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменный стеклянный стол",
 		GENITIVE = "плазменного стеклянного стола",
 		DATIVE = "плазменному стеклянному столу",
@@ -675,7 +675,7 @@
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT)
 
 /obj/structure/table/wood/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "деревянный стол",
 		GENITIVE = "деревянного стола",
 		DATIVE = "деревянному столу",
@@ -711,7 +711,7 @@
 	buildstack = /obj/item/stack/tile/carpet
 
 /obj/structure/table/wood/poker/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "игровой стол",
 		GENITIVE = "игрового стола",
 		DATIVE = "игровому столу",
@@ -739,7 +739,7 @@
 	canSmoothWith = SMOOTH_GROUP_FANCY_WOOD_TABLES
 
 /obj/structure/table/wood/fancy/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "модный стол",
 		GENITIVE = "модного стола",
 		DATIVE = "модному столу",
@@ -829,7 +829,7 @@
 	can_flip = FALSE
 
 /obj/structure/table/reinforced/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённый стол",
 		GENITIVE = "укреплённого стола",
 		DATIVE = "укреплённому столу",
@@ -937,7 +937,7 @@
 	can_flip = FALSE
 
 /obj/structure/table/bronze/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бронзовый стол",
 		GENITIVE = "бронзового стола",
 		DATIVE = "бронзовому столу",
@@ -960,7 +960,7 @@
 	max_integrity = 150
 
 /obj/structure/table/reinforced/rglass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённый стеклянный стол",
 		GENITIVE = "укреплённого стеклянного стола",
 		DATIVE = "укреплённому стеклянному столу",
@@ -979,7 +979,7 @@
 	buildstack = /obj/item/stack/sheet/plasmarglass
 
 /obj/structure/table/reinforced/plasmarglass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённый плазменный стеклянный стол",
 		GENITIVE = "укреплённого плазменного стеклянного стола",
 		DATIVE = "укреплённому плазменному стеклянному столу",
@@ -999,7 +999,7 @@
 	max_integrity = 250
 
 /obj/structure/table/reinforced/titaniumglass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "титановый стеклянный стол",
 		GENITIVE = "титанового стеклянного стола",
 		DATIVE = "титановому стеклянному столу",
@@ -1019,7 +1019,7 @@
 	max_integrity = 300
 
 /obj/structure/table/reinforced/plastitaniumglass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластитановый стеклянный стол",
 		GENITIVE = "пластитанового стеклянного стола",
 		DATIVE = "пластитановому стеклянному столу",
@@ -1056,7 +1056,7 @@
 	var/obj/item/clothing/mask/breath/breath_mask = null
 
 /obj/structure/table/optable/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "операционный стол",
 		GENITIVE = "операционного стола",
 		DATIVE = "операционному столу",
@@ -1439,7 +1439,7 @@
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)
 
 /obj/structure/rack/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеллаж",
 		GENITIVE = "стеллажа",
 		DATIVE = "стеллажу",
@@ -1456,7 +1456,7 @@
 	custom_materials = list(/datum/material/bone = SHEET_MATERIAL_AMOUNT)
 
 /obj/structure/rack/skeletal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "костяной мини-бар",
 		GENITIVE = "костяного мини-бара",
 		DATIVE = "костяному мини-бару",
@@ -1558,7 +1558,7 @@
 	var/building = FALSE
 
 /obj/item/rack_parts/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "части стеллажа",
 		GENITIVE = "частей стеллажа",
 		DATIVE = "частям стеллажа",

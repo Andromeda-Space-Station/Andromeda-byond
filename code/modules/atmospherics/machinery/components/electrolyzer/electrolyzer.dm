@@ -30,7 +30,7 @@
 	acid = 10
 
 /obj/machinery/electrolyzer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "космический электролизёр",
 		GENITIVE = "космического электролизёра",
 		DATIVE = "космическому электролизёру",

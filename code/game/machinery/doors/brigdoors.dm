@@ -36,7 +36,7 @@
 	var/broadcast_channel = RADIO_CHANNEL_SECURITY
 
 /obj/machinery/status_display/door_timer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "таймер двери",
 		GENITIVE = "таймера двери",
 		DATIVE = "таймеру двери",

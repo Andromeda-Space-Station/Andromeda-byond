@@ -6,7 +6,7 @@
 	icon_state = "cap"
 
 /obj/structure/closet/secure_closet/ert_com/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф командира ОБР",
 		GENITIVE = "шкафа командира ОБР",
 		DATIVE = "шкафу командира ОБР",
@@ -43,7 +43,7 @@
 	icon_state = "hos"
 
 /obj/structure/closet/secure_closet/ert_sec/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф офицера безопасности ОБР",
 		GENITIVE = "шкафа офицера безопасности ОБР",
 		DATIVE = "шкафу офицера безопасности ОБР",
@@ -68,7 +68,7 @@
 	icon_state = "cmo"
 
 /obj/structure/closet/secure_closet/ert_med/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф медика ОБР",
 		GENITIVE = "шкафа медика ОБР",
 		DATIVE = "шкафу медика ОБР",
@@ -95,7 +95,7 @@
 	icon_state = "ce"
 
 /obj/structure/closet/secure_closet/ert_engi/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф инженера ОБР",
 		GENITIVE = "шкафа инженера ОБР",
 		DATIVE = "шкафу инженера ОБР",

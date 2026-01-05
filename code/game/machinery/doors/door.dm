@@ -98,7 +98,7 @@
 	acid = 70
 
 /obj/machinery/door/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шлюз",
 		GENITIVE = "шлюза",
 		DATIVE = "шлюзу",

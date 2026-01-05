@@ -15,7 +15,7 @@
 	show_nav_computer_icon = FALSE
 
 /obj/machinery/door/poddoor/shutters/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "заслонки",
 		GENITIVE = "заслонок",
 		DATIVE = "заслонкам",
@@ -70,7 +70,7 @@
 	rad_insulation = RAD_EXTREME_INSULATION
 
 /obj/machinery/door/poddoor/shutters/radiation/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "радиационные заслонки",
 		GENITIVE = "радиационных заслонок",
 		DATIVE = "радиационным заслонкам",
@@ -112,7 +112,7 @@
 	glass = TRUE
 
 /obj/machinery/door/poddoor/shutters/window/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "заслонка с окном",
 		GENITIVE = "заслонки с окном",
 		DATIVE = "заслонке с окном",

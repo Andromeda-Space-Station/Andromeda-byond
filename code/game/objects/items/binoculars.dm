@@ -12,7 +12,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/binoculars/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бинокль",
 		GENITIVE = "бинокля",
 		DATIVE = "биноклю",

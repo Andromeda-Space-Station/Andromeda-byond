@@ -20,7 +20,7 @@
 	has_gas_visuals = FALSE
 
 /obj/machinery/atmospherics/pipe/heat_exchanging/manifold/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "манифольд",
 		GENITIVE = "манифольда",
 		DATIVE = "манифольду",

@@ -5,7 +5,7 @@
 	icon_state = "qm"
 
 /obj/structure/closet/secure_closet/quartermaster/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф квартирмейстера",
 		GENITIVE = "шкафа квартирмейстера",
 		DATIVE = "шкафу квартирмейстера",

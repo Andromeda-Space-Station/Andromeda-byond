@@ -37,7 +37,7 @@ GLOBAL_LIST_INIT(glass_recipes, list ( \
 	drop_sound = 'sound/items/handling/materials/glass_drop.ogg'
 
 /obj/item/stack/sheet/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стекло",
 		GENITIVE = "стекла",
 		DATIVE = "стеклу",
@@ -122,7 +122,7 @@ GLOBAL_LIST_INIT(pglass_recipes, list ( \
 	drop_sound = 'sound/items/handling/materials/glass_drop.ogg'
 
 /obj/item/stack/sheet/plasmaglass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменное стекло",
 		GENITIVE = "плазменного стекла",
 		DATIVE = "плазменному стеклу",
@@ -191,7 +191,7 @@ GLOBAL_LIST_INIT(reinforced_glass_recipes, list ( \
 	drop_sound = 'sound/items/handling/materials/glass_drop.ogg'
 
 /obj/item/stack/sheet/rglass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "армированное стекло",
 		GENITIVE = "армированного стекла",
 		DATIVE = "армированному стеклу",
@@ -244,7 +244,7 @@ GLOBAL_LIST_INIT(prglass_recipes, list ( \
 	drop_sound = 'sound/items/handling/materials/glass_drop.ogg'
 
 /obj/item/stack/sheet/plasmarglass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменное армированное стекло",
 		GENITIVE = "плазменного армированного стекла",
 		DATIVE = "плазменному армированному стеклу",
@@ -289,7 +289,7 @@ GLOBAL_LIST_INIT(titaniumglass_recipes, list(
 	drop_sound = 'sound/items/handling/materials/glass_drop.ogg'
 
 /obj/item/stack/sheet/titaniumglass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "титановое стекло",
 		GENITIVE = "титанового стекла",
 		DATIVE = "титановому стеклу",
@@ -334,7 +334,7 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	drop_sound = 'sound/items/handling/materials/glass_drop.ogg'
 
 /obj/item/stack/sheet/plastitaniumglass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластитановое стекло",
 		GENITIVE = "пластитанового стекла",
 		DATIVE = "пластитановому стеклу",
@@ -385,7 +385,7 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	embed_type = /datum/embedding/shard
 
 /obj/item/shard/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "осколок стекла",
 		GENITIVE = "осколка стекла",
 		DATIVE = "осколку стекла",
@@ -505,7 +505,7 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	craft_time = 7 SECONDS
 
 /obj/item/shard/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменный осколок",
 		GENITIVE = "плазменного осколка",
 		DATIVE = "плазменному осколку",
@@ -527,7 +527,7 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	craft_time = 7 SECONDS
 
 /obj/item/shard/titanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "титановый осколок",
 		GENITIVE = "титанового осколка",
 		DATIVE = "титановому осколку",
@@ -550,7 +550,7 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	craft_time = 14 SECONDS
 
 /obj/item/shard/plastitanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластитановый осколок",
 		GENITIVE = "пластитанового осколка",
 		DATIVE = "пластитановому осколку",

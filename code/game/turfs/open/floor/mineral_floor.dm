@@ -19,7 +19,7 @@
 	tiled_turf = FALSE
 
 /turf/open/floor/mineral/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "минеральный пол",
 		GENITIVE = "минерального пола",
 		DATIVE = "минеральному полу",
@@ -52,7 +52,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/open/floor/mineral/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменный пол",
 		GENITIVE = "плазменного пола",
 		DATIVE = "плазменному полу",
@@ -78,7 +78,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/open/floor/mineral/gold/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "золотой пол",
 		GENITIVE = "золотого пола",
 		DATIVE = "золотому полу",
@@ -97,7 +97,7 @@
 	custom_materials = list(/datum/material/silver = SMALL_MATERIAL_AMOUNT*5)
 
 /turf/open/floor/mineral/silver/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "серебряный пол",
 		GENITIVE = "серебряного пола",
 		DATIVE = "серебряному полу",
@@ -116,7 +116,7 @@
 	rust_resistance = RUST_RESISTANCE_TITANIUM
 
 /turf/open/floor/mineral/titanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол шаттла",
 		GENITIVE = "пола шаттла",
 		DATIVE = "полу шаттла",
@@ -172,7 +172,7 @@
 	floor_tile = /obj/item/stack/tile/mineral/titanium/tiled
 
 /turf/open/floor/mineral/titanium/tiled/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "титановая плитка",
 		GENITIVE = "титановой плитки",
 		DATIVE = "титановой плитке",
@@ -224,7 +224,7 @@
 	rust_resistance = RUST_RESISTANCE_TITANIUM
 
 /turf/open/floor/mineral/plastitanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол шаттла",
 		GENITIVE = "пола шаттла",
 		DATIVE = "полу шаттла",
@@ -263,7 +263,7 @@
 	var/sound_cooldown = 0
 
 /turf/open/floor/mineral/bananium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бананиумовый пол",
 		GENITIVE = "бананиумового пола",
 		DATIVE = "бананиумовому полу",
@@ -318,7 +318,7 @@
 	rust_resistance = RUST_RESISTANCE_REINFORCED
 
 /turf/open/floor/mineral/diamond/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "алмазный пол",
 		GENITIVE = "алмазного пола",
 		DATIVE = "алмазному полу",
@@ -341,7 +341,7 @@
 	var/active = null
 
 /turf/open/floor/mineral/uranium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "урановый пол",
 		GENITIVE = "уранового пола",
 		DATIVE = "урановому полу",
@@ -401,7 +401,7 @@
 	damaged_dmi = null
 
 /turf/open/floor/mineral/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетный пол",
 		GENITIVE = "инопланетного пола",
 		DATIVE = "инопланетному полу",

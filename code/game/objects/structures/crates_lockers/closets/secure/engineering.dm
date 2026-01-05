@@ -5,7 +5,7 @@
 	icon_state = "ce"
 
 /obj/structure/closet/secure_closet/engineering_chief/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф главного инженера",
 		GENITIVE = "шкафа главного инженера",
 		DATIVE = "шкафу главного инженера",
@@ -46,7 +46,7 @@
 	icon_door = "eng_elec"
 
 /obj/structure/closet/secure_closet/engineering_electrical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф электрооборудования",
 		GENITIVE = "шкафа электрооборудования",
 		DATIVE = "шкафу электрооборудования",
@@ -78,7 +78,7 @@
 	icon_door = "eng_weld"
 
 /obj/structure/closet/secure_closet/engineering_welding/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф сварочного оборудования",
 		GENITIVE = "шкафа сварочного оборудования",
 		DATIVE = "шкафу сварочного оборудования",
@@ -101,7 +101,7 @@
 	icon_state = "eng_secure"
 
 /obj/structure/closet/secure_closet/engineering_personal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф инженера",
 		GENITIVE = "шкафа инженера",
 		DATIVE = "шкафу инженера",
@@ -129,7 +129,7 @@
 	icon_state = "atmos"
 
 /obj/structure/closet/secure_closet/atmospherics/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф атмосферного техника",
 		GENITIVE = "шкафа атмосферного техника",
 		DATIVE = "шкафу атмосферного техника",

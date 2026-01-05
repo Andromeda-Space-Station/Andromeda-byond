@@ -26,7 +26,7 @@
 	var/specific_parts = FALSE
 
 /obj/item/circuitboard/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "микросхема",
 		GENITIVE = "микросхемы",
 		DATIVE = "микросхеме",

@@ -7,7 +7,7 @@
 	paint_jobs = null
 
 /obj/structure/closet/syndicate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф оружейной",
 		GENITIVE = "шкафа оружейной",
 		DATIVE = "шкафу оружейной",
@@ -61,7 +61,7 @@
 	icon_state = "syndicate_chemical"
 
 /obj/structure/closet/syndicate/chemical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с химикатами",
 		GENITIVE = "шкафа с химикатами",
 		DATIVE = "шкафу с химикатами",

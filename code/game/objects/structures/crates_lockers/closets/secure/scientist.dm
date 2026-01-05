@@ -5,7 +5,7 @@
 	icon_state = "rd"
 
 /obj/structure/closet/secure_closet/research_director/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф научного руководителя",
 		GENITIVE = "шкафа научного руководителя",
 		DATIVE = "шкафу научного руководителя",
@@ -44,7 +44,7 @@
 	req_access = list(ACCESS_RESEARCH)
 
 /obj/structure/closet/secure_closet/cytology/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф цитологического оборудования",
 		GENITIVE = "шкафа цитологического оборудования",
 		DATIVE = "шкафу цитологического оборудования",

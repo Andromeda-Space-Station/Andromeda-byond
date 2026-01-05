@@ -15,7 +15,7 @@
 	drop_sound = 'sound/items/handling/materials/skin_drop.ogg'
 
 /obj/item/stack/sheet/animalhide/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкура",
 		GENITIVE = "шкуры",
 		DATIVE = "шкуре",
@@ -35,7 +35,7 @@
 	merge_type = /obj/item/stack/sheet/animalhide/human
 
 /obj/item/stack/sheet/animalhide/human/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "человеческая кожа",
 		GENITIVE = "человеческой кожи",
 		DATIVE = "человеческой коже",
@@ -67,7 +67,7 @@ GLOBAL_LIST_INIT(human_recipes, list( \
 	merge_type = /obj/item/stack/sheet/animalhide/generic
 
 /obj/item/stack/sheet/animalhide/generic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кожа",
 		GENITIVE = "кожи",
 		DATIVE = "коже",
@@ -88,7 +88,7 @@ GLOBAL_LIST_INIT(human_recipes, list( \
 	merge_type = /obj/item/stack/sheet/animalhide/corgi
 
 /obj/item/stack/sheet/animalhide/corgicorgi/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкура корги",
 		GENITIVE = "шкуры корги",
 		DATIVE = "шкуре корги",
@@ -120,7 +120,7 @@ GLOBAL_LIST_INIT(corgi_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/animalhide/mothroach
 
 /obj/item/stack/sheet/animalhide/mothroach/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкура мотылька",
 		GENITIVE = "шкуры мотылька",
 		DATIVE = "шкуре мотылька",
@@ -144,7 +144,7 @@ GLOBAL_LIST_INIT(corgi_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/animalhide/gondola
 
 /obj/item/stack/sheet/animalhide/gondola/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкура гондолы",
 		GENITIVE = "шкуры гондолы",
 		DATIVE = "шкуре гондолы",
@@ -175,7 +175,7 @@ GLOBAL_LIST_INIT(gondola_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/animalhide/cat
 
 /obj/item/stack/sheet/animalhide/cat/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкура кота",
 		GENITIVE = "шкуры кота",
 		DATIVE = "шкуре кота",
@@ -199,7 +199,7 @@ GLOBAL_LIST_INIT(gondola_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/animalhide/monkey
 
 /obj/item/stack/sheet/animalhide/monkey/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкура обезьяны",
 		GENITIVE = "шкуры обезьяны",
 		DATIVE = "шкуре обезьяны",
@@ -232,7 +232,7 @@ GLOBAL_LIST_INIT(monkey_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/animalhide/lizard
 
 /obj/item/stack/sheet/animalhide/lizard/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кожа ящерицы",
 		GENITIVE = "кожи ящерицы",
 		DATIVE = "коже ящерицы",
@@ -256,7 +256,7 @@ GLOBAL_LIST_INIT(monkey_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/animalhide/xeno
 
 /obj/item/stack/sheet/animalhide/xeno/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкура пришельца",
 		GENITIVE = "шкуры пришельца",
 		DATIVE = "шкуре пришельца",
@@ -288,7 +288,7 @@ GLOBAL_LIST_INIT(xeno_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/xenochitin
 
 /obj/item/stack/sheet/xenochitin/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "хитин пришельца",
 		GENITIVE = "хитина пришельца",
 		DATIVE = "хитину пришельца",
@@ -304,7 +304,7 @@ GLOBAL_LIST_INIT(xeno_recipes, list ( \
 	icon_state = "claw"
 
 /obj/item/xenos_claw/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "коготь пришельца",
 		GENITIVE = "когтя пришельца",
 		DATIVE = "когтю пришельца",
@@ -325,7 +325,7 @@ GLOBAL_LIST_INIT(xeno_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/animalhide/carp
 
 /obj/item/stack/sheet/animalhide/carp/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "чешуя карпа",
 		GENITIVE = "чешуи карпа",
 		DATIVE = "чешуе карпа",
@@ -364,7 +364,7 @@ GLOBAL_LIST_INIT(carp_recipes, list ( \
 	drop_sound = 'sound/items/handling/materials/skin_drop.ogg'
 
 /obj/item/stack/sheet/leather/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кожа",
 		GENITIVE = "кожи",
 		DATIVE = "коже",
@@ -427,7 +427,7 @@ GLOBAL_LIST_INIT(leather_recipes, list ( \
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
 
 /obj/item/stack/sheet/sinew/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сухожилие наблюдателя",
 		GENITIVE = "сухожилия наблюдателя",
 		DATIVE = "сухожилию наблюдателя",
@@ -457,7 +457,7 @@ GLOBAL_LIST_INIT(leather_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/sinew/wolf
 
 /obj/item/stack/sheet/sinew/wolf/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "волчье сухожилие",
 		GENITIVE = "волчьего сухожилия",
 		DATIVE = "волчьему сухожилию",
@@ -493,7 +493,7 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/animalhide/goliath_hide
 
 /obj/item/stack/sheet/animalhide/goliath_hide/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластины шкуры голиафа",
 		GENITIVE = "пластин шкуры голиафа",
 		DATIVE = "пластинам шкуры голиафа",
@@ -515,7 +515,7 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 	novariants = FALSE
 
 /obj/item/stack/sheet/animalhide/bear/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "медвежья шкура",
 		GENITIVE = "медвежьей шкуры",
 		DATIVE = "медвежьей шкуре",
@@ -540,7 +540,7 @@ GLOBAL_LIST_INIT(bear_pelt_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/animalhide/goliath_hide/polar_bear_hide
 
 /obj/item/stack/sheet/animalhide/goliath_hide/polar_bear_hide/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкуры белого медведя",
 		GENITIVE = "шкур белого медведя",
 		DATIVE = "шкурам белого медведя",
@@ -566,7 +566,7 @@ GLOBAL_LIST_INIT(bear_pelt_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/animalhide/ashdrake
 
 /obj/item/stack/sheet/animalhide/ashdrake/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкура пепельного дракона",
 		GENITIVE = "шкуры пепельного дракона",
 		DATIVE = "шкуре пепельного дракона",
@@ -621,7 +621,7 @@ GLOBAL_LIST_INIT(bear_pelt_recipes, list ( \
 	drop_sound = 'sound/items/handling/materials/skin_drop.ogg'
 
 /obj/item/stack/sheet/hairlesshide/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "безволосая шкура",
 		GENITIVE = "безволосой шкуры",
 		DATIVE = "безволосой шкуре",
@@ -650,7 +650,7 @@ GLOBAL_LIST_INIT(bear_pelt_recipes, list ( \
 	var/drying_threshold_temperature = 500
 
 /obj/item/stack/sheet/wethide/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мокрая шкура",
 		GENITIVE = "мокрой шкуры",
 		DATIVE = "мокрой шкуре",

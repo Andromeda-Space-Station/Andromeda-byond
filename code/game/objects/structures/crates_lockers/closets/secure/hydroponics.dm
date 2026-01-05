@@ -5,7 +5,7 @@
 	icon_state = "hydro"
 
 /obj/structure/closet/secure_closet/hydroponics/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф ботаника",
 		GENITIVE = "шкафа ботаника",
 		DATIVE = "шкафу ботаника",

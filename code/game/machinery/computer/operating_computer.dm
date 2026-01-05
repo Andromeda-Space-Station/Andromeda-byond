@@ -27,7 +27,7 @@
 	var/datum/component/experiment_handler/experiment_handler
 
 /obj/machinery/computer/operating/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "операционный компьютер",
 		GENITIVE = "операционного компьютера",
 		DATIVE = "операционному компьютеру",

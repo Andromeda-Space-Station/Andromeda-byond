@@ -258,7 +258,7 @@
 	var/list/surgeries
 
 /obj/item/disk/surgery/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диск продвинутой хирургии",
 		GENITIVE = "диска продвинутой хирургии",
 		DATIVE = "диску продвинутой хирургии",
@@ -274,7 +274,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT * 3, /datum/material/glass=SMALL_MATERIAL_AMOUNT)
 
 /obj/item/disk/surgery/debug/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диск хирургии",
 		GENITIVE = "диска хирургии",
 		DATIVE = "диску хирургии",

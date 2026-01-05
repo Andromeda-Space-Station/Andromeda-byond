@@ -7,7 +7,7 @@
 	item_chair = null
 
 /obj/structure/chair/e_chair/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "электрический стул",
 		GENITIVE = "электрического стула",
 		DATIVE = "электрическому стулу",

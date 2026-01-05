@@ -98,7 +98,7 @@
 		can_dismember = FALSE
 
 /obj/item/bodypart/head/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "голова",
 		GENITIVE = "головы",
 		DATIVE = "голове",
@@ -108,7 +108,7 @@
 	)
 
 /obj/item/bodypart/head/get_ru_plaintext_names()
-	return list(
+	return alist(
 		NOMINATIVE = "голова",
 		GENITIVE = "головы",
 		DATIVE = "голове",

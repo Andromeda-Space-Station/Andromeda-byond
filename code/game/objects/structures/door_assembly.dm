@@ -39,7 +39,7 @@
 	var/material_amt = 4
 
 /obj/structure/door_assembly/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сборка шлюза",
 		GENITIVE = "сборки шлюза",
 		DATIVE = "сборке шлюза",
@@ -63,7 +63,7 @@
 	material_amt = 8
 
 /obj/structure/door_assembly/multi_tile/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сборка большого шлюза",
 		GENITIVE = "сборки большого шлюза",
 		DATIVE = "сборке большого шлюза",

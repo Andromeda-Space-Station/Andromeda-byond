@@ -31,7 +31,7 @@
 	acid = 30
 
 /obj/item/crowbar/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "карманная монтировка",
 		GENITIVE = "карманной монтировки",
 		DATIVE = "карманной монтировке",
@@ -65,7 +65,7 @@
 	toolspeed = 0.1
 
 /obj/item/crowbar/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетная монтировка",
 		GENITIVE = "инопланетной монтировки",
 		DATIVE = "инопланетной монтировке",
@@ -87,7 +87,7 @@
 	toolspeed = 0.7
 
 /obj/item/crowbar/large/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большой лом",
 		GENITIVE = "большого лома",
 		DATIVE = "большому лому",
@@ -102,7 +102,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/crowbar/large/emergency/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "аварийный лом",
 		GENITIVE = "аварийного лома",
 		DATIVE = "аварийному лому",
@@ -131,7 +131,7 @@
 	wound_bonus = 35
 
 /obj/item/crowbar/hammer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "молоток-гвоздодёр",
 		GENITIVE = "молотка-гвоздодёра",
 		DATIVE = "молотку-гвоздодёру",
@@ -152,7 +152,7 @@
 	inhand_icon_state = "crowbar_red"
 
 /obj/item/crowbar/large/twenty_force/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тяжёлый лом",
 		GENITIVE = "тяжёлого лома",
 		DATIVE = "тяжёлому лому",
@@ -168,7 +168,7 @@
 	throw_speed = 2
 
 /obj/item/crowbar/large/old/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "старый лом",
 		GENITIVE = "старого лома",
 		DATIVE = "старому лому",
@@ -227,7 +227,7 @@
 	var/alert_cooldown_time = 1 MINUTES
 
 /obj/item/crowbar/power/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "челюсти жизни",
 		GENITIVE = "челюстей жизни",
 		DATIVE = "челюстям жизни",
@@ -351,7 +351,7 @@
 	toolspeed = 0.5
 
 /obj/item/crowbar/power/syndicate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "челюсти смерти",
 		GENITIVE = "челюстей смерти",
 		DATIVE = "челюстям смерти",
@@ -398,7 +398,7 @@
 	radio_alert = TRUE
 
 /obj/item/crowbar/power/paramedic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "челюсти восстановления",
 		GENITIVE = "челюстей восстановления",
 		DATIVE = "челюстям восстановления",
@@ -449,7 +449,7 @@
 	toolspeed = 0.5
 
 /obj/item/crowbar/cyborg/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гидравлический лом",
 		GENITIVE = "гидравлического лома",
 		DATIVE = "гидравлическому лому",
@@ -479,7 +479,7 @@
 	fire = 100
 
 /obj/item/crowbar/mechremoval/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инструмент вскрытия мехов",
 		GENITIVE = "инструмента вскрытия мехов",
 		DATIVE = "инструменту вскрытия мехов",

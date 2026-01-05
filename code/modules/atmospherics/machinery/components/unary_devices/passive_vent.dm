@@ -15,7 +15,7 @@
 	interaction_flags_click = NEED_VENTCRAWL
 
 /obj/machinery/atmospherics/components/unary/passive_vent/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пассивная вентиляция",
 		GENITIVE = "пассивной вентиляции",
 		DATIVE = "пассивной вентиляции",

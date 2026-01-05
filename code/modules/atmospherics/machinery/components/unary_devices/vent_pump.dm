@@ -48,7 +48,7 @@
 	var/datum/looping_sound/vent_pump_overclock/sound_loop
 
 /obj/machinery/atmospherics/components/unary/vent_pump/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "вентиляция",
 		GENITIVE = "вентиляции",
 		DATIVE = "вентиляции",
@@ -372,7 +372,7 @@
 	power_channel = AREA_USAGE_EQUIP
 
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая вентиляция",
 		GENITIVE = "большой вентиляции",
 		DATIVE = "большой вентиляции",

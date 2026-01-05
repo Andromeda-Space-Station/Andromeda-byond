@@ -5,7 +5,7 @@
 	icon_door = "mixed"
 
 /obj/structure/closet/athletic_mixed/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "спортивный гардероб",
 		GENITIVE = "спортивного гардероба",
 		DATIVE = "спортивному гардеробу",
@@ -32,7 +32,7 @@
 	icon_door = "mixed"
 
 /obj/structure/closet/boxinggloves/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с боксёрскими перчатками",
 		GENITIVE = "шкафа с боксёрскими перчатками",
 		DATIVE = "шкафу с боксёрскими перчатками",
@@ -55,7 +55,7 @@
 	gender = MALE
 
 /obj/structure/closet/masks/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с масками",
 		GENITIVE = "шкафа с масками",
 		DATIVE = "шкафу с масками",
@@ -79,7 +79,7 @@
 	icon_state = "rack"
 
 /obj/structure/closet/lasertag/red/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стойка с красным снаряжением",
 		GENITIVE = "стойки с красным снаряжением",
 		DATIVE = "стойке с красным снаряжением",
@@ -105,7 +105,7 @@
 	icon_state = "rack"
 
 /obj/structure/closet/lasertag/blue/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стойка с синим снаряжением",
 		GENITIVE = "стойки с синим снаряжением",
 		DATIVE = "стойке с синим снаряжением",

@@ -46,7 +46,7 @@
 	var/hand_mine_speed = 15 SECONDS
 
 /turf/closed/mineral/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "камень",
 		GENITIVE = "камня",
 		DATIVE = "камню",
@@ -451,7 +451,7 @@
 	proximity_based = TRUE
 
 /turf/closed/mineral/random/snow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плотный снег",
 		GENITIVE = "плотного снега",
 		DATIVE = "плотному снегу",
@@ -556,7 +556,7 @@
 	defer_change = TRUE
 
 /turf/closed/mineral/random/labormineral/ice/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плотный снег",
 		GENITIVE = "плотного снега",
 		DATIVE = "плотному снегу",
@@ -736,7 +736,7 @@
 	rust_resistance = RUST_RESISTANCE_ORGANIC
 
 /turf/closed/mineral/ash_rock/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "камень",
 		GENITIVE = "камня",
 		DATIVE = "камню",
@@ -758,7 +758,7 @@
 	defer_change = TRUE
 
 /turf/closed/mineral/snowmountain/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плотный снег",
 		GENITIVE = "плотного снега",
 		DATIVE = "плотному снегу",
@@ -788,7 +788,7 @@
 	turf_type = /turf/open/misc/asteroid/snow/ice
 
 /turf/closed/mineral/snowmountain/cavern/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плотный лёд",
 		GENITIVE = "плотного льда",
 		DATIVE = "плотному льду",
@@ -817,7 +817,7 @@
 	base_icon_state = "red_wall"
 
 /turf/closed/mineral/asteroid/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "железосодержащий камень",
 		GENITIVE = "железосодержащего камня",
 		DATIVE = "железосодержащему камню",
@@ -832,7 +832,7 @@
 	base_icon_state = "red_wall"
 
 /turf/closed/mineral/random/stationside/asteroid/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "железосодержащий камень",
 		GENITIVE = "железосодержащего камня",
 		DATIVE = "железосодержащему камню",
@@ -847,7 +847,7 @@
 	baseturfs = /turf/open/misc/asteroid
 
 /turf/closed/mineral/random/stationside/asteroid/porus/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пористый железосодержащий камень",
 		GENITIVE = "пористого железосодержащего камня",
 		DATIVE = "пористому железосодержащему камню",
@@ -862,7 +862,7 @@
 	baseturfs = /turf/open/misc/asteroid
 
 /turf/closed/mineral/asteroid/porous/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пористый камень",
 		GENITIVE = "пористого камня",
 		DATIVE = "пористому камню",
@@ -1012,7 +1012,7 @@
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
 
 /turf/closed/mineral/asteroid/porous/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "очень прочный камень",
 		GENITIVE = "очень прочного камня",
 		DATIVE = "очень прочному камню",

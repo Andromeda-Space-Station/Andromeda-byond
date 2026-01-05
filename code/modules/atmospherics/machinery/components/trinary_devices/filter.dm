@@ -16,7 +16,7 @@
 	var/list/filter_type = list()
 
 /obj/machinery/atmospherics/components/trinary/filter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый фильтр",
 		GENITIVE = "газового фильтра",
 		DATIVE = "газовому фильтру",
@@ -239,7 +239,7 @@
 	name = "nitrogen filter"
 	filter_type = list(/datum/gas/nitrogen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/n2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "азотный фильтр",
 		GENITIVE = "азотного фильтра",
 		DATIVE = "азотному фильтру",
@@ -251,7 +251,7 @@
 	name = "oxygen filter"
 	filter_type = list(/datum/gas/oxygen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/o2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кислородный фильтр",
 		GENITIVE = "кислородного фильтра",
 		DATIVE = "кислородному фильтру",
@@ -263,7 +263,7 @@
 	name = "carbon dioxide filter"
 	filter_type = list(/datum/gas/carbon_dioxide)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/co2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр углекислого газа",
 		GENITIVE = "фильтра углекислого газа",
 		DATIVE = "фильтру углекислого газа",
@@ -275,7 +275,7 @@
 	name = "nitrous oxide filter"
 	filter_type = list(/datum/gas/nitrous_oxide)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/n2o/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр оксида азота",
 		GENITIVE = "фильтра оксида азота",
 		DATIVE = "фильтру оксида азота",
@@ -287,7 +287,7 @@
 	name = "plasma filter"
 	filter_type = list(/datum/gas/plasma)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменный фильтр",
 		GENITIVE = "плазменного фильтра",
 		DATIVE = "плазменному фильтру",
@@ -299,7 +299,7 @@
 	name = "bz filter"
 	filter_type = list(/datum/gas/bz)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/bz/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр BZ",
 		GENITIVE = "фильтра BZ",
 		DATIVE = "фильтру BZ",
@@ -311,7 +311,7 @@
 	name = "freon filter"
 	filter_type = list(/datum/gas/freon)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/freon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр фреона",
 		GENITIVE = "фильтра фреона",
 		DATIVE = "фильтру фреона",
@@ -323,7 +323,7 @@
 	name = "halon filter"
 	filter_type = list(/datum/gas/halon)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/halon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр галона",
 		GENITIVE = "фильтра галона",
 		DATIVE = "фильтру галона",
@@ -335,7 +335,7 @@
 	name = "healium filter"
 	filter_type = list(/datum/gas/healium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/healium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр хилиума",
 		GENITIVE = "фильтра хилиума",
 		DATIVE = "фильтру хилиума",
@@ -347,7 +347,7 @@
 	name = "hydrogen filter"
 	filter_type = list(/datum/gas/hydrogen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/h2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "водородный фильтр",
 		GENITIVE = "водородного фильтра",
 		DATIVE = "водородному фильтру",
@@ -359,7 +359,7 @@
 	name = "hypernoblium filter"
 	filter_type = list(/datum/gas/hypernoblium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/hypernoblium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр гиперноблия",
 		GENITIVE = "фильтра гиперноблия",
 		DATIVE = "фильтру гиперноблия",
@@ -371,7 +371,7 @@
 	name = "miasma filter"
 	filter_type = list(/datum/gas/miasma)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/miasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр миазмов",
 		GENITIVE = "фильтра миазмов",
 		DATIVE = "фильтру миазмов",
@@ -383,7 +383,7 @@
 	name = "nitrium filter"
 	filter_type = list(/datum/gas/nitrium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/no2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "нитриумный фильтр",
 		GENITIVE = "нитриумного фильтра",
 		DATIVE = "нитриумному фильтру",
@@ -395,7 +395,7 @@
 	name = "pluoxium filter"
 	filter_type = list(/datum/gas/pluoxium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/pluoxium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плюоксиевый фильтр",
 		GENITIVE = "плюоксиевого фильтра",
 		DATIVE = "плюоксиевому фильтру",
@@ -407,7 +407,7 @@
 	name = "proto-nitrate filter"
 	filter_type = list(/datum/gas/proto_nitrate)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/proto_nitrate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "протонитратный фильтр",
 		GENITIVE = "протонитратного фильтра",
 		DATIVE = "протонитратному фильтру",
@@ -419,7 +419,7 @@
 	name = "tritium filter"
 	filter_type = list(/datum/gas/tritium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/tritium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тритиевый фильтр",
 		GENITIVE = "тритиевого фильтра",
 		DATIVE = "тритиевому фильтру",
@@ -431,7 +431,7 @@
 	name = "water vapor filter"
 	filter_type = list(/datum/gas/water_vapor)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/h2o/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр водяного пара",
 		GENITIVE = "фильтра водяного пара",
 		DATIVE = "фильтру водяного пара",
@@ -443,7 +443,7 @@
 	name = "zauker filter"
 	filter_type = list(/datum/gas/zauker)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/zauker/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр заукера",
 		GENITIVE = "фильтра заукера",
 		DATIVE = "фильтру заукера",
@@ -456,7 +456,7 @@
 	name = "helium filter"
 	filter_type = list(/datum/gas/helium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/helium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гелиевый фильтр",
 		GENITIVE = "гелиевого фильтра",
 		DATIVE = "гелиевому фильтру",
@@ -469,7 +469,7 @@
 	name = "antinoblium filter"
 	filter_type = list(/datum/gas/antinoblium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/antinoblium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр антиноблия",
 		GENITIVE = "фильтра антиноблия",
 		DATIVE = "фильтру антиноблия",
@@ -485,7 +485,7 @@
 	name = "nitrogen filter"
 	filter_type = list(/datum/gas/nitrogen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/n2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "азотный фильтр",
 		GENITIVE = "азотного фильтра",
 		DATIVE = "азотному фильтру",
@@ -497,7 +497,7 @@
 	name = "oxygen filter"
 	filter_type = list(/datum/gas/oxygen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/o2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кислородный фильтр",
 		GENITIVE = "кислородного фильтра",
 		DATIVE = "кислородному фильтру",
@@ -509,7 +509,7 @@
 	name = "carbon dioxide filter"
 	filter_type = list(/datum/gas/carbon_dioxide)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/co2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр углекислого газа",
 		GENITIVE = "фильтра углекислого газа",
 		DATIVE = "фильтру углекислого газа",
@@ -521,7 +521,7 @@
 	name = "nitrous oxide filter"
 	filter_type = list(/datum/gas/nitrous_oxide)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/n2o/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр оксида азота",
 		GENITIVE = "фильтра оксида азота",
 		DATIVE = "фильтру оксида азота",
@@ -533,7 +533,7 @@
 	name = "plasma filter"
 	filter_type = list(/datum/gas/plasma)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменный фильтр",
 		GENITIVE = "плазменного фильтра",
 		DATIVE = "плазменному фильтру",
@@ -545,7 +545,7 @@
 	name = "bz filter"
 	filter_type = list(/datum/gas/bz)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/bz/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр BZ",
 		GENITIVE = "фильтра BZ",
 		DATIVE = "фильтру BZ",
@@ -557,7 +557,7 @@
 	name = "freon filter"
 	filter_type = list(/datum/gas/freon)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/freon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр фреона",
 		GENITIVE = "фильтра фреона",
 		DATIVE = "фильтру фреона",
@@ -569,7 +569,7 @@
 	name = "halon filter"
 	filter_type = list(/datum/gas/halon)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/halon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр галона",
 		GENITIVE = "фильтра галона",
 		DATIVE = "фильтру галона",
@@ -581,7 +581,7 @@
 	name = "healium filter"
 	filter_type = list(/datum/gas/healium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/healium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр хилиума",
 		GENITIVE = "фильтра хилиума",
 		DATIVE = "фильтру хилиума",
@@ -593,7 +593,7 @@
 	name = "hydrogen filter"
 	filter_type = list(/datum/gas/hydrogen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/h2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "водородный фильтр",
 		GENITIVE = "водородного фильтра",
 		DATIVE = "водородному фильтру",
@@ -605,7 +605,7 @@
 	name = "hypernoblium filter"
 	filter_type = list(/datum/gas/hypernoblium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/hypernoblium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр гиперноблия",
 		GENITIVE = "фильтра гиперноблия",
 		DATIVE = "фильтру гиперноблия",
@@ -617,7 +617,7 @@
 	name = "miasma filter"
 	filter_type = list(/datum/gas/miasma)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/miasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр миазмов",
 		GENITIVE = "фильтра миазмов",
 		DATIVE = "фильтру миазмов",
@@ -629,7 +629,7 @@
 	name = "nitrium filter"
 	filter_type = list(/datum/gas/nitrium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/no2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "нитриумный фильтр",
 		GENITIVE = "нитриумного фильтра",
 		DATIVE = "нитриумному фильтру",
@@ -641,7 +641,7 @@
 	name = "pluoxium filter"
 	filter_type = list(/datum/gas/pluoxium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/pluoxium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плюоксиевый фильтр",
 		GENITIVE = "плюоксиевого фильтра",
 		DATIVE = "плюоксиевому фильтру",
@@ -653,7 +653,7 @@
 	name = "proto-nitrate filter"
 	filter_type = list(/datum/gas/proto_nitrate)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/proto_nitrate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "протонитратный фильтр",
 		GENITIVE = "протонитратного фильтра",
 		DATIVE = "протонитратному фильтру",
@@ -665,7 +665,7 @@
 	name = "tritium filter"
 	filter_type = list(/datum/gas/tritium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/tritium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тритиевый фильтр",
 		GENITIVE = "тритиевого фильтра",
 		DATIVE = "тритиевому фильтру",
@@ -677,7 +677,7 @@
 	name = "water vapor filter"
 	filter_type = list(/datum/gas/water_vapor)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/h2o/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр водяного пара",
 		GENITIVE = "фильтра водяного пара",
 		DATIVE = "фильтру водяного пара",
@@ -689,7 +689,7 @@
 	name = "zauker filter"
 	filter_type = list(/datum/gas/zauker)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/zauker/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр заукера",
 		GENITIVE = "фильтра заукера",
 		DATIVE = "фильтру заукера",
@@ -701,7 +701,7 @@
 	name = "helium filter"
 	filter_type = list(/datum/gas/helium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/helium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гелиевый фильтр",
 		GENITIVE = "гелиевого фильтра",
 		DATIVE = "гелиевому фильтру",
@@ -713,7 +713,7 @@
 	name = "antinoblium filter"
 	filter_type = list(/datum/gas/antinoblium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/antinoblium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр антиноблия",
 		GENITIVE = "фильтра антиноблия",
 		DATIVE = "фильтру антиноблия",

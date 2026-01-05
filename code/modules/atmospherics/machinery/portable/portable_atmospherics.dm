@@ -45,7 +45,7 @@
 	acid = 30
 
 /obj/machinery/portable_atmospherics/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "переносное атмосферное оборудование",
 		GENITIVE = "переносного атмосферного оборудования",
 		DATIVE = "переносному атмосферному оборудованию",

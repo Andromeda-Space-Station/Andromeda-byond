@@ -10,7 +10,7 @@
 	merge_type = /obj/item/stack/sheet/hot_ice
 
 /obj/item/stack/sheet/hot_ice/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "горячий лёд",
 		GENITIVE = "горячего льда",
 		DATIVE = "горячему льду",

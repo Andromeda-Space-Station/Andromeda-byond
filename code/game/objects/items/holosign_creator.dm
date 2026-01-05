@@ -30,7 +30,7 @@
 	)
 
 /obj/item/holosign_creator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "проектор голознаков",
 		GENITIVE = "проектора голознаков",
 		DATIVE = "проектору голознаков",
@@ -131,7 +131,7 @@
 	max_signs = 12
 
 /obj/item/holosign_creator/janibarrier/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "проектор голобарьеров уборщика",
 		GENITIVE = "проектора голобарьеров уборщика",
 		DATIVE = "проектору голобарьеров уборщика",
@@ -149,7 +149,7 @@
 	max_signs = 6
 
 /obj/item/holosign_creator/security/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "проектор голобарьеров охраны",
 		GENITIVE = "проектора голобарьеров охраны",
 		DATIVE = "проектору голобарьеров охраны",
@@ -167,7 +167,7 @@
 	max_signs = 12
 
 /obj/item/holosign_creator/engineering/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "проектор голобарьеров инженера",
 		GENITIVE = "проектора голобарьеров инженера",
 		DATIVE = "проектору голобарьеров инженера",
@@ -195,7 +195,7 @@
 	var/clearview_timer
 
 /obj/item/holosign_creator/atmos/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "проектор АТМОС голобарьеров",
 		GENITIVE = "проектора АТМОС голобарьеров",
 		DATIVE = "проектору АТМОС голобарьеров",
@@ -259,7 +259,7 @@
 	max_signs = 6
 
 /obj/item/holosign_creator/medical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "проектор PENLITE голобарьеров",
 		GENITIVE = "проектора PENLITE голобарьеров",
 		DATIVE = "проектору PENLITE голобарьеров",
@@ -277,7 +277,7 @@
 	var/shock = FALSE
 
 /obj/item/holosign_creator/cyborg/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "проектор энергобарьеров",
 		GENITIVE = "проектора энергобарьеров",
 		DATIVE = "проектору энергобарьеров",

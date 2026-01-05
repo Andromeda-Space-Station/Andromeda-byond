@@ -19,7 +19,7 @@
 	var/volume_rate = 50
 
 /obj/machinery/atmospherics/components/unary/outlet_injector/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "воздушный инжектор",
 		GENITIVE = "воздушного инжектора",
 		DATIVE = "воздушному инжектору",

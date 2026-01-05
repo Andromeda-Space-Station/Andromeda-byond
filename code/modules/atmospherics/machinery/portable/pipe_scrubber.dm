@@ -32,7 +32,7 @@
 	)
 
 /obj/machinery/portable_atmospherics/pipe_scrubber/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "трубный скруббер",
 		GENITIVE = "трубного скруббера",
 		DATIVE = "трубному скрубберу",

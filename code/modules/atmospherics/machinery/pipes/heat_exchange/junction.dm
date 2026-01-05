@@ -19,7 +19,7 @@
 	has_gas_visuals = FALSE
 
 /obj/machinery/atmospherics/pipe/heat_exchanging/junction/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стык",
 		GENITIVE = "стыка",
 		DATIVE = "стыку",

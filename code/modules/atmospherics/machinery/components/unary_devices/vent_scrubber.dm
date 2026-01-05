@@ -34,7 +34,7 @@
 	COOLDOWN_DECLARE(check_turfs_cooldown)
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "скруббер",
 		GENITIVE = "скруббера",
 		DATIVE = "скрубберу",

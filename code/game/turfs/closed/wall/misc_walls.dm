@@ -12,7 +12,7 @@
 	girder_type = /obj/structure/girder/cult
 
 /turf/closed/wall/mineral/cult/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "руническая стена",
 		GENITIVE = "рунической стены",
 		DATIVE = "рунической стене",
@@ -33,7 +33,7 @@
 	desc = "Холодная каменная стена, покрытая нечитаемыми символами. При их изучении начинает пульсировать голова."
 
 /turf/closed/wall/mineral/cult/artificer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "каменная руническая стена",
 		GENITIVE = "каменной рунической стены",
 		DATIVE = "каменной рунической стене",
@@ -106,7 +106,7 @@
 	girder_type = /obj/structure/girder/bronze
 
 /turf/closed/wall/mineral/bronze/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "часовая стена",
 		GENITIVE = "часовой стены",
 		DATIVE = "часовой стене",
@@ -128,7 +128,7 @@
 	decon_type = /turf/closed/mineral/asteroid
 
 /turf/closed/wall/rock/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённая порода",
 		GENITIVE = "укреплённой породы",
 		DATIVE = "укреплённой породе",
@@ -143,7 +143,7 @@
 	decon_type = /turf/closed/mineral/asteroid/porous
 
 /turf/closed/wall/rock/porous/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённая пористая порода",
 		GENITIVE = "укреплённой пористой породы",
 		DATIVE = "укреплённой пористой породе",
@@ -163,7 +163,7 @@
 	smoothing_groups = null
 
 /turf/closed/wall/space/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "иллюзионистская стена",
 		GENITIVE = "иллюзионистской стены",
 		DATIVE = "иллюзионистской стене",
@@ -179,7 +179,7 @@
 	material_flags = MATERIAL_EFFECTS | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 
 /turf/closed/wall/material/meat/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "живая стена",
 		GENITIVE = "живой стены",
 		DATIVE = "живой стене",
@@ -209,7 +209,7 @@
 	baseturfs = /turf/open/misc/asteroid/basalt/airless
 
 /turf/closed/wall/tomb/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стена гробницы",
 		GENITIVE = "стены гробницы",
 		DATIVE = "стене гробницы",

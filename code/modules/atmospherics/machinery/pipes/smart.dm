@@ -17,7 +17,7 @@ GLOBAL_LIST_INIT(atmos_components, typecacheof(list(/obj/machinery/atmospherics)
 	var/connections = NONE
 
 /obj/machinery/atmospherics/pipe/smart/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "труба",
 		GENITIVE = "трубы",
 		DATIVE = "трубе",

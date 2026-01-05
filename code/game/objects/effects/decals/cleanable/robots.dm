@@ -9,7 +9,7 @@
 	color = null
 
 /obj/effect/decal/cleanable/blood/gibs/robot_debris/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "обломки робота",
 		GENITIVE = "обломков робота",
 		DATIVE = "обломкам робота",
@@ -59,7 +59,7 @@
 	color = /datum/blood_type/oil::color // For mapper sanity
 
 /obj/effect/decal/cleanable/blood/oil/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинное масло",
 		GENITIVE = "машинного масла",
 		DATIVE = "машинному маслу",
@@ -81,7 +81,7 @@
 	color = /datum/blood_type/oil::color
 
 /obj/effect/decal/cleanable/blood/splatter/oil/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "машинное масло",
 		GENITIVE = "машинного масла",
 		DATIVE = "машинному маслу",

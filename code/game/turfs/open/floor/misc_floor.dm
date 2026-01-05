@@ -17,7 +17,7 @@
 	var/on = -1
 
 /turf/open/floor/circuit/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол-схема",
 		GENITIVE = "пола-схемы",
 		DATIVE = "полу-схеме",
@@ -96,7 +96,7 @@
 	name = "mainframe base"
 
 /turf/open/floor/circuit/telecomms/mainframe/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "основание мейнфрейма",
 		GENITIVE = "основания мейнфрейма",
 		DATIVE = "основанию мейнфрейма",
@@ -109,7 +109,7 @@
 	name = "server base"
 
 /turf/open/floor/circuit/telecomms/server/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "основание сервера",
 		GENITIVE = "основания сервера",
 		DATIVE = "основанию сервера",
@@ -125,7 +125,7 @@
 	floor_tile = /obj/item/stack/tile/circuit/green
 
 /turf/open/floor/circuit/green/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "зелёная пол-схема",
 		GENITIVE = "зелёного пола-схемы",
 		DATIVE = "зелёному полу-схеме",
@@ -152,7 +152,7 @@
 	name = "mainframe base"
 
 /turf/open/floor/circuit/green/telecomms/mainframe/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "основание мейнфрейма",
 		GENITIVE = "основания мейнфрейма",
 		DATIVE = "основанию мейнфрейма",
@@ -168,7 +168,7 @@
 	floor_tile = /obj/item/stack/tile/circuit/red
 
 /turf/open/floor/circuit/red/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "красная пол-схема",
 		GENITIVE = "красного пола-схемы",
 		DATIVE = "красной полу-схеме",
@@ -197,7 +197,7 @@
 	floor_tile = /obj/item/stack/tile/pod
 
 /turf/open/floor/pod/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "рифлёный пол",
 		GENITIVE = "рифлёного пола",
 		DATIVE = "рифлёному полу",
@@ -211,7 +211,7 @@
 	floor_tile = /obj/item/stack/tile/pod/light
 
 /turf/open/floor/pod/light/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "светлый рифлёный пол",
 		GENITIVE = "светлого рифлёного пола",
 		DATIVE = "светлому рифлёному полу",
@@ -225,7 +225,7 @@
 	floor_tile = /obj/item/stack/tile/pod/dark
 
 /turf/open/floor/pod/dark/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тёмный рифлёный пол",
 		GENITIVE = "тёмного рифлёного пола",
 		DATIVE = "тёмному рифлёному полу",
@@ -241,7 +241,7 @@
 	slowdown = -0.3
 
 /turf/open/floor/noslip/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "нескользящий пол",
 		GENITIVE = "нескользящего пола",
 		DATIVE = "нескользящему полу",
@@ -279,7 +279,7 @@
 	floor_tile = /obj/item/stack/tile/bluespace
 
 /turf/open/floor/bluespace/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "блюспейс пол",
 		GENITIVE = "блюспейс пола",
 		DATIVE = "блюспейс полу",
@@ -295,7 +295,7 @@
 	floor_tile = /obj/item/stack/tile/sepia
 
 /turf/open/floor/sepia/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сепия пол",
 		GENITIVE = "сепия пола",
 		DATIVE = "сепия полу",
@@ -311,7 +311,7 @@
 	floor_tile = /obj/item/stack/tile/bronze
 
 /turf/open/floor/bronze/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бронзовый пол",
 		GENITIVE = "бронзового пола",
 		DATIVE = "бронзовому полу",
@@ -342,7 +342,7 @@
 	icon_state = "pure_white"
 
 /turf/open/floor/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "белый пол",
 		GENITIVE = "белого пола",
 		DATIVE = "белому полу",
@@ -356,7 +356,7 @@
 	icon_state = "black"
 
 /turf/open/floor/black/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "чёрный пол",
 		GENITIVE = "чёрного пола",
 		DATIVE = "чёрному полу",
@@ -370,7 +370,7 @@
 	icon_state = "green"
 
 /turf/open/floor/greenscreen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "хромакей",
 		GENITIVE = "хромакея",
 		DATIVE = "хромакею",
@@ -389,7 +389,7 @@
 	floor_tile = /obj/item/stack/tile/plastic
 
 /turf/open/floor/plastic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластиковый пол",
 		GENITIVE = "пластикового пола",
 		DATIVE = "пластиковому полу",
@@ -409,7 +409,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/open/floor/eighties/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ретро-пол",
 		GENITIVE = "ретро-пола",
 		DATIVE = "ретро-полу",
@@ -428,7 +428,7 @@
 	floor_tile = /obj/item/stack/tile/eighties/red
 
 /turf/open/floor/eighties/red/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "красный ретро-пол",
 		GENITIVE = "красного ретро-пола",
 		DATIVE = "красному ретро-полу",
@@ -481,7 +481,7 @@
 	icon_state = "stone_floor"
 
 /turf/open/floor/stone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "каменный кирпичный пол",
 		GENITIVE = "каменного кирпичного пола",
 		DATIVE = "каменному кирпичному полу",
@@ -508,7 +508,7 @@
 	base_icon_state = "rockvault"
 
 /turf/open/floor/vault/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "странный пол",
 		GENITIVE = "странного пола",
 		DATIVE = "странному полу",
@@ -521,7 +521,7 @@
 	name = "rocky floor"
 
 /turf/open/floor/vault/rock/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "каменистый пол",
 		GENITIVE = "каменистого пола",
 		DATIVE = "каменистому полу",
@@ -536,7 +536,7 @@
 	base_icon_state = "alienvault"
 
 /turf/open/floor/vault/alien/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетный пол",
 		GENITIVE = "инопланетного пола",
 		DATIVE = "инопланетному полу",
@@ -551,7 +551,7 @@
 	base_icon_state = "sandstonevault"
 
 /turf/open/floor/vault/sandstone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "песчаниковый пол",
 		GENITIVE = "песчаникового пола",
 		DATIVE = "песчаниковому полу",
@@ -567,7 +567,7 @@
 	floor_tile = /obj/item/stack/tile/cult
 
 /turf/open/floor/cult/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гравированный пол",
 		GENITIVE = "гравированного пола",
 		DATIVE = "гравированному полу",
@@ -592,7 +592,7 @@
 	material_flags = MATERIAL_EFFECTS | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 
 /turf/open/floor/material/meat/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "живой пол",
 		GENITIVE = "живого пола",
 		DATIVE = "живому полу",
@@ -616,7 +616,7 @@
 	icon_state = "tgmc_emblem"
 
 /turf/open/floor/iron/tgmcemblem/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "символ ТП",
 		GENITIVE = "символа ТП",
 		DATIVE = "символу ТП",
@@ -635,7 +635,7 @@
 	icon_state = "asphalt"
 
 /turf/open/floor/asphalt/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "асфальт",
 		GENITIVE = "асфальта",
 		DATIVE = "асфальту",

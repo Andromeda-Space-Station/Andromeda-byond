@@ -18,7 +18,7 @@
 	var/floor_tile_amount = 2
 
 /turf/open/floor/engine/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённый пол",
 		GENITIVE = "укреплённого пола",
 		DATIVE = "укреплённому полу",
@@ -111,7 +111,7 @@
 	initial_gas_mix = ATMOS_TANK_N2O
 
 /turf/open/floor/engine/n2o/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол N2O",
 		GENITIVE = "пола N2O",
 		DATIVE = "полу N2O",
@@ -125,7 +125,7 @@
 	initial_gas_mix = ATMOS_TANK_CO2
 
 /turf/open/floor/engine/co2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол CO2",
 		GENITIVE = "пола CO2",
 		DATIVE = "полу CO2",
@@ -139,7 +139,7 @@
 	initial_gas_mix = ATMOS_TANK_PLASMA
 
 /turf/open/floor/engine/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол плазмы",
 		GENITIVE = "пола плазмы",
 		DATIVE = "полу плазмы",
@@ -153,7 +153,7 @@
 	initial_gas_mix = ATMOS_TANK_O2
 
 /turf/open/floor/engine/o2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол O2",
 		GENITIVE = "пола O2",
 		DATIVE = "полу O2",
@@ -168,7 +168,7 @@
 	initial_gas_mix = ATMOS_TANK_N2
 
 /turf/open/floor/engine/n2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол N2",
 		GENITIVE = "пола N2",
 		DATIVE = "полу N2",
@@ -182,7 +182,7 @@
 	initial_gas_mix = ATMOS_TANK_BZ
 
 /turf/open/floor/engine/bz/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол BZ",
 		GENITIVE = "пола BZ",
 		DATIVE = "полу BZ",
@@ -196,7 +196,7 @@
 	initial_gas_mix = ATMOS_TANK_FREON
 
 /turf/open/floor/engine/freon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол фреона",
 		GENITIVE = "пола фреона",
 		DATIVE = "полу фреона",
@@ -210,7 +210,7 @@
 	initial_gas_mix = ATMOS_TANK_HALON
 
 /turf/open/floor/engine/halon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол галона",
 		GENITIVE = "пола галона",
 		DATIVE = "полу галона",
@@ -224,7 +224,7 @@
 	initial_gas_mix = ATMOS_TANK_HEALIUM
 
 /turf/open/floor/engine/healium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол хилиума",
 		GENITIVE = "пола хилиума",
 		DATIVE = "полу хилиума",
@@ -239,7 +239,7 @@
 	initial_gas_mix = ATMOS_TANK_H2
 
 /turf/open/floor/engine/h2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол H2",
 		GENITIVE = "пола H2",
 		DATIVE = "полу H2",
@@ -253,7 +253,7 @@
 	initial_gas_mix = ATMOS_TANK_HYPERNOBLIUM
 
 /turf/open/floor/engine/hypernoblium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол гиперноблия",
 		GENITIVE = "пола гиперноблия",
 		DATIVE = "полу гиперноблия",
@@ -267,7 +267,7 @@
 	initial_gas_mix = ATMOS_TANK_MIASMA
 
 /turf/open/floor/engine/miasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол миазмов",
 		GENITIVE = "пола миазмов",
 		DATIVE = "полу миазмов",
@@ -281,7 +281,7 @@
 	initial_gas_mix = ATMOS_TANK_NITRIUM
 
 /turf/open/floor/engine/nitrium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол нитрия",
 		GENITIVE = "пола нитрия",
 		DATIVE = "полу нитрия",
@@ -295,7 +295,7 @@
 	initial_gas_mix = ATMOS_TANK_PLUOXIUM
 
 /turf/open/floor/engine/pluoxium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол плюоксия",
 		GENITIVE = "пола плюоксия",
 		DATIVE = "полу плюоксия",
@@ -309,7 +309,7 @@
 	initial_gas_mix = ATMOS_TANK_PROTO_NITRATE
 
 /turf/open/floor/engine/proto_nitrate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол прото-нитрата",
 		GENITIVE = "пола прото-нитрата",
 		DATIVE = "полу прото-нитрата",
@@ -323,7 +323,7 @@
 	initial_gas_mix = ATMOS_TANK_TRITIUM
 
 /turf/open/floor/engine/tritium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол трития",
 		GENITIVE = "пола трития",
 		DATIVE = "полу трития",
@@ -338,7 +338,7 @@
 	initial_gas_mix = ATMOS_TANK_H2O
 
 /turf/open/floor/engine/h2o/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол H2O",
 		GENITIVE = "пола H2O",
 		DATIVE = "полу H2O",
@@ -352,7 +352,7 @@
 	initial_gas_mix = ATMOS_TANK_ZAUKER
 
 /turf/open/floor/engine/zauker/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол заукера",
 		GENITIVE = "пола заукера",
 		DATIVE = "полу заукера",
@@ -366,7 +366,7 @@
 	initial_gas_mix = ATMOS_TANK_HELIUM
 
 /turf/open/floor/engine/helium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол гелия",
 		GENITIVE = "пола гелия",
 		DATIVE = "полу гелия",
@@ -380,7 +380,7 @@
 	initial_gas_mix = ATMOS_TANK_ANTINOBLIUM
 
 /turf/open/floor/engine/antinoblium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол антиноблия",
 		GENITIVE = "пола антиноблия",
 		DATIVE = "полу антиноблия",
@@ -394,7 +394,7 @@
 	initial_gas_mix = ATMOS_TANK_AIRMIX
 
 /turf/open/floor/engine/air/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол воздуха",
 		GENITIVE = "пола воздуха",
 		DATIVE = "полу воздуха",
@@ -408,7 +408,7 @@
 	initial_gas_mix = XENOBIO_BZ
 
 /turf/open/floor/engine/xenobio/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пол ксено-BZ",
 		GENITIVE = "пола ксено-BZ",
 		DATIVE = "полу ксено-BZ",
@@ -425,7 +425,7 @@
 	var/obj/effect/cult_turf/realappearance
 
 /turf/open/floor/engine/cult/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гравированный пол",
 		GENITIVE = "гравированного пола",
 		DATIVE = "гравированному полу",
@@ -464,7 +464,7 @@
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/engine/vacuum/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "вакуумный пол",
 		GENITIVE = "вакуумного пола",
 		DATIVE = "вакуумному полу",
@@ -485,7 +485,7 @@
 	floor_tile_amount = 1 // Made with 1 sheet, deconstructs into 1 sheet
 
 /turf/open/floor/engine/insulation/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "термоизолированный пол",
 		GENITIVE = "термоизолированного пола",
 		DATIVE = "термоизолированному полу",

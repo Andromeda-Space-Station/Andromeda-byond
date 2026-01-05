@@ -112,7 +112,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	acid = 60
 
 /obj/structure/closet/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф",
 		GENITIVE = "шкафа",
 		DATIVE = "шкафу",

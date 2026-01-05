@@ -29,7 +29,7 @@
 	var/sniffable = FALSE
 
 /obj/item/stack/sheet/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "лист",
 		GENITIVE = "листа",
 		DATIVE = "листу",

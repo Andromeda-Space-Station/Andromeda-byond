@@ -5,7 +5,7 @@
 	req_access = list(ACCESS_CAPTAIN)
 
 /obj/structure/closet/secure_closet/captains/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф капитана",
 		GENITIVE = "шкафа капитана",
 		DATIVE = "шкафу капитана",
@@ -37,7 +37,7 @@
 	req_access = list(ACCESS_HOP)
 
 /obj/structure/closet/secure_closet/hop/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф главы персонала",
 		GENITIVE = "шкафа главы персонала",
 		DATIVE = "шкафу главы персонала",
@@ -74,7 +74,7 @@
 	req_access = list(ACCESS_HOS)
 
 /obj/structure/closet/secure_closet/hos/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф главы службы безопасности",
 		GENITIVE = "шкафа главы службы безопасности",
 		DATIVE = "шкафу главы службы безопасности",
@@ -114,7 +114,7 @@
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/warden/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф смотрителя",
 		GENITIVE = "шкафа смотрителя",
 		DATIVE = "шкафу смотрителя",
@@ -150,7 +150,7 @@
 	req_access = list(ACCESS_BRIG)
 
 /obj/structure/closet/secure_closet/security/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф офицера СБ",
 		GENITIVE = "шкафа офицера СБ",
 		DATIVE = "шкафу офицера СБ",
@@ -215,7 +215,7 @@
 	req_access = list(ACCESS_DETECTIVE)
 
 /obj/structure/closet/secure_closet/detective/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф детектива",
 		GENITIVE = "шкафа детектива",
 		DATIVE = "шкафу детектива",
@@ -245,7 +245,7 @@
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/injection/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф со смертельными инъекциями",
 		GENITIVE = "шкафа со смертельными инъекциями",
 		DATIVE = "шкафу со смертельными инъекциями",
@@ -267,7 +267,7 @@
 	var/id = null
 
 /obj/structure/closet/secure_closet/brig/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф брига",
 		GENITIVE = "шкафа брига",
 		DATIVE = "шкафу брига",
@@ -283,7 +283,7 @@
 	paint_jobs = null
 
 /obj/structure/closet/secure_closet/brig/genpop/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф общего режима",
 		GENITIVE = "шкафа общего режима",
 		DATIVE = "шкафу общего режима",
@@ -329,7 +329,7 @@
 	req_one_access = list(ACCESS_ARMORY, ACCESS_DETECTIVE)
 
 /obj/structure/closet/secure_closet/evidence/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "защищённый шкаф для улик",
 		GENITIVE = "защищённого шкафа для улик",
 		DATIVE = "защищённому шкафу для улик",
@@ -351,7 +351,7 @@
 	req_access = list(ACCESS_COURT)
 
 /obj/structure/closet/secure_closet/courtroom/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф зала суда",
 		GENITIVE = "шкафа зала суда",
 		DATIVE = "шкафу зала суда",
@@ -379,7 +379,7 @@
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/contraband/armory/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф для контрабанды",
 		GENITIVE = "шкафа для контрабанды",
 		DATIVE = "шкафу для контрабанды",
@@ -394,7 +394,7 @@
 	anchored = TRUE
 
 /obj/structure/closet/secure_closet/contraband/heads/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф для контрабанды",
 		GENITIVE = "шкафа для контрабанды",
 		DATIVE = "шкафу для контрабанды",
@@ -410,7 +410,7 @@
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/armory1/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с бронёй",
 		GENITIVE = "шкафа с бронёй",
 		DATIVE = "шкафу с бронёй",
@@ -442,7 +442,7 @@
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/armory2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с баллистическим оружием",
 		GENITIVE = "шкафа с баллистическим оружием",
 		DATIVE = "шкафу с баллистическим оружием",
@@ -469,7 +469,7 @@
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/armory3/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с энергетическим оружием",
 		GENITIVE = "шкафа с энергетическим оружием",
 		DATIVE = "шкафу с энергетическим оружием",
@@ -498,7 +498,7 @@
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/tac/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тактический шкаф оружейной",
 		GENITIVE = "тактического шкафа оружейной",
 		DATIVE = "тактическому шкафу оружейной",
@@ -521,7 +521,7 @@
 	req_access = list(ACCESS_SECURITY)
 
 /obj/structure/closet/secure_closet/labor_camp_security/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф охраны трудового лагеря",
 		GENITIVE = "шкафа охраны трудового лагеря",
 		DATIVE = "шкафу охраны трудового лагеря",

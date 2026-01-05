@@ -15,7 +15,7 @@
 	var/pixel_shift
 
 /obj/item/wallframe/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "настенный каркас",
 		GENITIVE = "настенного каркаса",
 		DATIVE = "настенному каркасу",
@@ -138,7 +138,7 @@
 	drop_sound = SFX_GENERIC_DEVICE_DROP
 
 /obj/item/electronics/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "микросхема",
 		GENITIVE = "микросхемы",
 		DATIVE = "микросхеме",

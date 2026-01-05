@@ -32,7 +32,7 @@
 	var/ranged_scan_distance = 1
 
 /obj/item/analyzer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газоанализатор",
 		GENITIVE = "газоанализатора",
 		DATIVE = "газоанализатору",
@@ -248,7 +248,7 @@
 	ranged_scan_distance = 15
 
 /obj/item/analyzer/ranged/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "дальнобойный газоанализатор",
 		GENITIVE = "дальнобойного газоанализатора",
 		DATIVE = "дальнобойному газоанализатору",

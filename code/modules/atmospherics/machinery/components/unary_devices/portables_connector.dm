@@ -21,7 +21,7 @@
 	var/obj/machinery/portable_atmospherics/connected_device
 
 /obj/machinery/atmospherics/components/unary/portables_connector/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "соединительный порт",
 		GENITIVE = "соединительного порта",
 		DATIVE = "соединительному порту",

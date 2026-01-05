@@ -22,7 +22,7 @@
 	var/has_armrest = FALSE
 
 /obj/structure/chair/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стул",
 		GENITIVE = "стула",
 		DATIVE = "стулу",
@@ -202,7 +202,7 @@
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 3)
 
 /obj/structure/chair/wood/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "деревянный стул",
 		GENITIVE = "деревянного стула",
 		DATIVE = "деревянному стулу",
@@ -219,7 +219,7 @@
 	item_chair = /obj/item/chair/wood/wings
 
 /obj/structure/chair/wood/wings/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "деревянный стул с крыльями",
 		GENITIVE = "деревянного стула с крыльями",
 		DATIVE = "деревянному стулу с крыльями",
@@ -243,7 +243,7 @@
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2)
 
 /obj/structure/chair/comfy/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "удобное кресло",
 		GENITIVE = "удобного кресла",
 		DATIVE = "удобному креслу",
@@ -279,7 +279,7 @@
 	custom_materials = list(/datum/material/titanium = SHEET_MATERIAL_AMOUNT * 2)
 
 /obj/structure/chair/comfy/shuttle/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кресло шаттла",
 		GENITIVE = "кресла шаттла",
 		DATIVE = "креслу шаттла",
@@ -335,7 +335,7 @@
 	name = "tactical chair"
 
 /obj/structure/chair/comfy/shuttle/tactical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тактическое кресло",
 		GENITIVE = "тактического кресла",
 		DATIVE = "тактическому креслу",
@@ -353,7 +353,7 @@
 	custom_materials = null
 
 /obj/structure/chair/comfy/carp/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кресло из кожи карпа",
 		GENITIVE = "кресла из кожи карпа",
 		DATIVE = "креслу из кожи карпа",
@@ -372,7 +372,7 @@
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5)
 
 /obj/structure/chair/office/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "офисное кресло",
 		GENITIVE = "офисного кресла",
 		DATIVE = "офисному креслу",
@@ -397,7 +397,7 @@
 	fishing_modifier = -10
 
 /obj/structure/chair/office/tactical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тактическое вращающееся кресло",
 		GENITIVE = "тактического вращающегося кресла",
 		DATIVE = "тактическому вращающемуся креслу",
@@ -422,7 +422,7 @@
 	max_integrity = 300
 
 /obj/structure/chair/stool/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "табурет",
 		GENITIVE = "табурета",
 		DATIVE = "табурету",
@@ -471,7 +471,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool, 0)
 	item_chair = /obj/item/chair/stool/bar
 
 /obj/structure/chair/stool/bar/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "барный табурет",
 		GENITIVE = "барного табурета",
 		DATIVE = "барному табурету",
@@ -498,7 +498,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	custom_materials = list(/datum/material/bamboo = SHEET_MATERIAL_AMOUNT * 2)
 
 /obj/structure/chair/stool/bamboo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бамбуковый табурет",
 		GENITIVE = "бамбукового табурета",
 		DATIVE = "бамбуковому табурету",
@@ -535,7 +535,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	var/obj/structure/chair/origin_type = /obj/structure/chair
 
 /obj/item/chair/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стул",
 		GENITIVE = "стула",
 		DATIVE = "стулу",
@@ -653,7 +653,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	max_integrity = 300 //It's too sturdy.
 
 /obj/item/chair/stool/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "табурет",
 		GENITIVE = "табурета",
 		DATIVE = "табурету",
@@ -669,7 +669,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	origin_type = /obj/structure/chair/stool/bar
 
 /obj/item/chair/stool/bar/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "барный табурет",
 		GENITIVE = "барного табурета",
 		DATIVE = "барному табурету",
@@ -689,7 +689,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	custom_materials = list(/datum/material/bamboo = SHEET_MATERIAL_AMOUNT * 2)
 
 /obj/item/chair/stool/bamboo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бамбуковый табурет",
 		GENITIVE = "бамбукового табурета",
 		DATIVE = "бамбуковому табурету",
@@ -714,7 +714,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 3)
 
 /obj/item/chair/wood/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "деревянный стул",
 		GENITIVE = "деревянного стула",
 		DATIVE = "деревянному стулу",
@@ -731,7 +731,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	origin_type = /obj/structure/chair/wood/wings
 
 /obj/item/chair/wood/wings/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "деревянный стул с крыльями",
 		GENITIVE = "деревянного стула с крыльями",
 		DATIVE = "деревянному стулу с крыльями",
@@ -748,7 +748,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	fishing_modifier = 4
 
 /obj/structure/chair/old/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "странный стул",
 		GENITIVE = "странного стула",
 		DATIVE = "странному стулу",
@@ -772,7 +772,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	var/turns = 0
 
 /obj/structure/chair/bronze/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "латунный стул",
 		GENITIVE = "латунного стула",
 		DATIVE = "латунному стулу",
@@ -824,7 +824,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	custom_materials = null
 
 /obj/structure/chair/mime/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "невидимый стул",
 		GENITIVE = "невидимого стула",
 		DATIVE = "невидимому стулу",
@@ -855,7 +855,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	fishing_modifier = -10
 
 /obj/structure/chair/plastic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "складной пластиковый стул",
 		GENITIVE = "складного пластикового стула",
 		DATIVE = "складному пластиковому стулу",
@@ -898,7 +898,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	origin_type = /obj/structure/chair/plastic
 
 /obj/item/chair/plastic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "складной пластиковый стул",
 		GENITIVE = "складного пластикового стула",
 		DATIVE = "складному пластиковому стулу",
@@ -914,7 +914,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	particles = new /particles/musical_notes
 
 /obj/structure/chair/musical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "музыкальный стул",
 		GENITIVE = "музыкального стула",
 		DATIVE = "музыкальному стулу",
@@ -930,7 +930,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	origin_type = /obj/structure/chair/musical
 
 /obj/item/chair/musical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "музыкальный стул",
 		GENITIVE = "музыкального стула",
 		DATIVE = "музыкальному стулу",
@@ -954,7 +954,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	layer = OBJ_LAYER
 
 /obj/structure/handrail/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "поручень",
 		GENITIVE = "поручня",
 		DATIVE = "поручню",

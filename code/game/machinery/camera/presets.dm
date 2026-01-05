@@ -47,7 +47,7 @@
 	name = "motion-sensitive security camera"
 
 /obj/machinery/camera/motion/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "камера наблюдения с датчиком движения",
 		GENITIVE = "камеры наблюдения с датчиком движения",
 		DATIVE = "камере наблюдения с датчиком движения",
@@ -99,7 +99,7 @@
 	name = "motion-sensitive security camera"
 
 /obj/machinery/camera/autoname/motion/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "камера наблюдения с датчиком движения",
 		GENITIVE = "камеры наблюдения с датчиком движения",
 		DATIVE = "камере наблюдения с датчиком движения",
@@ -129,7 +129,7 @@
 	start_active = TRUE
 
 /obj/machinery/camera/preset/ordnance/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённая камера испытательного полигона",
 		GENITIVE = "укреплённой камеры испытательного полигона",
 		DATIVE = "укреплённой камере испытательного полигона",

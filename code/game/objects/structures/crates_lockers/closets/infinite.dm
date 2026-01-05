@@ -7,7 +7,7 @@
 	var/auto_close_time = 15 SECONDS // Set to 0 to disable auto-closing.
 
 /obj/structure/closet/infinite/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бесконечный шкаф",
 		GENITIVE = "бесконечного шкафа",
 		DATIVE = "бесконечному шкафу",

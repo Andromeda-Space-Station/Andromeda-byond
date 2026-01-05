@@ -31,7 +31,7 @@
 	var/broken_message = "ОШИБКА"
 
 /obj/machinery/atmospherics/miner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик газа",
 		GENITIVE = "добытчика газа",
 		DATIVE = "добытчику газа",
@@ -161,7 +161,7 @@
 	spawn_id = /datum/gas/nitrous_oxide
 
 /obj/machinery/atmospherics/miner/n2o/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик оксида азота",
 		GENITIVE = "добытчика оксида азота",
 		DATIVE = "добытчику оксида азота",
@@ -176,7 +176,7 @@
 	spawn_id = /datum/gas/nitrogen
 
 /obj/machinery/atmospherics/miner/nitrogen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик азота",
 		GENITIVE = "добытчика азота",
 		DATIVE = "добытчику азота",
@@ -191,7 +191,7 @@
 	spawn_id = /datum/gas/oxygen
 
 /obj/machinery/atmospherics/miner/oxygen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик кислорода",
 		GENITIVE = "добытчика кислорода",
 		DATIVE = "добытчику кислорода",
@@ -206,7 +206,7 @@
 	spawn_id = /datum/gas/plasma
 
 /obj/machinery/atmospherics/miner/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик плазмы",
 		GENITIVE = "добытчика плазмы",
 		DATIVE = "добытчику плазмы",
@@ -221,7 +221,7 @@
 	spawn_id = /datum/gas/carbon_dioxide
 
 /obj/machinery/atmospherics/miner/carbon_dioxide/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик диоксида углерода",
 		GENITIVE = "добытчика диоксида углерода",
 		DATIVE = "добытчику диоксида углерода",
@@ -236,7 +236,7 @@
 	spawn_id = /datum/gas/bz
 
 /obj/machinery/atmospherics/miner/bz/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик BZ",
 		GENITIVE = "добытчика BZ",
 		DATIVE = "добытчику BZ",
@@ -251,7 +251,7 @@
 	spawn_id = /datum/gas/water_vapor
 
 /obj/machinery/atmospherics/miner/water_vapor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик водяного пара",
 		GENITIVE = "добытчика водяного пара",
 		DATIVE = "добытчику водяного пара",
@@ -266,7 +266,7 @@
 	spawn_id = /datum/gas/freon
 
 /obj/machinery/atmospherics/miner/freon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик фреона",
 		GENITIVE = "добытчика фреона",
 		DATIVE = "добытчику фреона",
@@ -281,7 +281,7 @@
 	spawn_id = /datum/gas/halon
 
 /obj/machinery/atmospherics/miner/halon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик галона",
 		GENITIVE = "добытчика галона",
 		DATIVE = "добытчику галона",
@@ -296,7 +296,7 @@
 	spawn_id = /datum/gas/healium
 
 /obj/machinery/atmospherics/miner/healium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик хилиума",
 		GENITIVE = "добытчика хилиума",
 		DATIVE = "добытчику хилиума",
@@ -311,7 +311,7 @@
 	spawn_id = /datum/gas/hydrogen
 
 /obj/machinery/atmospherics/miner/hydrogen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик водорода",
 		GENITIVE = "добытчика водорода",
 		DATIVE = "добытчику водорода",
@@ -326,7 +326,7 @@
 	spawn_id = /datum/gas/hypernoblium
 
 /obj/machinery/atmospherics/miner/hypernoblium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик гиперноблия",
 		GENITIVE = "добытчика гиперноблия",
 		DATIVE = "добытчику гиперноблия",
@@ -341,7 +341,7 @@
 	spawn_id = /datum/gas/miasma
 
 /obj/machinery/atmospherics/miner/miasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик миазмов",
 		GENITIVE = "добытчика миазмов",
 		DATIVE = "добытчику миазмов",
@@ -356,7 +356,7 @@
 	spawn_id = /datum/gas/nitrium
 
 /obj/machinery/atmospherics/miner/nitrium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик нитриума",
 		GENITIVE = "добытчика нитриума",
 		DATIVE = "добытчику нитриума",
@@ -371,7 +371,7 @@
 	spawn_id = /datum/gas/pluoxium
 
 /obj/machinery/atmospherics/miner/pluoxium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик плюоксиума",
 		GENITIVE = "добытчика плюоксиума",
 		DATIVE = "добытчику плюоксиума",
@@ -386,7 +386,7 @@
 	spawn_id = /datum/gas/proto_nitrate
 
 /obj/machinery/atmospherics/miner/proto_nitrate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик протонитрата",
 		GENITIVE = "добытчика протонитрата",
 		DATIVE = "добытчику протонитрата",
@@ -401,7 +401,7 @@
 	spawn_id = /datum/gas/tritium
 
 /obj/machinery/atmospherics/miner/tritium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик трития",
 		GENITIVE = "добытчика трития",
 		DATIVE = "добытчику трития",
@@ -416,7 +416,7 @@
 	spawn_id = /datum/gas/zauker
 
 /obj/machinery/atmospherics/miner/zauker/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик заукера",
 		GENITIVE = "добытчика заукера",
 		DATIVE = "добытчику заукера",
@@ -431,7 +431,7 @@
 	spawn_id = /datum/gas/helium
 
 /obj/machinery/atmospherics/miner/helium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик гелия",
 		GENITIVE = "добытчика гелия",
 		DATIVE = "добытчику гелия",
@@ -446,7 +446,7 @@
 	spawn_id = /datum/gas/antinoblium
 
 /obj/machinery/atmospherics/miner/antinoblium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "добытчик антиноблия",
 		GENITIVE = "добытчика антиноблия",
 		DATIVE = "добытчику антиноблия",

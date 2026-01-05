@@ -17,7 +17,7 @@
 	var/content_overlays = FALSE //If this is true, the belt will gain overlays based on what it's holding
 
 /obj/item/storage/belt/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "не совсем пояс для инструментов",
 		GENITIVE = "не совсем пояса для инструментов",
 		DATIVE = "не совсем поясу для инструментов",
@@ -55,7 +55,7 @@
 	storage_type = /datum/storage/utility_belt
 
 /obj/item/storage/belt/utility/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пояс для инструментов",
 		GENITIVE = "пояса для инструментов",
 		DATIVE = "поясу для инструментов",
@@ -72,7 +72,7 @@
 	worn_icon_state = "utility_ce"
 
 /obj/item/storage/belt/utility/chief/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пояс главного инженера",
 		GENITIVE = "пояса главного инженера",
 		DATIVE = "поясу главного инженера",
@@ -228,7 +228,7 @@
 	storage_type = /datum/storage/medical_belt
 
 /obj/item/storage/belt/medical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "медицинский пояс",
 		GENITIVE = "медицинского пояса",
 		DATIVE = "медицинскому поясу",
@@ -245,7 +245,7 @@
 	preload = TRUE
 
 /obj/item/storage/belt/medical/paramedic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пояс парамедика",
 		GENITIVE = "пояса парамедика",
 		DATIVE = "поясу парамедика",
@@ -312,7 +312,7 @@
 	storage_type = /datum/storage/security_belt
 
 /obj/item/storage/belt/security/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пояс офицера",
 		GENITIVE = "пояса офицера",
 		DATIVE = "поясу офицера",
@@ -340,7 +340,7 @@
 	storage_type = /datum/storage/security_belt/webbing
 
 /obj/item/storage/belt/security/webbing/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "разгрузка офицера",
 		GENITIVE = "разгрузки офицера",
 		DATIVE = "разгрузке офицера",
@@ -359,7 +359,7 @@
 	storage_type = /datum/storage/mining_belt
 
 /obj/item/storage/belt/mining/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "разгрузка исследователя",
 		GENITIVE = "разгрузки исследователя",
 		DATIVE = "разгрузке исследователя",
@@ -394,7 +394,7 @@
 	storage_type = /datum/storage/mining_belt/primitive
 
 /obj/item/storage/belt/mining/primitive/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пояс охотника",
 		GENITIVE = "пояса охотника",
 		DATIVE = "поясу охотника",
@@ -414,7 +414,7 @@
 	storage_type = /datum/storage/soulstone_belt
 
 /obj/item/storage/belt/soulstone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пояс камней душ",
 		GENITIVE = "пояса камней душ",
 		DATIVE = "поясу камней душ",
@@ -441,7 +441,7 @@
 	storage_type = /datum/storage/champion_belt
 
 /obj/item/storage/belt/champion/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "чемпионский пояс",
 		GENITIVE = "чемпионского пояса",
 		DATIVE = "чемпионскому поясу",
@@ -465,7 +465,7 @@
 	storage_type = /datum/storage/military_belt
 
 /obj/item/storage/belt/military/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "разгрузка",
 		GENITIVE = "разгрузки",
 		DATIVE = "разгрузке",
@@ -479,7 +479,7 @@
 	storage_type = /datum/storage/military_belt/snack
 
 /obj/item/storage/belt/military/snack/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тактическая закусочная разгрузка",
 		GENITIVE = "тактической закусочной разгрузки",
 		DATIVE = "тактической закусочной разгрузке",
@@ -534,7 +534,7 @@
 	content_overlays = TRUE
 
 /obj/item/storage/belt/military/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пояс агента",
 		GENITIVE = "пояса агента",
 		DATIVE = "поясу агента",
@@ -560,7 +560,7 @@
 	worn_icon_state = "military"
 
 /obj/item/storage/belt/military/army/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "армейский пояс",
 		GENITIVE = "армейского пояса",
 		DATIVE = "армейскому поясу",
@@ -578,7 +578,7 @@
 	storage_type = /datum/storage/military_belt/assault
 
 /obj/item/storage/belt/military/assault/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "штурмовой пояс",
 		GENITIVE = "штурмового пояса",
 		DATIVE = "штурмовому поясу",
@@ -604,7 +604,7 @@
 	storage_type = /datum/storage/grenade_belt
 
 /obj/item/storage/belt/grenade/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пояс гренадёра",
 		GENITIVE = "пояса гренадёра",
 		DATIVE = "поясу гренадёра",
@@ -636,7 +636,7 @@
 	storage_type = /datum/storage/wands_belt
 
 /obj/item/storage/belt/wands/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пояс жезлов",
 		GENITIVE = "пояса жезлов",
 		DATIVE = "поясу жезлов",
@@ -669,7 +669,7 @@
 	storage_type = /datum/storage/janitor_belt
 
 /obj/item/storage/belt/janitor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пояс уборщика",
 		GENITIVE = "пояса уборщика",
 		DATIVE = "поясу уборщика",
@@ -694,7 +694,7 @@
 	storage_type = /datum/storage/bandolier_belt
 
 /obj/item/storage/belt/bandolier/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бандольер",
 		GENITIVE = "бандольера",
 		DATIVE = "бандольеру",
@@ -714,7 +714,7 @@
 	storage_type = /datum/storage/fanny_pack
 
 /obj/item/storage/belt/fannypack/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "поясная сумка",
 		GENITIVE = "поясной сумки",
 		DATIVE = "поясной сумке",
@@ -729,7 +729,7 @@
 	worn_icon_state = "fannypack_black"
 
 /obj/item/storage/belt/fannypack/black/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "чёрная поясная сумка",
 		GENITIVE = "чёрной поясной сумки",
 		DATIVE = "чёрной поясной сумке",
@@ -744,7 +744,7 @@
 	worn_icon_state = "fannypack_red"
 
 /obj/item/storage/belt/fannypack/red/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "красная поясная сумка",
 		GENITIVE = "красной поясной сумки",
 		DATIVE = "красной поясной сумке",
@@ -759,7 +759,7 @@
 	worn_icon_state = "fannypack_purple"
 
 /obj/item/storage/belt/fannypack/purple/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фиолетовая поясная сумка",
 		GENITIVE = "фиолетовой поясной сумки",
 		DATIVE = "фиолетовой поясной сумке",
@@ -774,7 +774,7 @@
 	worn_icon_state = "fannypack_blue"
 
 /obj/item/storage/belt/fannypack/blue/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "синяя поясная сумка",
 		GENITIVE = "синей поясной сумки",
 		DATIVE = "синей поясной сумке",
@@ -789,7 +789,7 @@
 	worn_icon_state = "fannypack_orange"
 
 /obj/item/storage/belt/fannypack/orange/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "оранжевая поясная сумка",
 		GENITIVE = "оранжевой поясной сумки",
 		DATIVE = "оранжевой поясной сумке",
@@ -804,7 +804,7 @@
 	worn_icon_state = "fannypack_white"
 
 /obj/item/storage/belt/fannypack/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "белая поясная сумка",
 		GENITIVE = "белой поясной сумки",
 		DATIVE = "белой поясной сумке",
@@ -819,7 +819,7 @@
 	worn_icon_state = "fannypack_green"
 
 /obj/item/storage/belt/fannypack/green/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "зелёная поясная сумка",
 		GENITIVE = "зелёной поясной сумки",
 		DATIVE = "зелёной поясной сумке",
@@ -834,7 +834,7 @@
 	worn_icon_state = "fannypack_pink"
 
 /obj/item/storage/belt/fannypack/pink/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "розовая поясная сумка",
 		GENITIVE = "розовой поясной сумки",
 		DATIVE = "розовой поясной сумке",
@@ -849,7 +849,7 @@
 	worn_icon_state = "fannypack_cyan"
 
 /obj/item/storage/belt/fannypack/cyan/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "голубая поясная сумка",
 		GENITIVE = "голубой поясной сумки",
 		DATIVE = "голубой поясной сумке",
@@ -864,7 +864,7 @@
 	worn_icon_state = "fannypack_yellow"
 
 /obj/item/storage/belt/fannypack/yellow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "жёлтая поясная сумка",
 		GENITIVE = "жёлтой поясной сумки",
 		DATIVE = "жёлтой поясной сумке",
@@ -881,7 +881,7 @@
 	worn_icon_state = "cummerbund"
 
 /obj/item/storage/belt/fannypack/cummerbund/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кушак",
 		GENITIVE = "кушака",
 		DATIVE = "кушаку",
@@ -899,7 +899,7 @@
 	name = "fannypack of ULTIMATE DESPAIR"
 
 /obj/item/storage/belt/fannypack/black/rogue/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "поясная сумка АБСОЛЮТНОГО ОТЧАЯНИЯ",
 		GENITIVE = "поясной сумки АБСОЛЮТНОГО ОТЧАЯНИЯ",
 		DATIVE = "поясной сумке АБСОЛЮТНОГО ОТЧАЯНИЯ",
@@ -963,7 +963,7 @@
 	stored_blade = /obj/item/melee/sabre
 
 /obj/item/storage/belt/sheath/sabre/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ножны сабли",
 		GENITIVE = "ножен сабли",
 		DATIVE = "ножнам сабли",
@@ -981,7 +981,7 @@
 	storage_type = /datum/storage/green_sabre_belt
 
 /obj/item/storage/belt/sheath/grass_sabre/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ножны сабли",
 		GENITIVE = "ножен сабли",
 		DATIVE = "ножнам сабли",
@@ -1000,7 +1000,7 @@
 	stored_blade = /obj/item/claymore/gladius
 
 /obj/item/storage/belt/sheath/gladius/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ножны гладиуса",
 		GENITIVE = "ножен гладиуса",
 		DATIVE = "ножнам гладиуса",
@@ -1019,7 +1019,7 @@
 	storage_type = /datum/storage/plant_belt
 
 /obj/item/storage/belt/plant/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ботанический пояс",
 		GENITIVE = "ботанического пояса",
 		DATIVE = "ботаническому поясу",

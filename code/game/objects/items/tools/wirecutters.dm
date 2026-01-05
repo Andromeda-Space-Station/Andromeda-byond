@@ -52,7 +52,7 @@
 	acid = 30
 
 /obj/item/wirecutters/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кусачки",
 		GENITIVE = "кусачек",
 		DATIVE = "кусачкам",
@@ -85,7 +85,7 @@
 	snap_time_strong_handcuffs = 1 SECONDS
 
 /obj/item/wirecutters/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетные кусачки",
 		GENITIVE = "инопланетных кусачек",
 		DATIVE = "инопланетным кусачкам",
@@ -104,7 +104,7 @@
 	random_color = FALSE
 
 /obj/item/wirecutters/cyborg/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "электрические кусачки",
 		GENITIVE = "электрических кусачек",
 		DATIVE = "электрическим кусачкам",

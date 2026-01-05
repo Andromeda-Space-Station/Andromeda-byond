@@ -19,7 +19,7 @@
 	//node 3 is the outlet, nodes 1 & 2 are intakes
 
 /obj/machinery/atmospherics/components/trinary/mixer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовый смеситель",
 		GENITIVE = "газового смесителя",
 		DATIVE = "газовому смесителю",
@@ -252,7 +252,7 @@
 	on = TRUE
 
 /obj/machinery/atmospherics/components/trinary/mixer/airmix/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "смеситель воздуха",
 		GENITIVE = "смесителя воздуха",
 		DATIVE = "смесителю воздуха",

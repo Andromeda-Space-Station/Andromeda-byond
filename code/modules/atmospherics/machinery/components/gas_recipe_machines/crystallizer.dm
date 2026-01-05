@@ -36,7 +36,7 @@
 	acid = 30
 
 /obj/machinery/atmospherics/components/binary/crystallizer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кристаллизатор",
 		GENITIVE = "кристаллизатора",
 		DATIVE = "кристаллизатору",

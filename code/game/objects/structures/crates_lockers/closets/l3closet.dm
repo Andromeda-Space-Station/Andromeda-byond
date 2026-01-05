@@ -5,7 +5,7 @@
 	icon_state = "bio"
 
 /obj/structure/closet/l3closet/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с биозащитой 3-го уровня",
 		GENITIVE = "шкафа с биозащитой 3-го уровня",
 		DATIVE = "шкафу с биозащитой 3-го уровня",

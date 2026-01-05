@@ -51,7 +51,7 @@
 	acid = 50
 
 /obj/machinery/portable_atmospherics/canister/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра",
 		GENITIVE = "канистры",
 		DATIVE = "канистре",
@@ -140,7 +140,7 @@
 	greyscale_colors = "#c6c0b5"
 
 /obj/machinery/portable_atmospherics/canister/air/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра воздуха",
 		GENITIVE = "канистры воздуха",
 		DATIVE = "канистре воздуха",
@@ -159,7 +159,7 @@
 	greyscale_colors = "#333333#fefb30"
 
 /obj/machinery/portable_atmospherics/canister/antinoblium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра антиноблия",
 		GENITIVE = "канистры антиноблия",
 		DATIVE = "канистре антиноблия",
@@ -177,7 +177,7 @@
 	greyscale_colors = "#9b5d7f#d0d2a0"
 
 /obj/machinery/portable_atmospherics/canister/bz/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра BZ",
 		GENITIVE = "канистры BZ",
 		DATIVE = "канистре BZ",
@@ -195,7 +195,7 @@
 	greyscale_colors = "#4e4c48#eaeaea"
 
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра диоксида углерода",
 		GENITIVE = "канистры диоксида углерода",
 		DATIVE = "канистре диоксида углерода",
@@ -214,7 +214,7 @@
 	greyscale_colors = "#6696ee#fefb30"
 
 /obj/machinery/portable_atmospherics/canister/freon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра фреона",
 		GENITIVE = "канистры фреона",
 		DATIVE = "канистре фреона",
@@ -233,7 +233,7 @@
 	greyscale_colors = "#9b5d7f#368bff"
 
 /obj/machinery/portable_atmospherics/canister/halon/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра галона",
 		GENITIVE = "канистры галона",
 		DATIVE = "канистре галона",
@@ -252,7 +252,7 @@
 	greyscale_colors = "#009823#ff0e00"
 
 /obj/machinery/portable_atmospherics/canister/healium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра хилиума",
 		GENITIVE = "канистры хилиума",
 		DATIVE = "канистре хилиума",
@@ -271,7 +271,7 @@
 	greyscale_colors = "#9b5d7f#368bff"
 
 /obj/machinery/portable_atmospherics/canister/helium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра гелия",
 		GENITIVE = "канистры гелия",
 		DATIVE = "канистре гелия",
@@ -290,7 +290,7 @@
 	greyscale_colors = "#eaeaea#be3455"
 
 /obj/machinery/portable_atmospherics/canister/hydrogen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра водорода",
 		GENITIVE = "канистры водорода",
 		DATIVE = "канистре водорода",
@@ -309,7 +309,7 @@
 	greyscale_colors = "#009823#f7d5d3"
 
 /obj/machinery/portable_atmospherics/canister/miasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра миазмов",
 		GENITIVE = "канистры миазмов",
 		DATIVE = "канистре миазмов",
@@ -327,7 +327,7 @@
 	greyscale_colors = "#e9ff5c#f4fce8"
 
 /obj/machinery/portable_atmospherics/canister/nitrogen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра азота",
 		GENITIVE = "канистры азота",
 		DATIVE = "канистре азота",
@@ -345,7 +345,7 @@
 	greyscale_colors = "#c63e3b#f7d5d3"
 
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра оксида азота",
 		GENITIVE = "канистры оксида азота",
 		DATIVE = "канистре оксида азота",
@@ -363,7 +363,7 @@
 	greyscale_colors = "#7b4732"
 
 /obj/machinery/portable_atmospherics/canister/nitrium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра нитриума",
 		GENITIVE = "канистры нитриума",
 		DATIVE = "канистре нитриума",
@@ -381,7 +381,7 @@
 	greyscale_colors = "#6399fc#b2b2b2"
 
 /obj/machinery/portable_atmospherics/canister/nob/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра гиперноблия",
 		GENITIVE = "канистры гиперноблия",
 		DATIVE = "канистре гиперноблия",
@@ -399,7 +399,7 @@
 	greyscale_colors = "#2786e5#e8fefe"
 
 /obj/machinery/portable_atmospherics/canister/oxygen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра кислорода",
 		GENITIVE = "канистры кислорода",
 		DATIVE = "канистре кислорода",
@@ -417,7 +417,7 @@
 	greyscale_colors = "#2786e5"
 
 /obj/machinery/portable_atmospherics/canister/pluoxium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра плюоксиума",
 		GENITIVE = "канистры плюоксиума",
 		DATIVE = "канистре плюоксиума",
@@ -436,7 +436,7 @@
 	greyscale_colors = "#008200#33cc33"
 
 /obj/machinery/portable_atmospherics/canister/proto_nitrate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра протонитрата",
 		GENITIVE = "канистры протонитрата",
 		DATIVE = "канистре протонитрата",
@@ -454,7 +454,7 @@
 	greyscale_colors = "#f62800#000000"
 
 /obj/machinery/portable_atmospherics/canister/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра плазмы",
 		GENITIVE = "канистры плазмы",
 		DATIVE = "канистре плазмы",
@@ -472,7 +472,7 @@
 	greyscale_colors = "#3fcd40#000000"
 
 /obj/machinery/portable_atmospherics/canister/tritium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра трития",
 		GENITIVE = "канистры трития",
 		DATIVE = "канистре трития",
@@ -491,7 +491,7 @@
 	greyscale_colors = "#4c4e4d#f7d5d3"
 
 /obj/machinery/portable_atmospherics/canister/water_vapor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра водяного пара",
 		GENITIVE = "канистры водяного пара",
 		DATIVE = "канистре водяного пара",
@@ -510,7 +510,7 @@
 	greyscale_colors = "#009a00#006600"
 
 /obj/machinery/portable_atmospherics/canister/zauker/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра заукера",
 		GENITIVE = "канистры заукера",
 		DATIVE = "канистре заукера",
@@ -528,7 +528,7 @@
 	pressure_limit = 1e14
 
 /obj/machinery/portable_atmospherics/canister/fusion_test/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тестовая канистра синтеза",
 		GENITIVE = "тестовой канистры синтеза",
 		DATIVE = "тестовой канистре синтеза",
@@ -553,7 +553,7 @@
 	greyscale_colors = "#9fba6c#3d4680"
 
 /obj/machinery/portable_atmospherics/canister/anesthetic_mix/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "канистра смеси анестетика",
 		GENITIVE = "канистры смеси анестетика",
 		DATIVE = "канистре смеси анестетика",

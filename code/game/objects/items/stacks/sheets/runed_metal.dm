@@ -83,7 +83,7 @@ GLOBAL_LIST_INIT(runed_metal_recipes, list( \
 	use_radial = TRUE
 
 /obj/item/stack/sheet/runed_metal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "рунический металл",
 		GENITIVE = "рунического металла",
 		DATIVE = "руническому металлу",

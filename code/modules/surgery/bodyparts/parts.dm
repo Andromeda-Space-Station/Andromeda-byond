@@ -38,7 +38,7 @@
 	var/list/wing_types = list(/obj/item/organ/wings/functional/angel)
 
 /obj/item/bodypart/chest/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "грудь",
 		GENITIVE = "груди",
 		DATIVE = "груди",
@@ -48,7 +48,7 @@
 	)
 
 /obj/item/bodypart/chest/get_ru_plaintext_names()
-	return list(
+	return alist(
 		NOMINATIVE = "грудь",
 		GENITIVE = "груди",
 		DATIVE = "груди",
@@ -180,7 +180,7 @@
 	biological_state = BIO_STANDARD_JOINTED
 
 /obj/item/bodypart/arm/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "рука",
 		GENITIVE = "руки",
 		DATIVE = "руке",
@@ -190,7 +190,7 @@
 	)
 
 /obj/item/bodypart/arm/get_ru_plaintext_names()
-	return list(
+	return alist(
 		NOMINATIVE = "рука",
 		GENITIVE = "руки",
 		DATIVE = "руке",
@@ -252,7 +252,7 @@
 	bodypart_trait_source = LEFT_ARM_TRAIT
 
 /obj/item/bodypart/arm/left/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "левая рука",
 		GENITIVE = "левой руки",
 		DATIVE = "левой руке",
@@ -262,7 +262,7 @@
 	)
 
 /obj/item/bodypart/arm/left/get_ru_plaintext_names()
-	return list(
+	return alist(
 		NOMINATIVE = "левая рука",
 		GENITIVE = "левой руки",
 		DATIVE = "левой руке",
@@ -370,7 +370,7 @@
 	bodypart_trait_source = RIGHT_ARM_TRAIT
 
 /obj/item/bodypart/arm/right/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "правая рука",
 		GENITIVE = "правой руки",
 		DATIVE = "правой руке",
@@ -380,7 +380,7 @@
 	)
 
 /obj/item/bodypart/arm/right/get_ru_plaintext_names()
-	return list(
+	return alist(
 		NOMINATIVE = "правая рука",
 		GENITIVE = "правой руки",
 		DATIVE = "правой руке",
@@ -502,7 +502,7 @@
 	var/list/special_footstep_sounds
 
 /obj/item/bodypart/leg/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "нога",
 		GENITIVE = "ноги",
 		DATIVE = "ноге",
@@ -512,7 +512,7 @@
 	)
 
 /obj/item/bodypart/leg/get_ru_plaintext_names()
-	return list(
+	return alist(
 		NOMINATIVE = "нога",
 		GENITIVE = "ноги",
 		DATIVE = "ноге",
@@ -553,7 +553,7 @@
 	bodypart_trait_source = LEFT_LEG_TRAIT
 
 /obj/item/bodypart/leg/left/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "левая нога",
 		GENITIVE = "левой ноги",
 		DATIVE = "левой ноге",
@@ -563,7 +563,7 @@
 	)
 
 /obj/item/bodypart/leg/left/get_ru_plaintext_names()
-	return list(
+	return alist(
 		NOMINATIVE = "левая нога",
 		GENITIVE = "левой ноги",
 		DATIVE = "левой ноге",
@@ -661,7 +661,7 @@
 	bodypart_trait_source = RIGHT_LEG_TRAIT
 
 /obj/item/bodypart/leg/right/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "правая нога",
 		GENITIVE = "правой ноги",
 		DATIVE = "правой ноге",
@@ -671,7 +671,7 @@
 	)
 
 /obj/item/bodypart/leg/right/get_ru_plaintext_names()
-	return list(
+	return alist(
 		NOMINATIVE = "правая нога",
 		GENITIVE = "правой ноги",
 		DATIVE = "правой ноге",

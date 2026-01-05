@@ -35,7 +35,7 @@
 	var/list/dent_decals
 
 /turf/closed/wall/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стена",
 		GENITIVE = "стены",
 		DATIVE = "стене",

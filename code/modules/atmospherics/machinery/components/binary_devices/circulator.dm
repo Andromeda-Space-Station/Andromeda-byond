@@ -19,7 +19,7 @@
 	var/obj/machinery/power/thermoelectric_generator/generator
 
 /obj/machinery/atmospherics/components/binary/circulator/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "циркулятор",
 		GENITIVE = "циркулятора",
 		DATIVE = "циркулятору",

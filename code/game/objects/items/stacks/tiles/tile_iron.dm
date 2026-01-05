@@ -89,7 +89,7 @@
 	)
 
 /obj/item/stack/tile/iron/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "железная плитка",
 		GENITIVE = "железной плитки",
 		DATIVE = "железной плитке",
@@ -165,7 +165,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/edge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "краевая железная плитка",
 		GENITIVE = "краевой железной плитки",
 		DATIVE = "краевой железной плитке",
@@ -183,7 +183,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH)
 
 /obj/item/stack/tile/iron/half/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "половинчатая железная плитка",
 		GENITIVE = "половинчатой железной плитки",
 		DATIVE = "половинчатой железной плитке",
@@ -201,7 +201,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/corner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "угловая железная плитка",
 		GENITIVE = "угловой железной плитки",
 		DATIVE = "угловой железной плитке",
@@ -218,7 +218,7 @@
 	merge_type = /obj/item/stack/tile/iron/large
 
 /obj/item/stack/tile/iron/large/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая железная плитка",
 		GENITIVE = "большой железной плитки",
 		DATIVE = "большой железной плитке",
@@ -235,7 +235,7 @@
 	merge_type = /obj/item/stack/tile/iron/textured
 
 /obj/item/stack/tile/iron/textured/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фактурная железная плитка",
 		GENITIVE = "фактурной железной плитки",
 		DATIVE = "фактурной железной плитке",
@@ -253,7 +253,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/textured_edge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "краевая фактурная железная плитка",
 		GENITIVE = "краевой фактурной железной плитки",
 		DATIVE = "краевой фактурной железной плитке",
@@ -271,7 +271,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH)
 
 /obj/item/stack/tile/iron/textured_half/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "половинчатая фактурная железная плитка",
 		GENITIVE = "половинчатой фактурной железной плитки",
 		DATIVE = "половинчатой фактурной железной плитке",
@@ -289,7 +289,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/textured_corner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "угловая фактурная железная плитка",
 		GENITIVE = "угловой фактурной железной плитки",
 		DATIVE = "угловой фактурной железной плитке",
@@ -306,7 +306,7 @@
 	merge_type = /obj/item/stack/tile/iron/textured_large
 
 /obj/item/stack/tile/iron/textured_large/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая фактурная железная плитка",
 		GENITIVE = "большой фактурной железной плитки",
 		DATIVE = "большой фактурной железной плитке",
@@ -323,7 +323,7 @@
 	merge_type = /obj/item/stack/tile/iron/small
 
 /obj/item/stack/tile/iron/small/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "маленькая железная плитка",
 		GENITIVE = "маленькой железной плитки",
 		DATIVE = "маленькой железной плитке",
@@ -340,7 +340,7 @@
 	merge_type = /obj/item/stack/tile/iron/diagonal
 
 /obj/item/stack/tile/iron/diagonal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диагональная железная плитка",
 		GENITIVE = "диагональной железной плитки",
 		DATIVE = "диагональной железной плитке",
@@ -357,7 +357,7 @@
 	merge_type = /obj/item/stack/tile/iron/herringbone
 
 /obj/item/stack/tile/iron/herringbone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "железная плитка «ёлочка»",
 		GENITIVE = "железной плитки «ёлочка»",
 		DATIVE = "железной плитке «ёлочка»",
@@ -374,7 +374,7 @@
 	merge_type = /obj/item/stack/tile/iron/dark
 
 /obj/item/stack/tile/iron/dark/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тёмная железная плитка",
 		GENITIVE = "тёмной железной плитки",
 		DATIVE = "тёмной железной плитке",
@@ -392,7 +392,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/dark/smooth_edge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "краевая тёмная железная плитка",
 		GENITIVE = "краевой тёмной железной плитки",
 		DATIVE = "краевой тёмной железной плитке",
@@ -410,7 +410,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH)
 
 /obj/item/stack/tile/iron/dark/smooth_half/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "половинчатая тёмная железная плитка",
 		GENITIVE = "половинчатой тёмной железной плитки",
 		DATIVE = "половинчатой тёмной железной плитке",
@@ -428,7 +428,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/dark/smooth_corner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "угловая тёмная железная плитка",
 		GENITIVE = "угловой тёмной железной плитки",
 		DATIVE = "угловой тёмной железной плитке",
@@ -445,7 +445,7 @@
 	merge_type = /obj/item/stack/tile/iron/dark/smooth_large
 
 /obj/item/stack/tile/iron/dark/smooth_large/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая тёмная железная плитка",
 		GENITIVE = "большой тёмной железной плитки",
 		DATIVE = "большой тёмной железной плитке",
@@ -463,7 +463,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST, SOUTHEAST, SOUTHWEST, NORTHEAST, NORTHWEST)
 
 /obj/item/stack/tile/iron/dark_side/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "половинчатая тёмная железная плитка",
 		GENITIVE = "половинчатой тёмной железной плитки",
 		DATIVE = "половинчатой тёмной железной плитке",
@@ -481,7 +481,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/dark_corner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "четвертная тёмная железная плитка",
 		GENITIVE = "четвертной тёмной железной плитки",
 		DATIVE = "четвертной тёмной железной плитке",
@@ -499,7 +499,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH)
 
 /obj/item/stack/tile/iron/checker/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шахматная плитка",
 		GENITIVE = "шахматной плитки",
 		DATIVE = "шахматной плитке",
@@ -516,7 +516,7 @@
 	merge_type = /obj/item/stack/tile/iron/dark/textured
 
 /obj/item/stack/tile/iron/dark/textured/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тёмная фактурная железная плитка",
 		GENITIVE = "тёмной фактурной железной плитки",
 		DATIVE = "тёмной фактурной железной плитке",
@@ -534,7 +534,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/dark/textured_edge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "краевая тёмная фактурная железная плитка",
 		GENITIVE = "краевой тёмной фактурной железной плитки",
 		DATIVE = "краевой тёмной фактурной железной плитке",
@@ -552,7 +552,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH)
 
 /obj/item/stack/tile/iron/dark/textured_half/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "половинчатая тёмная фактурная железная плитка",
 		GENITIVE = "половинчатой тёмной фактурной железной плитки",
 		DATIVE = "половинчатой тёмной фактурной железной плитке",
@@ -570,7 +570,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/dark/textured_corner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "угловая тёмная фактурная железная плитка",
 		GENITIVE = "угловой тёмной фактурной железной плитки",
 		DATIVE = "угловой тёмной фактурной железной плитке",
@@ -587,7 +587,7 @@
 	merge_type = /obj/item/stack/tile/iron/dark/textured_large
 
 /obj/item/stack/tile/iron/dark/textured_large/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая тёмная фактурная железная плитка",
 		GENITIVE = "большой тёмной фактурной железной плитки",
 		DATIVE = "большой тёмной фактурной железной плитке",
@@ -604,7 +604,7 @@
 	merge_type = /obj/item/stack/tile/iron/dark/small
 
 /obj/item/stack/tile/iron/dark/small/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "маленькая тёмная железная плитка",
 		GENITIVE = "маленькой тёмной железной плитки",
 		DATIVE = "маленькой тёмной железной плитке",
@@ -621,7 +621,7 @@
 	merge_type = /obj/item/stack/tile/iron/dark/diagonal
 
 /obj/item/stack/tile/iron/dark/diagonal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диагональная тёмная железная плитка",
 		GENITIVE = "диагональной тёмной железной плитки",
 		DATIVE = "диагональной тёмной железной плитке",
@@ -638,7 +638,7 @@
 	merge_type = /obj/item/stack/tile/iron/dark/herringbone
 
 /obj/item/stack/tile/iron/dark/herringbone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тёмная железная плитка «ёлочка»",
 		GENITIVE = "тёмной железной плитки «ёлочка»",
 		DATIVE = "тёмной железной плитке «ёлочка»",
@@ -655,7 +655,7 @@
 	merge_type = /obj/item/stack/tile/iron/white
 
 /obj/item/stack/tile/iron/white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "белая железная плитка",
 		GENITIVE = "белой железной плитки",
 		DATIVE = "белой железной плитке",
@@ -673,7 +673,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/white/smooth_edge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "краевая белая железная плитка",
 		GENITIVE = "краевой белой железной плитки",
 		DATIVE = "краевой белой железной плитке",
@@ -691,7 +691,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH)
 
 /obj/item/stack/tile/iron/white/smooth_half/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "половинчатая белая железная плитка",
 		GENITIVE = "половинчатой белой железной плитки",
 		DATIVE = "половинчатой белой железной плитке",
@@ -709,7 +709,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/white/smooth_corner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "угловая белая железная плитка",
 		GENITIVE = "угловой белой железной плитки",
 		DATIVE = "угловой белой железной плитке",
@@ -726,7 +726,7 @@
 	merge_type = /obj/item/stack/tile/iron/white/smooth_large
 
 /obj/item/stack/tile/iron/white/smooth_large/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая белая железная плитка",
 		GENITIVE = "большой белой железной плитки",
 		DATIVE = "большой белой железной плитке",
@@ -744,7 +744,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST, SOUTHEAST, SOUTHWEST, NORTHEAST, NORTHWEST)
 
 /obj/item/stack/tile/iron/white_side/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "половинчатая белая железная плитка",
 		GENITIVE = "половинчатой белой железной плитки",
 		DATIVE = "половинчатой белой железной плитке",
@@ -762,7 +762,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/white_corner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "четвертная белая железная плитка",
 		GENITIVE = "четвертной белой железной плитки",
 		DATIVE = "четвертной белой железной плитке",
@@ -780,7 +780,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH)
 
 /obj/item/stack/tile/iron/cafeteria/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка кафетерия",
 		GENITIVE = "плитки кафетерия",
 		DATIVE = "плитке кафетерия",
@@ -797,7 +797,7 @@
 	merge_type = /obj/item/stack/tile/iron/white/textured
 
 /obj/item/stack/tile/iron/white/textured/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "белая фактурная железная плитка",
 		GENITIVE = "белой фактурной железной плитки",
 		DATIVE = "белой фактурной железной плитке",
@@ -815,7 +815,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/white/textured_edge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "краевая белая фактурная железная плитка",
 		GENITIVE = "краевой белой фактурной железной плитки",
 		DATIVE = "краевой белой фактурной железной плитке",
@@ -833,7 +833,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH)
 
 /obj/item/stack/tile/iron/white/textured_half/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "половинчатая белая фактурная железная плитка",
 		GENITIVE = "половинчатой белой фактурной железной плитки",
 		DATIVE = "половинчатой белой фактурной железной плитке",
@@ -851,7 +851,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/white/textured_corner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "угловая белая фактурная железная плитка",
 		GENITIVE = "угловой белой фактурной железной плитки",
 		DATIVE = "угловой белой фактурной железной плитке",
@@ -868,7 +868,7 @@
 	merge_type = /obj/item/stack/tile/iron/white/textured_large
 
 /obj/item/stack/tile/iron/white/textured_large/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая белая фактурная железная плитка",
 		GENITIVE = "большой белой фактурной железной плитки",
 		DATIVE = "большой белой фактурной железной плитке",
@@ -885,7 +885,7 @@
 	merge_type = /obj/item/stack/tile/iron/white/small
 
 /obj/item/stack/tile/iron/white/small/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "маленькая белая железная плитка",
 		GENITIVE = "маленькой белой железной плитки",
 		DATIVE = "маленькой белой железной плитке",
@@ -902,7 +902,7 @@
 	merge_type = /obj/item/stack/tile/iron/white/diagonal
 
 /obj/item/stack/tile/iron/white/diagonal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диагональная белая железная плитка",
 		GENITIVE = "диагональной белой железной плитки",
 		DATIVE = "диагональной белой железной плитке",
@@ -919,7 +919,7 @@
 	merge_type = /obj/item/stack/tile/iron/white/herringbone
 
 /obj/item/stack/tile/iron/white/herringbone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "белая железная плитка «ёлочка»",
 		GENITIVE = "белой железной плитки «ёлочка»",
 		DATIVE = "белой железной плитке «ёлочка»",
@@ -936,7 +936,7 @@
 	merge_type = /obj/item/stack/tile/iron/recharge_floor
 
 /obj/item/stack/tile/iron/recharge_floor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка для подзарядки",
 		GENITIVE = "плитки для подзарядки",
 		DATIVE = "плитке для подзарядки",
@@ -953,7 +953,7 @@
 	merge_type = /obj/item/stack/tile/iron/smooth
 
 /obj/item/stack/tile/iron/smooth/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гладкая железная плитка",
 		GENITIVE = "гладкой железной плитки",
 		DATIVE = "гладкой железной плитке",
@@ -971,7 +971,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/smooth_edge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "краевая гладкая железная плитка",
 		GENITIVE = "краевой гладкой железной плитки",
 		DATIVE = "краевой гладкой железной плитке",
@@ -989,7 +989,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH)
 
 /obj/item/stack/tile/iron/smooth_half/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "половинчатая гладкая железная плитка",
 		GENITIVE = "половинчатой гладкой железной плитки",
 		DATIVE = "половинчатой гладкой железной плитке",
@@ -1007,7 +1007,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/smooth_corner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "угловая гладкая железная плитка",
 		GENITIVE = "угловой гладкой железной плитки",
 		DATIVE = "угловой гладкой железной плитке",
@@ -1024,7 +1024,7 @@
 	merge_type = /obj/item/stack/tile/iron/smooth_large
 
 /obj/item/stack/tile/iron/smooth_large/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая гладкая железная плитка",
 		GENITIVE = "большой гладкой железной плитки",
 		DATIVE = "большой гладкой железной плитке",
@@ -1041,7 +1041,7 @@
 	merge_type = /obj/item/stack/tile/iron/terracotta
 
 /obj/item/stack/tile/iron/terracotta/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "терракотовая плитка",
 		GENITIVE = "терракотовой плитки",
 		DATIVE = "терракотовой плитке",
@@ -1058,7 +1058,7 @@
 	merge_type = /obj/item/stack/tile/iron/terracotta/small
 
 /obj/item/stack/tile/iron/terracotta/small/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "маленькая терракотовая плитка",
 		GENITIVE = "маленькой терракотовой плитки",
 		DATIVE = "маленькой терракотовой плитке",
@@ -1075,7 +1075,7 @@
 	merge_type = /obj/item/stack/tile/iron/terracotta/diagonal
 
 /obj/item/stack/tile/iron/terracotta/diagonal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диагональная терракотовая плитка",
 		GENITIVE = "диагональной терракотовой плитки",
 		DATIVE = "диагональной терракотовой плитке",
@@ -1092,7 +1092,7 @@
 	merge_type = /obj/item/stack/tile/iron/terracotta/herringbone
 
 /obj/item/stack/tile/iron/terracotta/herringbone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "терракотовая плитка «ёлочка»",
 		GENITIVE = "терракотовой плитки «ёлочка»",
 		DATIVE = "терракотовой плитке «ёлочка»",
@@ -1109,7 +1109,7 @@
 	merge_type = /obj/item/stack/tile/iron/kitchen
 
 /obj/item/stack/tile/iron/kitchen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кухонная плитка",
 		GENITIVE = "кухонной плитки",
 		DATIVE = "кухонной плитке",
@@ -1126,7 +1126,7 @@
 	merge_type = /obj/item/stack/tile/iron/kitchen/small
 
 /obj/item/stack/tile/iron/kitchen/small/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "маленькая кухонная плитка",
 		GENITIVE = "маленькой кухонной плитки",
 		DATIVE = "маленькой кухонной плитке",
@@ -1143,7 +1143,7 @@
 	merge_type = /obj/item/stack/tile/iron/kitchen/diagonal
 
 /obj/item/stack/tile/iron/kitchen/diagonal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диагональная кухонная плитка",
 		GENITIVE = "диагональной кухонной плитки",
 		DATIVE = "диагональной кухонной плитке",
@@ -1160,7 +1160,7 @@
 	merge_type = /obj/item/stack/tile/iron/kitchen/herringbone
 
 /obj/item/stack/tile/iron/kitchen/herringbone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "кухонная плитка «ёлочка»",
 		GENITIVE = "кухонной плитки «ёлочка»",
 		DATIVE = "кухонной плитке «ёлочка»",
@@ -1178,7 +1178,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST, SOUTHEAST, SOUTHWEST, NORTHEAST, NORTHWEST)
 
 /obj/item/stack/tile/iron/chapel/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка церкви",
 		GENITIVE = "плитки церкви",
 		DATIVE = "плитке церкви",
@@ -1195,7 +1195,7 @@
 	merge_type = /obj/item/stack/tile/iron/showroomfloor
 
 /obj/item/stack/tile/iron/showroomfloor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка выставочного зала",
 		GENITIVE = "плитки выставочного зала",
 		DATIVE = "плитке выставочного зала",
@@ -1212,7 +1212,7 @@
 	merge_type = /obj/item/stack/tile/iron/solarpanel
 
 /obj/item/stack/tile/iron/solarpanel/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка солнечной панели",
 		GENITIVE = "плитки солнечной панели",
 		DATIVE = "плитке солнечной панели",
@@ -1229,7 +1229,7 @@
 	merge_type = /obj/item/stack/tile/iron/freezer
 
 /obj/item/stack/tile/iron/freezer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плитка морозильника",
 		GENITIVE = "плитки морозильника",
 		DATIVE = "плитке морозильника",
@@ -1247,7 +1247,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/freezer/edge/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "краевая плитка морозильника",
 		GENITIVE = "краевой плитки морозильника",
 		DATIVE = "краевой плитке морозильника",
@@ -1265,7 +1265,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH)
 
 /obj/item/stack/tile/iron/freezer/half/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "половинчатая плитка морозильника",
 		GENITIVE = "половинчатой плитки морозильника",
 		DATIVE = "половинчатой плитке морозильника",
@@ -1283,7 +1283,7 @@
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
 
 /obj/item/stack/tile/iron/freezer/corner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "угловая плитка морозильника",
 		GENITIVE = "угловой плитки морозильника",
 		DATIVE = "угловой плитке морозильника",
@@ -1300,7 +1300,7 @@
 	merge_type = /obj/item/stack/tile/iron/freezer/large
 
 /obj/item/stack/tile/iron/freezer/large/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "большая плитка морозильника",
 		GENITIVE = "большой плитки морозильника",
 		DATIVE = "большой плитке морозильника",
@@ -1317,7 +1317,7 @@
 	merge_type = /obj/item/stack/tile/iron/grimy
 
 /obj/item/stack/tile/iron/grimy/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "грязная железная плитка",
 		GENITIVE = "грязной железной плитки",
 		DATIVE = "грязной железной плитке",
@@ -1335,7 +1335,7 @@
 	merge_type = /obj/item/stack/tile/iron/sepia
 
 /obj/item/stack/tile/iron/sepia/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "сепия плитка",
 		GENITIVE = "сепия плитки",
 		DATIVE = "сепия плитке",
@@ -1356,7 +1356,7 @@
 	tile_reskin_types = null
 
 /obj/item/stack/tile/iron/bluespace/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "блюспейс плитка",
 		GENITIVE = "блюспейс плитки",
 		DATIVE = "блюспейс плитке",
@@ -1375,7 +1375,7 @@
 	tile_reskin_types = null
 
 /obj/item/stack/tile/iron/goonplaque/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "памятная плитка",
 		GENITIVE = "памятной плитки",
 		DATIVE = "памятной плитке",
@@ -1393,7 +1393,7 @@
 	tile_reskin_types = null
 
 /obj/item/stack/tile/iron/vaporwave/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "вейпорвейв плитка",
 		GENITIVE = "вейпорвейв плитки",
 		DATIVE = "вейпорвейв плитке",

@@ -6,7 +6,7 @@
 	card_reader_installed = TRUE
 
 /obj/structure/closet/secure_closet/personal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "личный шкаф",
 		GENITIVE = "личного шкафа",
 		DATIVE = "личному шкафу",
@@ -44,7 +44,7 @@
 	name = "patient's closet"
 
 /obj/structure/closet/secure_closet/personal/patient/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф пациента",
 		GENITIVE = "шкафа пациента",
 		DATIVE = "шкафу пациента",

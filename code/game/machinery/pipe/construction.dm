@@ -510,7 +510,7 @@
 // Добавляем русские названия для объектов.
 
 /obj/item/pipe/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "трубный фитинг",
 		GENITIVE = "трубного фитинга",
 		DATIVE = "трубному фитингу",
@@ -520,7 +520,7 @@
 	)
 
 /obj/item/pipe_meter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "измеритель",
 		GENITIVE = "измерителя",
 		DATIVE = "измерителю",

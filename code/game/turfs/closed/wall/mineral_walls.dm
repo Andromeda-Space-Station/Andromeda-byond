@@ -24,7 +24,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/closed/wall/mineral/gold/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "золотая стена",
 		GENITIVE = "золотой стены",
 		DATIVE = "золотой стене",
@@ -47,7 +47,7 @@
 	custom_materials = list(/datum/material/silver = SHEET_MATERIAL_AMOUNT*2)
 
 /turf/closed/wall/mineral/silver/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "серебряная стена",
 		GENITIVE = "серебряной стены",
 		DATIVE = "серебряной стене",
@@ -73,7 +73,7 @@
 	rust_resistance = RUST_RESISTANCE_REINFORCED
 
 /turf/closed/wall/mineral/diamond/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "алмазная стена",
 		GENITIVE = "алмазной стены",
 		DATIVE = "алмазной стене",
@@ -100,7 +100,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/closed/wall/mineral/bananium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "баннаниумовая стена",
 		GENITIVE = "баннаниумовой стены",
 		DATIVE = "баннаниумовой стене",
@@ -125,7 +125,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/closed/wall/mineral/sandstone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "песчаниковая стена",
 		GENITIVE = "песчаниковой стены",
 		DATIVE = "песчаниковой стене",
@@ -153,7 +153,7 @@
 	var/last_event = 0
 
 /turf/closed/wall/mineral/uranium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "урановая стена",
 		GENITIVE = "урановой стены",
 		DATIVE = "урановой стене",
@@ -215,7 +215,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/closed/wall/mineral/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменная стена",
 		GENITIVE = "плазменной стены",
 		DATIVE = "плазменной стене",
@@ -241,7 +241,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/closed/wall/mineral/wood/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "деревянная стена",
 		GENITIVE = "деревянной стены",
 		DATIVE = "деревянной стене",
@@ -282,7 +282,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/closed/wall/mineral/bamboo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бамбуковая стена",
 		GENITIVE = "бамбуковой стены",
 		DATIVE = "бамбуковой стене",
@@ -307,7 +307,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/closed/wall/mineral/bamboo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "грубая железная стена",
 		GENITIVE = "грубой железной стены",
 		DATIVE = "грубой железной стене",
@@ -335,7 +335,7 @@
 	rust_resistance = RUST_RESISTANCE_BASIC
 
 /turf/closed/wall/mineral/snow/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "снежная стена",
 		GENITIVE = "снежной стены",
 		DATIVE = "снежной стене",
@@ -364,7 +364,7 @@
 	rust_resistance = RUST_RESISTANCE_ORGANIC
 
 /turf/closed/wall/mineral/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетная стена",
 		GENITIVE = "инопланетной стены",
 		DATIVE = "инопланетной стене",
@@ -393,7 +393,7 @@
 	rust_resistance = RUST_RESISTANCE_TITANIUM
 
 /turf/closed/wall/mineral/titanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стена",
 		GENITIVE = "стены",
 		DATIVE = "стене",
@@ -437,7 +437,7 @@
 	rust_resistance = RUST_RESISTANCE_TITANIUM
 
 /turf/closed/wall/mineral/titanium/survival/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стена",
 		GENITIVE = "стены",
 		DATIVE = "стене",
@@ -482,7 +482,7 @@
 	rust_resistance = RUST_RESISTANCE_TITANIUM
 
 /turf/closed/wall/mineral/plastitanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластитановая стена",
 		GENITIVE = "пластитановой стены",
 		DATIVE = "пластитановой стене",

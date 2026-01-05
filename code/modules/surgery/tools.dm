@@ -24,7 +24,7 @@
 	return surgical_tray_overlay
 
 /obj/item/retractor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "расширитель",
 		GENITIVE = "расширителя",
 		DATIVE = "расширителю",
@@ -58,7 +58,7 @@
 	return surgical_tray_overlay
 
 /obj/item/hemostat/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гемостат",
 		GENITIVE = "гемостата",
 		DATIVE = "гемостату",
@@ -93,7 +93,7 @@
 	return surgical_tray_overlay
 
 /obj/item/cautery/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "коагулятор",
 		GENITIVE = "коагулятора",
 		DATIVE = "коагулятору",
@@ -135,7 +135,7 @@
 	return surgical_tray_overlay
 
 /obj/item/surgicaldrill/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "хирургическая дрель",
 		GENITIVE = "хирургической дрели",
 		DATIVE = "хирургической дрели",
@@ -184,7 +184,7 @@
 	return surgical_tray_overlay
 
 /obj/item/scalpel/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "скальпель",
 		GENITIVE = "скальпеля",
 		DATIVE = "скальпелю",
@@ -239,7 +239,7 @@
 	return surgical_tray_overlay
 
 /obj/item/circular_saw/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "хирургическая пила",
 		GENITIVE = "хирургической пилы",
 		DATIVE = "хирургической пиле",
@@ -280,7 +280,7 @@
 	pickup_sound = SFX_CLOTH_PICKUP
 
 /obj/item/surgical_drapes/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "хирургическая простыня",
 		GENITIVE = "хирургической простыни",
 		DATIVE = "хирургической простыне",
@@ -313,7 +313,7 @@
 	var/surgical_tray_overlay = "bonesetter"
 
 /obj/item/bonesetter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "костоправ",
 		GENITIVE = "костоправа",
 		DATIVE = "костоправу",
@@ -347,7 +347,7 @@
 	var/surgical_tray_overlay = "filter"
 
 /obj/item/blood_filter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "фильтр крови",
 		GENITIVE = "фильтра крови",
 		DATIVE = "фильтру крови",
@@ -413,7 +413,7 @@
 	var/downloaded = TRUE
 
 /obj/item/surgical_processor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "хирургический процессор",
 		GENITIVE = "хирургического процессора",
 		DATIVE = "хирургическому процессору",
@@ -569,7 +569,7 @@
 	light_color = COLOR_SOFT_RED
 
 /obj/item/cautery/advanced/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "лазерный коагулятор",
 		GENITIVE = "лазерного коагулятора",
 		DATIVE = "лазерному коагулятору",
@@ -636,7 +636,7 @@
 	sharpness = SHARP_EDGED
 
 /obj/item/scalpel/advanced/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "лазерный скальпель",
 		GENITIVE = "лазерного скальпеля",
 		DATIVE = "лазерному скальпелю",
@@ -700,7 +700,7 @@
 	toolspeed = 0.7
 
 /obj/item/retractor/advanced/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "механические щипцы",
 		GENITIVE = "механических щипцов",
 		DATIVE = "механическим щипцам",

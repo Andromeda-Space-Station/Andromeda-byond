@@ -13,7 +13,7 @@
 	var/is_gas_flowing = FALSE
 
 /obj/machinery/atmospherics/components/binary/pressure_valve/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "клапан давления",
 		GENITIVE = "клапана давления",
 		DATIVE = "клапану давления",

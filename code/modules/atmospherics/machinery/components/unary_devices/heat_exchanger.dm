@@ -16,7 +16,7 @@
 	pipe_state = "heunary"
 
 /obj/machinery/atmospherics/components/unary/heat_exchanger/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "теплообменник",
 		GENITIVE = "теплообменника",
 		DATIVE = "теплообменнику",

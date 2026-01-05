@@ -23,7 +23,7 @@
 	var/static/list/mutable_appearance/center_cache = list()
 
 /obj/machinery/atmospherics/pipe/color_adapter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "цветовой адаптер",
 		GENITIVE = "цветового адаптера",
 		DATIVE = "цветовому адаптеру",

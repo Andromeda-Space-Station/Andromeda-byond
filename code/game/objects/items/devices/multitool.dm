@@ -34,7 +34,7 @@
 	COOLDOWN_DECLARE(next_apc_scan)
 
 /obj/item/multitool/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мультитул",
 		GENITIVE = "мультитула",
 		DATIVE = "мультитулу",
@@ -329,7 +329,7 @@
 	toolspeed = 0.1
 
 /obj/item/multitool/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетный мультитул",
 		GENITIVE = "инопланетного мультитула",
 		DATIVE = "инопланетному мультитулу",
@@ -347,7 +347,7 @@
 	toolspeed = 0.5
 
 /obj/item/multitool/cyborg/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "электронный мультитул",
 		GENITIVE = "электронного мультитула",
 		DATIVE = "электронному мультитулу",

@@ -22,7 +22,7 @@
 	fire = 40
 
 /obj/machinery/meter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "измеритель потока газа",
 		GENITIVE = "измерителя потока газа",
 		DATIVE = "измерителю потока газа",

@@ -24,7 +24,7 @@
 	var/door_deny = 'sound/machines/buzz/buzz-sigh.ogg'
 
 /obj/machinery/door/password/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "дверь с паролем",
 		GENITIVE = "двери с паролем",
 		DATIVE = "двери с паролем",

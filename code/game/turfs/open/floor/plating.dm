@@ -24,7 +24,7 @@
 	var/upgradable = TRUE
 
 /turf/open/floor/plating/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "покрытие",
 		GENITIVE = "покрытия",
 		DATIVE = "покрытию",
@@ -162,7 +162,7 @@
 	attachment_holes = FALSE
 
 /turf/open/floor/plating/foam/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "покрытие из металлопены",
 		GENITIVE = "покрытия из металлопены",
 		DATIVE = "покрытию из металлопены",
@@ -243,7 +243,7 @@
 	var/deconstruction_state = PLATE_INTACT
 
 /turf/open/floor/plating/reinforced/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "укреплённое покрытие",
 		GENITIVE = "укреплённого покрытия",
 		DATIVE = "укреплённому покрытию",

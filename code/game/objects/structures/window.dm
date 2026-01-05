@@ -39,7 +39,7 @@
 	var/added_leaning = FALSE
 
 /obj/structure/window/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "окно",
 		GENITIVE = "окна",
 		DATIVE = "окну",
@@ -508,7 +508,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/unanchored/spawner, 0)
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT)
 
 /obj/structure/window/reinforced/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "армированное окно",
 		GENITIVE = "армированного окна",
 		DATIVE = "армированному окну",
@@ -655,7 +655,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/unanchored/spawner,
 	custom_materials = list(/datum/material/alloy/plasmaglass = SHEET_MATERIAL_AMOUNT)
 
 /obj/structure/window/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменное окно",
 		GENITIVE = "плазменного окна",
 		DATIVE = "плазменному окну",
@@ -696,7 +696,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/plasma/spawner, 0)
 	custom_materials = list(/datum/material/alloy/plasmaglass = SHEET_MATERIAL_AMOUNT, /datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT)
 
 /obj/structure/window/reinforced/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "армированное плазменное окно",
 		GENITIVE = "армированного плазменного окна",
 		DATIVE = "армированному плазменному окну",
@@ -726,7 +726,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/plasma/spawner, 0)
 	icon_state = "twindow"
 
 /obj/structure/window/reinforced/tinted/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тонированное окно",
 		GENITIVE = "тонированного окна",
 		DATIVE = "тонированному окну",
@@ -742,7 +742,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/spawner, 0)
 	icon_state = "fwindow"
 
 /obj/structure/window/reinforced/tinted/frosted/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "матовое окно",
 		GENITIVE = "матового окна",
 		DATIVE = "матовому окну",
@@ -772,7 +772,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT * 2)
 
 /obj/structure/window/fulltile/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "окно",
 		GENITIVE = "окна",
 		DATIVE = "окну",
@@ -843,7 +843,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT * 2, /datum/material/iron = SHEET_MATERIAL_AMOUNT)
 
 /obj/structure/window/reinforced/fulltile/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "армированное окно",
 		GENITIVE = "армированного окна",
 		DATIVE = "армированному окну",
@@ -909,7 +909,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	glass_material_datum = /datum/material/alloy/titaniumglass
 
 /obj/structure/window/reinforced/shuttle/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "окно шаттла",
 		GENITIVE = "окна шаттла",
 		DATIVE = "окну шаттла",
@@ -940,7 +940,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
 /obj/structure/window/reinforced/shuttle/indestructible/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "закалённое окно шаттла",
 		GENITIVE = "закалённого окна шаттла",
 		DATIVE = "закалённому окну шаттла",
@@ -985,7 +985,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	glass_material_datum = /datum/material/alloy/plastitaniumglass
 
 /obj/structure/window/reinforced/plasma/plastitanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "пластитановое окно",
 		GENITIVE = "пластитанового окна",
 		DATIVE = "пластитановому окну",
@@ -1021,7 +1021,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
 /obj/structure/window/reinforced/plasma/plastitanium/indestructible/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "закалённое пластитановое окно",
 		GENITIVE = "закалённого пластитанового окна",
 		DATIVE = "закалённому пластитановому окну",
@@ -1069,7 +1069,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	var/static/mutable_appearance/paper = mutable_appearance('icons/obj/smooth_structures/structure_variations.dmi',icon_state = "paper-whole", layer = ABOVE_OBJ_LAYER - 0.1)
 
 /obj/structure/window/paperframe/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бумажная перегородка",
 		GENITIVE = "бумажной перегородки",
 		DATIVE = "бумажной перегородке",
@@ -1141,7 +1141,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	custom_materials = list(/datum/material/bronze = SHEET_MATERIAL_AMOUNT * 1)
 
 /obj/structure/window/bronze/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бронзовое окно",
 		GENITIVE = "бронзового окна",
 		DATIVE = "бронзовому окну",

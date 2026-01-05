@@ -41,7 +41,7 @@
 	acid = 100
 
 /obj/machinery/door/window/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внутренняя дверь",
 		GENITIVE = "внутренней двери",
 		DATIVE = "внутренней двери",
@@ -510,7 +510,7 @@
 	explosion_block = 1
 
 /obj/machinery/door/window/brigdoor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "защищённая дверь",
 		GENITIVE = "защищённой двери",
 		DATIVE = "защищённой двери",
@@ -525,7 +525,7 @@
 	req_access = list(ACCESS_BRIG)
 
 /obj/machinery/door/window/brigdoor/security/cell/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "дверь камеры",
 		GENITIVE = "двери камеры",
 		DATIVE = "двери камеры",
@@ -539,7 +539,7 @@
 	req_one_access = list(ACCESS_SECURITY)
 
 /obj/machinery/door/window/brigdoor/security/holding/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "дверь изолятора",
 		GENITIVE = "двери изолятора",
 		DATIVE = "двери изолятора",

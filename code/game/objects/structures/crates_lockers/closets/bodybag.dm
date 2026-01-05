@@ -28,7 +28,7 @@
 	var/tag_name
 
 /obj/structure/closet/body_bag/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мешок для трупов",
 		GENITIVE = "мешка для трупов",
 		DATIVE = "мешку для трупов",
@@ -150,7 +150,7 @@
 	max_mob_size = MOB_SIZE_LARGE
 
 /obj/structure/closet/body_bag/bluespace/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "блюспейс мешок для трупов",
 		GENITIVE = "блюспейс мешка для трупов",
 		DATIVE = "блюспейс мешку для трупов",
@@ -222,7 +222,7 @@
 	var/datum/gas_mixture/air_contents = null
 
 /obj/structure/closet/body_bag/environmental/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "защитный мешок",
 		GENITIVE = "защитного мешка",
 		DATIVE = "защитному мешку",
@@ -278,7 +278,7 @@
 	weather_protection = list(TRAIT_WEATHER_IMMUNE)
 
 /obj/structure/closet/body_bag/environmental/nanotrasen/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "элитный защитный мешок",
 		GENITIVE = "элитного защитного мешка",
 		DATIVE = "элитному защитному мешку",
@@ -304,7 +304,7 @@
 	var/sinch_sound = 'sound/items/equip/toolbelt_equip.ogg'
 
 /obj/structure/closet/body_bag/environmental/prisoner/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мешок для транспортировки заключённых",
 		GENITIVE = "мешка для транспортировки заключённых",
 		DATIVE = "мешку для транспортировки заключённых",
@@ -410,7 +410,7 @@
 	sinch_time = 20 SECONDS
 
 /obj/structure/closet/body_bag/environmental/prisoner/syndicate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мешок для транспортировки заключённых Синдиката",
 		GENITIVE = "мешка для транспортировки заключённых Синдиката",
 		DATIVE = "мешку для транспортировки заключённых Синдиката",
@@ -437,7 +437,7 @@
 	weather_protection = list(TRAIT_SNOWSTORM_IMMUNE)
 
 /obj/structure/closet/body_bag/environmental/hardlight/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "голографический мешок для трупов",
 		GENITIVE = "голографического мешка для трупов",
 		DATIVE = "голографическому мешку для трупов",
@@ -459,7 +459,7 @@
 	weather_protection = list(TRAIT_SNOWSTORM_IMMUNE)
 
 /obj/structure/closet/body_bag/environmental/prisoner/hardlight/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "голографический мешок для заключённых",
 		GENITIVE = "голографического мешка для заключённых",
 		DATIVE = "голографическому мешку для заключённых",

@@ -40,7 +40,7 @@
 	)
 
 /obj/item/airlock_painter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "покрасчик шлюзов",
 		GENITIVE = "покрасчика шлюзов",
 		DATIVE = "покрасчику шлюзов",

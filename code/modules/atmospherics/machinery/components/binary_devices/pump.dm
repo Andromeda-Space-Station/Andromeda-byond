@@ -23,7 +23,7 @@
 	var/target_pressure = ONE_ATMOSPHERE
 
 /obj/machinery/atmospherics/components/binary/pump/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "газовая помпа",
 		GENITIVE = "газовой помпы",
 		DATIVE = "газовой помпе",

@@ -6,7 +6,7 @@
 	req_access = list(ACCESS_MEDICAL)
 
 /obj/structure/closet/secure_closet/medical1/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с медикаментами",
 		GENITIVE = "шкафа с медикаментами",
 		DATIVE = "шкафу с медикаментами",
@@ -37,7 +37,7 @@
 	req_access = list(ACCESS_SURGERY)
 
 /obj/structure/closet/secure_closet/medical2/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф с анестетиками",
 		GENITIVE = "шкафа с анестетиками",
 		DATIVE = "шкафу с анестетиками",
@@ -60,7 +60,7 @@
 	icon_state = "med_secure"
 
 /obj/structure/closet/secure_closet/medical3/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф врача",
 		GENITIVE = "шкафа врача",
 		DATIVE = "шкафу врача",
@@ -90,7 +90,7 @@
 	close_sound_volume = 50
 
 /obj/structure/closet/secure_closet/psychology/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф психолога",
 		GENITIVE = "шкафа психолога",
 		DATIVE = "шкафу психолога",
@@ -120,7 +120,7 @@
 	icon_state = "cmo"
 
 /obj/structure/closet/secure_closet/chief_medical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф главного врача",
 		GENITIVE = "шкафа главного врача",
 		DATIVE = "шкафу главного врача",
@@ -161,7 +161,7 @@
 	req_access = list(ACCESS_SURGERY)
 
 /obj/structure/closet/secure_closet/animal/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф контроля животных",
 		GENITIVE = "шкафа контроля животных",
 		DATIVE = "шкафу контроля животных",
@@ -184,7 +184,7 @@
 	icon_state = "chem_secure"
 
 /obj/structure/closet/secure_closet/chemical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "химический шкаф",
 		GENITIVE = "химического шкафа",
 		DATIVE = "химическому шкафу",
@@ -209,7 +209,7 @@
 	req_access = list(ACCESS_PLUMBING)
 
 /obj/structure/closet/secure_closet/chemical/heisenberg/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "продвинутый химический шкаф",
 		GENITIVE = "продвинутого химического шкафа",
 		DATIVE = "продвинутому химическому шкафу",
@@ -233,7 +233,7 @@
 	icon_state = "paramed_secure"
 
 /obj/structure/closet/secure_closet/paramedic/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шкаф парамедика",
 		GENITIVE = "шкафа парамедика",
 		DATIVE = "шкафу парамедика",

@@ -33,7 +33,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(
 	var/is_fully_initialized = FALSE
 
 /obj/structure/cable/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "силовой кабель",
 		GENITIVE = "силового кабеля",
 		DATIVE = "силовому кабелю",
@@ -478,7 +478,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(
 	var/target_layer = CABLE_LAYER_2
 
 /obj/item/stack/cable_coil/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "моток кабеля",
 		GENITIVE = "мотка кабеля",
 		DATIVE = "мотку кабеля",
@@ -731,7 +731,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(
 	color = CABLE_COLOR_WHITE
 
 /obj/structure/cable/multilayer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "многослойный хаб",
 		GENITIVE = "многослойного хаба",
 		DATIVE = "многослойному хабу",

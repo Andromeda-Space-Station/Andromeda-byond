@@ -160,7 +160,7 @@
 	rad_insulation = RAD_MEDIUM_INSULATION
 
 /obj/machinery/door/airlock/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шлюз",
 		GENITIVE = "шлюза",
 		DATIVE = "шлюзу",
@@ -1954,7 +1954,7 @@
 	normal_integrity = 450
 
 /obj/machinery/door/airlock/command/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шлюз командования",
 		GENITIVE = "шлюза командования",
 		DATIVE = "шлюзу командования",
@@ -1971,7 +1971,7 @@
 	normal_integrity = 450
 
 /obj/machinery/door/airlock/security/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шлюз службы безопасности",
 		GENITIVE = "шлюза службы безопасности",
 		DATIVE = "шлюзу службы безопасности",
@@ -1986,7 +1986,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_eng
 
 /obj/machinery/door/airlock/engineering/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инженерный шлюз",
 		GENITIVE = "инженерного шлюза",
 		DATIVE = "инженерному шлюзу",
@@ -2001,7 +2001,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_med
 
 /obj/machinery/door/airlock/medical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "медицинский шлюз",
 		GENITIVE = "медицинского шлюза",
 		DATIVE = "медицинскому шлюзу",
@@ -2016,7 +2016,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_hydro
 
 /obj/machinery/door/airlock/hydroponics/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шлюз гидропоники",
 		GENITIVE = "шлюза гидропоники",
 		DATIVE = "шлюзу гидропоники",
@@ -2032,7 +2032,7 @@
 	normal_integrity = 250
 
 /obj/machinery/door/airlock/maintenance/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "технический шлюз",
 		GENITIVE = "технического шлюза",
 		DATIVE = "техническому шлюзу",
@@ -2047,7 +2047,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_extmai
 
 /obj/machinery/door/airlock/maintenance/external/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внешний технический шлюз",
 		GENITIVE = "внешнего технического шлюза",
 		DATIVE = "внешнему техническому шлюзу",
@@ -2062,7 +2062,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_min
 
 /obj/machinery/door/airlock/mining/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шлюз снабжения",
 		GENITIVE = "шлюза снабжения",
 		DATIVE = "шлюзу снабжения",
@@ -2077,7 +2077,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_atmo
 
 /obj/machinery/door/airlock/atmos/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "атмосферный шлюз",
 		GENITIVE = "атмосферного шлюза",
 		DATIVE = "атмосферному шлюзу",
@@ -2092,7 +2092,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_research
 
 /obj/machinery/door/airlock/research/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "исследовательский шлюз",
 		GENITIVE = "исследовательского шлюза",
 		DATIVE = "исследовательскому шлюзу",
@@ -2108,7 +2108,7 @@
 	can_be_glass = FALSE
 
 /obj/machinery/door/airlock/freezer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шлюз морозильной камеры",
 		GENITIVE = "шлюза морозильной камеры",
 		DATIVE = "шлюзу морозильной камеры",
@@ -2123,7 +2123,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_science
 
 /obj/machinery/door/airlock/science/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "научный шлюз",
 		GENITIVE = "научного шлюза",
 		DATIVE = "научному шлюзу",
@@ -2138,7 +2138,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_viro
 
 /obj/machinery/door/airlock/virology/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "вирусологический шлюз",
 		GENITIVE = "вирусологического шлюза",
 		DATIVE = "вирусологическому шлюзу",
@@ -2155,7 +2155,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный шлюз",
 		GENITIVE = "стеклянного шлюза",
 		DATIVE = "стеклянному шлюзу",
@@ -2174,7 +2174,7 @@
 	id_tag = INCINERATOR_SYNDICATELAVA_AIRLOCK_INTERIOR
 
 /obj/machinery/door/airlock/glass/incinerator/syndicatelava_interior/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внутренний шлюз турбины",
 		GENITIVE = "внутреннего шлюза турбины",
 		DATIVE = "внутреннему шлюзу турбины",
@@ -2188,7 +2188,7 @@
 	id_tag = INCINERATOR_SYNDICATELAVA_AIRLOCK_EXTERIOR
 
 /obj/machinery/door/airlock/glass/incinerator/syndicatelava_exterior/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внешний шлюз турбины",
 		GENITIVE = "внешнего шлюза турбины",
 		DATIVE = "внешнему шлюзу турбины",
@@ -2204,7 +2204,7 @@
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/command/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный шлюз командования",
 		GENITIVE = "стеклянного шлюза командования",
 		DATIVE = "стеклянному шлюзу командования",
@@ -2219,7 +2219,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/engineering/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный инженерный шлюз",
 		GENITIVE = "стеклянного инженерного шлюза",
 		DATIVE = "стеклянному инженерному шлюзу",
@@ -2238,7 +2238,7 @@
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/security/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный шлюз службы безопасности",
 		GENITIVE = "стеклянного шлюза службы безопасности",
 		DATIVE = "стеклянному шлюзу службы безопасности",
@@ -2253,7 +2253,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/medical/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный медицинский шлюз",
 		GENITIVE = "стеклянного медицинского шлюза",
 		DATIVE = "стеклянному медицинскому шлюзу",
@@ -2268,7 +2268,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/hydroponics/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный шлюз гидропоники",
 		GENITIVE = "стеклянного шлюза гидропоники",
 		DATIVE = "стеклянному шлюзу гидропоники",
@@ -2283,7 +2283,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/research/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный исследовательский шлюз",
 		GENITIVE = "стеклянного исследовательского шлюза",
 		DATIVE = "стеклянному исследовательскому шлюзу",
@@ -2301,7 +2301,7 @@
 	id_tag = INCINERATOR_ORDMIX_AIRLOCK_INTERIOR
 
 /obj/machinery/door/airlock/research/glass/incinerator/ordmix_interior/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внутренний шлюз камеры смешивания",
 		GENITIVE = "внутреннего шлюза камеры смешивания",
 		DATIVE = "внутреннему шлюзу камеры смешивания",
@@ -2315,7 +2315,7 @@
 	id_tag = INCINERATOR_ORDMIX_AIRLOCK_EXTERIOR
 
 /obj/machinery/door/airlock/research/glass/incinerator/ordmix_exterior/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внешний шлюз камеры смешивания",
 		GENITIVE = "внешнего шлюза камеры смешивания",
 		DATIVE = "внешнему шлюзу камеры смешивания",
@@ -2330,7 +2330,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/mining/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный шлюз снабжения",
 		GENITIVE = "стеклянного шлюза снабжения",
 		DATIVE = "стеклянному шлюзу снабжения",
@@ -2345,7 +2345,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/atmos/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный атмосферный шлюз",
 		GENITIVE = "стеклянного атмосферного шлюза",
 		DATIVE = "стеклянному атмосферному шлюзу",
@@ -2363,7 +2363,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/science/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный научный шлюз",
 		GENITIVE = "стеклянного научного шлюза",
 		DATIVE = "стеклянному научному шлюзу",
@@ -2378,7 +2378,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/virology/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный вирусологический шлюз",
 		GENITIVE = "стеклянного вирусологического шлюза",
 		DATIVE = "стеклянному вирусологическому шлюзу",
@@ -2393,7 +2393,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/maintenance/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "стеклянный технический шлюз",
 		GENITIVE = "стеклянного технического шлюза",
 		DATIVE = "стеклянному техническому шлюзу",
@@ -2409,7 +2409,7 @@
 	normal_integrity = 200
 
 /obj/machinery/door/airlock/maintenance/external/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внешний стеклянный технический шлюз",
 		GENITIVE = "внешнего стеклянного технического шлюза",
 		DATIVE = "внешнему стеклянному техническому шлюзу",
@@ -2426,7 +2426,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_gold
 
 /obj/machinery/door/airlock/gold/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "золотой шлюз",
 		GENITIVE = "золотого шлюза",
 		DATIVE = "золотому шлюзу",
@@ -2459,7 +2459,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_silver
 
 /obj/machinery/door/airlock/silver/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "серебряный шлюз",
 		GENITIVE = "серебряного шлюза",
 		DATIVE = "серебряному шлюзу",
@@ -2480,7 +2480,7 @@
 	explosion_block = 2
 
 /obj/machinery/door/airlock/diamond/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "алмазный шлюз",
 		GENITIVE = "алмазного шлюза",
 		DATIVE = "алмазному шлюзу",
@@ -2503,7 +2503,7 @@
 	var/actually_radioactive = TRUE
 
 /obj/machinery/door/airlock/uranium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "урановый шлюз",
 		GENITIVE = "уранового шлюза",
 		DATIVE = "урановому шлюзу",
@@ -2546,7 +2546,7 @@
 	material_modifier = 0.25
 
 /obj/machinery/door/airlock/plasma/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "плазменный шлюз",
 		GENITIVE = "плазменного шлюза",
 		DATIVE = "плазменному шлюзу",
@@ -2574,7 +2574,7 @@
 	doorOpen = 'sound/items/bikehorn.ogg'
 
 /obj/machinery/door/airlock/bananium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бананиумовый шлюз",
 		GENITIVE = "бананиумового шлюза",
 		DATIVE = "бананиумовому шлюзу",
@@ -2593,7 +2593,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_sandstone
 
 /obj/machinery/door/airlock/sandstone/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "песчаниковый шлюз",
 		GENITIVE = "песчаникового шлюза",
 		DATIVE = "песчаниковому шлюзу",
@@ -2612,7 +2612,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_wood
 
 /obj/machinery/door/airlock/wood/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "деревянный шлюз",
 		GENITIVE = "деревянного шлюза",
 		DATIVE = "деревянному шлюзу",
@@ -2633,7 +2633,7 @@
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/titanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шлюз шаттла",
 		GENITIVE = "шлюза шаттла",
 		DATIVE = "шлюзу шаттла",
@@ -2654,7 +2654,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_bronze
 
 /obj/machinery/door/airlock/bronze/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бронзовый шлюз",
 		GENITIVE = "бронзового шлюза",
 		DATIVE = "бронзовому шлюзу",
@@ -2678,7 +2678,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_public
 
 /obj/machinery/door/airlock/public/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "публичный шлюз",
 		GENITIVE = "публичного шлюза",
 		DATIVE = "публичному шлюзу",
@@ -2693,7 +2693,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/public/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "публичный стеклянный шлюз",
 		GENITIVE = "публичного стеклянного шлюза",
 		DATIVE = "публичному стеклянному шлюзу",
@@ -2711,7 +2711,7 @@
 	id_tag = INCINERATOR_ATMOS_AIRLOCK_INTERIOR
 
 /obj/machinery/door/airlock/public/glass/incinerator/atmos_interior/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внутренний шлюз турбины",
 		GENITIVE = "внутреннего шлюза турбины",
 		DATIVE = "внутреннему шлюзу турбины",
@@ -2725,7 +2725,7 @@
 	id_tag = INCINERATOR_ATMOS_AIRLOCK_EXTERIOR
 
 /obj/machinery/door/airlock/public/glass/incinerator/atmos_exterior/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внешний шлюз турбины",
 		GENITIVE = "внешнего шлюза турбины",
 		DATIVE = "внешнему шлюзу турбины",
@@ -2747,7 +2747,7 @@
 	var/space_dir = null
 
 /obj/machinery/door/airlock/external/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внешний шлюз",
 		GENITIVE = "внешнего шлюза",
 		DATIVE = "внешнему шлюзу",
@@ -2804,7 +2804,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/external/glass/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "внешний стеклянный шлюз",
 		GENITIVE = "внешнего стеклянного шлюза",
 		DATIVE = "внешнему стеклянному шлюзу",
@@ -2846,7 +2846,7 @@
 	security_level = 6
 
 /obj/machinery/door/airlock/vault/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "дверь хранилища",
 		GENITIVE = "двери хранилища",
 		DATIVE = "двери хранилища",
@@ -2867,7 +2867,7 @@
 	can_be_glass = FALSE
 
 /obj/machinery/door/airlock/hatch/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "герметичный люк",
 		GENITIVE = "герметичного люка",
 		DATIVE = "герметичному люку",
@@ -2885,7 +2885,7 @@
 	can_be_glass = FALSE
 
 /obj/machinery/door/airlock/maintenance_hatch/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "технический люк",
 		GENITIVE = "технического люка",
 		DATIVE = "техническому люку",
@@ -2908,7 +2908,7 @@
 	damage_deflection = 30
 
 /obj/machinery/door/airlock/highsecurity/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "высокотехнологичный защитный шлюз",
 		GENITIVE = "высокотехнологичного защитного шлюза",
 		DATIVE = "высокотехнологичному защитному шлюзу",
@@ -2926,7 +2926,7 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_shuttle
 
 /obj/machinery/door/airlock/shuttle/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шлюз шаттла",
 		GENITIVE = "шлюза шаттла",
 		DATIVE = "шлюзу шаттла",
@@ -2955,7 +2955,7 @@
 	security_level = 1
 
 /obj/machinery/door/airlock/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетный шлюз",
 		GENITIVE = "инопланетного шлюза",
 		DATIVE = "инопланетному шлюзу",
@@ -2981,7 +2981,7 @@
 	var/stealthy = FALSE
 
 /obj/machinery/door/airlock/cult/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "культистский шлюз",
 		GENITIVE = "культистского шлюза",
 		DATIVE = "культистскому шлюзу",
@@ -3078,7 +3078,7 @@
 	armor_type = /datum/armor/none
 
 /obj/machinery/door/airlock/cult/weak/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "хрупкий культистский шлюз",
 		GENITIVE = "хрупкого культистского шлюза",
 		DATIVE = "хрупкому культистскому шлюзу",

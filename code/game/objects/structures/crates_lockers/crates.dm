@@ -40,7 +40,7 @@
 	var/weld_z = 0
 
 /obj/structure/closet/crate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик",
 		GENITIVE = "ящика",
 		DATIVE = "ящику",
@@ -199,7 +199,7 @@
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 5)
 
 /obj/structure/closet/crate/coffin/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гроб",
 		GENITIVE = "гроба",
 		DATIVE = "гробу",
@@ -219,7 +219,7 @@
 	weld_z = 5
 
 /obj/structure/closet/crate/trashcart/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мусорная тележка",
 		GENITIVE = "мусорной тележки",
 		DATIVE = "мусорной тележке",
@@ -239,7 +239,7 @@
 	can_weld_shut = FALSE
 
 /obj/structure/closet/crate/trashcart/laundry/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тележка для белья",
 		GENITIVE = "тележки для белья",
 		DATIVE = "тележке для белья",
@@ -275,7 +275,7 @@
 	base_icon_state = "o2crate"
 
 /obj/structure/closet/crate/internals/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик с дыхательным снаряжением",
 		GENITIVE = "ящика с дыхательным снаряжением",
 		DATIVE = "ящику с дыхательным снаряжением",
@@ -292,7 +292,7 @@
 	base_icon_state = "medicalcrate"
 
 /obj/structure/closet/crate/medical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "медицинский ящик",
 		GENITIVE = "медицинского ящика",
 		DATIVE = "медицинскому ящику",
@@ -309,7 +309,7 @@
 	base_icon_state = "deforest"
 
 /obj/structure/closet/crate/deforest/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "медицинский ящик DeForest",
 		GENITIVE = "медицинского ящика DeForest",
 		DATIVE = "медицинскому ящику DeForest",
@@ -336,7 +336,7 @@
 	var/minimum_temperature = T0C - 60
 
 /obj/structure/closet/crate/freezer/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "морозильник",
 		GENITIVE = "морозильника",
 		DATIVE = "морозильнику",
@@ -365,7 +365,7 @@
 	gender = MALE
 
 /obj/structure/closet/crate/freezer/blood/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "морозильник для крови",
 		GENITIVE = "морозильника для крови",
 		DATIVE = "морозильнику для крови",
@@ -395,7 +395,7 @@
 	gender = MALE
 
 /obj/structure/closet/crate/freezer/surplus_limbs/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик с протезами",
 		GENITIVE = "ящика с протезами",
 		DATIVE = "ящику с протезами",
@@ -421,7 +421,7 @@
 	gender = MALE
 
 /obj/structure/closet/crate/freezer/organ/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "морозильник для органов",
 		GENITIVE = "морозильника для органов",
 		DATIVE = "морозильнику для органов",
@@ -448,7 +448,7 @@
 	base_icon_state = "food"
 
 /obj/structure/closet/crate/freezer/food/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик для еды",
 		GENITIVE = "ящика для еды",
 		DATIVE = "ящику для еды",
@@ -465,7 +465,7 @@
 	base_icon_state = "donkcocrate"
 
 /obj/structure/closet/crate/freezer/donk/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "холодильник Donk Co.",
 		GENITIVE = "холодильника Donk Co.",
 		DATIVE = "холодильнику Donk Co.",
@@ -482,7 +482,7 @@
 	base_icon_state = "selfcrate"
 
 /obj/structure/closet/crate/self/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик S.E.L.F.",
 		GENITIVE = "ящика S.E.L.F.",
 		DATIVE = "ящику S.E.L.F.",
@@ -499,7 +499,7 @@
 	base_icon_state = "radiation"
 
 /obj/structure/closet/crate/radiation/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик радиационной защиты",
 		GENITIVE = "ящика радиационной защиты",
 		DATIVE = "ящику радиационной защиты",
@@ -516,7 +516,7 @@
 	base_icon_state = "hydrocrate"
 
 /obj/structure/closet/crate/hydroponics/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик гидропоники",
 		GENITIVE = "ящика гидропоники",
 		DATIVE = "ящику гидропоники",
@@ -532,7 +532,7 @@
 	base_icon_state = "centcom"
 
 /obj/structure/closet/crate/centcom/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик Центкома",
 		GENITIVE = "ящика Центкома",
 		DATIVE = "ящику Центкома",
@@ -548,7 +548,7 @@
 	base_icon_state = "cargo"
 
 /obj/structure/closet/crate/cargo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "грузовой ящик",
 		GENITIVE = "грузового ящика",
 		DATIVE = "грузовому ящику",
@@ -565,7 +565,7 @@
 	base_icon_state = "robust"
 
 /obj/structure/closet/crate/robust/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик Robust Industries",
 		GENITIVE = "ящика Robust Industries",
 		DATIVE = "ящику Robust Industries",
@@ -581,7 +581,7 @@
 	base_icon_state = "mining"
 
 /obj/structure/closet/crate/cargo/mining/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "шахтёрский ящик",
 		GENITIVE = "шахтёрского ящика",
 		DATIVE = "шахтёрскому ящику",
@@ -597,7 +597,7 @@
 	base_icon_state = "engi_crate"
 
 /obj/structure/closet/crate/engineering/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инженерный ящик",
 		GENITIVE = "инженерного ящика",
 		DATIVE = "инженерному ящику",
@@ -614,7 +614,7 @@
 	base_icon_state = "nakamura"
 
 /obj/structure/closet/crate/nakamura/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инженерный ящик Nakamura",
 		GENITIVE = "инженерного ящика Nakamura",
 		DATIVE = "инженерному ящику Nakamura",
@@ -634,7 +634,7 @@
 	base_icon_state = "atmos"
 
 /obj/structure/closet/crate/engineering/atmos/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "атмосферный ящик",
 		GENITIVE = "атмосферного ящика",
 		DATIVE = "атмосферному ящику",
@@ -651,7 +651,7 @@
 	base_icon_state = "engi_crate"
 
 /obj/structure/closet/crate/rcd/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик для РСУ",
 		GENITIVE = "ящика для РСУ",
 		DATIVE = "ящику для РСУ",
@@ -674,7 +674,7 @@
 	base_icon_state = "scicrate"
 
 /obj/structure/closet/crate/science/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "научный ящик",
 		GENITIVE = "научного ящика",
 		DATIVE = "научному ящику",
@@ -690,7 +690,7 @@
 	base_icon_state = "robo"
 
 /obj/structure/closet/crate/science/robo/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик робототехники",
 		GENITIVE = "ящика робототехники",
 		DATIVE = "ящику робототехники",
@@ -706,7 +706,7 @@
 	base_icon_state = "robo"
 
 /obj/structure/closet/crate/mod/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "ящик MOD",
 		GENITIVE = "ящика MOD",
 		DATIVE = "ящику MOD",
@@ -729,7 +729,7 @@
 	base_icon_state = "engi_e_crate"
 
 /obj/structure/closet/crate/solarpanel_small/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "бюджетный ящик солнечных панелей",
 		GENITIVE = "бюджетного ящика солнечных панелей",
 		DATIVE = "бюджетному ящику солнечных панелей",
@@ -754,7 +754,7 @@
 	base_icon_state = "gold"
 
 /obj/structure/closet/crate/goldcrate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "золотой ящик",
 		GENITIVE = "золотого ящика",
 		DATIVE = "золотому ящику",
@@ -781,7 +781,7 @@
 	base_icon_state = "silver"
 
 /obj/structure/closet/crate/silvercrate/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "серебряный ящик",
 		GENITIVE = "серебряного ящика",
 		DATIVE = "серебряному ящику",
@@ -817,7 +817,7 @@
 	var/glitter_color = "#ff8080"
 
 /obj/structure/closet/crate/glitter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "розовый ящик",
 		GENITIVE = "розового ящика",
 		DATIVE = "розовому ящику",
@@ -844,7 +844,7 @@
 	glitter_color = "#db80ff"
 
 /obj/structure/closet/crate/glitter/lavender/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "лавандовый ящик",
 		GENITIVE = "лавандового ящика",
 		DATIVE = "лавандовому ящику",

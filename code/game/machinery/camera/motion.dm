@@ -68,7 +68,7 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF | FREEZE_PROOF
 
 /obj/machinery/camera/motion/thunderdome/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "развлекательная камера",
 		GENITIVE = "развлекательной камеры",
 		DATIVE = "развлекательной камере",

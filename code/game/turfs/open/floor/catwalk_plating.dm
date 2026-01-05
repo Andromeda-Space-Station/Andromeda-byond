@@ -22,7 +22,7 @@
 	var/catwalk_type = "maint"
 
 /turf/open/floor/catwalk_floor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "мостик",
 		GENITIVE = "мостика",
 		DATIVE = "мостику",
@@ -78,7 +78,7 @@
 	catwalk_type = "iron"
 
 /turf/open/floor/catwalk_floor/iron/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "железный мостик",
 		GENITIVE = "железного мостика",
 		DATIVE = "железному мостику",
@@ -94,7 +94,7 @@
 	catwalk_type = "whiteiron"
 
 /turf/open/floor/catwalk_floor/iron_white/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "белый железный мостик",
 		GENITIVE = "белого железного мостика",
 		DATIVE = "белому железному мостику",
@@ -110,7 +110,7 @@
 	catwalk_type = "darkiron"
 
 /turf/open/floor/catwalk_floor/iron_dark/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "тёмный железный мостик",
 		GENITIVE = "тёмного железного мостика",
 		DATIVE = "тёмному железному мостику",
@@ -127,7 +127,7 @@
 	rust_resistance = RUST_RESISTANCE_TITANIUM
 
 /turf/open/floor/catwalk_floor/titanium/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "титановый мостик",
 		GENITIVE = "титанового мостика",
 		DATIVE = "титановому мостику",
@@ -143,7 +143,7 @@
 	catwalk_type = "smoothiron"
 
 /turf/open/floor/catwalk_floor/iron_smooth/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гладкий железный мостик",
 		GENITIVE = "гладкого железного мостика",
 		DATIVE = "гладкому железному мостику",

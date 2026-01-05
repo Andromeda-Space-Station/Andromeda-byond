@@ -7,7 +7,7 @@
 	)
 
 /obj/item/disk/surgery/brainwashing/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "диск промывки мозгов",
 		GENITIVE = "диска промывки мозгов",
 		DATIVE = "диску промывки мозгов",

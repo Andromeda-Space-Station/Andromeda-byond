@@ -31,7 +31,7 @@
 	acid = 30
 
 /obj/item/wrench/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гаечный ключ",
 		GENITIVE = "гаечного ключа",
 		DATIVE = "гаечному ключу",
@@ -60,7 +60,7 @@
 	toolspeed = 0.1
 
 /obj/item/wrench/abductor/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "инопланетный ключ",
 		GENITIVE = "инопланетного ключа",
 		DATIVE = "инопланетному ключу",
@@ -82,7 +82,7 @@
 	var/suicider
 
 /obj/item/wrench/medical/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "медицинский ключ",
 		GENITIVE = "медицинского ключа",
 		DATIVE = "медицинскому ключу",
@@ -124,7 +124,7 @@
 	toolspeed = 0.5
 
 /obj/item/wrench/cyborg/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "гидравлический ключ",
 		GENITIVE = "гидравлического ключа",
 		DATIVE = "гидравлическому ключу",
@@ -145,7 +145,7 @@
 	tool_behaviour = null
 
 /obj/item/wrench/combat/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "боевой ключ",
 		GENITIVE = "боевого ключа",
 		DATIVE = "боевому ключу",
@@ -189,7 +189,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/wrench/bolter/get_ru_names()
-	return list(
+	return alist(
 		NOMINATIVE = "болтер-ключ",
 		GENITIVE = "болтер-ключа",
 		DATIVE = "болтер-ключу",
