@@ -130,7 +130,7 @@
 	if((HAS_TRAIT(target, TRAIT_ANALGESIA) && !(HAS_TRAIT(target, TRAIT_STASIS))) || target.stat == DEAD)
 		speed_mod *= SURGERY_SPEED_TRAIT_ANALGESIA
 
-	if(ishuman(user))
+	if(is_biological_carbon(target))
 		var/mob/living/carbon/human/surgeon = user
 		if(is_surgeon_clothing_bloody(surgeon))
 			sterility_risk += 2
@@ -146,28 +146,28 @@
 			sterility_risk += 3
 			sterility_warnings += "руки в крови"
 
-	if(tool && is_item_bloody(tool))
-		sterility_risk += 5
-		sterility_warnings += "инструмент"
+		if(tool && is_item_bloody(tool))
+			sterility_risk += 5
+			sterility_warnings += "инструмент"
 
-	if(check_area_cleanliness(get_turf(target)))
-		sterility_risk += 3
-		sterility_warnings += "зона"
+		if(check_area_cleanliness(get_turf(target)))
+			sterility_risk += 3
+			sterility_warnings += "зона"
 
-	// Показываем ОДИН баллон со всеми нарушениями
-	if(length(sterility_warnings) > 0)
-		var/warning_text = "нестерильно: [english_list(sterility_warnings)]"
-		user.balloon_alert(user, warning_text)
+		// Показываем ОДИН баллон со всеми нарушениями
+		if(length(sterility_warnings) > 0)
+			var/warning_text = "нестерильно: [english_list(sterility_warnings)]"
+			user.balloon_alert(user, warning_text)
 
-	if(sterility_risk > 0)
-		surgery.sterility_risk_total += sterility_risk
+		if(sterility_risk > 0)
+			surgery.sterility_risk_total += sterility_risk
 
-		var/current_total = surgery.sterility_risk_total
-		var/display_risk = min(current_total, 100)
-		var/risk_level = get_risk_level_text(display_risk)
+			var/current_total = surgery.sterility_risk_total
+			var/display_risk = min(current_total, 100)
+			var/risk_level = get_risk_level_text(display_risk)
 
-		// Сообщение хирургу
-		to_chat(user, span_danger("Нарушение стерильности! [risk_level] риск осложнений."))
+			// Сообщение хирургу
+			to_chat(user, span_danger("Нарушение стерильности! [risk_level] риск осложнений."))
 
 	var/implement_speed_mod = 1
 	if(implement_type) //this means it isn't a require hand or any item step.

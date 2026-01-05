@@ -123,6 +123,20 @@
 // Rewokin: Если механ с санитарией пройдёт бета тест, то обязательно добавить проверку на наличие медицинской маски
 // И шапочки хирурга (Если хирург лысый, то скип проверки шапочеки)
 
+
+/**
+ * Проверка на то, является ли моб органиком, для наложения штрафов санитарии (как пример, андроид)
+ */
+/proc/is_biological_carbon(mob/living/target)
+	if(!iscarbon(target))
+		return FALSE
+	var/mob/living/carbon/carbon_target = target
+	var/datum/species/target_species = carbon_target.dna?.species
+	// Если нет вида или вид имеет флаг MOB_ROBOTIC — не биологический
+	if(!target_species || (target_species.inherent_biotypes & MOB_ROBOTIC))
+		return FALSE
+	return TRUE
+
 /**
  * Проверяет, есть ли на предмете видимые следы крови
  * Возвращает TRUE если предмет в крови
@@ -138,6 +152,8 @@
  * Возвращает TRUE если найдена хоть одна вещь в крови
  */
 /proc/is_surgeon_clothing_bloody(mob/living/carbon/human/surgeon)
+	if(issilicon(surgeon))
+		return FALSE
 	if(!surgeon || !istype(surgeon))
 		return FALSE
 	// Все слоты одежды
@@ -164,6 +180,8 @@
  * Проверяет, есть ли перчатки у хирурга, если есть, то какие
  */
 /proc/has_proper_surgical_gloves(mob/living/carbon/human/surgeon)
+	if(issilicon(surgeon))
+		return FALSE
 	if(!surgeon || !istype(surgeon))
 		return FALSE
 	// Нет перчаток вообще
@@ -178,6 +196,9 @@
  * Проверяет, есть ли кровь на рука.
  */
 /proc/are_bare_hands_bloody(mob/living/carbon/human/surgeon)
+	if(issilicon(surgeon))
+		return FALSE
+	// Если есть перчатки, то не будет проверять кровь на руках.
 	if(!surgeon || !istype(surgeon) || surgeon.gloves)  // ← если surgeon.gloves = TRUE → то не проверяет руки на наличие крови
 		return FALSE
 	if(surgeon.forensics)

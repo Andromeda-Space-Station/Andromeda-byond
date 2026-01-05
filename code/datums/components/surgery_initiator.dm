@@ -126,6 +126,10 @@
 
 		patient.balloon_alert(user, "прекращение работы над [patient.parse_zone_with_bodypart(selected_zone, INSTRUMENTAL)]")
 
+		// Если операция завершается досрочно, то всё равно будет проверяться санитария.
+		if(the_surgery.sterility_risk_total > 0)
+			the_surgery.apply_sterility_consequences()
+
 		qdel(the_surgery)
 		return
 
