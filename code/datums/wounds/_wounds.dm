@@ -1,117 +1,114 @@
 /*
-	Wounds are specific medical complications that can arise and be applied to (currently) carbons, with a focus on humans. All of the code for and related to this is heavily WIP,
-	and the documentation will be slanted towards explaining what each part/piece is leading up to, until such a time as I finish the core implementations. The original design doc
-	can be found at https://hackmd.io/@Ryll/r1lb4SOwU
+	Раны - это конкретные медицинские осложнения, которые могут возникнуть и быть применены (в настоящее время) к углеродным формам жизни, с акцентом на людей. Весь код, относящийся к этому, находится в стадии активной разработки,
+	и документация будет сосредоточена на объяснении того, к чему ведет каждая часть, до тех пор, пока я не закончу основные реализации. Оригинальный дизайн-документ
+	можно найти по адресу https://hackmd.io/@Ryll/r1lb4SOwU
 
-	Wounds are datums that operate like a mix of diseases, brain traumas, and components, and are applied to a /obj/item/bodypart (preferably attached to a carbon) when they take large spikes of damage
-	or under other certain conditions (thrown hard against a wall, sustained exposure to plasma fire, etc). Wounds are categorized by the three following criteria:
-		1. Severity: Either MODERATE, SEVERE, or CRITICAL. See the hackmd for more details
-		2. Viable zones: What body parts the wound is applicable to. Generic wounds like broken bones and severe burns can apply to every zone, but you may want to add special wounds for certain limbs
-			like a twisted ankle for legs only, or open air exposure of the organs for particularly gruesome chest wounds. Wounds should be able to function for every zone they are marked viable for.
-		3. Damage type: Currently either BRUTE or BURN. Again, see the hackmd for a breakdown of my plans for each type.
+	Раны - это датумы, которые работают как смесь болезней, травм мозга и компонентов, и применяются к /obj/item/bodypart (предпочтительно прикрепленной к углеродной форме жизни), когда они получают большие всплески урона
+	или при других определенных условиях (сильный бросок о стену, длительное воздействие плазменного огня и т.д.). Раны классифицируются по следующим трем критериям:
+		1. Тяжесть: УМЕРЕННАЯ, СЕРЬЕЗНАЯ или КРИТИЧЕСКАЯ. См. hackmd для более подробной информации.
+		2. Применимые зоны: К каким частям тела применима рана. Общие раны, такие как переломы костей и сильные ожоги, могут применяться к каждой зоне, но вы можете добавить особые раны для определенных конечностей,
+			как вывих лодыжки только для ног, или открытое воздействие воздуха на органы для особенно ужасных ран груди. Раны должны быть способны функционировать для каждой зоны, для которой они отмечены как применимые.
+		3. Тип урона: В настоящее время либо БРУТАЛЬНЫЙ, либо ОЖОГОВЫЙ. Опять же, см. hackmd для разъяснения моих планов для каждого типа.
 
-	When a body part suffers enough damage to get a wound, the severity (determined by a roll or something, worse damage leading to worse wounds), affected limb, and damage type sustained are factored into
-	deciding what specific wound will be applied. I'd like to have a few different types of wounds for at least some of the choices, but I'm just doing rough generals for now. Expect polishing
+	Когда часть тела получает достаточно урона, чтобы получить рану, тяжесть (определяемая броском или чем-то подобным, худший урон приводит к худшим ранам), пораженная конечность и полученный тип урона учитываются
+	при решении, какая конкретная рана будет применена. Я хотел бы иметь несколько различных типов ран по крайней мере для некоторых вариантов, но сейчас я делаю лишь грубые общие черты. Ожидайте полировки.
 */
 
 #define WOUND_CRITICAL_BLUNT_DISMEMBER_BONUS 15
 
 /datum/wound
-	/// What it's named
-	var/name = "Wound"
-	/// Optional, what is the wound named when someone is checking themselves (IE, no scanner - just with their eyes and hands)
+	/// Как она называется
+	var/name = "Рана"
+	/// Опционально, как называется рана, когда кто-то проверяет себя (т.е. без сканера - только своими глазами и руками)
 	var/undiagnosed_name
-	/// The description shown on the scanners
+	/// Описание, показываемое на сканерах
 	var/desc = ""
-	/// The basic treatment suggested by health analyzers
+	/// Базовое лечение, предлагаемое анализаторами здоровья
 	var/treat_text = ""
-	/// Even more basic treatment
+	/// Еще более базовое лечение
 	var/treat_text_short = ""
-	/// What the limb looks like on a cursory examine
-	var/examine_desc = "is badly hurt"
+	/// Как выглядит конечность при беглом осмотре
+	var/examine_desc = "сильно повреждена"
 
-	/// Simple description, shortened for clarity if defined. Otherwise just takes the normal desc in the analyzer proc.
+	/// Простое описание, сокращенное для ясности, если определено. Иначе просто берется обычный desc в процедуре анализатора.
 	var/simple_desc
-	/// Simple analyzer's wound description, which focuses less on the clinical aspect of the wound and more on easily readable treatment instructions.
-	var/simple_treat_text = "Go to medbay idiot"
-	/// Improvised remedies indicated by the first aid analyzer only.
-	var/homemade_treat_text = "Remember to drink lots of water!"
+	/// Простое описание раны в анализаторе, которое меньше фокусируется на клиническом аспекте раны и больше на легко читаемых инструкциях по лечению.
+	var/simple_treat_text = "Иди в медотсек, идиот"
+	/// Самодельные средства, указанные только анализатором первой помощи.
+	var/homemade_treat_text = "Не забывайте пить много воды!"
 
-
-	/// If this wound can generate a scar.
+	/// Если эта рана может генерировать шрам.
 	var/can_scar = TRUE
 
-	/// The default file we take our scar descriptions from, if we fail to get the ideal file.
+	/// Файл по умолчанию, из которого мы берем описания шрамов, если нам не удается получить идеальный файл.
 	var/default_scar_file
 
-	/// needed for "your arm has a compound fracture" vs "your arm has some third degree burns"
-	var/a_or_from = "a"
-	/// The visible message when this happens
+	/// Видимое сообщение, когда это происходит
 	var/occur_text = ""
-	/// This sound will be played upon the wound being applied
+	/// Этот звук будет воспроизведен при нанесении раны
 	var/sound_effect
-	/// The volume of [sound_effect]
+	/// Громкость [sound_effect]
 	var/sound_volume = 70
 
-	/// Either WOUND_SEVERITY_TRIVIAL (meme wounds like stubbed toe), WOUND_SEVERITY_MODERATE, WOUND_SEVERITY_SEVERE, or WOUND_SEVERITY_CRITICAL (or maybe WOUND_SEVERITY_LOSS)
+	/// Либо WOUND_SEVERITY_TRIVIAL (мемные раны вроде ушиба пальца), WOUND_SEVERITY_MODERATE, WOUND_SEVERITY_SEVERE, либо WOUND_SEVERITY_CRITICAL (или, возможно, WOUND_SEVERITY_LOSS)
 	var/severity = WOUND_SEVERITY_MODERATE
 
-	/// Who owns the body part that we're wounding
+	/// Кто является владельцем части тела, которую мы раним
 	var/mob/living/carbon/victim = null
-	/// The bodypart we're parented to. Not guaranteed to be non-null, especially after/during removal or if we haven't been applied
+	/// Часть тела, к которой мы привязаны. Не гарантировано, что не-null, особенно после/во время удаления или если мы еще не были применены
 	var/obj/item/bodypart/limb = null
 
-	/// Specific items such as bandages or sutures that can try directly treating this wound
+	/// Конкретные предметы, такие как бинты или швы, которые могут попытаться напрямую лечить эту рану
 	var/list/treatable_by
-	/// Any tools with any of the flags in this list will be usable to try directly treating this wound
+	/// Любые инструменты с любым из флагов в этом списке будут пригодны для попытки прямого лечения этой раны
 	var/list/treatable_tools
-	/// How long it will take to treat this wound with a standard effective tool, assuming it doesn't need surgery
+	/// Сколько времени займет лечение этой раны стандартным эффективным инструментом, предполагая, что ей не нужна операция
 	var/base_treat_time = 5 SECONDS
 
-	/// Using this limb in a do_after interaction will multiply the length by this duration (arms)
+	/// Использование этой конечности во взаимодействии do_after будет умножать длительность на этот штраф (руки)
 	var/interaction_efficiency_penalty = 1
-	/// Incoming damage on this limb will be multiplied by this, to simulate tenderness and vulnerability (mostly burns).
+	/// Входящий урон по этой конечности будет умножен на это, чтобы имитировать болезненность и уязвимость (в основном ожоги).
 	var/damage_multiplier_penalty = 1
-	/// If set and this wound is applied to a leg, we take this many deciseconds extra per step on this leg
+	/// Если установлено и эта рана применена к ноге, мы добавляем столько десятых секунды за каждый шаг на этой ноге
 	var/limp_slowdown
-	/// If this wound has a limp_slowdown and is applied to a leg, it has this chance to limp each step
+	/// Если у этой раны есть limp_slowdown и она применена к ноге, у нее есть этот шанс прихрамывать при каждом шаге
 	var/limp_chance
-	/// How much we're contributing to this limb's bleed_rate
+	/// Насколько мы способствуем кровотечению этой конечности (bleed_rate)
 	var/blood_flow
 
-	/// How much having this wound will add to all future check_wounding() rolls on this limb, to allow progression to worse injuries with repeated damage
+	/// Насколько наличие этой раны добавит ко всем будущим броскам check_wounding() на этой конечности, чтобы позволить прогрессировать к худшим травмам при повторном уроне
 	var/threshold_penalty
-	/// How much having this wound will add to all future check_wounding() rolls on this limb, but only for wounds of its own series
+	/// Насколько наличие этой раны добавит ко всем будущим броскам check_wounding() на этой конечности, но только для ран ее собственной серии
 	var/series_threshold_penalty = 0
-	/// If we need to process each life tick
+	/// Если нам нужно обрабатываться каждый жизненный тик
 	var/processes = FALSE
 
-	/// If having this wound makes currently makes the parent bodypart unusable
+	/// Делает ли наличие этой раны в настоящее время родительскую часть тела непригодной к использованию
 	var/disabling
 
-	/// What status effect we assign on application
+	/// Какой эффект статуса мы назначаем при применении
 	var/status_effect_type
-	/// If we're operating on this wound and it gets healed, we'll nix the surgery too
+	/// Если мы оперируем эту рану и она заживает, мы также отменим операцию
 	var/datum/surgery/attached_surgery
-	/// if you're a lazy git and just throw them in cryo, the wound will go away after accumulating severity * [base_xadone_progress_to_qdel] power
+	/// если вы ленивый тип и просто бросите их в криокамеру, рана исчезнет после накопления тяжесть * [base_xadone_progress_to_qdel] мощности
 	var/cryo_progress
 
-	/// The base amount of [cryo_progress] required to have ourselves fully healed by cryo. Multiplied against severity.
+	/// Базовое количество [cryo_progress], необходимое для полного заживления нас крио. Умножается на тяжесть.
 	var/base_xadone_progress_to_qdel = 33
 
-	/// What kind of scars this wound will create description wise once healed
+	/// Какие шрамы эта рана создаст описательно после заживления
 	var/scar_keyword = "generic"
-	/// If we've already tried scarring while removing (remove_wound can be called twice in a del chain, let's be nice to our code yeah?) TODO: make this cleaner
+	/// Если мы уже пытались создать шрам при удалении (remove_wound может быть вызван дважды в цепочке del, давайте будем добры к нашему коду, да?) TODO: сделать это чище
 	var/already_scarred = FALSE
-	/// The source of how we got the wound, typically a weapon.
+	/// Источник того, как мы получили рану, обычно оружие.
 	var/wound_source
 
-	/// What flags apply to this wound
-	var/wound_flags = (ACCEPTS_GAUZE)
+	/// Какие флаги применяются к этой ране
+	var/wound_flags = (ACCEPTS_GAUZE) // ПРИНИМАЕТ_ПОВЯЗКУ
 
-	/// The unique ID of our wound for use with [actionspeed_mod]. Defaults to REF(src).
+	/// Уникальный ID нашей раны для использования с [actionspeed_mod]. По умолчанию REF(src).
 	var/unique_id
-	/// The actionspeed modifier we will use in case we are on the arms and have a interaction penalty. Qdelled on destroy.
+	/// Модификатор скорости действий, который мы будем использовать, если мы на руках и имеем штраф взаимодействия. Удаляется (qdel) при уничтожении.
 	var/datum/actionspeed_modifier/wound_interaction_inefficiency/actionspeed_mod
 
 /datum/wound/New()
@@ -129,8 +126,8 @@
 
 	return ..()
 
-/// If we should have an actionspeed_mod, ensures we do and updates its slowdown. Otherwise, ensures we don't have one
-/// by qdeleting any existing modifier.
+/// Если у нас должен быть actionspeed_mod, обеспечиваем его наличие и обновляем его замедление. В противном случае, обеспечиваем его отсутствие
+/// путем удаления (qdel) любого существующего модификатора.
 /datum/wound/proc/update_actionspeed_modifier()
 	if (should_have_actionspeed_modifier())
 		if (!actionspeed_mod)
@@ -140,11 +137,11 @@
 	else
 		remove_actionspeed_modifier()
 
-/// Returns TRUE if we have an interaction_efficiency_penalty, and if we are on the arms, FALSE otherwise.
+/// Возвращает TRUE, если у нас есть interaction_efficiency_penalty, и если мы на руках, FALSE в противном случае.
 /datum/wound/proc/should_have_actionspeed_modifier()
 	return (limb && victim && (limb.body_zone == BODY_ZONE_L_ARM || limb.body_zone == BODY_ZONE_R_ARM) && interaction_efficiency_penalty != 0)
 
-/// If we have no actionspeed_mod, generates a new one with our unique ID, sets actionspeed_mod to it, then returns it.
+/// Если у нас нет actionspeed_mod, генерирует новый с нашим уникальным ID, устанавливает actionspeed_mod в него, затем возвращает его.
 /datum/wound/proc/generate_actionspeed_modifier()
 	RETURN_TYPE(/datum/actionspeed_modifier)
 
@@ -158,7 +155,7 @@
 	actionspeed_mod = new_modifier
 	return actionspeed_mod
 
-/// If we have an actionspeed_mod, qdels it and sets our ref of it to null.
+/// Если у нас есть actionspeed_mod, удаляет его (qdel) и устанавливает нашу ссылку на него в null.
 /datum/wound/proc/remove_actionspeed_modifier()
 	if (!actionspeed_mod)
 		return
@@ -166,23 +163,23 @@
 	victim?.remove_actionspeed_modifier(actionspeed_mod)
 	QDEL_NULL(actionspeed_mod)
 
-/// Generates the ID we use for [unique_id], which is also set as our actionspeed mod's ID
+/// Генерирует ID, который мы используем для [unique_id], который также установлен как ID нашего модификатора скорости действий
 /datum/wound/proc/generate_unique_id()
-	return REF(src) // unique, cannot change, a perfect id
+	return REF(src) // уникальный, не может измениться, идеальный id
 
 /**
- * apply_wound() is used once a wound type is instantiated to assign it to a bodypart, and actually come into play.
+ * apply_wound() используется после создания экземпляра типа раны, чтобы назначить его части тела и фактически вступить в игру.
  *
  *
- * Arguments:
- * * limb: The bodypart we're wounding, we don't care about the person, we can get them through the limb
- * * silent: Not actually necessary I don't think, was originally used for demoting wounds so they wouldn't make new messages, but I believe old_wound took over that, I may remove this shortly
- * * old_wound: If our new wound is a replacement for one of the same time (promotion or demotion), we can reference the old one just before it's removed to copy over necessary vars
- * * smited- If this is a smite, we don't care about this wound for stat tracking purposes (not yet implemented)
- * * attack_direction: For bloodsplatters, if relevant
- * * wound_source: The source of the wound, such as a weapon.
+ * Аргументы:
+ * * limb: Часть тела, которую мы раним, нам неважен человек, мы можем получить его через конечность
+ * * silent: На самом деле не нужен, думаю, изначально использовался для понижения ран, чтобы они не создавали новых сообщений, но, я думаю, old_wound взял на себя эту роль, я могу удалить это вскоре
+ * * old_wound: Если наша новая рана является заменой одной того же типа (повышение или понижение), мы можем сослаться на старую прямо перед ее удалением, чтобы скопировать необходимые переменные
+ * * smited- Если это кара, нам не важна эта рана для целей отслеживания статистики (еще не реализовано)
+ * * attack_direction: Для брызг крови, если уместно
+ * * wound_source: Источник раны, например, оружие.
  */
-/datum/wound/proc/apply_wound(obj/item/bodypart/limb, silent = FALSE, datum/wound/old_wound = null, smited = FALSE, attack_direction = null, wound_source = "Unknown", replacing = FALSE)
+/datum/wound/proc/apply_wound(obj/item/bodypart/limb, silent = FALSE, datum/wound/old_wound = null, smited = FALSE, attack_direction = null, wound_source = "Неизвестно", replacing = FALSE)
 	if (!limb.is_woundable() || !can_be_applied_to(limb, old_wound))
 		qdel(src)
 		return FALSE
@@ -193,7 +190,7 @@
 	else if(istext(wound_source))
 		src.wound_source = wound_source
 	else
-		src.wound_source = "Unknown"
+		src.wound_source = "Неизвестно"
 
 	set_victim(limb.owner)
 	set_limb(limb, replacing)
@@ -221,7 +218,7 @@
 			msg = "<b>[msg]</b>"
 			vis_dist = DEFAULT_MESSAGE_RANGE
 
-		victim.visible_message(msg, span_userdanger("Your [limb.plaintext_zone] [occur_text]!"), vision_distance = vis_dist)
+		victim.visible_message(msg, span_userdanger("Ваша [limb.plaintext_zone] [occur_text]!"), vision_distance = vis_dist)
 		if(sound_effect)
 			playsound(limb.owner, sound_effect, sound_volume + (20 * severity), TRUE, falloff_exponent = SOUND_FALLOFF_EXPONENT + 2,  ignore_walls = FALSE, falloff_distance = 0)
 
@@ -231,28 +228,28 @@
 
 	return TRUE
 
-/// Returns TRUE if we can be applied to the limb.
+/// Возвращает TRUE, если мы можем быть применены к конечности.
 /datum/wound/proc/can_be_applied_to(obj/item/bodypart/limb, datum/wound/old_wound)
 	var/datum/wound_pregen_data/pregen_data = GLOB.all_wound_pregen_data[type]
 
-	// We assume we aren't being randomly applied - we have no reason to believe we are
-	// And, besides, if we were, you could just as easily check our pregen data rather than run this proc
-	// Generally speaking this proc is called in apply_wound, which is called when the caller is already confidant in its ability to be applied
+	// Мы предполагаем, что нас не применяют случайно - у нас нет оснований так считать
+	// И, кроме того, если бы это было так, вы могли бы так же легко проверить наши предварительно сгенерированные данные, а не запускать эту процедуру
+	// Вообще говоря, эта процедура вызывается в apply_wound, который вызывается, когда вызывающий уже уверен в своей возможности быть примененным
 	return pregen_data.can_be_applied_to(limb, old_wound = old_wound)
 
-/// Returns the zones we can be applied to.
+/// Возвращает зоны, к которым мы можем быть применены.
 /datum/wound/proc/get_viable_zones()
 	var/datum/wound_pregen_data/pregen_data = GLOB.all_wound_pregen_data[type]
 
 	return pregen_data.viable_zones
 
-/// Returns the biostate we require to be applied.
+/// Возвращает биологическое состояние, которое мы требуем для применения.
 /datum/wound/proc/get_required_biostate()
 	var/datum/wound_pregen_data/pregen_data = GLOB.all_wound_pregen_data[type]
 
 	return pregen_data.required_limb_biostate
 
-// Updates descriptive texts for the wound, in case it can get altered for whatever reason
+// Обновляет описательные тексты для раны, на случай, если они могут быть изменены по какой-либо причине
 /datum/wound/proc/update_descriptions()
 	return
 
@@ -260,7 +257,7 @@
 	SIGNAL_HANDLER
 	set_victim(null)
 
-/// Setter for [victim]. Should completely transfer signals, attributes, etc. To the new victim - if there is any, as it can be null.
+/// Сеттер для [victim]. Должен полностью передавать сигналы, атрибуты и т.д. новому victim - если он есть, так как он может быть null.
 /datum/wound/proc/set_victim(new_victim)
 	if(victim)
 		UnregisterSignal(victim, list(COMSIG_QDELETING, COMSIG_MOB_SWAP_HANDS, COMSIG_CARBON_POST_REMOVE_LIMB, COMSIG_CARBON_POST_ATTACH_LIMB))
@@ -269,7 +266,7 @@
 		UnregisterSignal(victim, COMSIG_CARBON_POST_REMOVE_LIMB)
 		UnregisterSignal(victim, COMSIG_ATOM_ITEM_INTERACTION)
 		if (actionspeed_mod)
-			victim.remove_actionspeed_modifier(actionspeed_mod) // no need to qdelete it, just remove it from our victim
+			victim.remove_actionspeed_modifier(actionspeed_mod) // не нужно удалять (qdel), просто удаляем его из нашего victim
 
 	remove_wound_from_victim()
 	victim = new_victim
@@ -278,15 +275,15 @@
 		RegisterSignals(victim, list(COMSIG_MOB_SWAP_HANDS, COMSIG_CARBON_POST_REMOVE_LIMB, COMSIG_CARBON_POST_ATTACH_LIMB), PROC_REF(add_or_remove_actionspeed_mod))
 		RegisterSignal(victim, COMSIG_ATOM_ITEM_INTERACTION, PROC_REF(interact_try_treating))
 		if (limb)
-			start_limping_if_we_should() // the status effect already handles removing itself
+			start_limping_if_we_should() // эффект статуса уже сам удаляет себя
 			add_or_remove_actionspeed_mod()
 
-/// Proc called to change the variable `limb` and react to the event.
+/// Процедура, вызываемая для изменения переменной `limb` и реакции на событие.
 /datum/wound/proc/set_limb(obj/item/bodypart/new_value, replaced = FALSE)
 	if(limb == new_value)
-		return FALSE //Limb can either be a reference to something or `null`. Returning the number variable makes it clear no change was made.
+		return FALSE // Limb может быть либо ссылкой на что-то, либо `null`. Возврат числовой переменной делает понятным, что изменений не было.
 	. = limb
-	if(limb) // if we're nulling limb, we're basically detaching from it, so we should remove ourselves in that case
+	if(limb) // если мы обнуляем limb, мы фактически открепляемся от него, поэтому в этом случае мы должны удалить себя
 		UnregisterSignal(limb, COMSIG_QDELETING)
 		UnregisterSignal(limb, list(COMSIG_BODYPART_GAUZED, COMSIG_BODYPART_UNGAUZED))
 		LAZYREMOVE(limb.wounds, src)
@@ -296,7 +293,7 @@
 
 	limb = new_value
 
-	// POST-CHANGE
+	// ПОСЛЕ ИЗМЕНЕНИЯ
 
 	if (limb)
 		RegisterSignal(limb, COMSIG_QDELETING, PROC_REF(source_died))
@@ -305,7 +302,7 @@
 			limb.add_traits(list(TRAIT_PARALYSIS, TRAIT_DISABLED_BY_WOUND), REF(src))
 
 		if (victim)
-			start_limping_if_we_should() // the status effect already handles removing itself
+			start_limping_if_we_should() // эффект статуса уже сам удаляет себя
 			add_or_remove_actionspeed_mod()
 
 		update_inefficiencies(replaced)
@@ -320,15 +317,15 @@
 
 /datum/wound/proc/start_limping_if_we_should()
 	if ((limb.body_zone == BODY_ZONE_L_LEG || limb.body_zone == BODY_ZONE_R_LEG) && limp_slowdown > 0 && limp_chance > 0)
-		victim.apply_status_effect(/datum/status_effect/limp)
+		victim.apply_status_effect(/datum/status_effect/limp) // хромота
 
 /datum/wound/proc/source_died()
 	SIGNAL_HANDLER
 	qdel(src)
 
-/// Remove the wound from whatever it's afflicting, and cleans up whatever status effects it had or modifiers it had on interaction times. ignore_limb is used for detachments where we only want to forget the victim
+/// Удаляет рану из того, кого она поражает, и очищает любые эффекты статуса или модификаторы времени взаимодействия, которые она имела. ignore_limb используется для откреплений, когда мы хотим только забыть victim
 /datum/wound/proc/remove_wound(ignore_limb, replaced = FALSE)
-	//TODO: have better way to tell if we're getting removed without replacement (full heal) scar stuff
+	//TODO: иметь лучший способ определить, удаляемся ли мы без замены (полное заживление) для шрамов
 	var/old_victim = victim
 	var/old_limb = limb
 
@@ -340,11 +337,11 @@
 
 	remove_actionspeed_modifier()
 
-	null_victim() // we use the proc here because some behaviors may depend on changing victim to some new value
+	null_victim() // мы используем процедуру здесь, потому что некоторое поведение может зависеть от изменения victim на какое-то новое значение
 
 	if(limb && !ignore_limb)
-		set_limb(null, replaced) // since we're removing limb's ref to us, we should do the same
-		// if you want to keep the ref, do it externally, there's no reason for us to remember it
+		set_limb(null, replaced) // поскольку мы удаляем ссылку limb на нас, мы должны сделать то же самое
+		// если вы хотите сохранить ссылку, сделайте это извне, нам нет причин ее помнить
 
 	if (ismob(old_victim))
 		var/mob/mob_victim = old_victim
@@ -359,39 +356,39 @@
 	SEND_SIGNAL(victim, COMSIG_CARBON_LOSE_WOUND, src, limb)
 
 /**
- * replace_wound() is used when you want to replace the current wound with a new wound, presumably of the same category, just of a different severity (either up or down counts)
+ * replace_wound() используется, когда вы хотите заменить текущую рану новой раной, предположительно той же категории, но другой тяжести (как повышение, так и понижение)
  *
- * Arguments:
- * * new_wound- The wound instance you want to replace this
- * * smited- If this is a smite, we don't care about this wound for stat tracking purposes (not yet implemented)
+ * Аргументы:
+ * * new_wound- Экземпляр раны, которым вы хотите заменить эту
+ * * smited- Если это кара, нам не важна эта рана для целей отслеживания статистики (еще не реализовано)
  */
 /datum/wound/proc/replace_wound(datum/wound/new_wound, smited = FALSE, attack_direction = attack_direction)
 	already_scarred = TRUE
-	var/obj/item/bodypart/cached_limb = limb // remove_wound() nulls limb so we have to track it locally
+	var/obj/item/bodypart/cached_limb = limb // remove_wound() обнуляет limb, поэтому мы должны отслеживать его локально
 	remove_wound(replaced=TRUE)
 	new_wound.apply_wound(cached_limb, old_wound = src, smited = smited, attack_direction = attack_direction, wound_source = wound_source, replacing = TRUE)
 	. = new_wound
 	qdel(src)
 
-/// The immediate negative effects faced as a result of the wound
+/// Непосредственные негативные эффекты, с которыми сталкиваются в результате раны
 /datum/wound/proc/wound_injury(datum/wound/old_wound = null, attack_direction = null)
 	return
 
-/// Proc called to change the variable `disabling` and react to the event.
+/// Процедура, вызываемая для изменения переменной `disabling` и реакции на событие.
 /datum/wound/proc/set_disabling(new_value)
 	if(disabling == new_value)
 		return
 	. = disabling
 	disabling = new_value
 	if(disabling)
-		if(!. && limb) //Gained disabling.
+		if(!. && limb) // Получили отключающий эффект.
 			limb.add_traits(list(TRAIT_PARALYSIS, TRAIT_DISABLED_BY_WOUND), REF(src))
-	else if(. && limb) //Lost disabling.
+	else if(. && limb) // Потеряли отключающий эффект.
 		limb.remove_traits(list(TRAIT_PARALYSIS, TRAIT_DISABLED_BY_WOUND), REF(src))
 	if(limb?.can_be_disabled)
 		limb.update_disabled()
 
-/// Setter for [interaction_efficiency_penalty]. Updates the actionspeed of our actionspeed mod.
+/// Сеттер для [interaction_efficiency_penalty]. Обновляет скорость действий нашего модификатора actionspeed_mod.
 /datum/wound/proc/set_interaction_efficiency_penalty(new_value)
 	var/should_update = (new_value != interaction_efficiency_penalty)
 
@@ -400,34 +397,34 @@
 	if (should_update)
 		update_actionspeed_modifier()
 
-/// Returns a "adjusted" interaction_efficiency_penalty that will be used for the actionspeed mod.
+/// Возвращает "скорректированный" interaction_efficiency_penalty, который будет использоваться для модификатора actionspeed_mod.
 /datum/wound/proc/get_effective_actionspeed_modifier()
 	return interaction_efficiency_penalty - 1
 
-/// Returns the decisecond multiplier of any click interactions, assuming our limb is being used.
+/// Возвращает множитель десятых секунды для любых кликовых взаимодействий, предполагая, что наша конечность используется.
 /datum/wound/proc/get_action_delay_mult()
 	SHOULD_BE_PURE(TRUE)
 
 	return interaction_efficiency_penalty
 
-/// Returns the decisecond increment of any click interactions, assuming our limb is being used.
+/// Возвращает приращение десятых секунды для любых кликовых взаимодействий, предполагая, что наша конечность используется.
 /datum/wound/proc/get_action_delay_increment()
 	SHOULD_BE_PURE(TRUE)
 
 	return 0
 
-/// Signal proc for if gauze has been applied or removed from our limb.
+/// Сигнальная процедура на случай, если на нашу конечность была наложена или удалена повязка.
 /datum/wound/proc/gauze_state_changed()
 	SIGNAL_HANDLER
 
-	if (wound_flags & ACCEPTS_GAUZE)
+	if (wound_flags & ACCEPTS_GAUZE) // ПРИНИМАЕТ_ПОВЯЗКУ
 		update_inefficiencies()
 
-/// Updates our limping and interaction penalties in accordance with our gauze.
+/// Обновляет наши штрафы хромоты и взаимодействия в соответствии с нашей повязкой.
 /datum/wound/proc/update_inefficiencies(replaced_or_replacing = FALSE)
-	if (wound_flags & ACCEPTS_GAUZE)
+	if (wound_flags & ACCEPTS_GAUZE) // ПРИНИМАЕТ_ПОВЯЗКУ
 		if(limb.body_zone in list(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG))
-			if(limb.current_gauze?.splint_factor)
+			if(limb.current_gauze?.splint_factor) // фактор_шины
 				limp_slowdown = initial(limp_slowdown) * limb.current_gauze.splint_factor
 				limp_chance = initial(limp_chance) * limb.current_gauze.splint_factor
 			else
@@ -446,11 +443,11 @@
 
 	start_limping_if_we_should()
 
-/// Additional beneficial effects when the wound is gained, in case you want to give a temporary boost to allow the victim to try an escape or last stand
+/// Дополнительные благоприятные эффекты при получении раны, на случай, если вы хотите дать временный усилитель, чтобы позволить жертве попытаться сбежать или совершить последний бой
 /datum/wound/proc/second_wind()
 	switch(severity)
 		if(WOUND_SEVERITY_MODERATE)
-			victim.reagents.add_reagent(/datum/reagent/determination, WOUND_DETERMINATION_MODERATE)
+			victim.reagents.add_reagent(/datum/reagent/determination, WOUND_DETERMINATION_MODERATE) // решимость
 		if(WOUND_SEVERITY_SEVERE)
 			victim.reagents.add_reagent(/datum/reagent/determination, WOUND_DETERMINATION_SEVERE)
 		if(WOUND_SEVERITY_CRITICAL)
@@ -464,17 +461,17 @@
 	return try_treating(tool, user)
 
 /**
- * Attempt to treat the wound with the given item/tool by the given user
- * This proc leads into [/datum/wound/proc/treat]
+ * Попытка лечить рану данным предметом/инструментом данным пользователем
+ * Эта процедура ведет к [/datum/wound/proc/treat]
  *
- * You can specify what items or tools you want to be intercepted
- * with var/list/treatable_by and var/treatable_tool,
- * then if an item fulfills one of those requirements and our wound claims it first,
- * it goes over to treat() and treat_self().
+ * Вы можете указать, какие предметы или инструменты вы хотите перехватывать
+ * с помощью var/list/treatable_by и var/treatable_tool,
+ * затем, если предмет соответствует одному из этих требований и наша рана заявляет его первой,
+ * он передается в treat() и treat_self().
  *
- * Arguments:
- * * I: The item we're trying to use
- * * user: The mob trying to use it on us
+ * Аргументы:
+ * * I: Предмет, который мы пытаемся использовать
+ * * user: Моб, пытающийся использовать его на нас
  */
 /datum/wound/proc/try_treating(obj/item/tool, mob/living/user)
 	SHOULD_NOT_OVERRIDE(TRUE)
@@ -488,14 +485,14 @@
 	if(!item_can_treat(tool, user))
 		return NONE
 
-	// now that we've determined we have a valid attempt at treating,
-	// we can stomp on their dreams if we're already interacting with the patient or if their part is obscured
+	// теперь, когда мы определили, что у нас есть действительная попытка лечения,
+	// мы можем раздавить их мечты, если мы уже взаимодействуем с пациентом или если их часть скрыта
 	if(DOING_INTERACTION_WITH_TARGET(user, victim))
-		to_chat(user, span_warning("You're already interacting with [victim]!"))
+		to_chat(user, span_warning("Вы уже взаимодействуете с [victim]!"))
 		return ITEM_INTERACT_BLOCKING
 
-	// next we check if the bodypart in actually accessible (not under thick clothing). We skip the species trait check since skellies
-	// & such may need to use bone gel but may be wearing a space suit for..... whatever reason a skeleton would wear a space suit for
+	// далее мы проверяем, доступна ли часть тела (не под толстой одеждой). Мы пропускаем проверку черты вида, так как скелеты
+	// и подобные могут нуждаться в использовании костного геля, но могут носить скафандр по... какой-то причине, по которой скелет носил бы скафандр
 	if(ishuman(victim))
 		var/mob/living/carbon/human/victim_human = victim
 		if(!victim_human.try_inject(user, injection_flags = INJECT_CHECK_IGNORE_SPECIES | INJECT_TRY_SHOW_ERROR_MESSAGE))
@@ -504,9 +501,9 @@
 	INVOKE_ASYNC(src, PROC_REF(treat), tool, user)
 	return ITEM_INTERACT_SUCCESS
 
-/// Returns TRUE if the item can be used to treat our wounds. Hooks into treat() - only things that return TRUE here may be used there.
+/// Возвращает TRUE, если предмет может быть использован для лечения наших ран. Перехватывается в treat() - только вещи, возвращающие TRUE здесь, могут быть использованы там.
 /datum/wound/proc/item_can_treat(obj/item/potential_treater, mob/user)
-	// surgeries take priority
+	// операции имеют приоритет
 	for(var/datum/surgery/operation as anything in victim.surgeries)
 		if(isnull(operation.operated_bodypart) || operation.operated_bodypart != limb)
 			continue
@@ -518,75 +515,75 @@
 		if(is_type_in_list(potential_treater, next_step.implements))
 			return FALSE
 
-	// check if we have a valid treatable tool
+	// проверяем, есть ли у нас действительный лечащий инструмент
 	if(potential_treater.tool_behaviour in treatable_tools)
 		return TRUE
-	// failing that, see if we're aggro grabbing them and if we have an item that works for aggro grabs only
+	// в противном случае, проверяем, агрессивно ли мы хватаем их и есть ли у нас предмет, который работает только при агрессивном захвате
 	if((user == victim || (user.pulling == victim && user.grab_state >= GRAB_AGGRESSIVE)) && check_grab_treatments(potential_treater, user))
 		return TRUE
-	// failing THAT, we check if we have a generally allowed item
+	// иначе, проверяем, есть ли у нас общеразрешенный предмет
 	if(is_type_in_list(potential_treater, treatable_by))
 		return TRUE
 	return FALSE
 
-/// Return TRUE if we have an item that can only be used while aggro grabbed
-/// (unhanded aggro grab treatments go in [/datum/wound/proc/try_handling]).
-/// Treatment is still is handled in [/datum/wound/proc/treat]
+/// Возвращает TRUE, если у нас есть предмет, который можно использовать только при агрессивном захвате
+/// (невооруженные лечения при агрессивном захвате идут в [/datum/wound/proc/try_handling]).
+/// Лечение все равно обрабатывается в [/datum/wound/proc/treat]
 /datum/wound/proc/check_grab_treatments(obj/item/tool, mob/user)
 	return FALSE
 
-/// Like try_treating() but for unhanded interactions, used by joint dislocations for manual bodypart chiropractice for example.
-/// Ignores thick material checks since you can pop an arm into place through a thick suit unlike using sutures
+/// Похоже на try_treating(), но для невооруженных взаимодействий, используется, например, для ручного вправления вывиха сустава.
+/// Игнорирует проверки толстой одежды, так как вы можете вправить руку на место через толстый костюм, в отличие от использования швов
 /datum/wound/proc/try_handling(mob/living/user)
 	return FALSE
 
-/// Someone is using something that might be used for treating the wound on this limb
+/// Кто-то использует что-то, что может быть использовано для лечения раны на этой конечности
 /datum/wound/proc/treat(obj/item/tool, mob/user)
 	return
 
-/// If var/processing is TRUE, this is run on each life tick
+/// Если var/processing равен TRUE, это запускается каждый жизненный тик
 /datum/wound/proc/handle_process(seconds_per_tick, times_fired)
 	return
 
-/// For use in do_after callback checks
+/// Для использования в проверках обратного вызова do_after
 /datum/wound/proc/still_exists()
 	return (!QDELETED(src) && limb)
 
-/// When our parent bodypart is hurt.
+/// Когда наша родительская часть тела повреждена.
 /datum/wound/proc/receive_damage(wounding_type, wounding_dmg, wound_bonus, attack_direction, damage_source)
 	return
 
-/// Called from cryoxadone and pyroxadone when they're proc'ing. Wounds will slowly be fixed separately from other methods when these are in effect. crappy name but eh
+/// Вызывается из криоксадона и пироксадона, когда они действуют. Раны будут медленно фиксироваться отдельно от других методов, когда они действуют. Плохое название, но ладно
 /datum/wound/proc/on_xadone(power)
 	cryo_progress += power
 
 	return handle_xadone_progress()
 
-/// Does various actions based on [cryo_progress]. By default, qdeletes the wound past a certain threshold.
+/// Выполняет различные действия на основе [cryo_progress]. По умолчанию удаляет рану (qdel) после определенного порога.
 /datum/wound/proc/handle_xadone_progress()
 	if(cryo_progress > get_xadone_progress_to_qdel())
 		qdel(src)
 
-/// Returns the amount of [cryo_progress] we need to be qdeleted.
+/// Возвращает количество [cryo_progress], необходимое для нашего удаления (qdel).
 /datum/wound/proc/get_xadone_progress_to_qdel()
 	SHOULD_BE_PURE(TRUE)
 
 	return base_xadone_progress_to_qdel * severity
 
-/// When synthflesh is applied to the victim, we call this. No sense in setting up an entire chem reaction system for wounds when we only care for a few chems. Probably will change in the future
+/// Когда синтетическая плоть применяется к жертве, мы вызываем это. Нет смысла настраивать целую систему химических реакций для ран, когда нас волнуют лишь несколько химикатов. Вероятно, изменится в будущем
 /datum/wound/proc/on_synthflesh(reac_volume)
 	return
 
-/// Called when the patient is undergoing stasis, so that having fully treated a wound doesn't make you sit there helplessly until you think to unbuckle them
+/// Вызывается, когда пациент находится в стазисе, чтобы полностью вылеченная рана не заставляла вас беспомощно сидеть, пока вы не догадаетесь отстегнуть их
 /datum/wound/proc/on_stasis(seconds_per_tick, times_fired)
 	return
 
-/// Sets our blood flow
+/// Устанавливает наш кровоток
 /datum/wound/proc/set_blood_flow(set_to)
 	adjust_blood_flow(set_to - blood_flow)
 
-/// Use this to modify blood flow. You must use this to change the variable
-/// Takes the amount to adjust by, and the lowest amount we're allowed to have post adjust
+/// Используйте это для изменения кровотока. Вы должны использовать это для изменения переменной
+/// Принимает количество, на которое нужно скорректировать, и минимальное количество, которое мы можем иметь после корректировки
 /datum/wound/proc/adjust_blood_flow(adjust_by, minimum = 0)
 	if(!adjust_by)
 		return
@@ -596,44 +593,44 @@
 	if(old_flow == blood_flow)
 		return
 
-	/// Update our bleed rate
+	/// Обновляем нашу скорость кровотечения
 	limb.refresh_bleed_rate()
 
-/// Used when we're being dragged while bleeding, the value we return is how much bloodloss this wound causes from being dragged. Since it's a proc, you can let bandages soak some of the blood
+/// Используется, когда нас тащат во время кровотечения, значение, которое мы возвращаем, - это сколько потери крови эта рана вызывает от волочения. Поскольку это процедура, вы можете позволить повязкам впитать часть крови
 /datum/wound/proc/drag_bleed_amount()
 	return
 
 /**
- * get_bleed_rate_of_change() is used in [/mob/living/carbon/proc/bleed_warn] to gauge whether this wound (if bleeding) is becoming worse, better, or staying the same over time
+ * get_bleed_rate_of_change() используется в [/mob/living/carbon/proc/bleed_warn] для оценки, становится ли эта рана (если кровоточит) хуже, лучше или остается той же с течением времени
  *
- * Returns BLOOD_FLOW_STEADY if we're not bleeding or there's no change (like piercing), BLOOD_FLOW_DECREASING if we're clotting (non-critical slashes, gauzed, coagulant, etc), BLOOD_FLOW_INCREASING if we're opening up (crit slashes/heparin/nitrous oxide)
+ * Возвращает BLOOD_FLOW_STEADY, если мы не кровоточим или нет изменений (как при проколе), BLOOD_FLOW_DECREASING, если мы свертываемся (несерьезные порезы, с повязкой, коагулянт и т.д.), BLOOD_FLOW_INCREASING, если мы раскрываемся (серьезные порезы/гепарин/закись азота)
  */
 /datum/wound/proc/get_bleed_rate_of_change()
-	if(blood_flow && HAS_TRAIT(victim, TRAIT_BLOOD_FOUNTAIN))
+	if(blood_flow && HAS_TRAIT(victim, TRAIT_BLOOD_FOUNTAIN)) // ИСТОЧНИК_КРОВИ
 		return BLOOD_FLOW_INCREASING
 	return BLOOD_FLOW_STEADY
 
 /**
- * get_examine_description() is used in carbon/examine and human/examine to show the status of this wound. Useful if you need to show some status like the wound being splinted or bandaged.
+ * get_examine_description() используется в carbon/examine и human/examine для показа статуса этой раны. Полезно, если вам нужно показать какой-то статус, например, наложение шины или повязки на рану.
  *
- * Return the full string line you want to show, note that we're already dealing with the 'warning' span at this point, and that \n is already appended for you in the place this is called from
+ * Возвращает полную строку, которую вы хотите показать, обратите внимание, что мы уже имеем дело с тегом 'warning' на этом этапе, и \n уже добавлен за вас в месте вызова
  *
- * Arguments:
- * * mob/user: The user examining the wound's owner, if that matters
+ * Аргументы:
+ * * mob/user: Пользователь, осматривающий владельца раны, если это имеет значение
  */
 /datum/wound/proc/get_examine_description(mob/user)
 	. = get_wound_description(user)
 	if(HAS_TRAIT(src, TRAIT_WOUND_SCANNED))
-		. += span_notice("<br>There is a holo-image next to the wound that seems to contain indications for treatment.")
+		. += span_notice("<br>Рядом с раной есть голо-изображение, которое, кажется, содержит указания для лечения.")
 
 	return .
 
 /datum/wound/proc/get_wound_description(mob/user)
 	var/desc
 
-	if ((wound_flags & ACCEPTS_GAUZE) && limb.current_gauze)
+	if ((wound_flags & ACCEPTS_GAUZE) && limb.current_gauze) // ПРИНИМАЕТ_ПОВЯЗКУ
 		var/sling_condition = get_gauze_condition()
-		desc = "[victim.p_Their()] [limb.plaintext_zone] is [sling_condition] fastened in a sling of [limb.current_gauze.name]"
+		desc = "[victim.p_Their()] [limb.plaintext_zone] [sling_condition] закреплена в перевязи из [limb.current_gauze.name]"
 	else
 		desc = "[victim.p_Their()] [limb.plaintext_zone] [examine_desc]"
 
@@ -642,30 +639,30 @@
 	return get_desc_intensity(desc)
 
 /**
- * Used when a mob is examining themselves / their limbs
+ * Используется, когда моб осматривает себя / свои конечности
  *
- * Reports what this wound looks like to them
+ * Сообщает, как эта рана выглядит для них
  *
- * It should be formatted as an extension of the limb:
- * Input is something like "Your chest is bruised.",
- * you would add something like "It is bleeding."
+ * Должно быть отформатировано как продолжение конечности:
+ * Входные данные - что-то вроде "Ваша грудь ушиблена.",
+ * вы добавили бы что-то вроде "Она кровоточит."
  *
- * * self_aware - if TRUE, the examiner is more aware of themselves and thus may get more detailed information
+ * * self_aware - если TRUE, осматривающий более осознает себя и, следовательно, может получить более подробную информацию
  *
- * Return a string, to be concatenated with other organ / limb status strings. Include spans and punctuation.
+ * Возвращает строку для объединения с другими строками статуса органов / конечностей. Включайте теги и знаки препинания.
  */
 /datum/wound/proc/get_self_check_description(self_aware)
 	switch(severity)
 		if(WOUND_SEVERITY_TRIVIAL)
-			return span_danger("It's suffering [a_or_from] [LOWER_TEXT(undiagnosed_name || name)].")
+			return span_danger("Она страдает от [LOWER_TEXT(undiagnosed_name || name)].")
 		if(WOUND_SEVERITY_MODERATE)
-			return span_warning("It's suffering [a_or_from] [LOWER_TEXT(undiagnosed_name || name)].")
+			return span_warning("Она страдает от [LOWER_TEXT(undiagnosed_name || name)].")
 		if(WOUND_SEVERITY_SEVERE)
-			return span_boldwarning("It's suffering [a_or_from] [LOWER_TEXT(undiagnosed_name || name)]!")
+			return span_boldwarning("Она страдает от [LOWER_TEXT(undiagnosed_name || name)]!")
 		if(WOUND_SEVERITY_CRITICAL)
-			return span_boldwarning("It's suffering [a_or_from] [LOWER_TEXT(undiagnosed_name || name)]!!")
+			return span_boldwarning("Она страдает от [LOWER_TEXT(undiagnosed_name || name)]!!")
 
-/// A hook proc used to modify desc before it is spanned via [get_desc_intensity]. Useful for inserting spans yourself.
+/// Хук-процедура, используемая для изменения desc перед ее оборачиванием в теги через [get_desc_intensity]. Полезна для самостоятельной вставки тегов.
 /datum/wound/proc/modify_desc_before_span(desc, mob/user)
 	return desc
 
@@ -674,17 +671,17 @@
 	if (!limb.current_gauze)
 		return null
 
-	switch(limb.current_gauze.absorption_capacity)
+	switch(limb.current_gauze.absorption_capacity) // ёмкость_впитывания
 		if(0 to 1.25)
-			return "just barely"
+			return "едва"
 		if(1.25 to 2.75)
-			return "loosely"
+			return "слабо"
 		if(2.75 to 4)
-			return "mostly"
+			return "в основном"
 		if(4 to INFINITY)
-			return "tightly"
+			return "туго"
 
-/// Spans [desc] based on our severity.
+/// Оборачивает [desc] в теги на основе нашей тяжести.
 /datum/wound/proc/get_desc_intensity(desc)
 	SHOULD_BE_PURE(TRUE)
 	if (severity > WOUND_SEVERITY_MODERATE)
@@ -692,57 +689,57 @@
 	return "[desc]."
 
 /**
- * Prints the details about the wound for the wound scanner on simple mode
+ * Выводит подробности о ране для сканера ран в простом режиме
  */
 /datum/wound/proc/get_scanner_description(mob/user)
-	return "Type: [name]<br>\
-		Severity: [severity_text()]<br>\
-		Description: [desc]<br>\
-		Recommended Treatment: [treat_text]"
+	return "Тип: [name]<br>\
+		Тяжесть: [severity_text()]<br>\
+		Описание: [desc]<br>\
+		Рекомендуемое лечение: [treat_text]"
 
 /**
- * Prints the details about the wound for the wound scanner on complex mode
+ * Выводит подробности о ране для сканера ран в сложном режиме
  */
 /datum/wound/proc/get_simple_scanner_description(mob/user)
 	var/severity_text_formatted = severity_text()
 	for(var/i in 1 to severity)
 		severity_text_formatted += "!"
 
-	return "[name] detected!<br>\
-		Risk: [severity_text_formatted]<br>\
-		Description: [simple_desc || desc]<br>\
-		<i>Treatment Guide: [simple_treat_text]</i><br>\
-		<i>Homemade Remedies: [homemade_treat_text]</i>"
+	return "Обнаружено: [name]!<br>\
+		Риск: [severity_text_formatted]<br>\
+		Описание: [simple_desc || desc]<br>\
+		<i>Руководство по лечению: [simple_treat_text]</i><br>\
+		<i>Самодельные средства: [homemade_treat_text]</i>"
 
 /**
- * Returns what text describes this wound
+ * Возвращает текстовое описание тяжести этой раны
  */
 /datum/wound/proc/severity_text()
 	switch(severity)
 		if(WOUND_SEVERITY_TRIVIAL)
-			return "Trivial"
+			return "Незначительная"
 		if(WOUND_SEVERITY_MODERATE)
-			return "Moderate"
+			return "Умеренная"
 		if(WOUND_SEVERITY_SEVERE)
-			return "<b>Severe</b>"
+			return "<b>Серьезная</b>"
 		if(WOUND_SEVERITY_CRITICAL)
-			return "<b>Critical</b>"
+			return "<b>Критическая</b>"
 
-/// Returns TRUE if our limb is the head or chest, FALSE otherwise.
-/// Essential in the sense of "we cannot live without it".
+/// Возвращает TRUE, если наша конечность - голова или грудь, FALSE в противном случае.
+/// Важна в смысле "мы не можем жить без нее".
 /datum/wound/proc/limb_essential()
 	return (limb.body_zone == BODY_ZONE_HEAD || limb.body_zone == BODY_ZONE_CHEST)
 
-/// Getter proc for our scar_keyword, in case we might have some custom scar gen logic.
+/// Геттер для нашего scar_keyword, на случай, если у нас может быть какая-то пользовательская логика генерации шрамов.
 /datum/wound/proc/get_scar_keyword(obj/item/bodypart/scarred_limb, add_to_scars)
 	return scar_keyword
 
-/// Getter proc for our scar_file, in case we might have some custom scar gen logic.
+/// Геттер для нашего scar_file, на случай, если у нас может быть какая-то пользовательская логика генерации шрамов.
 /datum/wound/proc/get_scar_file(obj/item/bodypart/scarred_limb, add_to_scars)
 	var/datum/wound_pregen_data/pregen_data = get_pregen_data()
-	// basically we iterate over biotypes until we find the one we want
-	// fleshy burns will look for flesh then bone
-	// dislocations will look for flesh, then bone, then metal
+	// в основном мы перебираем биотипы, пока не найдем тот, который нам нужен
+	// мясистые ожоги будут искать плоть, затем кость
+	// вывихи будут искать плоть, затем кость, затем металл
 	var/file = default_scar_file
 	for (var/biotype in pregen_data.scar_priorities)
 		if (scarred_limb.biological_state & text2num(biotype))
@@ -751,23 +748,23 @@
 
 	return file
 
-/// Returns what string is displayed when a limb that has sustained this wound is examined
-/// (This is examining the LIMB ITSELF, when it's not attached to someone.)
+/// Возвращает, какая строка отображается при осмотре конечности, которая получила эту рану
+/// (Это осмотр САМОЙ КОНЕЧНОСТИ, когда она не прикреплена к кому-либо.)
 /datum/wound/proc/get_limb_examine_description()
 	return
 
-/// Gets the flat percentage chance increment of a dismember occurring, if a dismember is attempted (requires mangled flesh and bone). returning 15 = +15%.
+/// Получает плоский процентный бонус шанса ампутации, если попытка ампутации предпринимается (требуется изувеченная плоть и кость). возврат 15 = +15%.
 /datum/wound/proc/get_dismember_chance_bonus(existing_chance)
 	SHOULD_BE_PURE(TRUE)
 
 	var/datum/wound_pregen_data/pregen_data = get_pregen_data()
 
 	if (pregen_data.required_wounding_type == WOUND_BLUNT && severity >= WOUND_SEVERITY_CRITICAL)
-		return WOUND_CRITICAL_BLUNT_DISMEMBER_BONUS // we only require mangled bone (T2 blunt), but if there's a critical blunt, we'll add 15% more
+		return WOUND_CRITICAL_BLUNT_DISMEMBER_BONUS // нам требуется только изувеченная кость (T2 тупая), но если есть критическая тупая травма, мы добавим еще 15%
 
-/// Returns our pregen data, which is practically guaranteed to exist, so this proc can safely be used raw.
-/// In fact, since it's RETURN_TYPEd to wound_pregen_data, you can even directly access the variables without having to store the value of this proc in a typed variable.
-/// Ex. get_pregen_data().wound_series
+/// Возвращает наши предварительно сгенерированные данные, которые практически гарантированно существуют, поэтому эту процедуру можно безопасно использовать напрямую.
+/// Фактически, поскольку она RETURN_TYPE'd в wound_pregen_data, вы можете даже напрямую обращаться к переменным, не сохраняя значение этой процедуры в типизированной переменной.
+/// Пример: get_pregen_data().wound_series
 /datum/wound/proc/get_pregen_data()
 	RETURN_TYPE(/datum/wound_pregen_data)
 
