@@ -1,61 +1,61 @@
 /**
- * scars are cosmetic datums that are assigned to bodyparts once they recover from wounds. Each wound type and severity have their own descriptions for what the scars
- * look like, and then each body part has a list of "specific locations" like your elbow or wrist or wherever the scar can appear, to make it more interesting than "right arm"
+ * Шрамы - это косметические данные, которые присваиваются частям тела после заживления ран. Каждый тип раны и её степень тяжести имеют собственное описание того, как выглядит шрам,
+ * и затем каждая часть тела имеет список "конкретных местоположений", таких как локоть, запястье или где бы то ни было, где может появиться шрам, чтобы сделать его более интересным, чем просто "правая рука".
  *
  *
- * Arguments:
+ * Аргументы:
  * *
  */
 /datum/scar
-	var/obj/item/bodypart/limb
-	var/mob/living/carbon/victim
-	/// The severity of the scar, derived from the worst severity a wound was at before it was healed (see: slashes), determines how visible/bold the scar description is
+	var/obj/item/bodypart/limb // Часть тела
+	var/mob/living/carbon/victim // Пострадавший
+	/// Степень тяжести шрама, полученная из наихудшей степени тяжести раны до её заживления (см.: порезы). Определяет, насколько видимым/выраженным является описание шрама.
 	var/severity
-	/// The description of the scar for examining
+	/// Описание шрама для осмотра
 	var/description
-	/// A string detailing the specific part of the bodypart the scar is on, for fluff purposes. See [/datum/scar/proc/generate]
+	/// Строка, детализирующая конкретную часть части тела, на которой находится шрам, для атмосферности. См. [/datum/scar/proc/generate]
 	var/precise_location
 
-	/// These scars are assumed to come from changeling disguises, rather than from persistence or wounds. As such, they are deleted by dropping changeling disguises, and are ignored by persistence
+	/// Предполагается, что эти шрамы являются следствием маскировки генокрадов, а не постоянными или от ран. Как таковые, они удаляются при сбросе маскировки генокрадов и игнорируются системой сохранения.
 	var/fake = FALSE
-	/// How many tiles away someone can see this scar, goes up with severity. Clothes covering this limb will decrease visibility by 1 each, except for the head/face which is a binary "is mask obscuring face" check
+	/// На каком расстоянии в клетках кто-то может увидеть этот шрам, увеличивается с тяжестью. Одежда, покрывающая эту конечность, будет уменьшать видимость на 1 за каждый предмет, кроме головы/лица, где проверка является бинарной "маска закрывает лицо".
 	var/visibility = 2
-	/// Whether this scar can actually be covered up by clothing
+	/// Может ли этот шрам быть фактически скрыт одеждой
 	var/coverable = TRUE
-	/// If we're a persistent scar or may become one, we go in this character slot
+	/// Если мы постоянный шрам или можем им стать, мы сохраняемся в этом слоте персонажа
 	var/persistent_character_slot = 0
 
-	/// The biostates we require from a limb to give them our scar.
+	/// Биологические состояния, которые требуются от конечности, чтобы нанести на неё наш шрам.
 	var/required_limb_biostate
-	/// If false, we will only check to see if a limb has ALL our biostates, instead of just any.
+	/// Если FALSE, мы будем проверять, имеет ли конечность ВСЕ наши биологические состояния, а не ЛЮБОЕ из них.
 	var/check_any_biostates
 
 /datum/scar/Destroy(force)
 	if(limb)
-		LAZYREMOVE(limb.scars, src)
+		LAZYREMOVE(limb.scars, src) // Лениво удаляем этот шрам из списка шрамов конечности
 	if(victim)
-		LAZYREMOVE(victim.all_scars, src)
+		LAZYREMOVE(victim.all_scars, src) // Лениво удаляем этот шрам из общего списка шрамов жертвы
 	limb = null
 	victim = null
 	. = ..()
 
 /**
- * generate() is used to actually fill out the info for a scar, according to the limb and wound it is provided.
+ * generate() используется для фактического заполнения информации о шраме в соответствии с переданной конечностью и раной.
  *
- * After creating a scar, call this on it while targeting the scarred bodypart with a given wound to apply the scar.
+ * После создания шрама вызовите эту процедуру, нацелившись на изувеченную часть тела с помощью заданной раны, чтобы применить шрам.
  *
- * Arguments:
- * * BP- The bodypart being targeted
- * * W- The wound being used to generate the severity and description info
- * * add_to_scars- Should always be TRUE unless you're just storing a scar for later usage, like how cuts want to store a scar for the highest severity of cut, rather than the severity when the wound is fully healed (probably demoted to moderate)
+ * Аргументы:
+ * * BP - Целевая часть тела
+ * * W - Рана, используемая для генерации информации о тяжести и описании
+ * * add_to_scars - Всегда должно быть TRUE, если вы не просто сохраняете шрам для последующего использования, как в случае с порезами, которые хотят сохранить шрам для наивысшей степени тяжести пореза, а не для степени тяжести, когда рана полностью зажила (вероятно, пониженной до умеренной)
  */
 /datum/scar/proc/generate(obj/item/bodypart/BP, datum/wound/W, add_to_scars=TRUE)
 
-	if (!W.can_scar)
-		qdel(src)
+	if (!W.can_scar) // Если рана не может оставить шрам
+		qdel(src) // Удаляем этот объект шрама
 		return
 
-	var/datum/wound_pregen_data/pregen_data = GLOB.all_wound_pregen_data[W.type]
+	var/datum/wound_pregen_data/pregen_data = GLOB.all_wound_pregen_data[W.type] // Получаем предварительно сгенерированные данные для этого типа раны
 	if (!pregen_data)
 		qdel(src)
 		return
@@ -83,8 +83,8 @@
 
 	description = pick_list(scar_file, scar_keyword)
 	if (!description)
-		stack_trace("no valid description found for scar! file: [scar_file] keyword: [scar_keyword] wound: [W.type]")
-		description = "general disfigurement"
+		stack_trace("Не найдено корректного описания для шрама! файл: [scar_file] ключевое слово: [scar_keyword] рана: [W.type]")
+		description = "сильное обезображивание"
 
 	precise_location = pick_list_replacements(SCAR_LOC_FILE, limb.body_zone)
 	switch(W.severity)
@@ -96,16 +96,16 @@
 			visibility = 5
 		if(WOUND_SEVERITY_LOSS)
 			visibility = 7
-			precise_location = "amputation"
+			precise_location = "ампутация"
 
-/// Used when we finalize a scar from a healing cut
+/// Используется, когда мы финализируем шрам от заживающего пореза
 /datum/scar/proc/lazy_attach(obj/item/bodypart/BP, datum/wound/W)
 	LAZYADD(BP.scars, src)
 	if(BP.owner)
 		victim = BP.owner
 		LAZYADD(victim.all_scars, src)
 
-/// Used to "load" a persistent scar
+/// Используется для "загрузки" постоянного шрама
 /datum/scar/proc/load(obj/item/bodypart/BP, version, description, specific_location, severity = WOUND_SEVERITY_SEVERE, required_limb_biostate = BIO_STANDARD_UNJOINTED, char_slot, check_any_biostates = FALSE)
 	if(!BP.scarrable)
 		qdel(src)
@@ -113,13 +113,13 @@
 
 	limb = BP
 	RegisterSignal(limb, COMSIG_QDELETING, PROC_REF(limb_gone))
-	if (isnull(check_any_biostates)) // so we dont break old scars. NOTE: REMOVE AFTER VERSION NUMBER MOVES PAST 3
+	if (isnull(check_any_biostates)) // чтобы не сломать старые шрамы. ПРИМЕЧАНИЕ: УДАЛИТЬ ПОСЛЕ ТОГО, КАК НОМЕР ВЕРСИИ ПРЕВЫСИТ 3
 		check_any_biostates = FALSE
 	if (check_any_biostates)
 		if (!(limb.biological_state & required_limb_biostate))
 			qdel(src)
 			return
-	else if (!((limb.biological_state & required_limb_biostate) == required_limb_biostate)) // check for all
+	else if (!((limb.biological_state & required_limb_biostate) == required_limb_biostate)) // проверяем на все
 		qdel(src)
 		return
 	if(limb.owner)
@@ -148,12 +148,12 @@
 	SIGNAL_HANDLER
 	qdel(src)
 
-/// What will show up in examine_more() if this scar is visible
+/// Что будет показано в examine_more(), если этот шрам видим
 /datum/scar/proc/get_examine_description(mob/viewer)
 	if(!victim || !is_visible(viewer))
 		return
 
-	var/msg = "[victim.p_They()] [victim.p_have()] [description] on [victim.p_their()] [precise_location]."
+	var/msg = "[victim.p_They()] [victim.p_have()] [description] на [victim.p_their()] [precise_location]."
 	switch(severity)
 		if(WOUND_SEVERITY_MODERATE)
 			msg = span_tinynoticeital("[msg]")
@@ -162,11 +162,11 @@
 		if(WOUND_SEVERITY_CRITICAL)
 			msg = span_smallnoticeital("<b>[msg]</b>")
 		if(WOUND_SEVERITY_LOSS)
-			msg = "[victim.p_Their()] [limb.plaintext_zone] [description]." // different format
+			msg = "[victim.p_Their()] [limb.plaintext_zone] [description]." // другой формат
 			msg = span_notice("<i><b>[msg]</b></i>")
 	return "\t[msg]"
 
-/// Whether a scar can currently be seen by the viewer
+/// Виден ли шрам в данный момент смотрящему
 /datum/scar/proc/is_visible(mob/viewer)
 	if(!victim || !viewer)
 		return
@@ -187,11 +187,11 @@
 
 	return TRUE
 
-/// Used to format a scar to save for either persistent scars, or for changeling disguises
+/// Используется для форматирования шрама для сохранения: либо для постоянных шрамов, либо для маскировок генокрадов
 /datum/scar/proc/format()
 	return "[SCAR_CURRENT_VERSION]|[limb.body_zone]|[description]|[precise_location]|[severity]|[required_limb_biostate]|[persistent_character_slot]|[check_any_biostates]"
 
-/// Used to format a scar to save in preferences for persistent scars
+/// Используется для форматирования шрама для сохранения в настройках для постоянных шрамов (ампутированных конечностей)
 /datum/scar/proc/format_amputated(body_zone, scar_file = FLESH_SCAR_FILE)
 	description = pick_list(scar_file, "dismember")
-	return "[SCAR_CURRENT_VERSION]|[body_zone]|[description]|amputated|[WOUND_SEVERITY_LOSS]|[required_limb_biostate]|[persistent_character_slot]|[check_any_biostates]"
+	return "[SCAR_CURRENT_VERSION]|[body_zone]|[description]|ампутировано|[WOUND_SEVERITY_LOSS]|[required_limb_biostate]|[persistent_character_slot]|[check_any_biostates]"

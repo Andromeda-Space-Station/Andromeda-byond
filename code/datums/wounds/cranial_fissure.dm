@@ -1,10 +1,10 @@
-/datum/wound_pregen_data/cranial_fissure
+/datum/wound_pregen_data/cranial_fissure // ЧЕРЕПНАЯ_ТРЕЩИНА
 	wound_path_to_generate = /datum/wound/cranial_fissure
 	required_limb_biostate = BIO_BONE
 
 	required_wounding_type = WOUND_ALL
 
-	wound_series = WOUND_SERIES_CRANIAL_FISSURE
+	wound_series = WOUND_SERIES_CRANIAL_FISSURE // СЕРИЯ_РАН_ЧЕРЕПНАЯ_ТРЕЩИНА
 
 	threshold_minimum = 110
 	weight = 10
@@ -15,40 +15,40 @@
 	if (isnull(limb.owner))
 		return ..()
 
-	if (HAS_TRAIT(limb.owner, TRAIT_CURSED) && (limb.get_mangled_state() & BODYPART_MANGLED_INTERIOR))
+	if (HAS_TRAIT(limb.owner, TRAIT_CURSED) && (limb.get_mangled_state() & BODYPART_MANGLED_INTERIOR)) // ПРОКЛЯТИЙ, СОСТОЯНИЕ_ИЗУВЕЧЕНИЯ_ИНТЕРЬЕРА
 		return ..()
 
-	if (limb.owner.stat >= HARD_CRIT)
+	if (limb.owner.stat >= HARD_CRIT) // ТЯЖЕЛЫЙ_КРИТ
 		return ..()
 
 	return 0
 
-/// A wound applied when receiving significant enough damage to the head.
-/// Will allow other players to take your eyes out of your head, and slipping
-/// will cause your brain to fall out of your head.
-/datum/wound/cranial_fissure
-	name = "Cranial Fissure"
-	desc = "Patient's crown is agape, revealing severe damage to the skull."
-	treat_text = "Surgical reconstruction of the skull is necessary."
-	treat_text_short = "Surgical reconstruction required."
-	examine_desc = "is split open"
-	occur_text = "is split into two separated chunks"
+/// Рана, наносимая при получении достаточно значительного урона по голове.
+/// Позволит другим игрокам вынимать ваши глаза из головы, а поскользнувшись,
+/// вы заставите ваш мозг выпасть из головы.
+/datum/wound/cranial_fissure // ЧЕРЕПНАЯ_ТРЕЩИНА
+	name = "Перелом черепа"
+	desc = "Череп пациента расколот, обнажая серьезные повреждения."
+	treat_text = "Необходима хирургическая реконструкция черепа."
+	treat_text_short = "Требуется хирургическая реконструкция."
+	examine_desc = "расколот на части"
+	occur_text = "раскалывается отдельные части"
 
-	simple_desc = "Patient's skull is split open."
+	simple_desc = "Череп пациента расколот."
 	threshold_penalty = 40
 
 	severity = WOUND_SEVERITY_CRITICAL
 	sound_effect = 'sound/effects/dismember.ogg'
 
-#define CRANIAL_FISSURE_FILTER_DISPLACEMENT "cranial_fissure_displacement"
+#define CRANIAL_FISSURE_FILTER_DISPLACEMENT "cranial_fissure_displacement" // ФИЛЬТР_СМЕЩЕНИЯ_ЧЕРЕПНОЙ_ТРЕЩИНЫ
 
 /datum/wound/cranial_fissure/wound_injury(datum/wound/old_wound = null, attack_direction = null)
-	ADD_TRAIT(limb, TRAIT_IMMUNE_TO_CRANIAL_FISSURE, type)
-	ADD_TRAIT(victim, TRAIT_HAS_CRANIAL_FISSURE, type)
+	ADD_TRAIT(limb, TRAIT_IMMUNE_TO_CRANIAL_FISSURE, type) // НЕВОСПРИИМЧИВОСТЬ_К_ЧЕРЕПНОЙ_ТРЕЩИНЕ
+	ADD_TRAIT(victim, TRAIT_HAS_CRANIAL_FISSURE, type) // ИМЕЕТ_ЧЕРЕПНУЮ_ТРЕЩИНУ
 
 	victim.add_filter(CRANIAL_FISSURE_FILTER_DISPLACEMENT, 2, displacement_map_filter(icon('icons/effects/cranial_fissure.dmi', "displacement"), size = 3))
 
-	RegisterSignal(victim, COMSIG_MOB_SLIPPED, PROC_REF(on_owner_slipped))
+	RegisterSignal(victim, COMSIG_MOB_SLIPPED, PROC_REF(on_owner_slipped)) // СИГНАЛ_МОБ_ПОСКОЛЬЗНУЛСЯ
 
 /datum/wound/cranial_fissure/remove_wound(ignore_limb, replaced)
 	REMOVE_TRAIT(limb, TRAIT_IMMUNE_TO_CRANIAL_FISSURE, type)
@@ -75,15 +75,15 @@
 	brain.throw_at(get_step(source_turf, source.dir), 1, 1)
 
 	source.visible_message(
-		span_boldwarning("[source]'s brain spills right out of [source.p_their()] head!"),
-		span_userdanger("Your brain spills right out of your head!"),
+		span_boldwarning("Мозг [source] вываливается прямо из [source.p_their()] головы!"),
+		span_userdanger("Ваш мозг вываливается прямо из вашей головы!"),
 	)
 
 /datum/wound/cranial_fissure/try_handling(mob/living/user)
 	if (user.usable_hands <= 0 || user.combat_mode)
 		return FALSE
 
-	if(!isnull(user.hud_used?.zone_select) && (user.zone_selected != BODY_ZONE_HEAD && user.zone_selected != BODY_ZONE_PRECISE_EYES))
+	if(!isnull(user.hud_used?.zone_select) && (user.zone_selected != BODY_ZONE_HEAD && user.zone_selected != BODY_ZONE_PRECISE_EYES)) // ЗОНА_ТОЧНЫЕ_ГЛАЗА
 		return FALSE
 
 	if (victim.body_position != LYING_DOWN)
@@ -91,19 +91,19 @@
 
 	var/obj/item/organ/eyes/eyes = victim.get_organ_by_type(/obj/item/organ/eyes)
 	if (isnull(eyes))
-		victim.balloon_alert(user, "no eyes to take!")
+		victim.balloon_alert(user, "нет глаз для извлечения!")
 		return TRUE
 
 	playsound(victim, 'sound/items/handling/surgery/organ2.ogg', 50, TRUE)
-	victim.balloon_alert(user, "pulling out eyes...")
+	victim.balloon_alert(user, "извлекаем глаза...")
 	user.visible_message(
-		span_boldwarning("[user] reaches inside [victim]'s skull..."),
+		span_boldwarning("[user] засовывает руку внутрь черепа [victim]..."),
 		ignored_mobs = user
 	)
 	victim.show_message(
-		span_userdanger("[victim] starts to pull out your eyes!"),
+		span_userdanger("[victim] начинает вытаскивать ваши глаза!"),
 		MSG_VISUAL,
-		span_userdanger("An arm reaches inside your brain, and starts pulling on your eyes!"),
+		span_userdanger("Рука проникает внутрь вашего мозга и начинает тянуть за ваши глаза!"),
 	)
 
 	if (!do_after(user, 10 SECONDS, victim, extra_checks = CALLBACK(src, PROC_REF(still_has_eyes), eyes)))
@@ -112,19 +112,19 @@
 	eyes.Remove(victim)
 	user.put_in_hands(eyes)
 
-	log_combat(user, victim, "pulled out the eyes of")
+	log_combat(user, victim, "вырвал глаза у")
 
 	playsound(victim, 'sound/items/handling/surgery/organ1.ogg', 75, TRUE)
 	user.visible_message(
-		span_boldwarning("[user] rips out [victim]'s eyes!"),
-		span_boldwarning("You rip out [victim]'s eyes!"),
+		span_boldwarning("[user] вырывает глаза [victim]!"),
+		span_boldwarning("Вы вырываете глаза [victim]!"),
 		ignored_mobs = victim,
 	)
 
 	victim.show_message(
-		span_userdanger("[user] rips out your eyes!"),
+		span_userdanger("[user] вырывает ваши глаза!"),
 		MSG_VISUAL,
-		span_userdanger("You feel an arm yank from inside your head, as you feel something very important is missing!"),
+		span_userdanger("Вы чувствуете, как рука дергается внутри вашей головы, и понимаете, что чего-то очень важного не хватает!"),
 	)
 
 	return TRUE

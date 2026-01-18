@@ -1,51 +1,51 @@
-// This datum is merely a singleton instance that allows for custom "can be applied" behaviors without instantiating a wound instance.
-// For example: You can make a pregen_data subtype for your wound that overrides can_be_applied_to to only apply to specifically slimeperson limbs.
-// Without this, you're stuck with very static initial variables.
+// Этот датум - всего лишь одиночный экземпляр, который позволяет настраивать поведение "может быть применено" без создания экземпляра раны.
+// Например: вы можете создать подтип pregen_data для своей раны, который переопределяет can_be_applied_to, чтобы применяться только к конечностям слизнелюдей.
+// Без этого вы ограничены очень статичными начальными переменными.
 
-/// A singleton datum that holds pre-gen and static data about a wound. Each wound datum should have a corresponding wound_pregen_data.
+/// Одиночный датум, который хранит предварительно сгенерированные и статические данные о ране. Каждый датум раны должен иметь соответствующий wound_pregen_data.
 /datum/wound_pregen_data
-	/// The typepath of the wound we will be handling and storing data of. NECESSARY IF THIS IS A NON-ABSTRACT TYPE!
+	/// Путь к типу раны, которую мы будем обрабатывать и хранить данные о ней. НЕОБХОДИМО, ЕСЛИ ЭТО НЕ АБСТРАКТНЫЙ ТИП!
 	var/datum/wound/wound_path_to_generate
 
-	/// Will this be instantiated?
+	/// Будет ли этот датум инстанцирован?
 	var/abstract = FALSE
 
-	/// If true, our wound can be selected in ordinary wound rolling. If this is set to false, our wound can only be directly instantiated by use of specific typepath.
+	/// Если true, наша рана может быть выбрана при обычном случайном создании ран. Если false, наша рана может быть создана только прямым указанием её пути.
 	var/can_be_randomly_generated = TRUE
 
-	/// A list of biostates a limb must have to receive our wound, in wounds.dm.
+	/// Список биологических состояний, которые конечность должна иметь, чтобы получить нашу рану. Определяется в wounds.dm.
 	var/required_limb_biostate
-	/// If false, we will check if the limb has all of our required biostates instead of just any.
+	/// Если false, мы будем проверять, имеет ли конечность ВСЕ наши требуемые биологические состояния, а не ЛЮБОЕ из них.
 	var/require_any_biostate = FALSE
 
-	/// If false, we will iterate through wounds on a given limb, and if any match our type, we wont add our wound.
+	/// Если false, мы пройдемся по ранам на данной конечности, и если найдется совпадение по типу, мы не добавим нашу рану.
 	var/duplicates_allowed = FALSE
 
-	/// If we require BIO_BLOODED, we will not add our wound if this is true and the limb cannot bleed.
-	var/ignore_cannot_bleed = TRUE // a lot of bleed wounds should still be applied for purposes of mangling flesh
+	/// Если мы требуем BIO_BLOODED, мы не добавим нашу рану, если это true и конечность не может кровоточить.
+	var/ignore_cannot_bleed = TRUE // многие кровоточащие раны все равно должны быть применены для целей изувечения плоти
 
-	/// A list of bodyzones we are applicable to.
+	/// Список зон тела, к которым мы применимы.
 	var/list/viable_zones = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
-	/// The type of attack that can generate this wound.
-	/// E.g. WOUND_SLASH = A sharp attack can cause this, WOUND_BLUNT = an attack with no sharpness/an attack with sharpness against a limb with mangled exterior can cause this.
+	/// Тип атаки, который может создать эту рану.
+	/// Например: WOUND_SLASH = острая атака может вызвать это, WOUND_BLUNT = атака без остроты/атака с остротой против конечности с изувеченной внешней частью может вызвать это.
 	var/required_wounding_type
 
-	/// The weight that will be used if, by the end of wound selection, there are multiple valid wounds. This will be inserted into pick_weight, so use integers.
+	/// Вес, который будет использоваться, если в конце выбора ран останется несколько валидных ран. Будет вставлен в pick_weight, поэтому используйте целые числа.
 	var/weight = WOUND_DEFAULT_WEIGHT
 
-	/// The minimum injury roll a attack must get to generate us. Affected by our wound's threshold_penalty and series_threshold_penalty, as well as the attack's wound_bonus. See check_wounding_mods().
+	/// Минимальный бросок травмы, который атака должна получить, чтобы создать нас. Зависит от threshold_penalty и series_threshold_penalty нашей раны, а также от wound_bonus атаки. См. check_wounding_mods().
 	var/threshold_minimum
 
-	/// The series of wounds this is in. See wounds.dm (the defines file) for a more detailed explanation - but tldr is that no 2 wounds of the same series can be on a limb.
+	/// Серия ран, к которой это относится. Смотри wounds.dm (файл с дефайнами) для более подробного объяснения - но вкратце: не может быть двух ран одной серии на конечности.
 	var/wound_series
 
-	/// If true, we will attempt to, during a random wound roll, overpower and remove other wound typepaths from the possible wounds list using competition_mode.
+	/// Если true, мы попытаемся во время случайного создания раны "пересилить" и удалить другие типы ран из списка возможных, используя competition_mode.
 	var/compete_for_wounding = TRUE
-	/// The competition mode with which we will remove other wounds from a possible wound roll assuming [compete_for_wounding] is TRUE. See wounds.dm, the defines file, for more information on what these do.
+	/// Режим конкуренции, с которым мы будем удалять другие раны из возможного списка при условии, что [compete_for_wounding] равен TRUE. Смотри wounds.dm, файл с дефайнами, для информации о том, что они делают.
 	var/competition_mode = WOUND_COMPETITION_OVERPOWER_LESSERS
 
-	/// A list of BIO_ defines that will be iterated over in order to determine the scar file our wound will generate.
-	/// Use generate_scar_priorities to create a custom list.
+	/// Список BIO_ дефайнов, который будет перебираться по порядку для определения файла шрама, который наша рана создаст.
+	/// Используйте generate_scar_priorities для создания кастомного списка.
 	var/list/scar_priorities
 
 /datum/wound_pregen_data/New()
@@ -53,13 +53,13 @@
 
 	if (!abstract)
 		if (required_limb_biostate == null)
-			stack_trace("required_limb_biostate null - please set it! occurred on: [src.type]")
+			stack_trace("required_limb_biostate равен null - пожалуйста, установите его! Произошло на: [src.type]")
 		if (wound_path_to_generate == null)
-			stack_trace("wound_path_to_generate null - please set it! occurred on: [src.type]")
+			stack_trace("wound_path_to_generate равен null - пожалуйста, установите его! Произошло на: [src.type]")
 
 	scar_priorities = generate_scar_priorities()
 
-/// Should return a list of BIO_ biostate priorities, in order. See [scar_priorities] for further documentation.
+/// Должен возвращать список BIO_ биологических состояний в порядке приоритета. Смотри [scar_priorities] для дальнейшей документации.
 /datum/wound_pregen_data/proc/generate_scar_priorities()
 	RETURN_TYPE(/list)
 
@@ -70,18 +70,18 @@
 
 	return priorities
 
-// this proc is the primary reason this datum exists - a singleton instance so we can always run this proc even without the wound existing
+// Эта процедура - основная причина существования этого датума - одиночный экземпляр, чтобы мы могли всегда запускать эту процедуру даже без существования раны
 /**
- * Args:
- * * obj/item/bodypart/limb: The limb we are considering.
- * * suggested_wounding_typs: The wounding type to be checked against the wounding type we require. Defaults to required_wounding_type.
- * * datum/wound/old_wound: If we would replace a wound, this would be said wound. Nullable.
- * * random_roll = FALSE: If this is in the context of a random wound generation, and this wound wasn't specifically checked.
+ * Аргументы:
+ * * obj/item/bodypart/limb: Конечность, которую мы рассматриваем.
+ * * suggested_wounding_type: Тип ранения для проверки против требуемого нами типа ранения. По умолчанию required_wounding_type.
+ * * datum/wound/old_wound: Если бы мы заменяли рану, это была бы старая рана. Может быть null.
+ * * random_roll = FALSE: Если это в контексте случайного создания раны, и эта рана не была проверена специально.
  *
- * Returns:
- * FALSE if the limb cannot be wounded, if the wounding types don't match ours (via wounding_types_valid()), if we have a higher severity wound already in our series,
- * if we have a biotype mismatch, if the limb isn't in a viable zone, or if there's any duplicate wound types.
- * TRUE otherwise.
+ * Возвращает:
+ * FALSE, если конечность не может быть ранена, если типы ранения не совпадают с нашими (через wounding_types_valid()), если у нас уже есть рана более высокой тяжести в нашей серии,
+ * если есть несоответствие биологического типа, если конечность не в допустимой зоне, или если есть дублирующиеся типы ран.
+ * TRUE в противном случае.
  */
 /datum/wound_pregen_data/proc/can_be_applied_to(obj/item/bodypart/limb, suggested_wounding_type = required_wounding_type, datum/wound/old_wound, random_roll = FALSE, duplicates_allowed = src.duplicates_allowed, care_about_existing_wounds = TRUE)
 	SHOULD_BE_PURE(TRUE)
@@ -111,67 +111,67 @@
 	if (!(limb.body_zone in viable_zones))
 		return FALSE
 
-	// we accept promotions and demotions, but no point in redundancy. This should have already been checked wherever the wound was rolled and applied for (see: bodypart damage code), but we do an extra check
-	// in case we ever directly add wounds
+	// мы принимаем повышения и понижения тяжести, но нет смысла в избыточности. Это уже должно было быть проверено там, где рана была создана и применена (см.: код повреждения частей тела), но мы делаем дополнительную проверку
+	// на случай, если мы когда-нибудь напрямую добавляем раны
 	if (!duplicates_allowed)
 		for (var/datum/wound/preexisting_wound as anything in limb.wounds)
 			if (preexisting_wound.type == wound_path_to_generate && (preexisting_wound != old_wound))
 				return FALSE
 	return TRUE
 
-/// Returns true if we have the given biostates, or any biostate in it if check_for_any is true. False otherwise.
+/// Возвращает true, если мы имеем данные биологические состояния, или ЛЮБОЕ из них, если check_for_any равно true. False в противном случае.
 /datum/wound_pregen_data/proc/biostate_valid(biostate)
 	if (require_any_biostate)
 		if (!(biostate & required_limb_biostate))
 			return FALSE
-	else if (!((biostate & required_limb_biostate) == required_limb_biostate)) // check for all
+	else if (!((biostate & required_limb_biostate) == required_limb_biostate)) // проверяем на все
 		return FALSE
 
 	return TRUE
 
 /**
- * A simple getter for [weight], with arguments supplied to allow custom behavior.
+ * Простой геттер для [weight], с предоставленными аргументами для возможности кастомного поведения.
  *
- * Args:
- * * obj/item/bodypart/limb: The limb we are contemplating being added to. Nullable.
- * * woundtype: The woundtype of the assumed attack that would generate us. Nullable.
- * * damage: The raw damage that would cause us. Nullable.
- * * attack_direction: The direction of the attack that'd cause us. Nullable.
- * * damage_source: The entity that would cause us. Nullable.
+ * Аргументы:
+ * * obj/item/bodypart/limb: Конечность, к которой мы рассматриваем возможность добавления. Может быть null.
+ * * woundtype: Тип ранения предполагаемой атаки, которая создала бы нас. Может быть null.
+ * * damage: Сырой урон, который вызвал бы нас. Может быть null.
+ * * attack_direction: Направление атаки, которая вызвала бы нас. Может быть null.
+ * * damage_source: Сущность, которая вызвала бы нас. Может быть null.
  *
- * Returns:
- * Our weight.
+ * Возвращает:
+ * Наш вес.
  */
 /datum/wound_pregen_data/proc/get_weight(obj/item/bodypart/limb, woundtype, damage, attack_direction, damage_source)
 	return weight
 
-/// Returns TRUE if we use WOUND_ALL or our wounding type
+/// Возвращает TRUE, если мы используем WOUND_ALL или наш тип ранения
 /datum/wound_pregen_data/proc/wounding_types_valid(suggested_wounding_type)
 	if (required_wounding_type == WOUND_ALL)
 		return TRUE
 	return suggested_wounding_type == required_wounding_type
 
 /**
- * A simple getter for [threshold_minimum], with arguments supplied to allow custom behavior.
+ * Простой геттер для [threshold_minimum], с предоставленными аргументами для возможности кастомного поведения.
  *
- * Args:
- * * obj/item/bodypart/part: The limb we are contemplating being added to.
- * * attack_direction: The direction of the attack that'd generate us. Nullable.
- * * damage_source: The source of the damage that'd cause us. Nullable.
+ * Аргументы:
+ * * obj/item/bodypart/part: Конечность, к которой мы рассматриваем возможность добавления.
+ * * attack_direction: Направление атаки, которая создала бы нас. Может быть null.
+ * * damage_source: Источник урона, который вызвал бы нас. Может быть null.
  */
 /datum/wound_pregen_data/proc/get_threshold_for(obj/item/bodypart/part, attack_direction, damage_source)
 	return threshold_minimum
 
-/// Returns a new instance of our wound datum.
+/// Возвращает новый экземпляр нашего датума раны.
 /datum/wound_pregen_data/proc/generate_instance(obj/item/bodypart/limb, ...)
 	RETURN_TYPE(/datum/wound)
 
 	return new wound_path_to_generate
 
 /datum/wound_pregen_data/Destroy(force)
-	var/error_message = "[src], a singleton wound pregen data instance, was destroyed! This should not happen!"
+	var/error_message = "[src], одиночный экземпляр предварительно сгенерированных данных раны, был уничтожен! Этого не должно происходить!"
 	if (force)
-		error_message += " NOTE: This Destroy() was called with force == TRUE. This instance will be deleted and replaced with a new one."
+		error_message += " ПРИМЕЧАНИЕ: Этот Destroy() был вызван с force == TRUE. Этот экземпляр будет удален и заменен новым."
 	stack_trace(error_message)
 
 	if (!force)
@@ -179,4 +179,4 @@
 
 	. = ..()
 
-	GLOB.all_wound_pregen_data[wound_path_to_generate] = new src.type //recover
+	GLOB.all_wound_pregen_data[wound_path_to_generate] = new src.type // восстанавливаем

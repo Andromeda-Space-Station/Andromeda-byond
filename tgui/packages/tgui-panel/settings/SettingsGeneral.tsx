@@ -181,7 +181,7 @@ export function SettingsGeneral(props) {
             tooltip="Экспорт настроек чата"
             onClick={() => dispatch(exportSettings())}
           >
-            Экспорт настроек
+            Экспорт
           </Button>
         </Stack.Item>
         <Stack.Item mt={0.15}>
@@ -191,7 +191,7 @@ export function SettingsGeneral(props) {
             icon="arrow-up-from-bracket"
             onSelectFiles={(files) => importChatSettings(files)}
           >
-            Импорт настроек
+            Импорт
           </Button.File>
         </Stack.Item>
         <Stack.Item grow mt={0.15}>
@@ -200,7 +200,7 @@ export function SettingsGeneral(props) {
             tooltip="Экспорт истории текущей вкладки в HTML файл"
             onClick={() => dispatch(saveChatToDisk())}
           >
-            Сохранить лог чата
+            Сохранить
           </Button>
         </Stack.Item>
         <Stack.Item mt={0.15}>
@@ -209,7 +209,7 @@ export function SettingsGeneral(props) {
             tooltip="Очистить историю текущей вкладки"
             onClick={() => dispatch(clearChat())}
           >
-            Очистить чат
+            Очистить
           </Button.Confirm>
         </Stack.Item>
       </Stack>
