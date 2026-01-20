@@ -5,7 +5,6 @@
 	operation_flags = OPERATION_MORBID | OPERATION_AFFECTS_MOOD | OPERATION_NOTABLE
 	required_bodytype = ~(BODYTYPE_ROBOTIC|BODYTYPE_PEG)
 	implements = list(
-		/obj/item/shears = 0.33,
 		TOOL_SAW = 1,
 		TOOL_SCALPEL = 1,
 		/obj/item/melee/arm_blade = 1.25,
@@ -25,9 +24,6 @@
 
 /datum/surgery_operation/limb/amputate/get_recommended_tool()
 	return TOOL_SAW
-
-/datum/surgery_operation/limb/amputate/get_default_radial_image()
-	return image(/obj/item/shears)
 
 /datum/surgery_operation/limb/amputate/state_check(obj/item/bodypart/limb)
 	if(limb.body_zone == BODY_ZONE_CHEST)

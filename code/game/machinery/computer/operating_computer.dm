@@ -228,7 +228,7 @@
 		data["surgeries"] += list(list(
 			"name" = operation.rnd_name || operation.name,
 			"desc" = operation.rnd_desc || operation.desc,
-			"tool_rec" = operation.get_recommended_tool() || "error",
+			"tool_rec" = operation.get_recommended_tool() || "ошибка",
 			"requirements" = operation.get_requirements(),
 			"show_as_next" = recommend,
 			"show_in_list" = TRUE,
