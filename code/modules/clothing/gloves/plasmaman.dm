@@ -1,5 +1,5 @@
 /obj/item/clothing/gloves/color/plasmaman
-	desc = "Covers up those scandalous boney hands."
+	desc = "Скрывает костлявые руки.."
 	name = "plasma envirogloves"
 	icon_state = "plasmaman"
 	greyscale_colors = "#913b00"
@@ -21,9 +21,19 @@
 	icon_state = "blackplasma"
 	greyscale_colors = "#2f2e31"
 
+/obj/item/clothing/gloves/color/plasmaman/get_ru_names()
+	return alist(
+		NOMINATIVE = "плазмогерметичные перчатки",
+		GENITIVE = "плазмогерметичных перчаток",
+		DATIVE = "плазмогерметичным перчаткам",
+		ACCUSATIVE = "плазмогерметичные перчатки",
+		INSTRUMENTAL = "плазмогерметичными перчатками",
+		PREPOSITIONAL = "плазмогерметичных перчатках",
+	)
+
 /obj/item/clothing/gloves/color/plasmaman/plasmanitrile
 	name = "nitrile envirogloves"
-	desc = "Pricy nitrile gloves made for plasmamen."
+	desc = "Дорогие нитриловые перчатки, изготовленные для плазмалюдей."
 	icon_state = "nitrile"
 	greyscale_colors = "#913b00"
 	clothing_traits = list(TRAIT_QUICKER_CARRY, TRAIT_FASTMED)
@@ -64,9 +74,19 @@
 	icon_state = "explorerplasma"
 	greyscale_colors = "#47453d"
 
+/obj/item/clothing/gloves/color/plasmaman/plasmanitrile/get_ru_names()
+	return alist(
+		NOMINATIVE = "плазмогерметичные нитриловые перчатки",
+		GENITIVE = "плазмогерметичных нитриловых перчаток",
+		DATIVE = "плазмогерметичным нитриловым перчаткам",
+		ACCUSATIVE = "плазмогерметичные нитриловые перчатки",
+		INSTRUMENTAL = "плазмогерметичными нитриловыми перчатками",
+		PREPOSITIONAL = "плазмогерметичных нитриловых перчатках",
+	)
+
 /obj/item/clothing/gloves/color/plasmaman/botanic_leather
 	name = "botany envirogloves"
-	desc = "These leather gloves protect your boney hands against thorns, barbs, prickles, spikes and other harmful objects of floral origin."
+	desc = "Эти кожаные перчатки защищают ваши костлявые руки от шипов, зазубрин, колючек, иголок и других опасных объектов растительного происхождения."
 	icon_state = "botanyplasma"
 	greyscale_colors = "#3164ff"
 	clothing_traits = list(TRAIT_PLANT_SAFE)
@@ -81,13 +101,23 @@
 	icon_state = "clownplasma"
 	greyscale_colors = "#ff0000"
 
+/obj/item/clothing/gloves/color/plasmaman/botanic_leather/get_ru_names()
+	return alist(
+		NOMINATIVE = "плазмогерметичные кожаные перчатки",
+		GENITIVE = "плазмогерметичных кожаных перчаток",
+		DATIVE = "плазмогерметичным кожаным перчаткам",
+		ACCUSATIVE = "плазмогерметичные кожаные перчатки",
+		INSTRUMENTAL = "плазмогерметичными кожаными перчатками",
+		PREPOSITIONAL = "плазмогерметичных кожаных перчатках",
+	)
+
 /obj/item/clothing/gloves/color/plasmaman/clown/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CLOWN, CELL_VIRUS_TABLE_GENERIC, rand(2,3), 0)
 
 /obj/item/clothing/gloves/color/plasmaman/head_of_personnel
 	name = "head of personnel's envirogloves"
-	desc = "Covers up those scandalous, bony hands. Appears to be an attempt at making a replica of the captain's gloves."
+	desc = "Скрывает костлявые руки. Похоже, это попытка сделать реплику перчаток капитана."
 	icon_state = "hopplasma"
 	inhand_icon_state = null
 	greyscale_colors = null
@@ -118,11 +148,31 @@
 	icon_state = "internplasma"
 	greyscale_colors = "#00974b"
 
+/obj/item/clothing/gloves/color/plasmaman/head_of_personnel/get_ru_names()
+	return alist(
+		NOMINATIVE = "плазмогерметичные перчатки главы",
+		GENITIVE = "плазмогерметичных перчаток главы",
+		DATIVE = "плазмогерметичным перчаткам главы",
+		ACCUSATIVE = "плазмогерметичные перчатки главы",
+		INSTRUMENTAL = "плазмогерметичными перчатками главы",
+		PREPOSITIONAL = "плазмогерметичных перчатках главы",
+	)
+
 /obj/item/clothing/gloves/color/plasmaman/radio
 	name = "translation envirogloves"
-	desc = "Allows the less vocally-capable plasmamen to use sign language over comms."
+	desc = "Позволяет менее разговорчивым плазмалюдям использовать язык жестов по каналам связи."
 	icon_state = "radio_gplasma"
 	inhand_icon_state = null
 	greyscale_colors = null
 	worn_icon_state = "radio_g"
 	clothing_traits = list(TRAIT_CAN_SIGN_ON_COMMS)
+
+/obj/item/clothing/gloves/color/plasmaman/radio/get_ru_names()
+	return alist(
+		NOMINATIVE = "плазмогерметичные переводные перчатки",
+		GENITIVE = "плазмогерметичных переводных перчаток",
+		DATIVE = "плазмогерметичным переводным перчаткам",
+		ACCUSATIVE = "плазмогерметичные переводные перчатки",
+		INSTRUMENTAL = "плазмогерметичными переводными перчатками",
+		PREPOSITIONAL = "плазмогерметичных переводных перчатках",
+	)

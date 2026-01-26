@@ -847,31 +847,31 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 		return
 	switch(number)
 		if(1)
-			return "first"
+			return "первый"
 		if(2)
-			return "second"
+			return "второй"
 		if(3)
-			return "third"
+			return "третий"
 		if(4)
-			return "fourth"
+			return "четвёртый"
 		if(5)
-			return "fifth"
+			return "пятый"
 		if(6)
-			return "sixth"
+			return "шестой"
 		if(7)
-			return "seventh"
+			return "седьмой"
 		if(8)
-			return "eighth"
+			return "восьмой"
 		if(9)
-			return "ninth"
+			return "девятый"
 		if(10)
-			return "tenth"
+			return "десятый"
 		if(11)
-			return "eleventh"
+			return "одинадцатый"
 		if(12)
-			return "twelfth"
+			return "двенадцатый"
 		else
-			return "[number]\th"
+			return "[number]"
 
 /**
  * Takes a 1, 2 or 3 digit number and returns it in words. Don't call this directly, use convert_integer_to_words() instead.
